@@ -1,7 +1,8 @@
 all: index.html
 
 index.html: *.txt images/xmvn.svg
-	asciidoc -b html5 -a icons -a toc2 -a toclevels=3 -a theme=flask index.txt
+	asciidoc -b html5 -a icons -a toc2 -a toclevels=3 -a theme=flask \
+	    -a version=$(VERSION) index.txt
 
 %.svg: %.dia
 	dia -e $@ $<
