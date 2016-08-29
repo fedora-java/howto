@@ -26,4 +26,4 @@ git add -A
 git commit -m 'Rebuild documentation'
 git push ../.. gh-pages:gh-pages
 cd ../..
-#git push origin gh-pages:gh-pages
+echo "Upload the documentation with 'git push origin gh-pages:gh-pages'"

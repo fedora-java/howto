@@ -1,8 +1,16 @@
-Version: {version}
-
 Versions of this document
 -------------------------
 
-- link:../latest[Latest (Snapshot version)]
-- link:../4.7.0[4.7.0 (Fedora rawhide, Fedora 25)]
-- link:../4.6.0[4.6.0 (Fedora 24)]
+Current version: {version}
+
+Before you start reading, please make sure that you're reading the version
+corresponding to the oldest Fedora release you want to package for. We don't
+generally backport new features to versions available in stable Fedora.
+
+ifeval::["{version}" == "latest"]
+You're reading latest version which corresponds to upstream snapshot.
+endif::[]
+
+- link:../latest/index.html[Latest (Snapshot version)]
+- link:../4.7.0/index.html[4.7.0 (Fedora rawhide, Fedora 25)]
+- link:../4.6.0/index.html[4.6.0 (Fedora 24)]
