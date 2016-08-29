@@ -1,11 +1,12 @@
 Java Packaging HOWTO
 ====================
 
-v
-include::../VERSION[]
-
 {localdate}
 
+== Versions of this document
+include::versions.txt[]
+
+== Authors and contributing
 include::preamble.txt[]
 
 :numbered!:

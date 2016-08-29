@@ -1,0 +1,19 @@
+Before you start reading, please make sure that you're reading the version
+corresponding to the oldest Fedora release you want to package for. We don't
+generally backport new features to versions available in stable Fedora.
+
+Current version: {version}
+
+ifeval::["{version}" == "snapshot"]
+[CAUTION]
+You're reading version which corresponds to upstream snapshot.
+endif::[]
+
+ifdef::multiversion[]
+
+- link:../snapshot/index.html[Snapshot version]
+- link:../latest/index.html[Fedora rawhide]
+- link:../25/index.html[Fedora 25]
+- link:../24/index.html[Fedora 24]
+
+endif::multiversion[]
