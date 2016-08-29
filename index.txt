@@ -1,8 +1,7 @@
 Java Packaging HOWTO
 ====================
 
-v
-include::../VERSION[]
+include::versions.txt[]
 
 {localdate}
 

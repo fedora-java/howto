@@ -1,0 +1,8 @@
+Version: {version}
+
+Versions of this document
+-------------------------
+
+- link:../latest[Latest (Snapshot version)]
+- link:../4.7.0[4.7.0 (Fedora rawhide, Fedora 25)]
+- link:../4.6.0[4.6.0 (Fedora 24)]
