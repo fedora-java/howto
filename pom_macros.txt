@@ -6,7 +6,7 @@ specially to ease this task.
 These macros are designed to be called from `%prep` section of spec
 files. They are documented in `/usr/lib/rpm/macros.d/macros.fjava` configuration
 file, which is also
-link:https://git.fedorahosted.org/cgit/javapackages.git/plain/macros.d/macros.fjava[available
+link:https://github.com/fedora-java/javapackages/blob/master/macros.d/macros.fjava[available
 online] and all the macros also have their own manual page. See the
 manual pages for technical details how to use them.
 
