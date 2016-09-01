@@ -25,7 +25,8 @@ for version in $versions; do
     latest=$version
 done
 cd gh-pages
-ln -sf "$latest" latest
+rm -f latest
+ln -s "$latest" latest
 git add -A
 git commit -m 'Rebuild documentation'
 git push ../.. gh-pages:gh-pages

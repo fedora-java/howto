@@ -9,7 +9,7 @@ index.html: *.txt images/xmvn.svg
 	dia -e $@ $<
 
 gh-pages: index.html
-	./upload-gh-pages.sh
+	./build-gh-pages.sh
 
 clean:
 	rm -Rf *.html images/*.svg
