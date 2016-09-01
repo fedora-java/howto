@@ -1,5 +1,5 @@
 Name:           java-packaging-howto
-Version:        5.0.0
+Version:        26.1
 Release:        0.git.%(date +%%Y%%m%%d.%%H%%M%%S)
 Summary:        Fedora Java packaging HowTo
 License:        BSD
@@ -12,8 +12,8 @@ BuildRequires:  make
 BuildRequires:  asciidoc
 BuildRequires:  dia
 
-Provides:       javapackages-tools-doc = %{version}-%{release}
-Obsoletes:      javapackages-tools-doc <= 4.7.0-7
+Provides:       javapackages-tools-doc = 4.7.0-7
+Obsoletes:      javapackages-tools-doc < 4.7.0-7
 
 %description
 Offline version of Fedora Java packaging HowTo.
@@ -22,12 +22,12 @@ Offline version of Fedora Java packaging HowTo.
 %setup -q
 
 %build
-VERSION=Latest make
+VERSION=snapshot make
 
 %install
 
 %files
 %license LICENSE
-%doc index.html images/xmvn.svg
+%doc index.html images
 
 %changelog
