@@ -1,5 +1,5 @@
 Name:           java-packaging-howto
-Version:        4.7.0
+Version:        5.0.0
 Release:        0.git.%(date +%%Y%%m%%d.%%H%%M%%S)
 Summary:        Fedora Java packaging HowTo
 License:        BSD
@@ -22,7 +22,7 @@ Offline version of Fedora Java packaging HowTo.
 %setup -q
 
 %build
-VERSION=%{version} make
+VERSION=Latest make
 
 %install
 
