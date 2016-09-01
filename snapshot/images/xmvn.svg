@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="43cm" height="27cm" viewBox="-22 3 848 532" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #ffffff" x="-20.5" y="60" width="607" height="420"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 20; stroke: #000000" x="-20.5" y="60" width="607" height="420"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="645" y="59" width="180" height="420"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 20; stroke: #000000" x="645" y="59" width="180" height="420"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="735" y="272.9">
+      <tspan x="735" y="272.9"></tspan>
+    </text>
+  </g>
+  <g>
+    <path style="fill: #ffcccc" d="M 698.333 119 L 751.667,119 C 759.03,119 765,127.954 765,139 C 765,150.046 759.03,159 751.667,159 L 698.333,159 C 690.97,159 685,150.046 685,139 C 685,127.954 690.97,119 698.333,119z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 698.333 119 L 751.667,119 C 759.03,119 765,127.954 765,139 C 765,150.046 759.03,159 751.667,159 L 698.333,159 C 690.97,159 685,150.046 685,139 C 685,127.954 690.97,119 698.333,119"/>
+    <text font-size="14.6756" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="725" y="143.586">
+      <tspan x="725" y="143.586">xmvn</tspan>
+    </text>
+  </g>
+  <g>
+    <path style="fill: #ffcccc" d="M 40.4 366 L 206,366 C 228.865,366 247.4,374.954 247.4,386 C 247.4,397.046 228.865,406 206,406 L 40.4,406 C 17.5354,406 -1,397.046 -1,386 C -1,374.954 17.5354,366 40.4,366z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 40.4 366 L 206,366 C 228.865,366 247.4,374.954 247.4,386 C 247.4,397.046 228.865,406 206,406 L 40.4,406 C 17.5354,406 -1,397.046 -1,386 C -1,374.954 17.5354,366 40.4,366"/>
+    <text font-size="14.6756" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="123.2" y="390.586">
+      <tspan x="123.2" y="390.586">javapackages-tools</tspan>
+    </text>
+  </g>
+  <g>
+    <path style="fill: #ffcccc" d="M 691.824 379 L 753.024,379 C 761.474,379 768.324,387.954 768.324,399 C 768.324,410.046 761.474,419 753.024,419 L 691.824,419 C 683.374,419 676.524,410.046 676.524,399 C 676.524,387.954 683.374,379 691.824,379z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 691.824 379 L 753.024,379 C 761.474,379 768.324,387.954 768.324,399 C 768.324,410.046 761.474,419 753.024,419 L 691.824,419 C 683.374,419 676.524,410.046 676.524,399 C 676.524,387.954 683.374,379 691.824,379"/>
+    <text font-size="14.6756" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="722.424" y="403.586">
+      <tspan x="722.424" y="403.586">maven</tspan>
+    </text>
+  </g>
+  <g>
+    <path style="fill: #ffcccc" d="M 146.525 130 L 252.625,130 C 267.274,130 279.15,138.954 279.15,150 C 279.15,161.046 267.274,170 252.625,170 L 146.525,170 C 131.876,170 120,161.046 120,150 C 120,138.954 131.876,130 146.525,130z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 146.525 130 L 252.625,130 C 267.274,130 279.15,138.954 279.15,150 C 279.15,161.046 267.274,170 252.625,170 L 146.525,170 C 131.876,170 120,161.046 120,150 C 120,138.954 131.876,130 146.525,130"/>
+    <text font-size="14.6756" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="199.575" y="154.586">
+      <tspan x="199.575" y="154.586">maven-local</tspan>
+    </text>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="192.783" y1="170.987" x2="132.99" y2="355.75"/>
+    <polygon style="fill: #000000" points="130.68,362.886 129.002,351.832 132.99,355.75 138.516,354.911 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="130.68,362.886 129.002,351.832 132.99,355.75 138.516,354.911 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="724.792" y1="159.979" x2="722.728" y2="368.285"/>
+    <polygon style="fill: #000000" points="722.654,375.785 717.753,365.736 722.728,368.285 727.753,365.835 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="722.654,375.785 717.753,365.736 722.728,368.285 727.753,365.835 "/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="665" y="439">
+    <tspan x="665" y="439">Upstream Maven</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="685" y="99">
+    <tspan x="685" y="99">Local Extensions</tspan>
+    <tspan x="685" y="115">for Maven</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="57" y="102">
+    <tspan x="57" y="102">used by packages</tspan>
+    <tspan x="57" y="118">built with Maven</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="-7" y="316">
+    <tspan x="-7" y="316">used by packages</tspan>
+    <tspan x="-7" y="332">not built with Maven</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="645" y="499">
+    <tspan x="645" y="499">system-independent</tspan>
+    <tspan x="645" y="515">(pure Java)</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="100" y="500">
+    <tspan x="100" y="500">Fedora-specific</tspan>
+    <tspan x="100" y="516">(RPM macros, shell scripts,</tspan>
+    <tspan x="100" y="532">distro-specific config files)</tspan>
+  </text>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 277.708,158.5 A 1736.2,1736.2 0 0 0 675.437,146.918"/>
+    <polygon style="fill: #000000" points="682.857,145.827 673.714,152.261 675.441,146.945 672.224,142.373 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="682.857,145.827 673.714,152.261 675.441,146.945 672.224,142.373 "/>
+  </g>
+  <text font-size="39.5111" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="20" y="40">
+    <tspan x="20" y="40">Structure of XMvn-related packages</tspan>
+  </text>
+  <g>
+    <path style="fill: #ffcccc" d="M 323.625 365.85 L 506.325,365.85 C 531.551,365.85 552,374.804 552,385.85 C 552,396.896 531.551,405.85 506.325,405.85 L 323.625,405.85 C 298.399,405.85 277.95,396.896 277.95,385.85 C 277.95,374.804 298.399,365.85 323.625,365.85z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 323.625 365.85 L 506.325,365.85 C 531.551,365.85 552,374.804 552,385.85 C 552,396.896 531.551,405.85 506.325,405.85 L 323.625,405.85 C 298.399,405.85 277.95,396.896 277.95,385.85 C 277.95,374.804 298.399,365.85 323.625,365.85"/>
+    <text font-size="14.6756" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="414.975" y="390.436">
+      <tspan x="414.975" y="390.436">python-javapackages</tspan>
+    </text>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="414.976" y="385.85">
+    <tspan x="414.976" y="385.85"></tspan>
+  </text>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="218.743" y1="170.988" x2="389.241" y2="357.673"/>
+    <polygon style="fill: #000000" points="394.299,363.211 383.863,359.199 389.241,357.673 391.247,352.455 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="394.299,363.211 383.863,359.199 389.241,357.673 391.247,352.455 "/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="389.9" y="312.75">
+    <tspan x="389.9" y="312.75">python module for</tspan>
+    <tspan x="389.9" y="328.75">managing java packaging</tspan>
+    <tspan x="389.9" y="344.75">files (depmap, pom.xml,...)</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="422.5" y="319.75">
+    <tspan x="422.5" y="319.75"></tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="283" y="270">
+    <tspan x="283" y="270"></tspan>
+  </text>
+  <text font-size="20.32" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="336" y="94">
+    <tspan x="336" y="94">TODO: add ivy-local</tspan>
+  </text>
+</svg>
