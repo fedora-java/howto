@@ -3,7 +3,7 @@ all: index.html
 
 index.html: *.txt images/xmvn.svg
 	asciidoc -b html5 -a icons -a toc2 -a toclevels=3 -a theme=flask \
-	    -a version=$(VERSION) index.txt
+	    -a version=$(VERSION) $(ASCIIDOC_ARGS) index.txt
 
 %.svg: %.dia
 	dia -e $@ $<
