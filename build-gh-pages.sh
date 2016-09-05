@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 if [ -n "$TRAVIS_BRANCH" ]; then
-    REMOTE="git@github.com:fedora-java/howto.git"
+    REMOTE="https://github.com/fedora-java/howto.git"
 else
     REMOTE=..
 fi
@@ -39,7 +39,7 @@ if [ -n "$TRAVIS_BRANCH" ]; then
         git commit -m 'Rebuild documentation' --author 'Travis CI <fedora-java@users.noreply.github.com>'
         openssl aes-256-cbc -K $encrypted_1f9369ab557d_key -iv $encrypted_1f9369ab557d_iv -in travis-key.enc -out travis-key -d
         chmod 600 travis-key
-        ssh-agent sh -c "ssh-add travis-key && git push $REMOTE gh-pages:gh-pages"
+        ssh-agent sh -c "ssh-add travis-key && git push git@github.com:fedora-java/howto.git gh-pages:gh-pages"
     fi
 else
     # probaly executed by human
