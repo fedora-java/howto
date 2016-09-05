@@ -24,8 +24,7 @@ mkdir doc_build
 cd doc_build
 git clone -b gh-pages "$REMOTE" gh-pages --single-branch
 build_doc_version master snapshot
-versions="$(git for-each-ref 'refs/heads/[1-9]*' --format '%(refname:strip=2)' | sort)"
-for version in $versions; do
+for version in 26 25 24; do
     build_doc_version "$version"
     latest=$version
 done
