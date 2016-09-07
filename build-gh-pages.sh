@@ -24,7 +24,7 @@ mkdir doc_build
 cd doc_build
 git clone -b gh-pages "$REMOTE" gh-pages --single-branch
 build_doc_version master snapshot
-for version in 26 25 24; do
+for version in 24 25 26; do
     build_doc_version "$version"
     latest=$version
 done
