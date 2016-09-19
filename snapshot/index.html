@@ -843,7 +843,7 @@ asciidoc.install(3);
 <div id="content">
 <div id="preamble">
 <div class="sectionbody">
-<div class="paragraph"><p>2016-09-07</p></div>
+<div class="paragraph"><p>2016-09-19</p></div>
 </div>
 </div>
 <div class="sect1">
@@ -3630,15 +3630,15 @@ http://www.gnu.org/software/src-highlite -->
 <span style="font-weight: bold"><span style="color: #000080">%files</span></span> -f .mfiles
 
 <span style="font-weight: bold"><span style="color: #000080">%files</span></span> javadoc -f .mfiles-javadoc</tt></pre></div></div>
-<div class="paragraph"><p><span class="monospaced">%gradle_local</span> macro is very similar to <span class="monospaced">%mvn_build</span> and it
+<div class="paragraph"><p><span class="monospaced">%gradle_build</span> macro is very similar to <span class="monospaced">%mvn_build</span> and it
 takes the same arguments.  It is a wrapper for <span class="monospaced">gradle</span> command which
 enables so called "local mode" of artifact resolution - dependency
 artifacts are resolved from local system before trying other
 repositories (system Maven repositories are used through XMvn).  By
-default <span class="monospaced">%gradle_local</span> invokes Gradle with <span class="monospaced">build</span> goal, but when
+default <span class="monospaced">%gradle_build</span> invokes Gradle with <span class="monospaced">build</span> goal, but when
 tests are skipped (option <span class="monospaced">-f</span>) then <span class="monospaced">assemble</span> goal is invoked
 instead.</p></div>
-<div class="paragraph"><p>In most simple cases calling <span class="monospaced">%gradle_local</span> should be enough to
+<div class="paragraph"><p>In most simple cases calling <span class="monospaced">%gradle_build</span> should be enough to
 resolve all dependencies, but sometimes additional patching of build
 script may be necessary.  The following example patch adds XMvn
 resolver to make Gradle correctly resolve dependencies of build script
@@ -3994,7 +3994,7 @@ achieve the same things with <span class="monospaced">%mvn_*</span> macros, see 
 <div id="footnotes"><hr></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-09-07 09:34:20 UTC
+Last updated 2016-09-19 12:54:58 UTC
 </div>
 </div>
 </body>
