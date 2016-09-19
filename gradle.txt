@@ -42,16 +42,16 @@ BuildRequires:  gradle-local
 -------
 
 
-`%gradle_local` macro is very similar to `%mvn_build` and it
+`%gradle_build` macro is very similar to `%mvn_build` and it
 takes the same arguments.  It is a wrapper for `gradle` command which
 enables so called "local mode" of artifact resolution - dependency
 artifacts are resolved from local system before trying other
 repositories (system Maven repositories are used through XMvn).  By
-default `%gradle_local` invokes Gradle with `build` goal, but when
+default `%gradle_build` invokes Gradle with `build` goal, but when
 tests are skipped (option `-f`) then `assemble` goal is invoked
 instead.
 
-In most simple cases calling `%gradle_local` should be enough to
+In most simple cases calling `%gradle_build` should be enough to
 resolve all dependencies, but sometimes additional patching of build
 script may be necessary.  The following example patch adds XMvn
 resolver to make Gradle correctly resolve dependencies of build script
