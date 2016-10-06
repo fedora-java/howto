@@ -19,7 +19,7 @@ short description.
 
     Directory where architecture-specific JAR files are installed.  In
     particular JAR files containing or using native code (Java Native
-    Interface, NI) should be installed.
+    Interface, JNI) should be installed.
 
 *`%{_javadocdir}`* -- `/usr/share/javadoc`::
 
