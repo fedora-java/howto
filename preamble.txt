@@ -5,6 +5,7 @@ The authors of this document are:
 * Stanislav Ochotnicky, Red Hat
 * Ville Skyttä, JPackage Project
 * Michal Srb, Red Hat
+* Michael Simacek, Red Hat
 
 This document is free software; see the
 https://github.com/fedora-java/howto/blob/master/LICENSE[license]
