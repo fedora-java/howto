@@ -34,6 +34,12 @@ short description.
     Maven are installed.  Each POM must have name that strictly
     corresponds to JAR file in `%{_javadir}` or `%{_jnidir}`.
 
+*`%{_ivyxmldir}`* -- `/usr/share/ivy-xmls`::
+
+    Directory where `ivy.xml` files used by Apache Ivy are installed.
+    Each XML must have name that strictly corresponds to JAR file in
+    `%{_javadir}` or `%{_jnidir}`.
+
 
 .Other directories
 [glossary]
