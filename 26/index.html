@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="generator" content="AsciiDoc 8.6.6">
+<meta name="generator" content="AsciiDoc 8.6.9">
 <title>Java Packaging HOWTO</title>
 <style type="text/css">
 /* Shared CSS for AsciiDoc xhtml11 and html5 backends */
@@ -602,6 +602,8 @@ div.exampleblock > div.content, div.sidebarblock > div.content, div.listingblock
 div.verseblock { border-left-width: 0; margin-left: 3em; }
 div.quoteblock { border-left-width: 3px; margin-left: 0; margin-right: 0;}
 div.admonitionblock td.content { border-left: 3px solid #E8E8E8; }
+
+
 @media screen {
   body {
     max-width: 50em; /* approximately 80 characters wide */
@@ -680,7 +682,7 @@ toc: function (toclevels) {
 
   function tocEntries(el, toclevels) {
     var result = new Array;
-    var re = new RegExp('[hH]([2-'+(toclevels+1)+'])');
+    var re = new RegExp('[hH]([1-'+(toclevels+1)+'])');
     // Function that scans the DOM tree for header elements (the DOM2
     // nodeIterator API would be a better technique but not supported by all
     // browsers).
@@ -709,7 +711,7 @@ toc: function (toclevels) {
   var i;
   for (i = 0; i < toc.childNodes.length; i++) {
     var entry = toc.childNodes[i];
-    if (entry.nodeName == 'div'
+    if (entry.nodeName.toLowerCase() == 'div'
      && entry.getAttribute("class")
      && entry.getAttribute("class").match(/^toclevel/))
       tocEntriesToRemove.push(entry);
@@ -755,7 +757,7 @@ footnotes: function () {
   var entriesToRemove = [];
   for (i = 0; i < noteholder.childNodes.length; i++) {
     var entry = noteholder.childNodes[i];
-    if (entry.nodeName == 'div' && entry.getAttribute("class") == "footnote")
+    if (entry.nodeName.toLowerCase() == 'div' && entry.getAttribute("class") == "footnote")
       entriesToRemove.push(entry);
   }
   for (i = 0; i < entriesToRemove.length; i++) {
@@ -843,7 +845,7 @@ asciidoc.install(3);
 <div id="content">
 <div id="preamble">
 <div class="sectionbody">
-<div class="paragraph"><p>2016-10-06</p></div>
+<div class="paragraph"><p>2018-06-11</p></div>
 </div>
 </div>
 <div class="sect1">
@@ -1029,7 +1031,7 @@ Print out &#8220;Hello World from&#8221; and the name from previous step
 </ul></div>
 <div class="listingblock">
 <div class="title">Directory listing of example project</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1048,7 +1050,7 @@ http://www.gnu.org/software/src-highlite -->
 <div class="paragraph"><p>In this project all packages are under <span class="monospaced">src/</span> directory hierarchy.</p></div>
 <div class="listingblock">
 <div class="title">HelloWorld.java listing</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1068,7 +1070,7 @@ http://www.gnu.org/software/src-highlite -->
 <span style="color: #FF0000">}</span></tt></pre></div></div>
 <div class="listingblock">
 <div class="title">Java packages</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1112,7 +1114,7 @@ Adding required JAR files on JVM classpath
 <div class="paragraph"><div class="title">Compiling our project</div><p>The sample project can be compiled to a bytecode by Java compiler. Java
 compiler can be typically invoked from command line by command <span class="monospaced">javac</span>.</p></div>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1168,7 +1170,7 @@ Optionaly the source code of our project (called source JAR then)
 we don&#8217;t want to have in packages. You can inspect the contents of given
 JAR file by extracting it. That can be done with following command:</p></div>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1183,7 +1185,7 @@ CLASSPATH environment variable, or via <span class="monospaced">-cp</span> (<spa
 Java Virtual Machine.</p></div>
 <div class="listingblock">
 <div class="title">Setting the classpath</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1220,7 +1222,7 @@ usually in its root or in specialized directories with names such as
 <div class="paragraph"><div class="title">Maven</div><p>Build managed by Apache Maven is configured by an XML file that is by
 default named <span class="monospaced">pom.xml</span>. In its simpler form it usually looks like this:</p></div>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1255,7 +1257,7 @@ dependencies and plugins.</p></div>
 <div class="paragraph"><div class="title">Ant</div><p>Apache Ant is also configured by an XML file. It is by convention named
 <span class="monospaced">build.xml</span> and in its simple form it looks like this:</p></div>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1304,7 +1306,7 @@ the <span class="monospaced">ivy</span> namespace in project&#8217;s build file.
 built on top of JVM and extending Java&#8217;s syntax). It&#8217;s configuration
 file is <span class="monospaced">build.gradle</span>.</p></div>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1430,7 +1432,7 @@ you didn&#8217;t read it you don&#8217;t need to; the file listing is available 
 and the rest is not necessary for this section.</p></div>
 <div class="listingblock">
 <div class="title">Directory listing</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1447,67 +1449,67 @@ src/org/fedoraproject/helloworld/HelloWorld<span style="color: #990000">.</span>
 <div class="paragraph"><p>We packed the project directory into file <span class="monospaced">helloworld.tar.gz</span>.</p></div>
 <div class="listingblock">
 <div class="title">Example spec file</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
-<pre><tt><span style="color: #000000">00001:</span> <span style="font-style: italic"><span style="color: #9A1900"># Comments start with hash sign. Caution: macros in comments are still</span></span>
-<span style="color: #000000">00002:</span> <span style="font-style: italic"><span style="color: #9A1900"># expanded, which can lead to unexpected results. To stop macro from expanding,</span></span>
-<span style="color: #000000">00003:</span> <span style="font-style: italic"><span style="color: #9A1900"># double its percent sign (e.g. %%mvn_install)</span></span>
-<span style="color: #000000">00004:</span>
-<span style="color: #000000">00005:</span> <span style="font-style: italic"><span style="color: #9A1900"># First part usually consists of metadata such as package name, version, and</span></span>
-<span style="color: #000000">00006:</span> <span style="font-style: italic"><span style="color: #9A1900"># much more</span></span>
-<span style="color: #000000">00007:</span> <span style="font-weight: bold"><span style="color: #0000FF">Name:</span></span>           helloworld
-<span style="color: #000000">00008:</span> <span style="font-weight: bold"><span style="color: #0000FF">Version:</span></span>        <span style="color: #993399">1.0</span>
-<span style="color: #000000">00009:</span> <span style="font-weight: bold"><span style="color: #0000FF">Release:</span></span>        <span style="color: #993399">1</span>%{?dist}
-<span style="color: #000000">00010:</span> <span style="font-weight: bold"><span style="color: #0000FF">Summary:</span></span>        This is a minimal spec file example
-<span style="color: #000000">00011:</span>
-<span style="color: #000000">00012:</span> <span style="font-weight: bold"><span style="color: #0000FF">License:</span></span>        GPLv2+
-<span style="color: #000000">00013:</span> <span style="font-style: italic"><span style="color: #9A1900"># Homepage URL of the project</span></span>
-<span style="color: #000000">00014:</span> <span style="font-weight: bold"><span style="color: #0000FF">URL:</span></span>            <span style="text-decoration: underline"><span style="color: #0000FF">http://www.fedoraproject.org</span></span>
-<span style="color: #000000">00015:</span>
-<span style="color: #000000">00016:</span> <span style="font-style: italic"><span style="color: #9A1900"># Our source archive. %{name} expands to 'helloworld' so the resulting</span></span>
-<span style="color: #000000">00017:</span> <span style="font-style: italic"><span style="color: #9A1900"># tarball name would be 'helloworld.tar.gz'.</span></span>
-<span style="color: #000000">00018:</span> <span style="font-weight: bold"><span style="color: #0000FF">Source0:</span></span>    <span style="font-weight: bold"><span style="color: #000080">%{name}</span></span>.tar.gz
-<span style="color: #000000">00019:</span>
-<span style="color: #000000">00020:</span> <span style="font-style: italic"><span style="color: #9A1900"># Packages that contain only architecture independent files, such as shell</span></span>
-<span style="color: #000000">00021:</span> <span style="font-style: italic"><span style="color: #9A1900"># scripts or regular Java programs (not JNI libraries), should be marked as 'noarch'</span></span>
-<span style="color: #000000">00022:</span> <span style="font-weight: bold"><span style="color: #0000FF">BuildArch:</span></span>  noarch
-<span style="color: #000000">00023:</span>
-<span style="color: #000000">00024:</span> <span style="font-style: italic"><span style="color: #9A1900"># Project's build time dependency. We don't really need JUnit, it just</span></span>
-<span style="color: #000000">00025:</span> <span style="font-style: italic"><span style="color: #9A1900"># serves as and example</span></span>
-<span style="color: #000000">00026:</span> <span style="font-weight: bold"><span style="color: #0000FF">BuildRequires:</span></span> junit
-<span style="color: #000000">00027:</span>
-<span style="color: #000000">00028:</span> <span style="font-weight: bold"><span style="color: #000080">%description</span></span>
-<span style="color: #000000">00029:</span> Very short description since we have nothing to say.
-<span style="color: #000000">00030:</span>
-<span style="color: #000000">00031:</span> <span style="font-weight: bold"><span style="color: #000080">%prep</span></span>
-<span style="color: #000000">00032:</span> <span style="font-style: italic"><span style="color: #9A1900"># section for preparation of sources, applying patches</span></span>
-<span style="color: #000000">00033:</span> <span style="font-style: italic"><span style="color: #9A1900"># or other things which can be done before running the build</span></span>
-<span style="color: #000000">00034:</span> <span style="font-style: italic"><span style="color: #9A1900"># The macro setup is used to unpack sources</span></span>
-<span style="color: #000000">00035:</span> <span style="font-weight: bold"><span style="color: #000080">%setup</span></span> -q
-<span style="color: #000000">00036:</span>
-<span style="color: #000000">00037:</span> <span style="font-weight: bold"><span style="color: #000080">%build</span></span>
-<span style="color: #000000">00038:</span> <span style="font-style: italic"><span style="color: #9A1900"># Section for compiling and generally assembling the final pieces.</span></span>
-<span style="color: #000000">00039:</span> <span style="font-style: italic"><span style="color: #9A1900"># Our Makefile builds the project JAR file</span></span>
-<span style="color: #000000">00040:</span> make {?_smp_flags}
-<span style="color: #000000">00041:</span>
-<span style="color: #000000">00042:</span> <span style="font-weight: bold"><span style="color: #000080">%install</span></span>
-<span style="color: #000000">00043:</span> <span style="font-style: italic"><span style="color: #9A1900"># Installation into directory prepared by RPM expressed as %{buildroot}</span></span>
-<span style="color: #000000">00044:</span> install -p -m <span style="color: #993399">644</span> helloworld.jar <span style="font-weight: bold"><span style="color: #000080">%{buildroot}%{_javadir}</span></span>/helloworld.jar
-<span style="color: #000000">00045:</span>
-<span style="color: #000000">00046:</span> <span style="font-style: italic"><span style="color: #9A1900"># We use macro %jpackage_script to generate wrapper script for our JAR</span></span>
-<span style="color: #000000">00047:</span> <span style="font-style: italic"><span style="color: #9A1900"># Will be explained in later sections</span></span>
-<span style="color: #000000">00048:</span> <span style="font-weight: bold"><span style="color: #000080">%jpackage_script</span></span> org.fedoraproject.helloworld.HelloWorld "" "" <span style="font-weight: bold"><span style="color: #000080">%{name}</span></span> helloworld true
-<span style="color: #000000">00049:</span>
-<span style="color: #000000">00050:</span> <span style="font-style: italic"><span style="color: #9A1900"># List of files that this package installs on the system</span></span>
-<span style="color: #000000">00051:</span> <span style="font-weight: bold"><span style="color: #000080">%files</span></span>
-<span style="color: #000000">00052:</span> <span style="font-weight: bold"><span style="color: #000080">%{_javadir}</span></span>/helloworld.jar
-<span style="color: #000000">00053:</span> <span style="font-weight: bold"><span style="color: #000080">%{_bindir}</span></span>/helloworld
-<span style="color: #000000">00054:</span>
-<span style="color: #000000">00055:</span> <span style="font-weight: bold"><span style="color: #000080">%changelog</span></span>
-<span style="color: #000000">00056:</span> * Tue Mar <span style="color: #993399">19</span> <span style="color: #993399">2013</span> Stanislav Ochotnicky <span style="text-decoration: underline"><span style="color: #0000FF">&lt;sochotnicky@redhat.com&gt;</span></span> - <span style="color: #993399">1.0</span>-<span style="color: #993399">1</span>
-<span style="color: #000000">00057:</span> - This is first version</tt></pre></div></div>
+<pre><tt><span style="color: #000000">    1:</span> <span style="font-style: italic"><span style="color: #9A1900"># Comments start with hash sign. Caution: macros in comments are still</span></span>
+<span style="color: #000000">    2:</span> <span style="font-style: italic"><span style="color: #9A1900"># expanded, which can lead to unexpected results. To stop macro from expanding,</span></span>
+<span style="color: #000000">    3:</span> <span style="font-style: italic"><span style="color: #9A1900"># double its percent sign (e.g. %%mvn_install)</span></span>
+<span style="color: #000000">    4:</span>
+<span style="color: #000000">    5:</span> <span style="font-style: italic"><span style="color: #9A1900"># First part usually consists of metadata such as package name, version, and</span></span>
+<span style="color: #000000">    6:</span> <span style="font-style: italic"><span style="color: #9A1900"># much more</span></span>
+<span style="color: #000000">    7:</span> <span style="font-weight: bold"><span style="color: #0000FF">Name:</span></span>           helloworld
+<span style="color: #000000">    8:</span> <span style="font-weight: bold"><span style="color: #0000FF">Version:</span></span>        <span style="color: #993399">1.0</span>
+<span style="color: #000000">    9:</span> <span style="font-weight: bold"><span style="color: #0000FF">Release:</span></span>        <span style="color: #993399">1</span>%{?dist}
+<span style="color: #000000">   10:</span> <span style="font-weight: bold"><span style="color: #0000FF">Summary:</span></span>        This is a minimal spec file example
+<span style="color: #000000">   11:</span>
+<span style="color: #000000">   12:</span> <span style="font-weight: bold"><span style="color: #0000FF">License:</span></span>        GPLv2+
+<span style="color: #000000">   13:</span> <span style="font-style: italic"><span style="color: #9A1900"># Homepage URL of the project</span></span>
+<span style="color: #000000">   14:</span> <span style="font-weight: bold"><span style="color: #0000FF">URL:</span></span>            <span style="text-decoration: underline"><span style="color: #0000FF">http://www.fedoraproject.org</span></span>
+<span style="color: #000000">   15:</span>
+<span style="color: #000000">   16:</span> <span style="font-style: italic"><span style="color: #9A1900"># Our source archive. %{name} expands to 'helloworld' so the resulting</span></span>
+<span style="color: #000000">   17:</span> <span style="font-style: italic"><span style="color: #9A1900"># tarball name would be 'helloworld.tar.gz'.</span></span>
+<span style="color: #000000">   18:</span> <span style="font-weight: bold"><span style="color: #0000FF">Source0:</span></span>    <span style="font-weight: bold"><span style="color: #000080">%{name}</span></span>.tar.gz
+<span style="color: #000000">   19:</span>
+<span style="color: #000000">   20:</span> <span style="font-style: italic"><span style="color: #9A1900"># Packages that contain only architecture independent files, such as shell</span></span>
+<span style="color: #000000">   21:</span> <span style="font-style: italic"><span style="color: #9A1900"># scripts or regular Java programs (not JNI libraries), should be marked as 'noarch'</span></span>
+<span style="color: #000000">   22:</span> <span style="font-weight: bold"><span style="color: #0000FF">BuildArch:</span></span>  noarch
+<span style="color: #000000">   23:</span>
+<span style="color: #000000">   24:</span> <span style="font-style: italic"><span style="color: #9A1900"># Project's build time dependency. We don't really need JUnit, it just</span></span>
+<span style="color: #000000">   25:</span> <span style="font-style: italic"><span style="color: #9A1900"># serves as and example</span></span>
+<span style="color: #000000">   26:</span> <span style="font-weight: bold"><span style="color: #0000FF">BuildRequires:</span></span> junit
+<span style="color: #000000">   27:</span>
+<span style="color: #000000">   28:</span> <span style="font-weight: bold"><span style="color: #000080">%description</span></span>
+<span style="color: #000000">   29:</span> Very short description since we have nothing to say.
+<span style="color: #000000">   30:</span>
+<span style="color: #000000">   31:</span> <span style="font-weight: bold"><span style="color: #000080">%prep</span></span>
+<span style="color: #000000">   32:</span> <span style="font-style: italic"><span style="color: #9A1900"># section for preparation of sources, applying patches</span></span>
+<span style="color: #000000">   33:</span> <span style="font-style: italic"><span style="color: #9A1900"># or other things which can be done before running the build</span></span>
+<span style="color: #000000">   34:</span> <span style="font-style: italic"><span style="color: #9A1900"># The macro setup is used to unpack sources</span></span>
+<span style="color: #000000">   35:</span> <span style="font-weight: bold"><span style="color: #000080">%setup</span></span> -q
+<span style="color: #000000">   36:</span>
+<span style="color: #000000">   37:</span> <span style="font-weight: bold"><span style="color: #000080">%build</span></span>
+<span style="color: #000000">   38:</span> <span style="font-style: italic"><span style="color: #9A1900"># Section for compiling and generally assembling the final pieces.</span></span>
+<span style="color: #000000">   39:</span> <span style="font-style: italic"><span style="color: #9A1900"># Our Makefile builds the project JAR file</span></span>
+<span style="color: #000000">   40:</span> make {?_smp_flags}
+<span style="color: #000000">   41:</span>
+<span style="color: #000000">   42:</span> <span style="font-weight: bold"><span style="color: #000080">%install</span></span>
+<span style="color: #000000">   43:</span> <span style="font-style: italic"><span style="color: #9A1900"># Installation into directory prepared by RPM expressed as %{buildroot}</span></span>
+<span style="color: #000000">   44:</span> install -p -m <span style="color: #993399">644</span> helloworld.jar <span style="font-weight: bold"><span style="color: #000080">%{buildroot}%{_javadir}</span></span>/helloworld.jar
+<span style="color: #000000">   45:</span>
+<span style="color: #000000">   46:</span> <span style="font-style: italic"><span style="color: #9A1900"># We use macro %jpackage_script to generate wrapper script for our JAR</span></span>
+<span style="color: #000000">   47:</span> <span style="font-style: italic"><span style="color: #9A1900"># Will be explained in later sections</span></span>
+<span style="color: #000000">   48:</span> <span style="font-weight: bold"><span style="color: #000080">%jpackage_script</span></span> org.fedoraproject.helloworld.HelloWorld "" "" <span style="font-weight: bold"><span style="color: #000080">%{name}</span></span> helloworld true
+<span style="color: #000000">   49:</span>
+<span style="color: #000000">   50:</span> <span style="font-style: italic"><span style="color: #9A1900"># List of files that this package installs on the system</span></span>
+<span style="color: #000000">   51:</span> <span style="font-weight: bold"><span style="color: #000080">%files</span></span>
+<span style="color: #000000">   52:</span> <span style="font-weight: bold"><span style="color: #000080">%{_javadir}</span></span>/helloworld.jar
+<span style="color: #000000">   53:</span> <span style="font-weight: bold"><span style="color: #000080">%{_bindir}</span></span>/helloworld
+<span style="color: #000000">   54:</span>
+<span style="color: #000000">   55:</span> <span style="font-weight: bold"><span style="color: #000080">%changelog</span></span>
+<span style="color: #000000">   56:</span> * Tue Mar <span style="color: #993399">19</span> <span style="color: #993399">2013</span> Stanislav Ochotnicky <span style="text-decoration: underline"><span style="color: #0000FF">&lt;sochotnicky@redhat.com&gt;</span></span> - <span style="color: #993399">1.0</span>-<span style="color: #993399">1</span>
+<span style="color: #000000">   57:</span> - This is first version</tt></pre></div></div>
 <div class="paragraph"><p>RPM <span class="monospaced">spec</span> files contain several basic sections:</p></div>
 <div class="dlist"><dl>
 <dt class="hdlist1">
@@ -1702,7 +1704,7 @@ Has prescribed format. To prevent mistakes in format, it is
 <div class="paragraph"><p>To build RPM from <a href="rpm_project/helloworld.spec">this <span class="monospaced">spec</span> file</a> save it in
 your current directory and run <span class="monospaced">rpmbuild</span>:</p></div>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1753,7 +1755,7 @@ information like "which package contains Maven artifact
 <span class="monospaced">groupId:artifactId</span>".</p></div>
 <div class="listingblock">
 <div class="title">Find out which package provides given artifact</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1766,7 +1768,7 @@ configuration, but it is possible to explicitly specify any other
 repository. For example following command will query only Rawhide
 repository:</p></div>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1775,7 +1777,7 @@ apache-commons-io-<span style="color: #993399">1</span><span style="color: #9900
 <div class="paragraph"><p>Sometimes it may be useful to just list all the artifacts provided by
 given package:</p></div>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1797,7 +1799,7 @@ queried with this tool.</p></div>
 <div class="paragraph"><p>Common use case could be checking which Maven artifacts provide locally
 built packages.</p></div>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1873,7 +1875,7 @@ It&#8217;s a Java application launcher which spawns Java Virtual Machine
 (JVM), loads specified <span class="monospaced">.class</span> file and executes its main method.</p></div>
 <div class="paragraph"><p>Here is an example how to run sample Java project from section 1.1.1:</p></div>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1949,7 +1951,7 @@ classpaths easier.</p></div>
 coordinates as arguments and translates them to classpath-like string.
 See following example:</p></div>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1960,7 +1962,7 @@ file is stored in subdirectory under <span class="monospaced">%{_javadir}</span>
 pass <span class="monospaced">subdirectory/jarname</span> as an argument to <span class="monospaced">build-classpath</span>.
 Example:</p></div>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1974,7 +1976,7 @@ with symbolic/hard links to specified JAR files.Similarly to
 <span class="monospaced">build-classpath</span>, JARs can be identified by their names or artifact
 coordintes.</p></div>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1990,7 +1992,7 @@ rebuild-jar-repository</span> for more information.</p></div>
 <div class="paragraph"><p><span class="monospaced">build-classpath-directory</span> is a small tool which can be used to build
 classpath string from specified directory.</p></div>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -2229,7 +2231,7 @@ Requires and BuildRequires.
 Creating an alias is achieved by <span class="monospaced">%mvn_alias</span> macro.</p></div>
 <div class="listingblock">
 <div class="title">Example invocation</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -2323,7 +2325,7 @@ version. Non-compat artifact don&#8217;t have any version in the virtual
 provides.</p></div>
 <div class="listingblock">
 <div class="title">Example invocation of <span class="monospaced">%mvn_compat_version</span></div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -2372,7 +2374,7 @@ extension is omitted if it&#8217;s <span class="monospaced">jar</span> and class
 Version is present only for compat artifacts, but the trailing colon has
 to be present unless it&#8217;s a Jar artifact with no classifier.</p></div>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -2411,7 +2413,7 @@ dependencies.</p></div>
 <div class="paragraph"><div class="title">Querying Requires and Provides of built packages</div><p>The generated Requires and Provides of built packages can be queried
 using <span class="monospaced">rpm</span>:</p></div>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -2672,7 +2674,7 @@ require the full Java SDK will want to set that to <span class="monospaced">true
 results when looking up a JVM when some of the installed JRE&#8217;s don&#8217;t have the
 corresponding SDK (*-devel package) installed.</p></div>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -2693,7 +2695,7 @@ classpaths.</p></div>
 symlinks to the system JARs located in <span class="monospaced">%{_javadir}</span>. This task can be achieved
 using tool called <span class="monospaced">xmvn-subst</span>.</p></div>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -2750,7 +2752,7 @@ don&#8217;t build with Maven. If not you should try to search Maven Central
 Repository for it, ship it as another source and install it.</p></div>
 <div class="listingblock">
 <div class="title">Common spec file</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -2828,7 +2830,7 @@ dependencies.</p></div>
 and requires generation.</p></div>
 <div class="listingblock">
 <div class="title">Spec file</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -2880,7 +2882,7 @@ You can use dependency handling macros <span class="monospaced">%pom_add_dep</sp
 <span class="monospaced">%pom_remove_dep</span>, <span class="monospaced">%pom_change_dep</span> and generic <span class="monospaced">%pom_xpath_*</span> macros.
 For more details, see corresponding manpages.</p></div>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -2901,7 +2903,7 @@ with
 <span class="monospaced">%mvn_artifact</span>.</p></div>
 <div class="listingblock">
 <div class="title">Spec file using the <span class="monospaced">ivy:publish</span> task</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -2968,7 +2970,7 @@ Use generated file <span class="monospaced">.mfiles</span> lists to populate <sp
 </ol></div>
 <div class="listingblock">
 <div class="title">Common spec file sections</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -2995,51 +2997,51 @@ corresponding POM and metadata files are also installed.</p></div>
 <div class="paragraph"><p>This step by step guide will show you how to package Maven project. Let&#8217;s start with
 probably simplest spec file possible.</p></div>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
-<pre><tt><span style="color: #000000">00001:</span> <span style="font-weight: bold"><span style="color: #0000FF">Name:</span></span>           simplemaven
-<span style="color: #000000">00002:</span> <span style="font-weight: bold"><span style="color: #0000FF">Version:</span></span>        <span style="color: #993399">1.0</span>
-<span style="color: #000000">00003:</span> <span style="font-weight: bold"><span style="color: #0000FF">Release:</span></span>        <span style="color: #993399">1</span>%{?dist}
-<span style="color: #000000">00004:</span> <span style="font-weight: bold"><span style="color: #0000FF">Summary:</span></span>        Simple Maven project
-<span style="color: #000000">00005:</span> <span style="font-weight: bold"><span style="color: #0000FF">License:</span></span>        BSD
-<span style="color: #000000">00006:</span> <span style="font-weight: bold"><span style="color: #0000FF">URL:</span></span>            <span style="text-decoration: underline"><span style="color: #0000FF">http://www.example.com</span></span>
-<span style="color: #000000">00007:</span> <span style="font-weight: bold"><span style="color: #0000FF">Source0:</span></span>        <span style="text-decoration: underline"><span style="color: #0000FF">http://www.example.com/simplemaven-1.0.tar.gz</span></span>
-<span style="color: #000000">00008:</span> <span style="font-weight: bold"><span style="color: #0000FF">BuildArch:</span></span>      noarch
-<span style="color: #000000">00009:</span>
-<span style="color: #000000">00010:</span> <span style="font-weight: bold"><span style="color: #0000FF">BuildRequires:</span></span>  maven-local
-<span style="color: #000000">00011:</span>
-<span style="color: #000000">00012:</span> <span style="font-weight: bold"><span style="color: #000080">%description</span></span>
-<span style="color: #000000">00013:</span> This is simple Maven project.
-<span style="color: #000000">00014:</span>
-<span style="color: #000000">00015:</span> <span style="font-weight: bold"><span style="color: #000080">%package</span></span>        javadoc
-<span style="color: #000000">00016:</span> <span style="font-weight: bold"><span style="color: #0000FF">Summary:</span></span>        Javadoc for <span style="font-weight: bold"><span style="color: #000080">%{name}</span></span>
-<span style="color: #000000">00017:</span>
-<span style="color: #000000">00018:</span> <span style="font-weight: bold"><span style="color: #000080">%description</span></span> javadoc
-<span style="color: #000000">00019:</span> This package contains the API documentation for <span style="font-weight: bold"><span style="color: #000080">%{name}</span></span>.
-<span style="color: #000000">00020:</span>
-<span style="color: #000000">00021:</span> <span style="font-weight: bold"><span style="color: #000080">%prep</span></span>
-<span style="color: #000000">00022:</span> <span style="font-weight: bold"><span style="color: #000080">%setup</span></span> -q
-<span style="color: #000000">00023:</span>
-<span style="color: #000000">00024:</span> <span style="font-weight: bold"><span style="color: #000080">%build</span></span>
-<span style="color: #000000">00025:</span> <span style="font-weight: bold"><span style="color: #000080">%mvn_build</span></span>
-<span style="color: #000000">00026:</span>
-<span style="color: #000000">00027:</span> <span style="font-weight: bold"><span style="color: #000080">%install</span></span>
-<span style="color: #000000">00028:</span> <span style="font-weight: bold"><span style="color: #000080">%mvn_install</span></span>
-<span style="color: #000000">00029:</span>
-<span style="color: #000000">00030:</span> <span style="font-weight: bold"><span style="color: #000080">%files</span></span> -f .mfiles
-<span style="color: #000000">00031:</span> <span style="font-weight: bold"><span style="color: #000080">%dir</span></span> <span style="font-weight: bold"><span style="color: #000080">%{_javadir}</span></span>/<span style="font-weight: bold"><span style="color: #000080">%{name}</span></span>
-<span style="color: #000000">00032:</span> <span style="font-weight: bold"><span style="color: #000080">%files</span></span> javadoc -f .mfiles-javadoc
-<span style="color: #000000">00033:</span>
-<span style="color: #000000">00034:</span> <span style="font-weight: bold"><span style="color: #000080">%changelog</span></span>
-<span style="color: #000000">00035:</span> * Mon Oct <span style="color: #993399">14</span> <span style="color: #993399">2013</span> Michal Srb <span style="text-decoration: underline"><span style="color: #0000FF">&lt;msrb@redhat.com&gt;</span></span> - <span style="color: #993399">1.0</span>-<span style="color: #993399">1</span>
-<span style="color: #000000">00036:</span> - Initial packaging</tt></pre></div></div>
+<pre><tt><span style="color: #000000">    1:</span> <span style="font-weight: bold"><span style="color: #0000FF">Name:</span></span>           simplemaven
+<span style="color: #000000">    2:</span> <span style="font-weight: bold"><span style="color: #0000FF">Version:</span></span>        <span style="color: #993399">1.0</span>
+<span style="color: #000000">    3:</span> <span style="font-weight: bold"><span style="color: #0000FF">Release:</span></span>        <span style="color: #993399">1</span>%{?dist}
+<span style="color: #000000">    4:</span> <span style="font-weight: bold"><span style="color: #0000FF">Summary:</span></span>        Simple Maven project
+<span style="color: #000000">    5:</span> <span style="font-weight: bold"><span style="color: #0000FF">License:</span></span>        BSD
+<span style="color: #000000">    6:</span> <span style="font-weight: bold"><span style="color: #0000FF">URL:</span></span>            <span style="text-decoration: underline"><span style="color: #0000FF">http://www.example.com</span></span>
+<span style="color: #000000">    7:</span> <span style="font-weight: bold"><span style="color: #0000FF">Source0:</span></span>        <span style="text-decoration: underline"><span style="color: #0000FF">http://www.example.com/simplemaven-1.0.tar.gz</span></span>
+<span style="color: #000000">    8:</span> <span style="font-weight: bold"><span style="color: #0000FF">BuildArch:</span></span>      noarch
+<span style="color: #000000">    9:</span>
+<span style="color: #000000">   10:</span> <span style="font-weight: bold"><span style="color: #0000FF">BuildRequires:</span></span>  maven-local
+<span style="color: #000000">   11:</span>
+<span style="color: #000000">   12:</span> <span style="font-weight: bold"><span style="color: #000080">%description</span></span>
+<span style="color: #000000">   13:</span> This is simple Maven project.
+<span style="color: #000000">   14:</span>
+<span style="color: #000000">   15:</span> <span style="font-weight: bold"><span style="color: #000080">%package</span></span>        javadoc
+<span style="color: #000000">   16:</span> <span style="font-weight: bold"><span style="color: #0000FF">Summary:</span></span>        Javadoc for <span style="font-weight: bold"><span style="color: #000080">%{name}</span></span>
+<span style="color: #000000">   17:</span>
+<span style="color: #000000">   18:</span> <span style="font-weight: bold"><span style="color: #000080">%description</span></span> javadoc
+<span style="color: #000000">   19:</span> This package contains the API documentation for <span style="font-weight: bold"><span style="color: #000080">%{name}</span></span>.
+<span style="color: #000000">   20:</span>
+<span style="color: #000000">   21:</span> <span style="font-weight: bold"><span style="color: #000080">%prep</span></span>
+<span style="color: #000000">   22:</span> <span style="font-weight: bold"><span style="color: #000080">%setup</span></span> -q
+<span style="color: #000000">   23:</span>
+<span style="color: #000000">   24:</span> <span style="font-weight: bold"><span style="color: #000080">%build</span></span>
+<span style="color: #000000">   25:</span> <span style="font-weight: bold"><span style="color: #000080">%mvn_build</span></span>
+<span style="color: #000000">   26:</span>
+<span style="color: #000000">   27:</span> <span style="font-weight: bold"><span style="color: #000080">%install</span></span>
+<span style="color: #000000">   28:</span> <span style="font-weight: bold"><span style="color: #000080">%mvn_install</span></span>
+<span style="color: #000000">   29:</span>
+<span style="color: #000000">   30:</span> <span style="font-weight: bold"><span style="color: #000080">%files</span></span> -f .mfiles
+<span style="color: #000000">   31:</span> <span style="font-weight: bold"><span style="color: #000080">%dir</span></span> <span style="font-weight: bold"><span style="color: #000080">%{_javadir}</span></span>/<span style="font-weight: bold"><span style="color: #000080">%{name}</span></span>
+<span style="color: #000000">   32:</span> <span style="font-weight: bold"><span style="color: #000080">%files</span></span> javadoc -f .mfiles-javadoc
+<span style="color: #000000">   33:</span>
+<span style="color: #000000">   34:</span> <span style="font-weight: bold"><span style="color: #000080">%changelog</span></span>
+<span style="color: #000000">   35:</span> * Mon Oct <span style="color: #993399">14</span> <span style="color: #993399">2013</span> Michal Srb <span style="text-decoration: underline"><span style="color: #0000FF">&lt;msrb@redhat.com&gt;</span></span> - <span style="color: #993399">1.0</span>-<span style="color: #993399">1</span>
+<span style="color: #000000">   36:</span> - Initial packaging</tt></pre></div></div>
 <div class="paragraph"><p>The spec file above is a real world example how it may look like for simple Maven
 project. Both <span class="monospaced">%build</span> and <span class="monospaced">%install</span> sections consist only of one line.</p></div>
 <div class="paragraph"><p>Another interesting lines:</p></div>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -3048,7 +3050,7 @@ http://www.gnu.org/software/src-highlite -->
 to have Requires and BuildRequires on <span class="monospaced">jpackages-utils</span>, but build system adds
 these automatically. Package maintainer doesn&#8217;t need to list them explicitly.</p></div>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -3063,7 +3065,7 @@ for building of the project and therefore it may be needed to package them
 later.  Let&#8217;s remove the dependencies from <span class="monospaced">pom.xml</span>.</p></div>
 <div class="listingblock">
 <div class="title">Remove dependencies from pom.xml</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -3097,7 +3099,7 @@ will stop complaining about missing test scoped dependencies from now on.</p></d
 </div>
 <div class="paragraph"><p>We already have package which provides <span class="monospaced">commons-io:commons-io</span> artifact, let&#8217;s add it to the <span class="monospaced">BuildRequires</span>. Also disable tests for now.</p></div>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -3131,7 +3133,7 @@ http://www.gnu.org/software/src-highlite -->
 in <span class="monospaced">%{_javadir}</span>.</p></div>
 <div class="paragraph"><p>This can be easily achieved with <span class="monospaced">%mvn_file</span> macro:</p></div>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -3143,7 +3145,7 @@ http://www.gnu.org/software/src-highlite -->
 <div class="paragraph"><p>Another quite common thing to do is adding aliases to Maven artifact. Try to run <span class="monospaced">rpm
 -qp --provides</span> on your locally built RPM package:</p></div>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -3161,7 +3163,7 @@ how to solve the problems like these. Package maintainer can add aliases to actu
 Maven artifact.</p></div>
 <div class="listingblock">
 <div class="title">Add alias to Maven artifact</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -3169,7 +3171,7 @@ http://www.gnu.org/software/src-highlite -->
 <div class="paragraph"><p>See <a href="#mvn_alias">Additional Mappings</a> for more information on <span class="monospaced">%mvn_alias</span>.</p></div>
 <div class="paragraph"><p>Rebuild the pacakge and check <span class="monospaced">rpm -qp --provides</span> output again:</p></div>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -3206,7 +3208,7 @@ created outside of <span class="monospaced">%mvn_build</span> can be marked for 
 <span class="monospaced">%mvn_artifact</span> macro. This macro creates configuration for <span class="monospaced">%mvn_install</span>.</p></div>
 <div class="listingblock">
 <div class="title">Requesting installation of Maven artifact</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -3230,7 +3232,7 @@ other packages might require different IDs than those reflected in the installed
 POM.</p></div>
 <div class="listingblock">
 <div class="title">Adding more mappings for JAR/POM files example</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -3247,7 +3249,7 @@ also can create symbolic links to the JAR files. These links can be possibly
 located outside of the <span class="monospaced">%{_javadir}</span> directory.</p></div>
 <div class="listingblock">
 <div class="title">Adding file symlinks to compatibility</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -3268,7 +3270,7 @@ list of files related to specific artifact (typically JAR file, POM file and
 metadata). It can be later used in <span class="monospaced">%files</span> section of the spec file.</p></div>
 <div class="listingblock">
 <div class="title">Creating one subpackage for each generated artifact</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -3310,7 +3312,7 @@ each artifact has its own subpackage and default packaging, when all artifacts
 end up in the same package.</p></div>
 <div class="listingblock">
 <div class="title">Assigning multiple artifacts to single subpackage</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -3350,7 +3352,7 @@ name has a special meaning. And as you can guess, artifacts assigned into this
 package won&#8217;t be installed anywhere and the package itself won&#8217;t be created.</p></div>
 <div class="listingblock">
 <div class="title">Skipping installation of an artifact</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -3368,7 +3370,7 @@ systems. This problem can be easily solved by passing <span class="monospaced">-
 compiler, so one could add following line to the spec file:</p></div>
 <div class="listingblock">
 <div class="title">Overriding default XMvn configuration</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -3447,7 +3449,7 @@ because of different reasons. <span class="monospaced">%pom_remove_dep</span> ma
 ease this task:</p></div>
 <div class="listingblock">
 <div class="title">Removing dependencies from pom.xml files</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -3475,7 +3477,7 @@ without the need to enumerate all POMs manually. It recursively
 traverses all enabled submodules of given <span class="monospaced">pom.xml</span> by looking at
 <span class="monospaced">&lt;module&gt;</span> nodes. It is activated by <span class="monospaced">-r</span> switch.</p></div>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -3491,7 +3493,7 @@ correspond to ones used in Fedora and you need to modify them.
 argument to artifact coordinates specified by the second argument. Note
 this macro also works in recursive mode.</p></div>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -3505,7 +3507,7 @@ http://www.gnu.org/software/src-highlite -->
 Maven plugin invocations. Some examples:</p></div>
 <div class="listingblock">
 <div class="title">Removing Maven plugins from pom.xml files</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -3524,7 +3526,7 @@ various reasons and there is a need to disable them. This can be
 achieved by using <span class="monospaced">%pom_disable_module</span>, for example:</p></div>
 <div class="listingblock">
 <div class="title">Disabling specific project modules</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -3544,7 +3546,7 @@ reference (<span class="monospaced">%pom_add_parent</span>) and replacing existi
 one (<span class="monospaced">%pom_set_parent</span>).</p></div>
 <div class="listingblock">
 <div class="title">Manipulating parent POM references</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -3574,7 +3576,7 @@ with specified value.  Below you can find some examples for these
 macros.</p></div>
 <div class="listingblock">
 <div class="title">Less common pom.xml modifications</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -3652,7 +3654,7 @@ Use generated file <span class="monospaced">.mfiles</span> lists to populate <sp
 </ol></div>
 <div class="listingblock">
 <div class="title">Common spec file sections</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -3683,7 +3685,7 @@ resolver to make Gradle correctly resolve dependencies of build script
 itself.</p></div>
 <div class="listingblock">
 <div class="title">Patch enabling local mode</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -3896,7 +3898,7 @@ explicitly enumerated in <span class="monospaced">%files</span> section. Generat
 should be used instead.</p></div>
 <div class="paragraph"><p>Relevant parts of specfile using <span class="monospaced">%add_maven_depmap</span></p></div>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -3932,7 +3934,7 @@ cp -pr api/* <span style="color: #009900">$RPM_BUILD_ROOT</span><span style="fon
 <span style="font-weight: bold"><span style="color: #000080">%doc</span></span> <span style="font-weight: bold"><span style="color: #000080">%{_javadocdir}</span></span>/<span style="font-weight: bold"><span style="color: #000080">%{name}</span></span></tt></pre></div></div>
 <div class="paragraph"><p>The same specfile migrated to <span class="monospaced">%mvn_artifact</span> and <span class="monospaced">%mvn_install</span></p></div>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.5
+<div class="content"><!-- Generator: GNU source-highlight 3.1.6
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -4014,7 +4016,7 @@ achieve the same things with <span class="monospaced">%mvn_*</span> macros, see 
 <div id="footnotes"><hr></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-10-06 12:19:59 UTC
+Last updated 2018-06-11 10:09:21 UTC
 </div>
 </div>
 </body>
