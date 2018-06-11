@@ -167,28 +167,49 @@ finally, `%pom_xpath_set` replaces content of the arbitrary XML nodes
 with specified value.  Below you can find some examples for these
 macros.
 
-.Less common pom.xml modifications
+.Removing nodes
+`%pom_xpath_remove` can be used to remove arbitrary XML nodes.
 [source,spec]
 --------
 # Removes extensions from the build
 %pom_xpath_remove "pom:build/pom:extensions" module/pom.xml
+--------
 
-# Adds new dependency
-%pom_xpath_inject "pom:dependencies" "
-                  <dependency>
-                        <groupId>org.example.project</groupId>
-                        <artifactId>awesomeproject</artifactId>
-                        <version>1.0.0.GA</version>
-                  </dependency>"
+.Injecting nodes
+`%pom_xpath_inject` macro is capable of injecting arbitrary
+XML code to any `pom.xml` file. The injected code is the last argument
+- optional file paths go before it (unlike most other macros).
+To pass a multiline snippet, quote the argument as in the following
+example.
+[source,spec]
+--------
+# Add additional exclusion into maven-wagon dependency
+%pom_xpath_inject "pom:dependency[pom:artifactId='maven-wagon']/pom:exclusions" "
+<exclusion>
+    <groupId>antlr</groupId>
+    <artifactId>antlr</artifactId>
+</exclusion>"
+# The same thing, but with explicit file path
+%pom_xpath_inject "pom:dependency[pom:artifactId='maven-wagon']/pom:exclusions" pom.xml "
+<exclusion>
+    <groupId>antlr</groupId>
+    <artifactId>antlr</artifactId>
+</exclusion>"
+-------
 
+.Changing nodes' content
+`%pom_xpath_set` replaces content of the arbitrary XML nodes
+with specified value (can contain XML nodes).
+[source,spec]
+--------
 # Change groupId of a parent
 %pom_xpath_set "pom:parent/pom:groupId" "org.apache"
+--------
 
-# Use a bit more complex XPath to add additional exclusion into
-# maven-wagon dependency
-%pom_xpath_inject "pom:dependency[pom:artifactId[text()='maven-wagon']]/pom:exclusions" "
-        <exclusion>
-            <groupId>antlr</groupId>
-            <artifactId>antlr</artifactId>
-        </exclusion>"
+.Replacing nodes
+`%pom_xpath_replace` replaces a XML node with specified XML code.
+[source,spec]
+--------
+# Change groupId of a parent (note the difference from %pom_xpath_set)
+%pom_xpath_replace "pom:parent/pom:groupId" "<groupId>org.apache</groupId>"
 --------
