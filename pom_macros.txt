@@ -2,74 +2,77 @@ Sometimes Maven `pom.xml` files need to be patched before they are used
 to build packages. One could use traditional patches to maintain
 changes, but package maintainers should use `%pom_*` macros developed
 specially to ease this task.
-
-These macros are designed to be called from `%prep` section of spec
-files. They are documented in `/usr/lib/rpm/macros.d/macros.fjava` configuration
-file, which is also
-link:https://github.com/fedora-java/javapackages/blob/master/macros.d/macros.fjava[available
-online] and all the macros also have their own manual page. See the
-manual pages for technical details how to use them.
-
-.Handling XML namespaces
-[NOTE]
-=======
-POM files use a specific namespace - http://maven.apache.org/POM/4.0.0.
-The easiest way to respect this namespace in XPath expressions is
-prefixing all node names with `pom:`. For example,
-`pom:environment/pom:os` will work because it selects nodes from `pom`
-namespace, but `environment/os` won't find anything because it looks for
-nodes that don't belong to any XML namespace. It is needed even if the
-original POM file didn't contain proper POM namespace, since it will be
-added automatically.
-=======
 Using `%pom_*` macros not only increases readability of the spec file,
 but also improves maintainability of the package as there are no patches
-that would need to be rebased with each upstream release. Below are some
-examples added for convenience.
+that would need to be rebased with each upstream release.
+
+There are two categories of macros:
+
+- POM-specific macros - used to manipulate dependencies, modules... Some
+  of them also work on `ivy.xml` files.
+- Generic XML manipulation macros - used to add/remove/replace XML nodes
+
+The macros are designed to be called from `%prep` section of spec
+files. All the macros also have their own manual page.
+This document provides an overview of how they are used. For the
+technical details, refer to their respective manpages.
+
+.File specfication
+By default, a macro acts on a `pom.xml` file (or `ivy.xml` file) in the
+current directory. Different path can be explicitly specified via an
+argument (the last one, unless stated otherwise). Multiple paths can be
+specified as multiple arguments. If a path is a directory, it looks for
+a `pom.xml` file in that directory.
+For example:
+[source,spec]
+----
+# The following works on pom.xml file in the current directory
+%pom_remove_parent
+
+# The following works on submodule/pom.xml
+%pom_remove_parent submodule
+
+# The following works on submodule/pom.xml as well
+%pom_remove_parent submodule/pom.xml
+
+# The following works on submodule2/pom.xml and submodule2/pom.xml
+%pom_remove_parent submodule1 submodule2
+----
+
+.Recursive mode
+Most macros also support *recursive* mode, where the change is applied
+to the `pom.xml` and all its modules recursively. This can be used, for
+example, to remove a dependency from the whole project. It is activated
+by `-r` switch.
 
 
 [[pom_remove_dep]]
-==== Adding/removing dependencies
-
+==== Dependency manipulation macros
+.Removing dependencies
 Often dependencies specified in Maven `pom.xml` files need to be removed
 because of different reasons. `%pom_remove_dep` macro can be used to
 ease this task:
 
-.Removing dependencies from pom.xml files
 [source,spec]
 --------
-# Removes dependency on groupId:artifactId from ./pom.xml
-%pom_remove_dep groupId:artifactId
+# Removes dependency with groupId "foo" and artifactId "bar" from pom.xml
+%pom_remove_dep foo:bar
 
-# Removes dependency on groupId:artifactId from ./submodule/pom.xml
-%pom_remove_dep groupId:artifactId submodule
+# Removes dependency on all artifacts with groupId "foo" from pom.xml
+%pom_remove_dep foo:
 
-# Removes dependency on groupId:artifactId from ./submodule1/pom.xml and
-# ./submodule2/pom.xml
-%pom_remove_dep groupId:artifactId submodule1 submodule2
+# Removes dependency on all artifacts with artifactId "bar" from pom.xml
+%pom_remove_dep :bar
 
-# Removes dependency on groupId:artifactId from ./full/path/to/file.pom
-%pom_remove_dep groupId:artifactId full/path/to/file.pom
+# Removes dependency on all artifacts with artifactId "bar" from submodule1/pom.xml
+%pom_remove_dep :bar submodule1
 
-# Removes dependency on all artifacts in group groupId from ./pom.xml
-%pom_remove_dep groupId:
+# Removes dependency on all artifacts with artifactId "bar" from pom.xml
+# and all its submodules
+%pom_remove_dep -r :bar
 
-# Removes all dependencies from ./pom.xml
+# Removes all dependencies from pom.xml
 %pom_remove_dep :
---------
-
-.Recursive mode
-POM macros which remove elements can work in recursive mode, allowing
-the maintainer to remove given dependency/plugin from all the poms
-without the need to enumerate all POMs manually. It recursively
-traverses all enabled submodules of given `pom.xml` by looking at
-`<module>` nodes. It is activated by `-r` switch.
-
-[source,spec]
------
-# Removes dependency on groupId:artifactId from pom.xml and all its
-# submodules
-%pom_remove_dep -r groupId:artifactId
 -----
 
 .Adding dependencies
@@ -159,13 +162,25 @@ one (`%pom_set_parent`).
 The above macros cover the most common cases of modifying `pom.xml`
 files, however if there is a need to apply some less-common patches
 there are also three generic macros for modifying `pom.xml` files.
-`%pom_xpath_remove` can be used to remove arbitrary XML nodes, described
-by link:http://www.w3.org/TR/xpath/[XPath] 1.0 expressions.
-`%pom_xpath_inject` macro is capable of injecting arbitrary
-link:http://www.w3.org/TR/xml/[XML] code to any `pom.xml` file. And
-finally, `%pom_xpath_set` replaces content of the arbitrary XML nodes
-with specified value.  Below you can find some examples for these
-macros.
+These generic macros can also be applied to other XML files, such as
+Ant's `build.xml` files.
+
+They all take a link:http://www.w3.org/TR/xpath/[XPath] 1.0 expression
+that selects XML nodes to be acted on (removed, replaced...).
+
+.Handling XML namespaces
+[NOTE]
+=======
+POM files use a specific namespace - http://maven.apache.org/POM/4.0.0.
+The easiest way to respect this namespace in XPath expressions is
+prefixing all node names with `pom:`. For example,
+`pom:environment/pom:os` will work because it selects nodes from `pom`
+namespace, but `environment/os` won't find anything because it looks for
+nodes that don't belong to any XML namespace. It is needed even if the
+original POM file didn't contain proper POM namespace, since it will be
+added automatically. Note that this requirement is due to limitation of
+XPath 1.0 and we cannot work it around.
+=======
 
 .Removing nodes
 `%pom_xpath_remove` can be used to remove arbitrary XML nodes.
