@@ -13,9 +13,6 @@ ifdef::multiversion[]
 
 Available versions:
 
-- link:../snapshot/index.html[Snapshot version]
-- link:../latest/index.html[26 - Fedora rawhide]
-- link:../25/index.html[25 - Fedora 25]
-- link:../24/index.html[24 - Fedora 24]
+include::../version-links.txt[]
 
 endif::multiversion[]

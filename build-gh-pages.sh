@@ -1,14 +1,15 @@
 #!/bin/bash
 set -e
-if [ -n "$TRAVIS_BRANCH" ]; then
-    REMOTE="https://github.com/fedora-java/howto.git"
-else
-    REMOTE=..
-fi
+
+VERSIONS="27 28 29"
+REMOTE="https://github.com/fedora-java/howto.git"
+
 build_doc_version() {
     local ref="$1"
     local ver="${2:-$ref}"
-    git clone -b "$ref" "$REMOTE" "$ver" --depth 1 --single-branch
+    local remote;
+    [ -n "$TRAVIS_BRANCH" ] && remote="$REMOTE" || remote=..
+    git clone -b "$ref" "$remote" "$ver" --depth 1 --single-branch
     if [ "$ver" != snapshot ]; then cp snapshot/versions.txt "$ver/"; fi
     pushd "$ver"
     VERSION="$ver" ASCIIDOC_ARGS="-a multiversion" make
@@ -22,9 +23,14 @@ build_doc_version() {
 rm -rf doc_build
 mkdir doc_build
 cd doc_build
+echo "$VERSIONS" | tr ' ' '\n' | tac | sed '
+1     i - link:../snapshot/index.html[Snapshot version]
+1  s#.*#- link:../latest/index.html[& - Fedora Rawhide]#
+2,$s#.*#- link:../&/index.html[& - Fedora &]#
+' > version-links.txt
 git clone -b gh-pages "$REMOTE" gh-pages --single-branch
 build_doc_version master snapshot
-for version in 24 25 26; do
+for version in $VERSIONS; do
     build_doc_version "$version"
     latest=$version
 done
@@ -42,10 +48,4 @@ if [ -n "$TRAVIS_BRANCH" ]; then
         chmod 600 travis-key
         ssh-agent sh -c "ssh-add travis-key && git push git@github.com:fedora-java/howto.git gh-pages:gh-pages"
     fi
-else
-    # probaly executed by human
-    git commit -m 'Rebuild documentation'
-    git push ../.. gh-pages:gh-pages
-    cd ../..
-    echo "Upload the documentation with 'git push origin gh-pages:gh-pages'"
 fi
