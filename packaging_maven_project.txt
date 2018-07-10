@@ -135,7 +135,7 @@ Maven artifact.
 .Add alias to Maven artifact
 [source,spec]
 ------
-%mnv_alias org.example:simplemaven simplemaven:simplemaven
+%mvn_alias org.example:simplemaven simplemaven:simplemaven
 ------
 
 See <<mvn_alias,Additional Mappings>> for more information on `%mvn_alias`.
