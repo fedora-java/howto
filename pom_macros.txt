@@ -171,7 +171,7 @@ that selects XML nodes to be acted on (removed, replaced...).
 .Handling XML namespaces
 [NOTE]
 =======
-POM files use a specific namespace - http://maven.apache.org/POM/4.0.0.
+POM files use a specific namespace - \http://maven.apache.org/POM/4.0.0.
 The easiest way to respect this namespace in XPath expressions is
 prefixing all node names with `pom:`. For example,
 `pom:environment/pom:os` will work because it selects nodes from `pom`
