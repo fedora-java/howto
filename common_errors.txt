@@ -99,8 +99,9 @@ done by using `%pom_add_dep` macro. See section about
 === Requires cannot be generated
 
 ------
-Following dependencies were not resolved and requires cannot be generated. Either remove the dependency from pom.xml or add proper packages to BuildRequires:
-org.apache.maven.doxia:doxia-core::tests:UNKNOWN
+Following dependencies were not resolved and requires cannot be generated.
+Either remove the dependency from pom.xml or add proper packages to
+BuildRequires: org.apache.maven.doxia:doxia-core::tests:UNKNOWN
 ------
 
 Most often this error happens when one part of the package depends on an
