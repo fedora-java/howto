@@ -11,9 +11,9 @@ essential to discover the real cause of the build failure
 
 2. versions of relevant packages
 
-Quite often it's necessary to chech versions of packages involved in
+Quite often it's necessary to check versions of packages involved in
 the bug.  There may be multiple reasons for doing that.  One of them
-is ruling out possible causes basing on changes madein each version.
+is ruling out possible causes basing on changes made in each version.
 Ideally a list of all installed packages with their versions (`rpm
 -qa`) should be included.
 
