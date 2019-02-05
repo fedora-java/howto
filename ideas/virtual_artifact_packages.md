@@ -13,7 +13,7 @@ For example, if package `foo` contains artifacts
 will be created for package `foo`: one named
 `mvn(com.example:foo-artifact)` and the other named `mvn(bar:baz)`.
 
-Craeting virtual packages for Maven artifacts has several advantages.
+Creating virtual packages for Maven artifacts has several advantages.
 It makes it easy to search which package provides given artifact, for
 example `dnf repoquery --whatprovides 'mvn(bar:baz)'` in the previous
 example would return `foo`.  Virtual packages also make it easier to

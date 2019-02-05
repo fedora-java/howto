@@ -14,7 +14,7 @@ which can be used in situations requiring writing custom build logic.
 Flexibility means that Gradle build scripts can differ significantly
 across different projects and there is no universal way of packaging
 Gradle projects.  However, in most common situations the following
-steps can are necessary:
+steps are necessary:
 
 1. Add build-dependency on `gradle-local`
 2. In the `%build` section of the spec use `%gradle_build` macro to
