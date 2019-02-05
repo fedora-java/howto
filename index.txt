@@ -58,8 +58,9 @@ include::migration.txt[]
 
 
 [appendix]
-== Appendix
-Ideally include manpages for mvn_ and pom_ macros here
+[[manpages]]
+== Manpages
+include::manpages.txt[]
 
 [bibliography]
 References
