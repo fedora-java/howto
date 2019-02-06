@@ -64,6 +64,19 @@ dependency right away. Maintainer could package compile time dependencies first 
 rest for later (test dependencies, ...). But Maven needs to know that it shouldn't try to run tests now. This can be achieved by passing `-f` option to `%mvn_build` macro.  Maven
 will stop complaining about missing test scoped dependencies from now on.
 
+[TIP]
+======
+Another major reason to disable the test phase is to speed up the local build
+process. This can also be achieved by specifying an additional switch
+`--without=tests` to the `fedpkg` or the `mock` tool instead of adding a switch
+to `%mvn_build`.
+
+Another switch `--without=javadoc` causes the build to skip Javadoc generation.
+
+Note that to actually build the package with tests disabled you have to specify
+the switch to `%mvn_build`.
+======
+
 [NOTE]
 ======
 It is always recommended to run all available test suites during build. It greatly improves quality of the package.
