@@ -14,7 +14,7 @@ include::preamble.txt[]
 == Abstract
 This document aims to help developers create and maintain Java packages in
 Fedora. It *does not* supersede or replace
-link:https://fedoraproject.org/wiki/Packaging:Java[Java Packaging Guidelines],
+link:https://docs.fedoraproject.org/en-US/packaging-guidelines/Java/[Java Packaging Guidelines],
 but rather aims to document tools and techniques used for packaging Java
 software on Fedora.
 
@@ -66,7 +66,7 @@ References
 ----------
 
 [bibliography]
-- [[[guidelines]]] https://fedoraproject.org/wiki/Packaging:Java
+- [[[guidelines]]] https://docs.fedoraproject.org/en-US/packaging-guidelines/Java/
 - [[[walsh-muellner]]] Norman Walsh & Leonard Muellner.
   'DocBook - The Definitive Guide'. O'Reilly & Associates. 1999.
   ISBN 1-56592-580-7.
