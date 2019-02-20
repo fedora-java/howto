@@ -845,7 +845,7 @@ asciidoc.install(3);
 <div id="content">
 <div id="preamble">
 <div class="sectionbody">
-<div class="paragraph"><p>2019-02-11</p></div>
+<div class="paragraph"><p>2019-02-20</p></div>
 </div>
 </div>
 <div class="sect1">
@@ -3067,6 +3067,22 @@ will stop complaining about missing test scoped dependencies from now on.</p></d
 <div class="admonitionblock">
 <table><tr>
 <td class="icon">
+<img src="./images/icons/tip.png" alt="Tip">
+</td>
+<td class="content">
+<div class="paragraph"><p>Another major reason to disable the test phase is to speed up the local build
+process. This can also be achieved by specifying an additional switch
+<span class="monospaced">--without=tests</span> to the <span class="monospaced">fedpkg</span> or the <span class="monospaced">mock</span> tool instead of adding a switch
+to <span class="monospaced">%mvn_build</span>.</p></div>
+<div class="paragraph"><p>Another switch <span class="monospaced">--without=javadoc</span> causes the build to skip Javadoc generation.</p></div>
+<div class="paragraph"><p>Note that to actually build the package with tests disabled you have to specify
+the switch to <span class="monospaced">%mvn_build</span>.</p></div>
+</td>
+</tr></table>
+</div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
 <img src="./images/icons/note.png" alt="Note">
 </td>
 <td class="content">
@@ -4052,7 +4068,7 @@ achieve the same things with <span class="monospaced">%mvn_*</span> macros, see 
 <div id="footnotes"><hr></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-02-11 17:05:57 UTC
+Last updated 2019-02-20 23:14:47 UTC
 </div>
 </div>
 </body>
