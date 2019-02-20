@@ -1,5 +1,5 @@
 sudo: required
 install:
   - sudo apt-get update
-  - sudo apt-get install asciidoc dia source-highlight colorized-logs
+  - sudo apt-get install asciidoc dia source-highlight kbtin
 script: ./build-gh-pages.sh
