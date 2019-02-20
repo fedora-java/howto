@@ -3,131 +3,131 @@ This section contains manpages for +mvn_*+ and +pom_*+ macros.
 === mvn_alias
 {_} +
 ++++++++++++++++++++++++++
-include::manpages/mvn_alias.html[]
+include::manpages/mvn_alias.7.html[]
 ++++++++++++++++++++++++++
 
 === mvn_artifact
 {_} +
 ++++++++++++++++++++++++++
-include::manpages/mvn_artifact.html[]
+include::manpages/mvn_artifact.7.html[]
 ++++++++++++++++++++++++++
 
 === mvn_build
 {_} +
 ++++++++++++++++++++++++++
-include::manpages/mvn_build.html[]
+include::manpages/mvn_build.7.html[]
 ++++++++++++++++++++++++++
 
 === mvn_compat_version
 {_} +
 ++++++++++++++++++++++++++
-include::manpages/mvn_compat_version.html[]
+include::manpages/mvn_compat_version.7.html[]
 ++++++++++++++++++++++++++
 
 === mvn_config
 {_} +
 ++++++++++++++++++++++++++
-include::manpages/mvn_config.html[]
+include::manpages/mvn_config.7.html[]
 ++++++++++++++++++++++++++
 
 === mvn_file
 {_} +
 ++++++++++++++++++++++++++
-include::manpages/mvn_file.html[]
+include::manpages/mvn_file.7.html[]
 ++++++++++++++++++++++++++
 
 === mvn_install
 {_} +
 ++++++++++++++++++++++++++
-include::manpages/mvn_install.html[]
+include::manpages/mvn_install.7.html[]
 ++++++++++++++++++++++++++
 
 === mvn_package
 {_} +
 ++++++++++++++++++++++++++
-include::manpages/mvn_package.html[]
+include::manpages/mvn_package.7.html[]
 ++++++++++++++++++++++++++
 
 === pom_add_dep
 {_} +
 ++++++++++++++++++++++++++
-include::manpages/pom_add_dep.html[]
+include::manpages/pom_add_dep.7.html[]
 ++++++++++++++++++++++++++
 
 === pom_add_parent
 {_} +
 ++++++++++++++++++++++++++
-include::manpages/pom_add_parent.html[]
+include::manpages/pom_add_parent.7.html[]
 ++++++++++++++++++++++++++
 
 === pom_add_plugin
 {_} +
 ++++++++++++++++++++++++++
-include::manpages/pom_add_plugin.html[]
+include::manpages/pom_add_plugin.7.html[]
 ++++++++++++++++++++++++++
 
 === pom_change_dep
 {_} +
 ++++++++++++++++++++++++++
-include::manpages/pom_change_dep.html[]
+include::manpages/pom_change_dep.7.html[]
 ++++++++++++++++++++++++++
 
 === pom_disable_module
 {_} +
 ++++++++++++++++++++++++++
-include::manpages/pom_disable_module.html[]
+include::manpages/pom_disable_module.7.html[]
 ++++++++++++++++++++++++++
 
 === pom_remove_dep
 {_} +
 ++++++++++++++++++++++++++
-include::manpages/pom_remove_dep.html[]
+include::manpages/pom_remove_dep.7.html[]
 ++++++++++++++++++++++++++
 
 === pom_remove_parent
 {_} +
 ++++++++++++++++++++++++++
-include::manpages/pom_remove_parent.html[]
+include::manpages/pom_remove_parent.7.html[]
 ++++++++++++++++++++++++++
 
 === pom_remove_plugin
 {_} +
 ++++++++++++++++++++++++++
-include::manpages/pom_remove_plugin.html[]
+include::manpages/pom_remove_plugin.7.html[]
 ++++++++++++++++++++++++++
 
 === pom_set_parent
 {_} +
 ++++++++++++++++++++++++++
-include::manpages/pom_set_parent.html[]
+include::manpages/pom_set_parent.7.html[]
 ++++++++++++++++++++++++++
 
 === pom_xpath_disable
 {_} +
 ++++++++++++++++++++++++++
-include::manpages/pom_xpath_disable.html[]
+include::manpages/pom_xpath_disable.7.html[]
 ++++++++++++++++++++++++++
 
 === pom_xpath_inject
 {_} +
 ++++++++++++++++++++++++++
-include::manpages/pom_xpath_inject.html[]
+include::manpages/pom_xpath_inject.7.html[]
 ++++++++++++++++++++++++++
 
 === pom_xpath_remove
 {_} +
 ++++++++++++++++++++++++++
-include::manpages/pom_xpath_remove.html[]
+include::manpages/pom_xpath_remove.7.html[]
 ++++++++++++++++++++++++++
 
 === pom_xpath_replace
 {_} +
 ++++++++++++++++++++++++++
-include::manpages/pom_xpath_replace.html[]
+include::manpages/pom_xpath_replace.7.html[]
 ++++++++++++++++++++++++++
 
 === pom_xpath_set
 {_} +
 ++++++++++++++++++++++++++
-include::manpages/pom_xpath_set.html[]
+include::manpages/pom_xpath_set.7.html[]
 ++++++++++++++++++++++++++
