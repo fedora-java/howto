@@ -17,4 +17,4 @@ software on Fedora.
 
 
 :numbered:
-include_asciidoc(sections)
+include_sections(sections)
