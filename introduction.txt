@@ -1,3 +1,5 @@
+== Introduction
+
 Clean Java packaging has historically been a daunting task.  Lack of
 any standard addressing the physical location of files on the system
 combined with the common use of licensing terms that only allow free
@@ -40,11 +42,3 @@ point.
 
 It should be noted that especially in this section we might sacrifice
 correctness for simplicity.
-
-[[XFor_Packagers]]
-=== For Packagers
-include::introduction_for_packagers.txt[]
-
-[[XFor_Devs]]
-=== For Java Developers
-include::introduction_for_developers.txt[]

@@ -1,3 +1,6 @@
+[[helper_macros]]
+=== Macros for POM modification
+
 Sometimes Maven `pom.xml` files need to be patched before they are used
 to build packages. One could use traditional patches to maintain
 changes, but package maintainers should use `%pom_*` macros developed

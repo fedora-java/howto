@@ -3,10 +3,7 @@ Java Packaging HOWTO
 
 {localdate}
 
-== Versions of this document
 include::versions.txt[]
-
-== Authors and contributing
 include::preamble.txt[]
 
 :numbered!:
@@ -20,44 +17,37 @@ software on Fedora.
 
 
 :numbered:
-== Introduction
 include::introduction.txt[]
-
-== Java Specifics in Fedora for Users and Developers
+// {
+include::introduction_for_packagers.txt[]
+include::introduction_for_developers.txt[]
+// }
 include::fedora_java_specifics.txt[]
-
-== Java Specifics in Fedora for Packagers
 include::fedora_java_packaging_specifics.txt[]
-
-== Packaging Best Practices
+// {
+include::directory_layout.txt[]
+include::jar_file_id.txt[]
+// {
+include::jar_file_id_relative.txt[]
+include::jar_file_id_artifact.txt[]
+include::jar_file_id_aliases.txt[]
+include::jar_file_id_compat.txt[]
+// }
+include::dependency_handling.txt[]
+include::javadoc_packages.txt[]
+include::core_java_packages.txt[]
+// }
 include::packaging_best_practices.txt[]
-
-== Generic Java Builds
 include::generic_java_build.txt[]
-
-[[ant]]
-== Ant
 include::ant.txt[]
-
-[[maven]]
-== Maven
 include::maven.txt[]
-
-[[gradle]]
-== Gradle
+// {
+include::packaging_maven_project.txt[]
+include::mvn_macros.txt[]
+include::pom_macros.txt[]
+// }
 include::gradle.txt[]
-
-== Common Errors
 include::common_errors.txt[]
-
-== Integration of Maven and XMvn Tools
 include::integration_maven_xmvn.txt[]
-
-== Migration from older tools
 include::migration.txt[]
-
-
-[appendix]
-[[manpages]]
-== Manpages
 include::manpages.txt[]

@@ -1,3 +1,6 @@
+[[packaging_maven_project]]
+=== Packaging Maven project
+
 This step by step guide will show you how to package Maven project. Let's start with
 probably simplest spec file possible.
 

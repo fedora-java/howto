@@ -1,3 +1,5 @@
+=== JAR File Identification
+
 Complex Java applications usually consist of multiple components.
 Each component can have multiple implementations, called _artifacts_.
 Artifacts in Java context are _usually_ JAR files, but can also be WAR
@@ -12,17 +14,3 @@ impossible to every naming scheme, so there are some simplifications.
 
 This chapter describes artifact different ways to identify and locate
 artifacts in system repository.
-
-==== Relative paths
-include::jar_file_id_relative.txt[]
-
-==== Artifact specification
-include::jar_file_id_artifact.txt[]
-
-[[aliases]]
-==== Aliases
-include::jar_file_id_aliases.txt[]
-
-[[compat_packages]]
-==== Compatibility versions
-include::jar_file_id_compat.txt[]

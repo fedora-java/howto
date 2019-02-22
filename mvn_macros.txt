@@ -1,3 +1,9 @@
+[[mvn_macros]]
+=== Macros for Maven build configuration
+Maven builds can be configured to produce alternative layout, include additional
+aliases in package metadata or create separate subpackages for certain
+artifacts.
+
 [[mvn_artifact]]
 ==== Installing additional artifacts
 It is possible to explicitly request an installation of any Maven artifact

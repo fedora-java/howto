@@ -1,3 +1,5 @@
+==== Artifact specification
+
 As noted in previous section, every artifact can be uniquely identified
 by its file path.  However this is not always the preferred way of
 artifact identification.

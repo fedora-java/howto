@@ -1,3 +1,5 @@
+== Packaging Best Practices
+
 Packaging Java has certain specifics that will be covered in this section which
 will cover basic packaging principles
 

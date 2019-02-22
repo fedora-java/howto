@@ -1,3 +1,6 @@
+[[compat_packages]]
+==== Compatibility versions
+
 Handling of compatibility packages, versioned jars etc.
 
 WORK IN PROGRESS

@@ -1,3 +1,5 @@
+=== Directory Layout
+
 This section describes most of directories used for Java packaging.
 Each directory is named in RPM macro form, which shows how it should
 be used in RPM spec files.  Symbolic name is followed by usual macro

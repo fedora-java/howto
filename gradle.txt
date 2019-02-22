@@ -1,3 +1,6 @@
+[[gradle]]
+== Gradle
+
 [quote,,from Gradle package description]
 ______
 Gradle combines the power and flexibility of Ant with the dependency

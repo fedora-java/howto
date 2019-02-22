@@ -1,3 +1,5 @@
+== Migration from older tools
+
 This section describes how to migrate packages that use older deprecated
 tools to current ones.
 
