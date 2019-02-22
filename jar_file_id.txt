@@ -14,3 +14,9 @@ impossible to every naming scheme, so there are some simplifications.
 
 This chapter describes artifact different ways to identify and locate
 artifacts in system repository.
+
+
+include_asciidoc(jar_file_id_relative)
+include_asciidoc(jar_file_id_artifact)
+include_asciidoc(jar_file_id_aliases)
+include_asciidoc(jar_file_id_compat)
