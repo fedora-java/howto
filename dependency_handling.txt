@@ -80,7 +80,7 @@ using `rpm`:
 --------------
 rpm -qp --provides path/to/example-1.0.noarch.rpm
 rpm -qp --requires path/to/example-1.0.noarch.rpm
--------------
+--------------
 
 [TIP]
 =====

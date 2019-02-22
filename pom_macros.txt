@@ -73,7 +73,7 @@ ease this task:
 
 # Removes all dependencies from pom.xml
 %pom_remove_dep :
------
+--------
 
 .Adding dependencies
 Dependencies can also be added to `pom.xml` with `%pom_add_dep` macro.
@@ -210,7 +210,7 @@ example.
     <groupId>antlr</groupId>
     <artifactId>antlr</artifactId>
 </exclusion>"
--------
+--------
 
 .Changing nodes' content
 `%pom_xpath_set` replaces content of the arbitrary XML nodes

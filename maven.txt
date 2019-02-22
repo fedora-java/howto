@@ -30,7 +30,7 @@ BuildRequires:  maven-local
 %dir %{_javadir}/%{name}
 
 %files javadoc -f .mfiles-javadoc
--------
+--------
 
 
 The macros `%mvn_build` and `%mvn_install` automatically handle building of the

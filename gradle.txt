@@ -39,7 +39,7 @@ BuildRequires:  gradle-local
 %files -f .mfiles
 
 %files javadoc -f .mfiles-javadoc
--------
+--------
 
 
 `%gradle_build` macro is very similar to `%mvn_build` and it
@@ -72,7 +72,7 @@ index a3cb553..50dd2a4 100644
      maven { url 'https://repo.gradle.org/gradle/libs' }
      mavenCentral()
  }
--------
+--------
 
 
 Once Gradle build completes, all Maven artifacts produced by the build

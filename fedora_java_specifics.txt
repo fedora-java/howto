@@ -50,7 +50,7 @@ There are 3 programs which provide 'java'.
    3           /usr/lib/jvm/jre-1.8.0-openjdk.x86_64/bin/java
 
 Enter to keep the current selection[+], or type selection number:
--------
+--------
 
 Example above shows how to chose default Java environment. `java`
 command will then point to the Java implementation provided by given
