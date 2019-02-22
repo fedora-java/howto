@@ -65,7 +65,7 @@ $(antora_root)/pages/%.adoc: macros.m4 %.txt
 	@mkdir -p $(@D)
 	m4 -g -P -DFORMAT=antora $^ >$@
 
-$(antora_root)/pages/manpage_%.adoc: macros.m4 manpage.txt
+$(antora_root)/pages/manpage_%.adoc: macros.m4 manpage.m4
 	@mkdir -p $(@D)
 	m4 -g -P -DFORMAT=antora -DMANPAGE=$(*F) $^ >$@
 
