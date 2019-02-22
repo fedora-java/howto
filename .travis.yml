@@ -1,5 +1,5 @@
 sudo: required
 install:
   - sudo apt-get update
-  - sudo apt-get install asciidoc dia source-highlight kbtin
+  - sudo apt-get install asciidoc dia source-highlight kbtin m4
 script: ./build-gh-pages.sh
