@@ -54,7 +54,8 @@ clean:
 
 antora_root = modules/ROOT
 antora_pages = $(patsubst %.txt,$(antora_root)/pages/%.adoc,$(modules))
-antora_manpages = $(patsubst %,$(antora_root)/examples/manpages/%.7.html,$(manpages))
+antora_manpages = $(patsubst %,$(antora_root)/pages/manpage_%.adoc,$(manpages))
+antora_manpages_html = $(patsubst %,$(antora_root)/examples/manpages/%.7.html,$(manpages))
 antora_examples = \
     $(antora_root)/examples/rpm_project/helloworld.spec \
     $(antora_root)/examples/java_project/src/org/fedoraproject/helloworld/HelloWorld.java \
@@ -62,13 +63,17 @@ antora_examples = \
 
 $(antora_root)/pages/%.adoc: macros.m4 %.txt
 	@mkdir -p $(@D)
-	m4 -P -DFORMAT=antora $^ >$@
+	m4 -g -P -DFORMAT=antora $^ >$@
+
+$(antora_root)/pages/manpage_%.adoc: macros.m4 manpage.txt
+	@mkdir -p $(@D)
+	m4 -g -P -DFORMAT=antora -DMANPAGE=$(*F) $^ >$@
 
 $(antora_root)/examples/%: %
 	@mkdir -p $(@D)
 	cp -p $< $@
 
-antora: $(antora_pages) $(antora_manpages) $(antora_examples)
+antora: $(antora_pages) $(antora_manpages) $(antora_manpages_html) $(antora_examples)
 
 antora-preview: antora
 	podman run --rm -it -v $(CURDIR):/antora:z antora/antora --html-url-extension-style=indexify site.yml
