@@ -62,15 +62,6 @@ include::migration.txt[]
 == Manpages
 include::manpages.txt[]
 
-[bibliography]
-References
-----------
-
-[bibliography]
-- [[[guidelines]]] https://docs.fedoraproject.org/en-US/packaging-guidelines/Java/
-- [[[walsh-muellner]]] Norman Walsh & Leonard Muellner.
-  'DocBook - The Definitive Guide'. O'Reilly & Associates. 1999.
-  ISBN 1-56592-580-7.
 
 ifdef::backend-docbook[]
 [index]
