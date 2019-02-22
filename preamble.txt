@@ -1,3 +1,5 @@
+== Authors and contributing
+
 The authors of this document are:
 
 * Mikolaj Izdebski, Red Hat

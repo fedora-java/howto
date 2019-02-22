@@ -1,3 +1,6 @@
+[[aliases]]
+==== Aliases
+
 Aliases working in two ways:
 
 * Symlinks for paths

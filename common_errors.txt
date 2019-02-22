@@ -1,3 +1,5 @@
+== Common Errors
+
 This section contains explanations and solutions/workarounds for common
 errors which can be encountered during packaging.
 

@@ -1,3 +1,5 @@
+=== Core Java packages
+
 ==== JVM
 
 Fedora allows multiple Java Virtual Machines (JVMs) to be packaged
