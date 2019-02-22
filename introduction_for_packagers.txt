@@ -193,7 +193,7 @@ default named `pom.xml`. In its simpler form it usually looks like this:
         </dependency>
     </dependencies>
 </project>
----------
+-------------
 
 
 It describes project's build process in a declarative way, without

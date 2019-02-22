@@ -36,7 +36,7 @@ ant test
 %dir %{_javadir}/%{name}
 
 %files javadoc -f .mfiles-javadoc
-------
+-------------
 
 Details:
 
@@ -90,7 +90,7 @@ ant -Divy.mode=local test
 
 %files -f .mfiles
 %files -javadoc -f .mfiles-javadoc
---------
+--------------
 
 Details:
 
