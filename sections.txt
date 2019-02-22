@@ -1,34 +1,26 @@
-include::introduction.txt[]
-// {
-include::introduction_for_packagers.txt[]
-include::introduction_for_developers.txt[]
-// }
-include::fedora_java_specifics.txt[]
-include::fedora_java_packaging_specifics.txt[]
-// {
-include::directory_layout.txt[]
-include::jar_file_id.txt[]
-// {
-include::jar_file_id_relative.txt[]
-include::jar_file_id_artifact.txt[]
-include::jar_file_id_aliases.txt[]
-include::jar_file_id_compat.txt[]
-// }
-include::dependency_handling.txt[]
-include::javadoc_packages.txt[]
-include::core_java_packages.txt[]
-// }
-include::packaging_best_practices.txt[]
-include::generic_java_build.txt[]
-include::ant.txt[]
-include::maven.txt[]
-// {
-include::packaging_maven_project.txt[]
-include::mvn_macros.txt[]
-include::pom_macros.txt[]
-// }
-include::gradle.txt[]
-include::common_errors.txt[]
-include::integration_maven_xmvn.txt[]
-include::migration.txt[]
-include::manpages.txt[]
+section(introduction)
+subsection(introduction_for_packagers)
+subsection(introduction_for_developers)
+section(fedora_java_specifics)
+section(fedora_java_packaging_specifics)
+subsection(directory_layout)
+subsection(jar_file_id)
+subsubsection(jar_file_id_relative)
+subsubsection(jar_file_id_artifact)
+subsubsection(jar_file_id_aliases)
+subsubsection(jar_file_id_compat)
+subsection(dependency_handling)
+subsection(javadoc_packages)
+subsection(core_java_packages)
+section(packaging_best_practices)
+section(generic_java_build)
+section(ant)
+section(maven)
+subsection(packaging_maven_project)
+subsection(mvn_macros)
+subsection(pom_macros)
+section(gradle)
+section(common_errors)
+section(integration_maven_xmvn)
+section(migration)
+section(manpages)
