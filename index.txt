@@ -61,14 +61,3 @@ include::migration.txt[]
 [[manpages]]
 == Manpages
 include::manpages.txt[]
-
-
-ifdef::backend-docbook[]
-[index]
-Example Index
--------------
-////////////////////////////////////////////////////////////////
-The index is normally left completely empty, it's contents being
-generated automatically by the DocBook toolchain.
-////////////////////////////////////////////////////////////////
-endif::backend-docbook[]
