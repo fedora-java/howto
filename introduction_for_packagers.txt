@@ -100,7 +100,7 @@ http://ant.apache.org/[Apache Ant] and http://www.gradle.org/[Gradle].
 
 [TIP]
 ======
-See also <<maven,Maven>> and <<ant,Ant>> sections.
+See also REFERENCE(maven, maven, Maven) and REFERENCE(ant, ant, Ant) sections.
 ======
 
 .JAR files
