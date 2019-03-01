@@ -30,5 +30,5 @@ m4_define(`REFERENCE', `<<$2, $3>>')
 
 ')
 
-m4_changequote(`[[', `]]')
+m4_changequote(`{{', `}}')
 m4_divert(0)m4_dnl
