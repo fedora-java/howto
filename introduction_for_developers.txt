@@ -69,8 +69,8 @@ Header, which contains: ::
    ** Run time dependencies will be detected automatically. If it fails,
       you have to specify them with `Requires`.
    ** More information on this topic can be found in
-      REFERENCE(dependency_handling, dependency_handling, Dependency handling)
-	  section.
+      REFERENCE(dependency_handling, dependency_handling, Dependency
+      handling) section.
 
 
 Description::
