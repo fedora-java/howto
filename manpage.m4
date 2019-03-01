@@ -1,5 +1,5 @@
 === MANPAGE
 {_} +
 ++++++++++++++++++++++++++
-include_example(manpages/MANPAGE.7.html)
+INCLUDE_EXAMPLE(manpages/MANPAGE.7.html)
 ++++++++++++++++++++++++++
