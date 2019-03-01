@@ -16,7 +16,7 @@ This chapter describes artifact different ways to identify and locate
 artifacts in system repository.
 
 
-include_asciidoc(jar_file_id_relative)
-include_asciidoc(jar_file_id_artifact)
-include_asciidoc(jar_file_id_aliases)
-include_asciidoc(jar_file_id_compat)
+INCLUDE_ASCIIDOC(jar_file_id_relative)
+INCLUDE_ASCIIDOC(jar_file_id_artifact)
+INCLUDE_ASCIIDOC(jar_file_id_aliases)
+INCLUDE_ASCIIDOC(jar_file_id_compat)
