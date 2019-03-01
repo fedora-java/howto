@@ -26,14 +26,19 @@ pom_xpath_set
 
 manpages_html = $(patsubst %,manpages/%.7.html,$(manpages))
 
+manpage_sections = $(patsubst %,manpage_%.adoc,$(manpages))
+
 modules = $(shell ls *.txt)
 
 
 all: index.html
 
-index.html: $(modules:.txt=.adoc) images/xmvn.svg $(manpages_html)
+index.html: $(modules:.txt=.adoc) images/xmvn.svg $(manpages_html) $(manpage_sections)
 	asciidoc -b html5 -a icons -a toc2 -a toclevels=3 -a theme=flask \
 	    -a version=$(VERSION) $(ASCIIDOC_ARGS) index.adoc
+
+manpage_%.adoc: macros.m4 manpage.m4
+	m4 -g -P -DMANPAGE=$(*F) $^ >$@
 
 %.adoc: macros.m4 %.txt
 	m4 -P $^ >$@
