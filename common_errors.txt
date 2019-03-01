@@ -20,7 +20,7 @@ couldn't find some dependencies (in this case
 
 You have multiple options here:
 
- - If you suspect that a dependecy is not necessary, you can
+ - If you suspect that a dependency is not necessary, you can
    remove it from `pom.xml` file and Maven will stop complaining about it.
    You can use wide variety of
    <<helper_macros,macros>> for modifying POM files. The one

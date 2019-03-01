@@ -193,7 +193,7 @@ default named `pom.xml`. In its simpler form it usually looks like this:
         </dependency>
     </dependencies>
 </project>
----------
+-------------
 
 
 It describes project's build process in a declarative way, without
@@ -255,7 +255,7 @@ Some projects that use Apache Ant also use Apache Ivy to simplify
 dependency handling. Ivy is capable of resolving and downloading
 artifacts from Maven repositories which are declaratively described in
 XML. Project usually contains one or more `ivy.xml` files specifying the
-module Maven coordinates and its dependecies. Ivy can also be used
+module Maven coordinates and its dependencies. Ivy can also be used
 directly from Ant build files. To detect whether the project you wish to
 package is using Apache Ivy, look for files named `ivy.xml` or nodes in
 the `ivy` namespace in project's build file.
