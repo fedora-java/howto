@@ -78,8 +78,10 @@ $(antora_root)/examples/%: %
 	@mkdir -p $(@D)
 	cp -p $< $@
 
-antora: $(antora_pages) $(antora_manpages) $(antora_manpages_html) $(antora_examples)
-	cp $(antora_root)/pages/sections.adoc $(antora_root)/nav.adoc
+$(antora_root)/nav.adoc: $(antora_root)/pages/sections.adoc
+	cp -p $^ $@
+
+antora: $(antora_pages) $(antora_manpages) $(antora_manpages_html) $(antora_examples) $(antora_root)/nav.adoc
 
 antora-preview: antora
 	podman run --rm -it -v $(CURDIR):/antora:z antora/antora --html-url-extension-style=indexify site.yml
