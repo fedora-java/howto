@@ -242,7 +242,7 @@ Apache Ant is also configured by an XML file. It is by convention named
     <delete dir="${dist}"/>
   </target>
 </project>
-----------
+-------------
 
 
 Ant build file consists mostly of targets, which are collections of
