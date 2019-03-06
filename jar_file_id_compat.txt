@@ -3,8 +3,10 @@
 
 Handling of compatibility packages, versioned jars etc.
 
-WORK IN PROGRESS
-msimacek, 2015-04-02
+M4_HIDE(
+	WORK IN PROGRESS
+	msimacek, 2015-04-02
+)
 
 In Fedora we prefer to always have only the latest version of a given
 project. Unfortunately, this is not always possible as some projects
