@@ -1,4 +1,5 @@
-VERSION?=Unknown
+VERSION?='$(shell date -I)'
+DOCKER?=docker
 
 manpages=\
 mvn_alias \
@@ -41,7 +42,7 @@ manpage_%.adoc: macros.m4 manpage.m4
 	m4 -g -P -DMANPAGE=$(*F) $^ >$@
 
 %.adoc: macros.m4 %.txt
-	m4 -P $^ >$@
+	m4 -P -DM4_VERSION=$(VERSION) $^ >$@
 
 %.svg: %.dia
 	dia -e $@ $<
@@ -68,7 +69,7 @@ antora_examples = \
 
 $(antora_root)/pages/%.adoc: macros.m4 %.txt
 	@mkdir -p $(@D)
-	m4 -g -P -DFORMAT=antora $^ >$@
+	m4 -g -P -DFORMAT=antora -DM4_VERSION=$(VERSION) $^ >$@
 
 $(antora_root)/pages/manpage_%.adoc: macros.m4 manpage.m4
 	@mkdir -p $(@D)
@@ -89,3 +90,9 @@ antora-preview: antora
 	@echo Preveiew should be available at http://localhost:5000
 	@echo ------------
 	podman run --rm -it -v $(CURDIR)/public:/usr/share/nginx/html:ro -p 5000:80 nginx
+
+build_container: Dockerfile
+	$(DOCKER) build . -t howto
+
+container:
+	$(DOCKER) run -v "$(CURDIR):/BUILD" -it howto sh -c 'make -C BUILD $(TARGET)'

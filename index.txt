@@ -1,8 +1,6 @@
 Java Packaging HOWTO
 ====================
 
-{localdate}
-
 INCLUDE_ASCIIDOC(versions)
 INCLUDE_ASCIIDOC(preamble)
 

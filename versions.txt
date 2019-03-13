@@ -4,17 +4,4 @@ Before you start reading, please make sure that you're reading the version
 corresponding to the oldest Fedora release you want to package for. We don't
 generally backport new features to versions available in stable Fedora.
 
-Current version: {version}
-
-ifeval::["{version}" == "snapshot"]
-[CAUTION]
-You're reading version which corresponds to upstream snapshot.
-endif::[]
-
-ifdef::multiversion[]
-
-Available versions:
-
-INCLUDE_ASCIIDOC(../version-links)
-
-endif::multiversion[]
+Current version: M4_VERSION
