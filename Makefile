@@ -1,4 +1,5 @@
 VERSION?=Unknown
+DOCKER?=docker
 
 manpages=\
 mvn_alias \
@@ -89,3 +90,9 @@ antora-preview: antora
 	@echo Preveiew should be available at http://localhost:5000
 	@echo ------------
 	podman run --rm -it -v $(CURDIR)/public:/usr/share/nginx/html:ro -p 5000:80 nginx
+
+build_container: Dockerfile
+	$(DOCKER) build . -t howto
+
+container:
+	$(DOCKER) run -v "$(CURDIR):/BUILD" -it howto sh -c 'make -C BUILD $(TARGET)'
