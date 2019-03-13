@@ -845,7 +845,7 @@ asciidoc.install(3);
 <div id="content">
 <div id="preamble">
 <div class="sectionbody">
-<div class="paragraph"><p>2019-03-01</p></div>
+<div class="paragraph"><p>2019-03-13</p></div>
 </div>
 </div>
 <div class="sect1">
@@ -2192,8 +2192,6 @@ Additional mappings for artifact specifications
 </p>
 </li>
 </ul></div>
-<div class="paragraph"><p>WORK IN PROGRESS
-msimacek, 31 March 2015</p></div>
 <div class="paragraph"><p>In the real world the same project can appear under different names as it was
 evolving or released differently. Therefore other projects may refer to those
 alternative names instead of using the name currently prefered by upstream.</p></div>
@@ -2234,8 +2232,6 @@ http://www.gnu.org/software/src-highlite -->
 <div class="sect3">
 <h4 id="compat_packages">3.2.4. Compatibility versions</h4>
 <div class="paragraph"><p>Handling of compatibility packages, versioned jars etc.</p></div>
-<div class="paragraph"><p>WORK IN PROGRESS
-msimacek, 2015-04-02</p></div>
 <div class="paragraph"><p>In Fedora we prefer to always have only the latest version of a given
 project. Unfortunately, this is not always possible as some projects
 change too much and it would be too hard to port dependent packages to
@@ -2321,10 +2317,6 @@ http://www.gnu.org/software/src-highlite -->
 </div>
 <div class="sect2">
 <h3 id="dependency_handling">3.3. Dependency Handling</h3>
-<div class="paragraph"><p>WORK IN PROGRESS
-msimacek, 2015-04-09</p></div>
-<div class="paragraph"><p>Describe RPM Provides and Requires, their interactions especially with relation
-to JAR file identification, explain mvn(gId:aId&#8230;) strings.</p></div>
 <div class="paragraph"><p>RPM has multiple types of metadata to describe dependency relationships
 between packages. The two basic types are Requires and Provides.
 Requires denote that a package needs something to be present at
@@ -2613,10 +2605,24 @@ Links to other appropriate documents
 <div class="sect1">
 <h2 id="_generic_java_builds">5. Generic Java Builds</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>Handling of basic build steps in Java
-* javac
-* usage of build-claspath, build-jar-repository to prepare for build
-* &#8230;</p></div>
+<div class="paragraph"><p>Handling of basic build steps in Java</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+javac
+</p>
+</li>
+<li>
+<p>
+usage of build-claspath, build-jar-repository to prepare for build
+</p>
+</li>
+<li>
+<p>
+&#8230;
+</p>
+</li>
+</ul></div>
 <div class="sect2">
 <h3 id="_generating_application_shell_scripts">5.1. Generating Application Shell Scripts</h3>
 <div class="paragraph"><p>As mentioned in section about <a href="#XFor_Packagers">Java packaging basics</a>,
@@ -3907,20 +3913,12 @@ back the dependency without <span class="monospaced">&lt;scope&gt;</span> or <sp
 </div>
 </div>
 <div class="sect1">
-<h2 id="_integration_of_maven_and_xmvn_tools">10. Integration of Maven and XMvn Tools</h2>
-<div class="sectionbody">
-<div class="paragraph"><p>Describe common usage patterns of XMvn, xmvn-bisect and other tools with links
-to upstream documentation where it makes sense</p></div>
-<div class="paragraph"><p>TODO - write content</p></div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_migration_from_older_tools">11. Migration from older tools</h2>
+<h2 id="_migration_from_older_tools">10. Migration from older tools</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>This section describes how to migrate packages that use older deprecated
 tools to current ones.</p></div>
 <div class="sect2">
-<h3 id="_add_maven_depmap_macro">11.1. add_maven_depmap macro</h3>
+<h3 id="_add_maven_depmap_macro">10.1. add_maven_depmap macro</h3>
 <div class="paragraph"><p><span class="monospaced">%add_maven_depmap</span> macro was used to manually install Maven artifacts
 that were built with Apache Ant or <span class="monospaced">mvn-rpmbuild</span>. It
 is now deprecated and its invocations should be replaced with
@@ -4024,11 +4022,11 @@ achieve the same things with <span class="monospaced">%mvn_*</span> macros, see
 </div>
 </div>
 <div class="sect1">
-<h2 id="manpages">12. Appendix A: Manpages</h2>
+<h2 id="manpages">11. Appendix A: Manpages</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>This section contains manpages for <span class="monospaced">mvn_*</span> and <span class="monospaced">pom_*</span> macros.</p></div>
 <div class="sect2">
-<h3 id="_mvn_alias">12.1. mvn_alias</h3>
+<h3 id="_mvn_alias">11.1. mvn_alias</h3>
 <div class="paragraph"><p></p></div>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
         "http://www.w3.org/TR/html4/strict.dtd">
@@ -4053,7 +4051,7 @@ pre {
 </html>
 </div>
 <div class="sect2">
-<h3 id="_mvn_artifact">12.2. mvn_artifact</h3>
+<h3 id="_mvn_artifact">11.2. mvn_artifact</h3>
 <div class="paragraph"><p></p></div>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
         "http://www.w3.org/TR/html4/strict.dtd">
@@ -4078,7 +4076,7 @@ pre {
 </html>
 </div>
 <div class="sect2">
-<h3 id="_mvn_build">12.3. mvn_build</h3>
+<h3 id="_mvn_build">11.3. mvn_build</h3>
 <div class="paragraph"><p></p></div>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
         "http://www.w3.org/TR/html4/strict.dtd">
@@ -4103,7 +4101,7 @@ pre {
 </html>
 </div>
 <div class="sect2">
-<h3 id="_mvn_compat_version">12.4. mvn_compat_version</h3>
+<h3 id="_mvn_compat_version">11.4. mvn_compat_version</h3>
 <div class="paragraph"><p></p></div>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
         "http://www.w3.org/TR/html4/strict.dtd">
@@ -4128,7 +4126,7 @@ pre {
 </html>
 </div>
 <div class="sect2">
-<h3 id="_mvn_config">12.5. mvn_config</h3>
+<h3 id="_mvn_config">11.5. mvn_config</h3>
 <div class="paragraph"><p></p></div>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
         "http://www.w3.org/TR/html4/strict.dtd">
@@ -4153,7 +4151,7 @@ pre {
 </html>
 </div>
 <div class="sect2">
-<h3 id="_mvn_file">12.6. mvn_file</h3>
+<h3 id="_mvn_file">11.6. mvn_file</h3>
 <div class="paragraph"><p></p></div>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
         "http://www.w3.org/TR/html4/strict.dtd">
@@ -4178,7 +4176,7 @@ pre {
 </html>
 </div>
 <div class="sect2">
-<h3 id="_mvn_install">12.7. mvn_install</h3>
+<h3 id="_mvn_install">11.7. mvn_install</h3>
 <div class="paragraph"><p></p></div>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
         "http://www.w3.org/TR/html4/strict.dtd">
@@ -4203,7 +4201,7 @@ pre {
 </html>
 </div>
 <div class="sect2">
-<h3 id="_mvn_package">12.8. mvn_package</h3>
+<h3 id="_mvn_package">11.8. mvn_package</h3>
 <div class="paragraph"><p></p></div>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
         "http://www.w3.org/TR/html4/strict.dtd">
@@ -4228,7 +4226,7 @@ pre {
 </html>
 </div>
 <div class="sect2">
-<h3 id="_pom_add_dep">12.9. pom_add_dep</h3>
+<h3 id="_pom_add_dep">11.9. pom_add_dep</h3>
 <div class="paragraph"><p></p></div>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
         "http://www.w3.org/TR/html4/strict.dtd">
@@ -4253,7 +4251,7 @@ pre {
 </html>
 </div>
 <div class="sect2">
-<h3 id="_pom_add_parent">12.10. pom_add_parent</h3>
+<h3 id="_pom_add_parent">11.10. pom_add_parent</h3>
 <div class="paragraph"><p></p></div>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
         "http://www.w3.org/TR/html4/strict.dtd">
@@ -4278,7 +4276,7 @@ pre {
 </html>
 </div>
 <div class="sect2">
-<h3 id="_pom_add_plugin">12.11. pom_add_plugin</h3>
+<h3 id="_pom_add_plugin">11.11. pom_add_plugin</h3>
 <div class="paragraph"><p></p></div>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
         "http://www.w3.org/TR/html4/strict.dtd">
@@ -4303,7 +4301,7 @@ pre {
 </html>
 </div>
 <div class="sect2">
-<h3 id="_pom_change_dep">12.12. pom_change_dep</h3>
+<h3 id="_pom_change_dep">11.12. pom_change_dep</h3>
 <div class="paragraph"><p></p></div>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
         "http://www.w3.org/TR/html4/strict.dtd">
@@ -4328,7 +4326,7 @@ pre {
 </html>
 </div>
 <div class="sect2">
-<h3 id="_pom_disable_module">12.13. pom_disable_module</h3>
+<h3 id="_pom_disable_module">11.13. pom_disable_module</h3>
 <div class="paragraph"><p></p></div>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
         "http://www.w3.org/TR/html4/strict.dtd">
@@ -4353,7 +4351,7 @@ pre {
 </html>
 </div>
 <div class="sect2">
-<h3 id="_pom_remove_dep">12.14. pom_remove_dep</h3>
+<h3 id="_pom_remove_dep">11.14. pom_remove_dep</h3>
 <div class="paragraph"><p></p></div>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
         "http://www.w3.org/TR/html4/strict.dtd">
@@ -4378,7 +4376,7 @@ pre {
 </html>
 </div>
 <div class="sect2">
-<h3 id="_pom_remove_parent">12.15. pom_remove_parent</h3>
+<h3 id="_pom_remove_parent">11.15. pom_remove_parent</h3>
 <div class="paragraph"><p></p></div>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
         "http://www.w3.org/TR/html4/strict.dtd">
@@ -4403,7 +4401,7 @@ pre {
 </html>
 </div>
 <div class="sect2">
-<h3 id="_pom_remove_plugin">12.16. pom_remove_plugin</h3>
+<h3 id="_pom_remove_plugin">11.16. pom_remove_plugin</h3>
 <div class="paragraph"><p></p></div>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
         "http://www.w3.org/TR/html4/strict.dtd">
@@ -4428,7 +4426,7 @@ pre {
 </html>
 </div>
 <div class="sect2">
-<h3 id="_pom_set_parent">12.17. pom_set_parent</h3>
+<h3 id="_pom_set_parent">11.17. pom_set_parent</h3>
 <div class="paragraph"><p></p></div>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
         "http://www.w3.org/TR/html4/strict.dtd">
@@ -4453,7 +4451,7 @@ pre {
 </html>
 </div>
 <div class="sect2">
-<h3 id="_pom_xpath_disable">12.18. pom_xpath_disable</h3>
+<h3 id="_pom_xpath_disable">11.18. pom_xpath_disable</h3>
 <div class="paragraph"><p></p></div>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
         "http://www.w3.org/TR/html4/strict.dtd">
@@ -4478,7 +4476,7 @@ pre {
 </html>
 </div>
 <div class="sect2">
-<h3 id="_pom_xpath_inject">12.19. pom_xpath_inject</h3>
+<h3 id="_pom_xpath_inject">11.19. pom_xpath_inject</h3>
 <div class="paragraph"><p></p></div>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
         "http://www.w3.org/TR/html4/strict.dtd">
@@ -4503,7 +4501,7 @@ pre {
 </html>
 </div>
 <div class="sect2">
-<h3 id="_pom_xpath_remove">12.20. pom_xpath_remove</h3>
+<h3 id="_pom_xpath_remove">11.20. pom_xpath_remove</h3>
 <div class="paragraph"><p></p></div>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
         "http://www.w3.org/TR/html4/strict.dtd">
@@ -4528,7 +4526,7 @@ pre {
 </html>
 </div>
 <div class="sect2">
-<h3 id="_pom_xpath_replace">12.21. pom_xpath_replace</h3>
+<h3 id="_pom_xpath_replace">11.21. pom_xpath_replace</h3>
 <div class="paragraph"><p></p></div>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
         "http://www.w3.org/TR/html4/strict.dtd">
@@ -4553,7 +4551,7 @@ pre {
 </html>
 </div>
 <div class="sect2">
-<h3 id="_pom_xpath_set">12.22. pom_xpath_set</h3>
+<h3 id="_pom_xpath_set">11.22. pom_xpath_set</h3>
 <div class="paragraph"><p></p></div>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
         "http://www.w3.org/TR/html4/strict.dtd">
@@ -4583,7 +4581,7 @@ pre {
 <div id="footnotes"><hr></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-03-01 14:29:37 UTC
+Last updated 2019-03-13 14:36:11 UTC
 </div>
 </div>
 </body>
