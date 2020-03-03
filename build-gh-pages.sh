@@ -12,7 +12,7 @@ build_doc_version() {
     git clone -b "$ref" "$remote" "$ver" --depth 1 --single-branch
     if [ "$ver" != snapshot ]; then cp snapshot/versions.txt "$ver/"; fi
     pushd "$ver"
-    VERSION="$ver" ASCIIDOC_ARGS="-a multiversion" make
+    VERSION="$ver" make
     rm -rf "../gh-pages/$ver"
     mkdir -p "../gh-pages/$ver"
     cp index.html "../gh-pages/$ver/index.html"
