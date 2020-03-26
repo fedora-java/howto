@@ -24,6 +24,11 @@ pushd java-packaging-howto
 git rm -rf modules
 mv ../howto/modules .
 git add modules
-git commit --allow-empty -m "${COMMIT_MESSAGE}"
-git push origin
+
+# Push only when there are changes to the generated documentation
+if git commit -m "${COMMIT_MESSAGE}"
+then
+	git push origin
+fi
+
 popd
