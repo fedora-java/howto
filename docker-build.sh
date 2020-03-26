@@ -8,8 +8,8 @@ set -e
 # Reason: Reset dnf flags in order ot install documentation files including manpages
 dnf -y --setopt=tsflags= install asciidoc dia git javapackages-local javapackages-tools m4 make man python3-ansi2html
 
-git config --global user.name 'mkoncek-jenkins'
-git config --global user.email '<>'
+git config --global user.name 'Jenkins CI'
+git config --global user.email 'java-maint@redhat.com'
 
 export GIT_SSH_COMMAND='/usr/bin/ssh -i /mnt/build/jenkins.private -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
 
