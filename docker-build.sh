@@ -24,6 +24,6 @@ pushd java-packaging-howto
 git rm -rf modules
 mv ../howto/modules .
 git add modules
-git commit -m "${COMMIT_MESSAGE}"
+git commit --allow-empty -m "${COMMIT_MESSAGE}"
 git push origin
 popd
