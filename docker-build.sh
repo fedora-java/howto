@@ -20,10 +20,9 @@ pushd howto
 make antora
 popd
 
-git rm -rf java-packaging-howto/modules
-mv howto/modules java-packaging-howto
-
 pushd java-packaging-howto
+git rm -rf modules
+mv ../howto/modules .
 git add modules
 git commit -m "${COMMIT_MESSAGE}"
 git push origin
