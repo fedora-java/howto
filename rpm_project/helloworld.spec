@@ -37,7 +37,7 @@ Very short description since we have nothing to say.
 %build
 # Section for compiling and generally assembling the final pieces.
 # Our Makefile builds the project JAR file
-make {?_smp_flags}
+%make_build
 
 %install
 # Installation into directory prepared by RPM expressed as %{buildroot}
