@@ -15,7 +15,6 @@ SECTION(maven, Maven)
 SUBSECTION(packaging_maven_project, Packaging)
 SUBSECTION(mvn_macros, Macros for Maven packaging)
 SUBSECTION(pom_macros, Macros for POM modification)
-SECTION(gradle, Gradle)
 SECTION(common_errors, Common Errors)
 
 M4_HIDE(

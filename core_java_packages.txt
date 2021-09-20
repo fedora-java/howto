@@ -63,16 +63,11 @@ Java Packages Tools are packaged as severas binary RPM packages
     various macros and utlilty tools.  `maven-local` is usually
     declared as build dependency of Maven packages.
 
-*`gradle-local`*::
-
-    Similairly to `maven-local`, this package provides an environment
-    required to build Java packages using Gradle as a build tool.
-
 *`ivy-local`*::
 
-    Analogously to `maven-local` and `gradle-local`, this package
-    provides an environment required to build Java packages using
-    Apache Ivy as dependency manager.
+    Analogously to `maven-local`, this package provides an environment
+    required to build Java packages using Apache Ivy as dependency
+    manager.
 
 *`javapackages-local`*::
 

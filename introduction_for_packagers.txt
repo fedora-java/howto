@@ -95,8 +95,8 @@ compilation a bit. It might be sufficient for such a simple project, but
 it would quickly become hard to build more complex projects with this
 approach. Java world knows several high-level build systems which can
 highly simplify building of Java projects. Among the others, probably
-most known are http://maven.apache.org/[Apache Maven],
-http://ant.apache.org/[Apache Ant] and http://www.gradle.org/[Gradle].
+most known are http://maven.apache.org/[Apache Maven] and
+http://ant.apache.org/[Apache Ant].
 
 [TIP]
 ======
@@ -262,23 +262,6 @@ module Maven coordinates and its dependencies. Ivy can also be used
 directly from Ant build files. To detect whether the project you wish to
 package is using Apache Ivy, look for files named `ivy.xml` or nodes in
 the `ivy` namespace in project's build file.
-
-
-.Gradle
-Gradle is configured by a script written in Groovy (dynamic language
-built on top of JVM and extending Java's syntax). It's configuration
-file is `build.gradle`.
-
-[source, java]
-----------------
-apply plugin: 'java'
-
-task customJar(type: Jar) {
-  archiveName = 'myproject.jar'
-  destinationDir = file("${buildDir}/jars")
-  from sourceSets.main.output
-}
-----------------
 
 
 .Make
