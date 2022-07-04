@@ -26,7 +26,7 @@ used along the non-compat one.
 ======
 You should always evaluate whether creating a compat package is really
 necessary. Porting dependent projects to new versions of dependencies
-may be a compicated task, but your effort would be appreciated and it's
+may be a complicated task, but your effort would be appreciated and it's
 likely that the patch will be accepted upstream at some point in time.
 If the upstream is already inactive and the package is not required by
 anything, you should also consider retiring it.
