@@ -51,7 +51,7 @@ in the project. Only dependencies with `scope` set to either `compile`,
 `runtime` or not set at all are used for Requires generation.
 Requires don't rely on package names and instead always
 use virtual provides that were described above, in exactly the same
-format, in order to be satisfieable by the already existing provides.
+format, in order to be satisfiable by the already existing provides.
 For packages consisting of multiple subpackages, Requires are generated
 separately for each subpackage. Additionally, Requires that point to an
 artifact in a different subpackage of the same source package are
