@@ -7,7 +7,7 @@ few useful tools which can be used during packaging/development.
 [[openjdk]]
 === Java implementation in Fedora
 Fedora ships with an open-source reference implementation of Java
-Standard Edition 8 called http://openjdk.java.net/[OpenJDK]. OpenJDK
+Standard Edition called http://openjdk.java.net/[OpenJDK]. OpenJDK
 provides Java Runtime Environment for Java applications and set of
 development tools for Java developers.
 
@@ -47,9 +47,9 @@ There are 3 programs which provide 'java'.
 
   Selection    Command
   -----------------------------------------------
-   1           /usr/lib/jvm/jre-1.5.0-gcj/bin/java
-*+ 2           /usr/lib/jvm/java-1.7.0-openjdk-1.7.0.60-2.4.3.1.fc21.x86_64/jre/bin/java
-   3           /usr/lib/jvm/jre-1.8.0-openjdk.x86_64/bin/java
+   1           java-17-openjdk.x86_64 (/usr/lib/jvm/java-17-openjdk-17.0.2.0.8-1.fc35.x86_64/bin/java)
+*+ 2           java-11-openjdk.x86_64 (/usr/lib/jvm/java-11-openjdk-11.0.14.1.1-5.fc35.x86_64/bin/java)
+   3           java-latest-openjdk.x86_64 (/usr/lib/jvm/java-18-openjdk-18.0.1.0.10-1.rolling.fc35.x86_64/bin/java)
 
 Enter to keep the current selection[+], or type selection number:
 --------
