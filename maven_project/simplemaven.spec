@@ -3,8 +3,8 @@ Version:        1.0
 Release:        1%{?dist}
 Summary:        Simple Maven project
 License:        BSD
-URL:            http://www.example.com
-Source0:        http://www.example.com/simplemaven-1.0.tar.gz
+URL:            https://www.example.com
+Source0:        https://www.example.com/simplemaven-1.0.tar.gz
 BuildArch:      noarch
 
 BuildRequires:  maven-local
@@ -28,7 +28,6 @@ This package contains the API documentation for %{name}.
 %mvn_install
 
 %files -f .mfiles
-%dir %{_javadir}/%{name}
 %files javadoc -f .mfiles-javadoc
 
 %changelog
