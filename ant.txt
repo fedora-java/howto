@@ -1,16 +1,16 @@
 [[ant]]
 == Ant
 
-[quote,,http://ant.apache.org/]
+[quote,,https://ant.apache.org/]
 ______
 Apache Ant is a Java library and command-line tool whose mission is to drive
 processes described in build files as targets and extension points dependent
 upon each other.
 ______
 
-Apache Ant is probably second most used Java build tool right after Apache
-Maven. The main difference between these two tools is that Ant is procedural and
-Maven is declarative. When using Ant, it is neccessary to exactly describe the
+Apache Ant is one of the most popular Java build tools after Apache Maven.
+The main difference between these two tools is that Ant is procedural and Maven
+is declarative. When using Ant, it is neccessary to exactly describe the
 processes which lead to the result. It means that one needs to specify where the
 source files are, what needs to be done and when it needs to be done. On the
 other hand, Maven relies on conventions and doesn't require specifying most
@@ -18,7 +18,7 @@ of the process unless you need to override the defaults.
 
 
 If upstream ships a Maven POM file, it must be installed even if you
-don't build with Maven. If not you should try to search Maven Central
+don't build with Maven. If not, you should try to search Maven Central
 Repository for it, ship it as another source and install it.
 
 .Common spec file
@@ -36,8 +36,6 @@ ant test
 %mvn_install -J api/
 
 %files -f .mfiles
-%dir %{_javadir}/%{name}
-
 %files javadoc -f .mfiles-javadoc
 -------------
 
