@@ -69,8 +69,7 @@ Header, which contains: ::
    ** Run time dependencies will be detected automatically. If it fails,
       you have to specify them with `Requires`.
    ** More information on this topic can be found in
-      REFERENCE(dependency_handling, dependency_handling, Dependency
-      handling) section.
+      <<dependency_handling, Dependency handling>> section.
 
 
 Description::
@@ -192,8 +191,8 @@ osgi(org.apache.commons.io) = 2.4.0
 Output above means that package `apache-commons-io` provides two Maven
 artifacts: previously mentioned `commons-io:commons-io` and
 `org.apache.commons:commons-io`. In this case the second one is just an
-alias for same JAR file. See section about REFERENCE(jar_file_id_aliases,
-aliases, artifact aliases) for more information on this topic.
+alias for same JAR file. See section about <<aliases, artifact aliases>> for
+more information on this topic.
 
 Another useful tool is `rpm`. It can do a lot of stuff, but most
 importantly it can replace `dnf repoquery` if one only needs to query local

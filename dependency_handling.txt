@@ -87,7 +87,7 @@ rpm -qp --requires path/to/example-1.0.noarch.rpm
 
 [TIP]
 =====
-See also REFERENCE(introduction_for_developers, querying_repositories, Querying Fedora repositories)
+See also <<querying_repositories, Querying Fedora repositories>>
 =====
 
 .Generating BuildRequires

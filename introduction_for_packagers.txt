@@ -100,7 +100,7 @@ http://ant.apache.org/[Apache Ant].
 
 [TIP]
 ======
-See also REFERENCE(maven, maven, Maven) and REFERENCE(ant, ant, Ant) sections.
+See also <<maven, Maven>> and <<ant, Ant>> sections.
 ======
 
 .JAR files

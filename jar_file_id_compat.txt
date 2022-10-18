@@ -36,8 +36,8 @@ necessary steps to avoid clashes with the non-compat version. An
 artifact can be marked as compat by `%mvn_compat_version`. It accepts an
 artifact argument which will determine which artifact will be compat.
 The format for specifying artifact coordinates is the same as with
-REFERENCE(mvn_macros, mvn_alias,`%mvn_alias`). In the common case you will want
-to mark all artifacts as compat. You can specify multiple compat versions at a time.
+<<mvn_alias,`%mvn_alias`>>. In the common case you will want to mark all
+artifacts as compat. You can specify multiple compat versions at a time.
 
 .Dependency resolution of compat artifacts
 When XMvn performs dependency resolution for a dependency artifact in

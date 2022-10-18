@@ -48,8 +48,7 @@ Details:
     - `%mvn_artifact` macro is used to request installation of an
       artifact that was not built using Maven. It expects a POM file and
       a JAR file. For POM only artifacts, the JAR part is omitted. +
-      See REFERENCE(mvn_macros, mvn_artifact, Installing additional
-      artifacts) for more information
+      See <<mvn_artifact, Installing additional artifacts>> for more information
     - `%mvn_install` performs the actual installation. Optional `-J`
       parameter requests installation of generated Javadoc from given
       directory

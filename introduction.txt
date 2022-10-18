@@ -35,10 +35,10 @@ packaging rules had to be evolved.
 This section includes basic introduction to Java packaging world to people
 coming from different backgrounds. Goal is to understand language of all groups
 involved. If you are a Java developer coming into contact with RPM packaging for
-the first time start reading REFERENCE(introduction_for_developers, XFor_Devs, Java developer)
+the first time start reading <<XFor_Devs, Java developer>>
 section. On the other hand if you are coming from RPM packaging background an
-REFERENCE(introduction_for_packagers, XFor_Packagers, introduction to Java world)
-is probably a better starting point.
+<<XFor_Packagers, introduction to Java world>> is probably a better starting
+point.
 
 It should be noted that especially in this section we might sacrifice
 correctness for simplicity.

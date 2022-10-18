@@ -193,6 +193,5 @@ full http://mizdebsk.fedorapeople.org/xmvn/site/config.html[configuration refere
 All `%mvn_` macros have their own manual page which contains details on how to
 use them. All possible options should be documented there. These manual pages
 should be considered most up to date documentation right after source code. Try
-for example `man mvn_file`. These pages are also included in the
-REFERENCE(manpages, manpages, Appendix).
+for example `man mvn_file`. These pages are also included in the <<manpages, Appendix>>.
 ======
