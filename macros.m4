@@ -3,8 +3,6 @@ m4_divert(-1)
 # This is needed in case there are more references which expand to '#' on one line
 m4_changecom(`M4_COMMENT')
 
-m4_define(`M4_HIDE')
-
 m4_ifelse(FORMAT, `antora', `
 
 m4_define(`SECTION', `* xref:$1.adoc[$2]')

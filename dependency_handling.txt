@@ -1,13 +1,11 @@
 [[dependency_handling]]
 === Dependency Handling
 
-M4_HIDE(
-	WORK IN PROGRESS
-	msimacek, 2015-04-09
-	
-	Describe RPM Provides and Requires, their interactions especially with relation
-	to JAR file identification, explain mvn(gId:aId...) strings.
-)
+// WORK IN PROGRESS
+// msimacek, 2015-04-09
+// 
+// Describe RPM Provides and Requires, their interactions especially with relation
+// to JAR file identification, explain mvn(gId:aId...) strings.
 
 RPM has multiple types of metadata to describe dependency relationships
 between packages. The two basic types are Requires and Provides.

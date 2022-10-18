@@ -17,9 +17,7 @@ SUBSECTION(mvn_macros, Macros for Maven packaging)
 SUBSECTION(pom_macros, Macros for POM modification)
 SECTION(common_errors, Common Errors)
 
-M4_HIDE(
-	SECTION(integration_maven_xmvn, Integration of Maven and XMvn Tools)
-)
+// SECTION(integration_maven_xmvn, Integration of Maven and XMvn Tools)
 
 SECTION(migration, Migration from older tools)
 SECTION(manpages, Manual pages)
