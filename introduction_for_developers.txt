@@ -48,7 +48,7 @@ We packed the project directory into file `helloworld.tar.gz`.
 .Example spec file
 [source,spec,numbered]
 ------
-INCLUDE_EXAMPLE(rpm_project/helloworld.spec)
+include::rpm_project/helloworld.spec[]
 ------
 
 RPM `spec` files contain several basic sections:

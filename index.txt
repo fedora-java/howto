@@ -3,8 +3,8 @@ Java Packaging HOWTO
 
 {localdate}
 
-INCLUDE_ASCIIDOC(versions)
-INCLUDE_ASCIIDOC(preamble)
+include::versions.txt[]
+include::preamble.txt[]
 
 :numbered!:
 [abstract]
@@ -17,4 +17,4 @@ software on Fedora.
 
 
 :numbered:
-INCLUDE_SECTIONS(sections)
+include::sections.txt[]
