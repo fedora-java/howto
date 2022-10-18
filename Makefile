@@ -26,22 +26,24 @@ pom_xpath_set
 
 manpages_html = $(patsubst %,manpages/%.7.html,$(manpages))
 
-manpage_sections = $(patsubst %,manpage_%.adoc,$(manpages))
+manpage_sections = $(patsubst %,manpage_%.txt,$(manpages))
 
 modules = $(shell ls *.txt)
 
 
 all: index.html
 
-index.html: $(modules:.txt=.adoc) images/xmvn.svg $(manpages_html) $(manpage_sections)
+index.html: *.txt images/xmvn.svg $(manpages_html) $(manpage_sections)
 	asciidoc -b html5 -a icons -a toc2 -a toclevels=3 -a theme=flask \
-	    -a version=$(VERSION) $(ASCIIDOC_ARGS) index.adoc
+	    -a version=$(VERSION) $(ASCIIDOC_ARGS) index.txt
 
-manpage_%.adoc: macros.m4 manpage.m4
-	m4 -g -P -DMANPAGE=$(*F) $^ >$@
-
-%.adoc: macros.m4 %.txt
-	m4 -P $^ >$@
+manpage_%.txt: manpages/%.7.html
+	@rm -f $@
+	@echo '=== $(*F)' >> $@
+	@echo '{_} +' >> $@
+	@echo '++++++++++++++++++++++++++' >> $@
+	@echo 'include::manpages/mvn_alias.7.html[]' >> $@
+	@echo '++++++++++++++++++++++++++' >> $@
 
 %.svg: %.dia
 	dia -e $@ $<
@@ -54,31 +56,27 @@ gh-pages: index.html
 	./build-gh-pages.sh
 
 clean:
-	rm -Rf *.html *.adoc images/*.svg manpages modules
+	rm -Rf *.html images/*.svg manpages modules $(manpage_sections)
 
 
 antora_root = modules/ROOT
-antora_pages = $(patsubst %.txt,$(antora_root)/pages/%.adoc,$(modules))
-antora_manpages = $(patsubst %,$(antora_root)/pages/manpage_%.adoc,$(manpages))
+antora_pages = $(patsubst %.txt,$(antora_root)/pages/%.txt,$(modules))
+antora_manpages = $(patsubst %,$(antora_root)/pages/manpage_%.txt,$(manpages))
 antora_manpages_html = $(patsubst %,$(antora_root)/examples/manpages/%.7.html,$(manpages))
 antora_examples = \
     $(antora_root)/examples/rpm_project/helloworld.spec \
     $(antora_root)/examples/java_project/src/org/fedoraproject/helloworld/HelloWorld.java \
     $(antora_root)/examples/maven_project/simplemaven.spec \
 
-$(antora_root)/pages/%.adoc: macros.m4 %.txt
+$(antora_root)/pages/%.txt: %.txt
 	@mkdir -p $(@D)
-	m4 -g -P -DFORMAT=antora $^ >$@
-
-$(antora_root)/pages/manpage_%.adoc: macros.m4 manpage.m4
-	@mkdir -p $(@D)
-	m4 -g -P -DFORMAT=antora -DMANPAGE=$(*F) $^ >$@
+	cp $^ $@
 
 $(antora_root)/examples/%: %
 	@mkdir -p $(@D)
 	cp -p $< $@
 
-$(antora_root)/nav.adoc: $(antora_root)/pages/sections.adoc
+$(antora_root)/nav.adoc: $(antora_root)/pages/sections.txt
 	cp -p $^ $@
 
 antora: $(antora_pages) $(antora_manpages) $(antora_manpages_html) $(antora_examples) $(antora_root)/nav.adoc
