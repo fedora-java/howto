@@ -7,7 +7,7 @@ probably simplest spec file possible.
 
 [source,spec,numbered]
 ------
-INCLUDE_EXAMPLE(maven_project/simplemaven.spec)
+include::maven_project/simplemaven.spec[]
 ------
 
 The spec file above is a real world example how it may look like for simple Maven

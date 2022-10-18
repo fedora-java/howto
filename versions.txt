@@ -15,6 +15,6 @@ ifdef::multiversion[]
 
 Available versions:
 
-INCLUDE_ASCIIDOC(../version-links)
+include::../version-links.txt[]
 
 endif::multiversion[]
