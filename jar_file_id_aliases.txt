@@ -6,10 +6,8 @@ Aliases working in two ways:
 * Symlinks for paths
 * Additional mappings for artifact specifications
 
-M4_HIDE(
-	WORK IN PROGRESS
-	msimacek, 31 March 2015
-)
+// WORK IN PROGRESS
+// msimacek, 31 March 2015
 
 In the real world the same project can appear under different names as it was
 evolving or released differently. Therefore other projects may refer to those
