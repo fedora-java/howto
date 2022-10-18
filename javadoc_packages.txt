@@ -2,12 +2,12 @@
 
 Javadoc subpackages in Fedora provide automatically generated API
 documentation for Java libraries and applications.
-REFERENCE(fedora_java_specifics, openjdk, Java Development Kit) comes with tool
-called `javadoc`. This tool can be used for generating the documentation from
-specially formated comments in Java source files.  Output of this tool, together
-with license files, usually represents only content of javadoc subpackages.
-Note `javadoc` invocation is typically handled by build system and package
-maintainer doesn't need to deal with it directly.
+<<openjdk, Java Development Kit>> comes with tool called `javadoc`. This tool
+can be used for generating the documentation from specially formated comments in
+Java source files.  Output of this tool, together with license files, usually
+represents only content of javadoc subpackages. Note `javadoc` invocation is
+typically handled by build system and package maintainer doesn't need to deal
+with it directly.
 
 Javadoc subpackage shouldn't depend on its base package and vice versa.
 The rationale behind this rule is that documentation can usually be used

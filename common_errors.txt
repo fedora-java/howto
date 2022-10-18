@@ -25,9 +25,9 @@ You have multiple options here:
  - If you suspect that a dependency is not necessary, you can
    remove it from `pom.xml` file and Maven will stop complaining about it.
    You can use wide variety of
-   REFERENCE(pom_macros, helper_macros, macros) for modifying POM files. The one
+   <<helper_macros, macros>> for modifying POM files. The one
    for removing dependencies is called
-   REFERENCE(pom_macros, pom_remove_dep, %pom_remove_dep).
+   <<pom_remove_dep, %pom_remove_dep>>.
   - There is a mock plugin that can automate installation of missing dependencies.
     When you're using mock, pass additional `--enable-plugin pm_request` argument
     and the build process would be able to install missing dependencies by itself.
@@ -81,7 +81,7 @@ project requires older version, then the project should be ported to
 latest stable version of the library (this may require cooperation with
 project's upstream). If none of these is possible from some reason, it
 is still possible to introduce new `compat` package. See
-REFERENCE(jar_file_id_compat, compat_packages, compat packages) section for more
+<<compat_packages, compat packages>> section for more
 information on this topic.
 
 Sometimes `pom.xml` doesn't list all the necessary dependencies, even if
@@ -95,7 +95,7 @@ dependencies and relies on transitive dependencies. Such a missing
 dependency may be considered a bug in the project. The solution is to
 explicitly add missing dependency to the `pom.xml`. This may be easily
 done by using `%pom_add_dep` macro. See section about
-REFERENCE(pom_macros, helper_macros, macros for POM modification) for more information.
+<<helper_macros, macros for POM modification>> for more information.
 
 [[error_requires_unknown]]
 === Requires cannot be generated

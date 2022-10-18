@@ -92,9 +92,8 @@ ant test
 .Aliases and subpackages
 `%add_maven_depmap` had `-a` switch to specify artifact aliases and `-f`
 switch to support splitting artifacts across multiple subpackages. To
-achieve the same things with `%mvn_*` macros, see
-REFERENCE(mvn_macros, mvn_alias, Additional Mappings) and
-REFERENCE(mvn_macros, mvn_package, Assignment of the Maven Artifacts to the Subpackages).
+achieve the same things with `%mvn_*` macros, see <<mvn_alias, Additional Mappings>>
+and <<mvn_package, Assignment of the Maven Artifacts to the Subpackages>>.
 
 [TIP]
 ======

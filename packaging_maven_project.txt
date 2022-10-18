@@ -32,8 +32,7 @@ By default, resulting JAR files will be installed in `%{_javadir}/%{name}`,
 therefore package needs to own this directory.
 
 The build could fail from many reasons, but one probably most common is
-build failure due to REFERENCE(common_errors, error_missing_dependency,
-missing dependencies)
+build failure due to <<error_missing_dependency, missing dependencies>>
 
 We can try to remove these missing dependencies from pom.xml and make Maven
 stop complaining about them. However, these removed dependencies may be crucial
@@ -54,11 +53,11 @@ later.  Let's remove the dependencies from `pom.xml`.
 ------
 
 Package maintainer can use a wide variety of "`pom_`" macros for modifying
-`pom.xml` files. See REFERENCE(pom_macros, helper_macros, Macros for POM
-modification) section for more information.
+`pom.xml` files. See <<helper_macros, Macros for POM modification>> section for
+more information.
 
 Now try to build the project again. The build will fail with
-REFERENCE(common_errors, error_compilation_failure, compilation failure).
+<<error_compilation_failure, compilation failure>>.
 
 Oops, another problem. This time Maven thought it had all the necessary dependencies, but Java
 compiler thinks otherwise.
@@ -110,7 +109,7 @@ BuildRequires:  apache-commons-io
 ======
 One can easily search for package which provides desired artifact. Try
 `dnf repoquery --whatprovides 'mvn(commons-io:commons-io)'`, or see how to
-REFERENCE(introduction_for_developers, querying_repositories,query repositories).
+<<querying_repositories,query repositories>>.
 ======
 
 Now try to build the project one more time. The build should succeed now. Congrats, you managed to create an RPM from Maven project!
@@ -128,7 +127,7 @@ This can be easily achieved with `%mvn_file` macro:
 %mvn_file : %{name}/%{name} %{name}
 ------
 
-See REFERENCE(mvn_macros, mvn_file, Alternative JAR File Names) section for more information.
+See <<mvn_file, Alternative JAR File Names>> section for more information.
 
 Another quite common thing to do is adding aliases to Maven artifact. Try to run `rpm
 -qp --provides` on your locally built RPM package:
@@ -156,7 +155,7 @@ Maven artifact.
 %mvn_alias org.example:simplemaven simplemaven:simplemaven
 ------
 
-See REFERENCE(mvn_macros, mvn_alias,Additional Mappings) for more information on `%mvn_alias`.
+See <<mvn_alias, Additional Mappings>> for more information on `%mvn_alias`.
 
 Rebuild the pacakge and check `rpm -qp --provides` output again:
 

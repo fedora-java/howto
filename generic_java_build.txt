@@ -7,7 +7,7 @@ Handling of basic build steps in Java
 * ...
 
 === Generating Application Shell Scripts
-As mentioned in section about REFERENCE(introduction_for_packagers, XFor_Packagers, Java packaging basics),
+As mentioned in section about <<XFor_Packagers, Java packaging basics>>,
 all Java applications need wrapper shell scripts to setup the environment before
 running JVM and associated Java code.
 
