@@ -1,45 +1,43 @@
-SECTION(introduction, Introduction)
-SUBSECTION(introduction_for_packagers, For Packagers)
-SUBSECTION(introduction_for_developers, For Java Developers)
-SECTION(fedora_java_specifics, Fedora Java Specifics for Users and Developers)
-SECTION(fedora_java_packaging_specifics, Fedora Java Specifics for Packagers)
-SUBSECTION(directory_layout, Directory Layout)
-SUBSECTION(jar_file_id, JAR File Identification)
-SUBSECTION(dependency_handling, Dependency Handling)
-SUBSECTION(javadoc_packages, Javadoc packages)
-SUBSECTION(core_java_packages, Core Java packages)
-SECTION(packaging_best_practices, Packaging Best Practices)
-SECTION(generic_java_build, Generic Java Builds)
-SECTION(ant, Ant)
-SECTION(maven, Maven)
-SUBSECTION(packaging_maven_project, Packaging)
-SUBSECTION(mvn_macros, Macros for Maven packaging)
-SUBSECTION(pom_macros, Macros for POM modification)
-SECTION(common_errors, Common Errors)
-
-// SECTION(integration_maven_xmvn, Integration of Maven and XMvn Tools)
-
-SECTION(migration, Migration from older tools)
-SECTION(manpages, Manual pages)
-SUBSECTION(manpage_mvn_alias, mvn_alias)
-SUBSECTION(manpage_mvn_artifact, mvn_artifact)
-SUBSECTION(manpage_mvn_build, mvn_build)
-SUBSECTION(manpage_mvn_compat_version, mvn_compat_version)
-SUBSECTION(manpage_mvn_config, mvn_config)
-SUBSECTION(manpage_mvn_file, mvn_file)
-SUBSECTION(manpage_mvn_install, mvn_install)
-SUBSECTION(manpage_mvn_package, mvn_package)
-SUBSECTION(manpage_pom_add_dep, pom_add_dep)
-SUBSECTION(manpage_pom_add_parent, pom_add_parent)
-SUBSECTION(manpage_pom_add_plugin, pom_add_plugin)
-SUBSECTION(manpage_pom_change_dep, pom_change_dep)
-SUBSECTION(manpage_pom_disable_module, pom_disable_module)
-SUBSECTION(manpage_pom_remove_dep, pom_remove_dep)
-SUBSECTION(manpage_pom_remove_parent, pom_remove_parent)
-SUBSECTION(manpage_pom_remove_plugin, pom_remove_plugin)
-SUBSECTION(manpage_pom_set_parent, pom_set_parent)
-SUBSECTION(manpage_pom_xpath_disable, pom_xpath_disable)
-SUBSECTION(manpage_pom_xpath_inject, pom_xpath_inject)
-SUBSECTION(manpage_pom_xpath_remove, pom_xpath_remove)
-SUBSECTION(manpage_pom_xpath_replace, pom_xpath_replace)
-SUBSECTION(manpage_pom_xpath_set, pom_xpath_set)
+include::introduction.txt[]
+include::introduction_for_packagers.txt[]
+include::introduction_for_developers.txt[]
+include::fedora_java_specifics.txt[]
+include::fedora_java_packaging_specifics.txt[]
+include::directory_layout.txt[]
+include::jar_file_id.txt[]
+include::dependency_handling.txt[]
+include::javadoc_packages.txt[]
+include::core_java_packages.txt[]
+include::packaging_best_practices.txt[]
+include::generic_java_build.txt[]
+include::ant.txt[]
+include::maven.txt[]
+include::packaging_maven_project.txt[]
+include::mvn_macros.txt[]
+include::pom_macros.txt[]
+include::common_errors.txt[]
+// include::integration_maven_xmvn.txt[]
+include::migration.txt[]
+include::manpages.txt[]
+include::manpage_mvn_alias.txt[]
+include::manpage_mvn_artifact.txt[]
+include::manpage_mvn_build.txt[]
+include::manpage_mvn_compat_version.txt[]
+include::manpage_mvn_config.txt[]
+include::manpage_mvn_file.txt[]
+include::manpage_mvn_install.txt[]
+include::manpage_mvn_package.txt[]
+include::manpage_pom_add_dep.txt[]
+include::manpage_pom_add_parent.txt[]
+include::manpage_pom_add_plugin.txt[]
+include::manpage_pom_change_dep.txt[]
+include::manpage_pom_disable_module.txt[]
+include::manpage_pom_remove_dep.txt[]
+include::manpage_pom_remove_parent.txt[]
+include::manpage_pom_remove_plugin.txt[]
+include::manpage_pom_set_parent.txt[]
+include::manpage_pom_xpath_disable.txt[]
+include::manpage_pom_xpath_inject.txt[]
+include::manpage_pom_xpath_remove.txt[]
+include::manpage_pom_xpath_replace.txt[]
+include::manpage_pom_xpath_set.txt[]
