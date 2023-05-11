@@ -1,9 +1,5 @@
 doc_build
-images/xmvn.svg
 index.html
-*.adoc
 /build/
 /cache/
 /public/
-/modules/
-/manpages/

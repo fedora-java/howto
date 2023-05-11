@@ -1,21 +1,23 @@
 site:
-  title: Java Packaging HOWTO
-  start_page: howto::index
+  title: Local Preview
+  start_page: howto::index.adoc
+asciidoc:
+  attributes:
+    EXAMPLE: example$
 content:
-  branches: master
   sources:
-  - url: .
-    branches:
-    - HEAD
+   - url: .
+     branches: HEAD
 ui:
   bundle:
-    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
+    url: https://gitlab.com/fedora/docs/docs-website/ui-bundle/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
     snapshot: true
+  default_layout: with_menu
 output:
   clean: true
   dir: ./public
-  destinations:
-  - provider: archive
 runtime:
-  pull: true
+  fetch: true
   cache_dir: ./cache
+urls:
+  html_extension_style: indexify
