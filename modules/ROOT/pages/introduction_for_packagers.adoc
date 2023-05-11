@@ -50,9 +50,8 @@ In this project all packages are under `src/` directory hierarchy.
 .HelloWorld.java listing
 [source,java]
 ------
-include::java_project/src/org/fedoraproject/helloworld/HelloWorld.java[]
+include::{EXAMPLE}java_project/src/org/fedoraproject/helloworld/HelloWorld.java[]
 ------
-
 
 
 .Java packages

@@ -39,7 +39,7 @@ classpaths.
 === Replacing JARs with symlinks using xmvn-subst
 
 Sometimes it may be needed to replace all JAR files in current directory with
-symlinks to the system JARs located in `%{_javadir}`. This task can be achieved
+symlinks to the system JARs located in +`%{_javadir}`+. This task can be achieved
 using tool called `xmvn-subst`.
 
 [source,shell]

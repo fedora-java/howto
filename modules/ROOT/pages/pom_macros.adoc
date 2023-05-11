@@ -80,7 +80,7 @@ ease this task:
 
 .Adding dependencies
 Dependencies can also be added to `pom.xml` with `%pom_add_dep` macro.
-Usage is very similar to `%pom_remove_dep`, see `"man pom_add_dep"` for
+Usage is very similar to `%pom_remove_dep`, see `$ man pom_add_dep` for
 more information.
 
 .Changing dependencies

@@ -60,7 +60,7 @@ Details:
       `.mfiles-subpackage-name`
     - All packages are required to own directories which they create
       (and which are not owned by other packages). JAR files are by
-      default installed into subdirectory of `%{_javadir}`. To override
+      default installed into subdirectory of +`%{_javadir}`+. To override
       this behavior, use `%mvn_file`
 
 
@@ -138,7 +138,7 @@ with
 [source,spec]
 -------------
 BuildRequires: ivy-local
-....
+...
 %prep
 %pom_xpath_set ivy:publish/@resolver xmvn build.xml
 

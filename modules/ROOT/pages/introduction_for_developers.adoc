@@ -48,7 +48,7 @@ We packed the project directory into file `helloworld.tar.gz`.
 .Example spec file
 [source,spec,numbered]
 ------
-include::rpm_project/helloworld.spec[]
+include::{EXAMPLE}rpm_project/helloworld.spec[]
 ------
 
 RPM `spec` files contain several basic sections:
@@ -95,10 +95,10 @@ Optional `%check` section::
 
 Install section::
    * Copies built files that are supposed to be installed into
-     `%{buildroot}` directory, which represents target filesystem's root
+     +`%{buildroot}`+ directory, which represents target filesystem's root
 
 Files section::
-   * Lists all files, that should be installed from `%{buildroot}` to
+   * Lists all files, that should be installed from +`%{buildroot}`+ to
      target system.
    * Documentation files are prefixed by `%doc` and are
      taken from build directory instead of buildroot

@@ -1,6 +1,6 @@
 name: howto
 title: Java Packaging HOWTO
 version: master
-start_page: ROOT:index
-nav:
-- modules/ROOT/pages/sections.adoc
+start_page: ROOT:index.adoc
+# nav:
+# - modules/ROOT/nav.adoc

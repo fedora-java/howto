@@ -3,8 +3,9 @@ Java Packaging HOWTO
 
 {localdate}
 
-include::versions.txt[]
-include::preamble.txt[]
+include::versions.adoc[]
+
+include::preamble.adoc[]
 
 :numbered!:
 [abstract]
@@ -15,6 +16,5 @@ link:https://docs.fedoraproject.org/en-US/packaging-guidelines/Java/[Java Packag
 but rather aims to document tools and techniques used for packaging Java
 software on Fedora.
 
-
 :numbered:
-include::sections.txt[]
+include::sections.adoc[]
