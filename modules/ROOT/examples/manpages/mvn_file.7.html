@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+MVN_FILE(7)                   Java Packages Tools                  MVN_FILE(7)
+
+
+
+<span class="ansi1">NAME</span>
+       mvn_file - set installation location(s) for Maven artifact(s)
+
+<span class="ansi1">SYNOPSIS</span>
+       <span class="ansi1">%mvn_file </span>artifact-coordinates primary-file [secondary-file ...]
+
+<span class="ansi1">DESCRIPTION</span>
+       <span class="ansi1">mvn_file </span>macro causes instructions for artifact installation to be
+       added to XMvn reactor configuration. It is used to control locations of
+       artifact files in file system. (The exact meaning of artifact location
+       is dependant on particular implementation of XMvn repository into which
+       artifacts will be installed.)
+
+       Specified artifact coordinates must match at least one artifact. If not
+       then behavior is unspecified. It is possible to specify artifact
+       coordinates matching multiple artifacts, so one call to <span class="ansi1">mvn_file </span>can
+       affect installation of more than one artifact.
+
+<span class="ansi1">OPERANDS</span>
+       <span class="ansi1">artifact-coordinates</span>
+           Artifact coordinates specify artifact(s) that this rule applies to.
+           Coordinates are in format
+           <span class="ansi1">groupId:artifactId[:extension[:classifier]][:version]</span>. If extension
+           is specified then version must be specified too. If any part is
+           omitted or equal to empty string then it matches any string.
+           Wildcards and brace expansions are supported in each part. For more
+           information see XMvn Configuration Reference.
+
+       <span class="ansi1">primary-file</span>
+           Primary location of artifact file. This operand is passed directly
+           to XMvn installer. Its exact meaning is specific to particular
+           repository implementation used to install given artifact.
+           Backreferences are supported in form <span class="ansi1">@n</span>, where <span class="ansi1">n </span>is an integer
+           corresponding to brace in <span class="ansi1">artifact-coordinates</span>.
+
+       <span class="ansi1">secondary-file</span>
+           Secondary location of artifact file. There can be any number (zero
+           or more) of secondary artifact files. These operands are passed
+           directly to XMvn installer. Their exact meaning is specific to
+           particular repository implementation used to install given
+           artifact. Backreferences are supported in form <span class="ansi1">@n</span>, where <span class="ansi1">n </span>is an
+           integer corresponding to brace in <span class="ansi1">artifact-coordinates</span>.
+
+<span class="ansi1">AUTHOR</span>
+       Originally written by Mikolaj Izdebski. Versions 3.0.0 and later were
+       written by Stanislav Ochotnicky.
+
+<span class="ansi1">REPORTING BUGS</span>
+       Bugs should be reported through Java Packages Tools issue tracker at
+       Github: <span class="ansi34"></span><span class="ansi1 ansi34">https://github.com/fedora-java/javapackages/issues</span><span class="ansi1"></span>.
+
+<span class="ansi1">SEE ALSO</span>
+       <span class="ansi1">gradle_build</span>(7), <span class="ansi1">mvn_alias</span>(7), <span class="ansi1">mvn_build</span>(7), <span class="ansi1">mvn_compat_version</span>(7),
+       <span class="ansi1">mvn_config</span>(7), <span class="ansi1">mvn_package</span>(7), <span class="ansi1">xmvn</span>(1).
+
+
+
+JAVAPACKAGES                      01/25/2023                       MVN_FILE(7)
+
+</pre>
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+[appendix]
+[[manpages]]
+== Manpages
+
+This section contains manpages for +mvn_*+ and +pom_*+ macros.
+
+=== mvn_alias
+++++++++++++++++++++++++++
+include::{EXAMPLE}manpages/mvn_alias.7.html[]
+++++++++++++++++++++++++++
+
+=== mvn_artifact
+++++++++++++++++++++++++++
+include::{EXAMPLE}manpages/mvn_artifact.7.html[]
+++++++++++++++++++++++++++
+
+=== mvn_build
+++++++++++++++++++++++++++
+include::{EXAMPLE}manpages/mvn_build.7.html[]
+++++++++++++++++++++++++++
+
+=== mvn_compat_version
+++++++++++++++++++++++++++
+include::{EXAMPLE}manpages/mvn_compat_version.7.html[]
+++++++++++++++++++++++++++
+
+=== mvn_config
+++++++++++++++++++++++++++
+include::{EXAMPLE}manpages/mvn_config.7.html[]
+++++++++++++++++++++++++++
+
+=== mvn_file
+++++++++++++++++++++++++++
+include::{EXAMPLE}manpages/mvn_file.7.html[]
+++++++++++++++++++++++++++
+
+=== mvn_install
+++++++++++++++++++++++++++
+include::{EXAMPLE}manpages/mvn_install.7.html[]
+++++++++++++++++++++++++++
+
+=== mvn_package
+++++++++++++++++++++++++++
+include::{EXAMPLE}manpages/mvn_package.7.html[]
+++++++++++++++++++++++++++
+
+=== pom_add_dep
+++++++++++++++++++++++++++
+include::{EXAMPLE}manpages/pom_add_dep.7.html[]
+++++++++++++++++++++++++++
+
+=== pom_add_parent
+++++++++++++++++++++++++++
+include::{EXAMPLE}manpages/pom_add_parent.7.html[]
+++++++++++++++++++++++++++
+
+=== pom_add_plugin
+++++++++++++++++++++++++++
+include::{EXAMPLE}manpages/pom_add_plugin.7.html[]
+++++++++++++++++++++++++++
+
+=== pom_change_dep
+++++++++++++++++++++++++++
+include::{EXAMPLE}manpages/pom_change_dep.7.html[]
+++++++++++++++++++++++++++
+
+=== pom_disable_module
+++++++++++++++++++++++++++
+include::{EXAMPLE}manpages/pom_disable_module.7.html[]
+++++++++++++++++++++++++++
+
+=== pom_remove_dep
+++++++++++++++++++++++++++
+include::{EXAMPLE}manpages/pom_remove_dep.7.html[]
+++++++++++++++++++++++++++
+
+=== pom_remove_parent
+++++++++++++++++++++++++++
+include::{EXAMPLE}manpages/pom_remove_parent.7.html[]
+++++++++++++++++++++++++++
+
+=== pom_remove_plugin
+++++++++++++++++++++++++++
+include::{EXAMPLE}manpages/pom_remove_plugin.7.html[]
+++++++++++++++++++++++++++
+
+=== pom_set_parent
+++++++++++++++++++++++++++
+include::{EXAMPLE}manpages/pom_set_parent.7.html[]
+++++++++++++++++++++++++++
+
+=== pom_xpath_disable
+++++++++++++++++++++++++++
+include::{EXAMPLE}manpages/pom_xpath_disable.7.html[]
+++++++++++++++++++++++++++
+
+=== pom_xpath_inject
+++++++++++++++++++++++++++
+include::{EXAMPLE}manpages/pom_xpath_inject.7.html[]
+++++++++++++++++++++++++++
+
+=== pom_xpath_remove
+++++++++++++++++++++++++++
+include::{EXAMPLE}manpages/pom_xpath_remove.7.html[]
+++++++++++++++++++++++++++
+
+=== pom_xpath_replace
+++++++++++++++++++++++++++
+include::{EXAMPLE}manpages/pom_xpath_replace.7.html[]
+++++++++++++++++++++++++++
+
+=== pom_xpath_set
+++++++++++++++++++++++++++
+include::{EXAMPLE}manpages/pom_xpath_set.7.html[]
+++++++++++++++++++++++++++
+
