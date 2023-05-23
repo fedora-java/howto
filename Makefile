@@ -71,7 +71,7 @@ cache public &: modules $(shell find $(source_dir)) $(generated_sources) antora.
 
 antora: cache public
 
-antora-preview: antora
+antora-preview: antora nginx.conf
 	@echo ------------
 	@echo Preveiew should be available at http://localhost:8080
 	@echo ------------
