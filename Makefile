@@ -1,7 +1,5 @@
 MAKEFLAGS += -r
 
-VERSION ?= Unknown
-
 manpages :=\
 	mvn_alias\
 	mvn_artifact\
@@ -41,7 +39,7 @@ clean:
 	@rm -rfv build cache public $(generated_sources)
 
 index.html: $(pages) $(examples) $(generated_sources)
-	asciidoctor -a EXAMPLE='../examples/' -b html5 -a icons -a toc2 -a toclevels=3 -a theme=flask -a version=$(VERSION) -o $@ $(source_dir)/pages/index.adoc --failure-level=ERROR
+	asciidoctor -a EXAMPLE='../examples/' -b html5 -a icons -a toc2 -a toclevels=3 -a theme=flask -o $@ $(source_dir)/pages/index.adoc --failure-level=ERROR
 
 $(call manpage_html,%):
 	COLUMNS=80 man -Tutf8 7 $(*F) | ansi2html >$@

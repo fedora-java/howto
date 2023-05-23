@@ -3,8 +3,6 @@ Java Packaging HOWTO
 
 {localdate}
 
-include::versions.adoc[]
-
 include::preamble.adoc[]
 
 :numbered!:
