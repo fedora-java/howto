@@ -10,7 +10,7 @@ documentation].
 
 ==== Example Java Project
 To better illustrate various parts of Java packaging we will dissect simple Java
-``Hello world'' application. Java sources are usually organized using directory
+`Hello world` application. Java sources are usually organized using directory
 hierarchies. Shared directory hierarchy creates a namespace called `package` in
 Java terminology. To understand naming mechanisms of Java `packages` see
 link:http://docs.oracle.com/javase/tutorial/java/package/namingpkgs.html[Java
@@ -20,7 +20,7 @@ Let's create a simple hello world application that will execute following steps
 when run:
 
  1. Ask for a name
- 2. Print out ``Hello World from'' and the name from previous step
+ 2. Print out `Hello World from` and the name from previous step
 
 To illustrate certain points we artificially complicate things by creating:
 
