@@ -31,7 +31,7 @@ examples = $(shell find $(source_dir)/examples -type f)
 manpage_html = $(patsubst %,$(source_dir)/examples/manpages/%.7.html,$(1))
 generated_sources = $(source_dir)/examples/images/xmvn.svg $(source_dir)/examples/manpages.adoc $(call manpage_html,$(manpages))
 
-.PHONY: all clean gh-pages antora antora-preview
+.PHONY: all clean antora antora-preview
 
 all: index.html
 
@@ -58,9 +58,6 @@ $(source_dir)/examples/manpages.adoc: $(source_dir)/pages/manpages.adoc
 		echo '++++++++++++++++++++++++++' >> $@;\
 		echo >> $@;\
 	done
-
-gh-pages: index.html
-	./build-gh-pages.sh
 
 ################################################################################
 
