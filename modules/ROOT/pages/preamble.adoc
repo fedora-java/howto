@@ -1,3 +1,4 @@
+[colophon]
 == Authors and contributing
 
 The authors of this document are:

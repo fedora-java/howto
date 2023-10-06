@@ -432,8 +432,122 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 #footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
+<style>
+pre.rouge table td { padding: 5px; }
+pre.rouge table pre { margin: 0; }
+pre.rouge, pre.rouge .w {
+  color: #24292f;
+  background-color: #f6f8fa;
+}
+pre.rouge .k, pre.rouge .kd, pre.rouge .kn, pre.rouge .kp, pre.rouge .kr, pre.rouge .kt, pre.rouge .kv {
+  color: #cf222e;
+}
+pre.rouge .gr {
+  color: #f6f8fa;
+}
+pre.rouge .gd {
+  color: #82071e;
+  background-color: #ffebe9;
+}
+pre.rouge .nb {
+  color: #953800;
+}
+pre.rouge .nc {
+  color: #953800;
+}
+pre.rouge .no {
+  color: #953800;
+}
+pre.rouge .nn {
+  color: #953800;
+}
+pre.rouge .sr {
+  color: #116329;
+}
+pre.rouge .na {
+  color: #116329;
+}
+pre.rouge .nt {
+  color: #116329;
+}
+pre.rouge .gi {
+  color: #116329;
+  background-color: #dafbe1;
+}
+pre.rouge .kc {
+  color: #0550ae;
+}
+pre.rouge .l, pre.rouge .ld, pre.rouge .m, pre.rouge .mb, pre.rouge .mf, pre.rouge .mh, pre.rouge .mi, pre.rouge .il, pre.rouge .mo, pre.rouge .mx {
+  color: #0550ae;
+}
+pre.rouge .sb {
+  color: #0550ae;
+}
+pre.rouge .bp {
+  color: #0550ae;
+}
+pre.rouge .ne {
+  color: #0550ae;
+}
+pre.rouge .nl {
+  color: #0550ae;
+}
+pre.rouge .py {
+  color: #0550ae;
+}
+pre.rouge .nv, pre.rouge .vc, pre.rouge .vg, pre.rouge .vi, pre.rouge .vm {
+  color: #0550ae;
+}
+pre.rouge .o, pre.rouge .ow {
+  color: #0550ae;
+}
+pre.rouge .gh {
+  color: #0550ae;
+  font-weight: bold;
+}
+pre.rouge .gu {
+  color: #0550ae;
+  font-weight: bold;
+}
+pre.rouge .s, pre.rouge .sa, pre.rouge .sc, pre.rouge .dl, pre.rouge .sd, pre.rouge .s2, pre.rouge .se, pre.rouge .sh, pre.rouge .sx, pre.rouge .s1, pre.rouge .ss {
+  color: #0a3069;
+}
+pre.rouge .nd {
+  color: #8250df;
+}
+pre.rouge .nf, pre.rouge .fm {
+  color: #8250df;
+}
+pre.rouge .err {
+  color: #f6f8fa;
+  background-color: #82071e;
+}
+pre.rouge .c, pre.rouge .ch, pre.rouge .cd, pre.rouge .cm, pre.rouge .cp, pre.rouge .cpf, pre.rouge .c1, pre.rouge .cs {
+  color: #6e7781;
+}
+pre.rouge .gl {
+  color: #6e7781;
+}
+pre.rouge .gt {
+  color: #6e7781;
+}
+pre.rouge .ni {
+  color: #24292f;
+}
+pre.rouge .si {
+  color: #24292f;
+}
+pre.rouge .ge {
+  color: #24292f;
+  font-style: italic;
+}
+pre.rouge .gs {
+  color: #24292f;
+  font-weight: bold;
+}
+</style>
 </head>
-<body class="article toc2 toc-left">
+<body class="book toc2 toc-left text-justify">
 <div id="header">
 <h1>Java Packaging HOWTO</h1>
 <div id="toc" class="toc2">
@@ -746,8 +860,8 @@ when run:</p>
 <div class="listingblock">
 <div class="title">Directory listing of example project</div>
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">$ find .
-.
+<pre class="rouge highlight"><code data-lang="shell"><span class="nv">$ </span>find <span class="nb">.</span>
+<span class="nb">.</span>
 ./Makefile
 ./src
 ./src/org
@@ -766,26 +880,26 @@ when run:</p>
 <div class="listingblock">
 <div class="title">HelloWorld.java listing</div>
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">package org.fedoraproject.helloworld;
+<pre class="rouge highlight"><code data-lang="java"><span class="kn">package</span> <span class="nn">org.fedoraproject.helloworld</span><span class="o">;</span>
 
-// import Input class from org.fedoraproject.helloworld.input package
-import org.fedoraproject.helloworld.input.Input;
-// import Output class from org.fedoraproject.helloworld.output package
-import org.fedoraproject.helloworld.output.Output;
+<span class="c1">// import Input class from org.fedoraproject.helloworld.input package</span>
+<span class="kn">import</span> <span class="nn">org.fedoraproject.helloworld.input.Input</span><span class="o">;</span>
+<span class="c1">// import Output class from org.fedoraproject.helloworld.output package</span>
+<span class="kn">import</span> <span class="nn">org.fedoraproject.helloworld.output.Output</span><span class="o">;</span>
 
-class HelloWorld {
-    public static void main(String[] args) {
-        System.out.print("What is your name?: ");
-        String reply = Input.getInput();
-        Output.output(reply);
-    }
-}</code></pre>
+<span class="kd">class</span> <span class="nc">HelloWorld</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"What is your name?: "</span><span class="o">);</span>
+        <span class="nc">String</span> <span class="n">reply</span> <span class="o">=</span> <span class="nc">Input</span><span class="o">.</span><span class="na">getInput</span><span class="o">();</span>
+        <span class="nc">Output</span><span class="o">.</span><span class="na">output</span><span class="o">(</span><span class="n">reply</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">Java packages</div>
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">org/fedoraproject/helloworld/input/Input.java
+<pre class="rouge highlight"><code data-lang="shell">org/fedoraproject/helloworld/input/Input.java
 org/fedoraproject/helloworld/output/Output.java
 org/fedoraproject/helloworld/HelloWorld.java</code></pre>
 </div>
@@ -829,7 +943,7 @@ compiler can be typically invoked from command line by command <code>javac</code
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">$ javac $(find -name '*.java')</code></pre>
+<pre class="rouge highlight"><code data-lang="shell"><span class="nv">$ </span>javac <span class="si">$(</span>find <span class="nt">-name</span> <span class="s1">'*.java'</span><span class="si">)</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -891,7 +1005,7 @@ JAR file by extracting it. That can be done with following command:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">jar xf something.jar</code></pre>
+<pre class="rouge highlight"><code data-lang="shell">jar xf something.jar</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -910,8 +1024,8 @@ Java Virtual Machine.</p>
 <div class="listingblock">
 <div class="title">Setting the classpath</div>
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">java -cp /usr/share/java/log4j.jar:/usr/share/java/junit.jar mypackage/MyClass.class
-CLASSPATH=/usr/share/java/log4j.jar:/usr/share/java/junit.jar java mypackage/MyClass.class</code></pre>
+<pre class="rouge highlight"><code data-lang="shell">java <span class="nt">-cp</span> /usr/share/java/log4j.jar:/usr/share/java/junit.jar mypackage/MyClass.class
+<span class="nv">CLASSPATH</span><span class="o">=</span>/usr/share/java/log4j.jar:/usr/share/java/junit.jar java mypackage/MyClass.class</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -960,25 +1074,25 @@ default named <code>pom.xml</code>. In its simpler form it usually looks like th
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-                             http://maven.apache.org/maven-v4_0_0.xsd"&gt;
-    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
-    &lt;groupId&gt;com.example.myproject&lt;/groupId&gt;
-    &lt;artifactId&gt;myproject&lt;/artifactId&gt;
-    &lt;packaging&gt;jar&lt;/packaging&gt;
-    &lt;version&gt;1.0&lt;/version&gt;
-    &lt;name&gt;myproject&lt;/name&gt;
-    &lt;dependencies&gt;
-        &lt;dependency&gt;
-            &lt;groupId&gt;junit&lt;/groupId&gt;
-            &lt;artifactId&gt;junit&lt;/artifactId&gt;
-            &lt;version&gt;4.1&lt;/version&gt;
-            &lt;scope&gt;test&lt;/scope&gt;
-        &lt;/dependency&gt;
-    &lt;/dependencies&gt;
-&lt;/project&gt;</code></pre>
+<pre class="rouge highlight"><code data-lang="xml"><span class="nt">&lt;project</span> <span class="na">xmlns=</span><span class="s">"http://maven.apache.org/POM/4.0.0"</span>
+         <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span>
+         <span class="na">xsi:schemaLocation=</span><span class="s">"http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/maven-v4_0_0.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>com.example.myproject<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>myproject<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;packaging&gt;</span>jar<span class="nt">&lt;/packaging&gt;</span>
+    <span class="nt">&lt;version&gt;</span>1.0<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;name&gt;</span>myproject<span class="nt">&lt;/name&gt;</span>
+    <span class="nt">&lt;dependencies&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>junit<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>junit<span class="nt">&lt;/artifactId&gt;</span>
+            <span class="nt">&lt;version&gt;</span>4.1<span class="nt">&lt;/version&gt;</span>
+            <span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+    <span class="nt">&lt;/dependencies&gt;</span>
+<span class="nt">&lt;/project&gt;</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -999,32 +1113,32 @@ dependencies and plugins.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;project name="MyProject" default="dist" basedir="."&gt;
-  &lt;property name="src" location="src"/&gt;
-  &lt;property name="build" location="build"/&gt;
-  &lt;property name="dist" location="dist"/&gt;
+<pre class="rouge highlight"><code data-lang="xml"><span class="nt">&lt;project</span> <span class="na">name=</span><span class="s">"MyProject"</span> <span class="na">default=</span><span class="s">"dist"</span> <span class="na">basedir=</span><span class="s">"."</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"src"</span> <span class="na">location=</span><span class="s">"src"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"build"</span> <span class="na">location=</span><span class="s">"build"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"dist"</span> <span class="na">location=</span><span class="s">"dist"</span><span class="nt">/&gt;</span>
 
-  &lt;target name="init" description="Create build directory"&gt;
-    &lt;mkdir dir="${build}"/&gt;
-  &lt;/target&gt;
+  <span class="nt">&lt;target</span> <span class="na">name=</span><span class="s">"init"</span> <span class="na">description=</span><span class="s">"Create build directory"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;mkdir</span> <span class="na">dir=</span><span class="s">"${build}"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/target&gt;</span>
 
-  &lt;target name="compile" depends="init"
-        description="Compile the source"&gt;
-    &lt;javac srcdir="${src}" destdir="${build}"/&gt;
-  &lt;/target&gt;
+  <span class="nt">&lt;target</span> <span class="na">name=</span><span class="s">"compile"</span> <span class="na">depends=</span><span class="s">"init"</span>
+        <span class="na">description=</span><span class="s">"Compile the source"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;javac</span> <span class="na">srcdir=</span><span class="s">"${src}"</span> <span class="na">destdir=</span><span class="s">"${build}"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/target&gt;</span>
 
-  &lt;target name="dist" depends="compile"
-        description="Generate jar"&gt;
-    &lt;mkdir dir="${dist}/lib"/&gt;
+  <span class="nt">&lt;target</span> <span class="na">name=</span><span class="s">"dist"</span> <span class="na">depends=</span><span class="s">"compile"</span>
+        <span class="na">description=</span><span class="s">"Generate jar"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;mkdir</span> <span class="na">dir=</span><span class="s">"${dist}/lib"</span><span class="nt">/&gt;</span>
 
-    &lt;jar jarfile="${dist}/myproject.jar" basedir="${build}"/&gt;
-  &lt;/target&gt;
+    <span class="nt">&lt;jar</span> <span class="na">jarfile=</span><span class="s">"${dist}/myproject.jar"</span> <span class="na">basedir=</span><span class="s">"${build}"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/target&gt;</span>
 
-  &lt;target name="clean" description="Clean build files"&gt;
-    &lt;delete dir="${build}"/&gt;
-    &lt;delete dir="${dist}"/&gt;
-  &lt;/target&gt;
-&lt;/project&gt;</code></pre>
+  <span class="nt">&lt;target</span> <span class="na">name=</span><span class="s">"clean"</span> <span class="na">description=</span><span class="s">"Clean build files"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;delete</span> <span class="na">dir=</span><span class="s">"${build}"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;delete</span> <span class="na">dir=</span><span class="s">"${dist}"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/target&gt;</span>
+<span class="nt">&lt;/project&gt;</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1147,7 +1261,7 @@ and the rest is not necessary for this section.</p>
 <div class="listingblock">
 <div class="title">Directory listing</div>
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">Makefile
+<pre class="rouge highlight"><code data-lang="shell">Makefile
 src
 src/org
 src/org/fedoraproject
@@ -1165,7 +1279,64 @@ src/org/fedoraproject/helloworld/HelloWorld.java</code></pre>
 <div class="listingblock">
 <div class="title">Example spec file</div>
 <div class="content">
-<pre class="highlight"><code class="language-spec" data-lang="spec"># Comments start with hash sign. Caution: macros in comments are still
+<pre class="rouge highlight"><code data-lang="rpmspec"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+</pre></td><td class="code"><pre># Comments start with hash sign. Caution: macros in comments are still
 # expanded, which can lead to unexpected results. To stop macro from expanding,
 # double its percent sign (e.g. %%mvn_install)
 
@@ -1221,7 +1392,8 @@ install -p -m 644 helloworld.jar %{buildroot}%{_javadir}/helloworld.jar
 
 %changelog
 * Tue Mar 19 2013 Stanislav Ochotnicky &lt;sochotnicky@redhat.com&gt; - 1.0-1
-- This is first version</code></pre>
+- This is first version
+</pre></td></tr></tbody></table></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1339,7 +1511,7 @@ this section is omitted</p>
 <ul>
 <li>
 <p>Copies built files that are supposed to be installed into
-<code><code>%{buildroot}</code></code> directory, which represents target filesystem&#8217;s root</p>
+`%{buildroot}` directory, which represents target filesystem&#8217;s root</p>
 </li>
 </ul>
 </div>
@@ -1349,7 +1521,7 @@ this section is omitted</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Lists all files, that should be installed from <code><code>%{buildroot}</code></code> to
+<p>Lists all files, that should be installed from `%{buildroot}` to
 target system.</p>
 </li>
 <li>
@@ -1385,7 +1557,7 @@ your current directory and run <code>rpmbuild</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">$ rpmbuild -bb helloworld.spec</code></pre>
+<pre class="rouge highlight"><code data-lang="shell"><span class="nv">$ </span>rpmbuild <span class="nt">-bb</span> helloworld.spec</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1431,7 +1603,7 @@ which can be later build to RPMs (option <code>-bs</code>)</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>See <code>rpmbuild</code>'s manual page for all available options.</p>
+<p>See `rpmbuild&#8217;s manual page for all available options.</p>
 </div>
 </div>
 <div class="sect3">
@@ -1444,12 +1616,12 @@ assistance in getting information from RPM repositories.</p>
 <p><code>dnf repoquery</code> is a tool for querying information from RPM repositories.
 Maintainer of Java packages might typically query the repository for
 information like "which package contains Maven artifact
-<code>groupId:artifactId</code>".</p>
+`groupId:artifactId`".</p>
 </div>
 <div class="listingblock">
 <div class="title">Find out which package provides given artifact</div>
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">$ dnf repoquery --whatprovides 'mvn(commons-io:commons-io)'
+<pre class="rouge highlight"><code data-lang="shell"><span class="nv">$ </span>dnf repoquery <span class="nt">--whatprovides</span> <span class="s1">'mvn(commons-io:commons-io)'</span>
 apache-commons-io-1:2.4-9.fc19.noarch</code></pre>
 </div>
 </div>
@@ -1465,7 +1637,7 @@ repository:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">$ dnf repoquery --available --disablerepo \* --enablerepo rawhide --whatprovides 'mvn(commons-io:commons-io)'
+<pre class="rouge highlight"><code data-lang="shell"><span class="nv">$ </span>dnf repoquery <span class="nt">--available</span> <span class="nt">--disablerepo</span> <span class="se">\*</span> <span class="nt">--enablerepo</span> rawhide <span class="nt">--whatprovides</span> <span class="s1">'mvn(commons-io:commons-io)'</span>
 apache-commons-io-1:2.4-10.fc20.noarch</code></pre>
 </div>
 </div>
@@ -1475,12 +1647,12 @@ given package:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">$ dnf repoquery --provides apache-commons-io
-apache-commons-io = 1:2.4-9.fc19
-jakarta-commons-io = 1:2.4-9.fc19
-mvn(commons-io:commons-io) = 2.4
-mvn(org.apache.commons:commons-io) = 2.4
-osgi(org.apache.commons.io) = 2.4.0</code></pre>
+<pre class="rouge highlight"><code data-lang="shell"><span class="nv">$ </span>dnf repoquery <span class="nt">--provides</span> apache-commons-io
+apache-commons-io <span class="o">=</span> 1:2.4-9.fc19
+jakarta-commons-io <span class="o">=</span> 1:2.4-9.fc19
+mvn<span class="o">(</span>commons-io:commons-io<span class="o">)</span> <span class="o">=</span> 2.4
+mvn<span class="o">(</span>org.apache.commons:commons-io<span class="o">)</span> <span class="o">=</span> 2.4
+osgi<span class="o">(</span>org.apache.commons.io<span class="o">)</span> <span class="o">=</span> 2.4.0</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1502,10 +1674,10 @@ built packages.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">$ rpm -qp --provides simplemaven-1.0-2.fc21.noarch.rpm
-mvn(com.example:simplemaven) = 1.0
-mvn(simplemaven:simplemaven) = 1.0
-simplemaven = 1.0-2.fc21</code></pre>
+<pre class="rouge highlight"><code data-lang="shell"><span class="nv">$ </span>rpm <span class="nt">-qp</span> <span class="nt">--provides</span> simplemaven-1.0-2.fc21.noarch.rpm
+mvn<span class="o">(</span>com.example:simplemaven<span class="o">)</span> <span class="o">=</span> 1.0
+mvn<span class="o">(</span>simplemaven:simplemaven<span class="o">)</span> <span class="o">=</span> 1.0
+simplemaven <span class="o">=</span> 1.0-2.fc21</code></pre>
 </div>
 </div>
 </div>
@@ -1571,7 +1743,7 @@ It&#8217;s a Java application launcher which spawns Java Virtual Machine
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">$ java org/fedoraproject/helloworld/HelloWorld.class</code></pre>
+<pre class="rouge highlight"><code data-lang="shell"><span class="nv">$ </span>java org/fedoraproject/helloworld/HelloWorld.class</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1657,19 +1829,19 @@ See following example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">$ build-classpath log4j junit org.ow2.asm:asm
+<pre class="rouge highlight"><code data-lang="shell"><span class="nv">$ </span>build-classpath log4j junit org.ow2.asm:asm
 /usr/share/java/log4j.jar:/usr/share/java/junit.jar:/usr/share/java/objectweb-asm4/asm.jar</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p><code>log4j</code> corresponds to <code>log4j.jar</code> stored in <code><code>%{_javadir}</code></code>. If the JAR
-file is stored in subdirectory under <code><code>%{_javadir}</code></code>, it&#8217;s neccessary to
+<p><code>log4j</code> corresponds to <code>log4j.jar</code> stored in `%{_javadir}`. If the JAR
+file is stored in subdirectory under `%{_javadir}`, it&#8217;s neccessary to
 pass <code>subdirectory/jarname</code> as an argument to <code>build-classpath</code>.
 Example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">$ build-classpath httpcomponents/httpclient.jar
+<pre class="rouge highlight"><code data-lang="shell"><span class="nv">$ </span>build-classpath httpcomponents/httpclient.jar
 /usr/share/java/httpcomponents/httpclient.jar</code></pre>
 </div>
 </div>
@@ -1684,12 +1856,12 @@ coordintes.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">$ build-jar-repository my-repo log4j httpcomponents/httpclient junit:junit
-$ ls -l my-repo/
+<pre class="rouge highlight"><code data-lang="shell"><span class="nv">$ </span>build-jar-repository my-repo log4j httpcomponents/httpclient junit:junit
+<span class="nv">$ </span><span class="nb">ls</span> <span class="nt">-l</span> my-repo/
 total 0
-lrwxrwxrwx. 1 msrb msrb 45 Oct 29 10:39 [httpcomponents][httpclient].jar -&gt; /usr/share/java/httpcomponents/httpclient.jar
-lrwxrwxrwx. 1 msrb msrb 25 Oct 29 10:39 [junit:junit].jar -&gt; /usr/share/java/junit.jar
-lrwxrwxrwx. 1 msrb msrb 25 Oct 29 10:39 [log4j].jar -&gt; /usr/share/java/log4j.jar</code></pre>
+lrwxrwxrwx. 1 msrb msrb 45 Oct 29 10:39 <span class="o">[</span>httpcomponents][httpclient].jar -&gt; /usr/share/java/httpcomponents/httpclient.jar
+lrwxrwxrwx. 1 msrb msrb 25 Oct 29 10:39 <span class="o">[</span>junit:junit].jar -&gt; /usr/share/java/junit.jar
+lrwxrwxrwx. 1 msrb msrb 25 Oct 29 10:39 <span class="o">[</span>log4j].jar -&gt; /usr/share/java/log4j.jar</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1703,7 +1875,7 @@ classpath string from specified directory.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">$ build-classpath-directory /usr/share/java/xstream
+<pre class="rouge highlight"><code data-lang="shell"><span class="nv">$ </span>build-classpath-directory /usr/share/java/xstream
 /usr/share/java/xstream/xstream-benchmark.jar:/usr/share/java/xstream/xstream.jar
 :/usr/share/java/xstream/xstream-hibernate.jar</code></pre>
 </div>
@@ -1726,7 +1898,7 @@ short description.</p>
 <div class="dlist glossary">
 <div class="title">Directories commonly used by regular packages</div>
 <dl>
-<dt><code><code>%{_javadir}</code></code>&#8201;&#8212;&#8201;<code>/usr/share/java</code></dt>
+<dt>`%{_javadir}`&#8201;&#8212;&#8201;<code>/usr/share/java</code></dt>
 <dd>
 <p>Directory that holds all JAR files that do not contain or use
 native code and do not depend on a particular Java standard
@@ -1735,37 +1907,37 @@ directory or one of its subdirectories.  Often packages create
 their own subdirectories there, in this case subdirectory name
 should match package name.</p>
 </dd>
-<dt><code><code>%{_jnidir}</code></code>&#8201;&#8212;&#8201;<code>/usr/lib/java</code></dt>
+<dt>`%{_jnidir}`&#8201;&#8212;&#8201;<code>/usr/lib/java</code></dt>
 <dd>
 <p>Directory where architecture-specific JAR files are installed.  In
 particular JAR files containing or using native code (Java Native
 Interface, JNI) should be installed.</p>
 </dd>
-<dt><code><code>%{_javadocdir}</code></code>&#8201;&#8212;&#8201;<code>/usr/share/javadoc</code></dt>
+<dt>`%{_javadocdir}`&#8201;&#8212;&#8201;<code>/usr/share/javadoc</code></dt>
 <dd>
 <p>Root directory where all Java API documentation (Javadoc) is
 installed.  Each source package usually creates a single
 subdirectory containing aggregated Javadocs for all binary
 packages it produces.</p>
 </dd>
-<dt><code><code>%{_mavenpomdir}</code></code>&#8201;&#8212;&#8201;<code>/usr/share/maven-poms</code></dt>
+<dt>`%{_mavenpomdir}`&#8201;&#8212;&#8201;<code>/usr/share/maven-poms</code></dt>
 <dd>
 <p>Directory where Project Object Model (POM) files used by Apache
 Maven are installed.  Each POM must have name that strictly
-corresponds to JAR file in <code><code>%{_javadir}</code></code> or <code><code>%{_jnidir}</code></code>.</p>
+corresponds to JAR file in `%{_javadir}` or `%{_jnidir}`.</p>
 </dd>
-<dt><code><code>%{_ivyxmldir}</code></code>&#8201;&#8212;&#8201;<code>/usr/share/ivy-xmls</code></dt>
+<dt>`%{_ivyxmldir}`&#8201;&#8212;&#8201;<code>/usr/share/ivy-xmls</code></dt>
 <dd>
 <p>Directory where <code>ivy.xml</code> files used by Apache Ivy are installed.
 Each XML must have name that strictly corresponds to JAR file in
-<code><code>%{_javadir}</code></code> or <code><code>%{_jnidir}</code></code>.</p>
+`%{_javadir}` or `%{_jnidir}`.</p>
 </dd>
 </dl>
 </div>
 <div class="dlist glossary">
 <div class="title">Other directories</div>
 <dl>
-<dt><code><code>%{_jvmdir}</code></code>&#8201;&#8212;&#8201;<code>/usr/lib/jvm</code></dt>
+<dt>`%{_jvmdir}`&#8201;&#8212;&#8201;<code>/usr/lib/jvm</code></dt>
 <dd>
 <p>Root directory where different Java Virtual Machines (JVM) are
 installed.  Each JVM creates a subdirectory, possibly with several
@@ -1774,17 +1946,17 @@ prefixed with <code>java</code> contain Java Development Kit (JDK), while
 directories which names start with <code>jre</code> hold Java Runtime
 Environment (JRE).</p>
 </dd>
-<dt><code><code>%{_jvmsysconfdir}</code></code>&#8201;&#8212;&#8201;<code>/etc/jvm</code></dt>
-<dt><code><code>%{_jvmcommonsysconfdir}</code></code>&#8201;&#8212;&#8201;<code>/etc/jvm-common</code></dt>
+<dt>`%{_jvmsysconfdir}`&#8201;&#8212;&#8201;<code>/etc/jvm</code></dt>
+<dt>`%{_jvmcommonsysconfdir}`&#8201;&#8212;&#8201;<code>/etc/jvm-common</code></dt>
 <dd>
 <p>Directories containing configuration files for Java Virtual
 Machines (JVM).</p>
 </dd>
-<dt><code><code>%{_jvmprivdir}</code></code>&#8201;&#8212;&#8201;<code>/usr/lib/jvm-private</code></dt>
-<dt><code><code>%{_jvmlibdir}</code></code>&#8201;&#8212;&#8201;<code>/usr/lib/jvm</code></dt>
-<dt><code><code>%{_jvmdatadir}</code></code>&#8201;&#8212;&#8201;<code>/usr/share/jvm</code></dt>
-<dt><code><code>%{_jvmcommonlibdir}</code></code>&#8201;&#8212;&#8201;<code>/usr/lib/jvm-common</code></dt>
-<dt><code><code>%{_jvmcommondatadir}</code></code>&#8201;&#8212;&#8201;<code>/usr/share/jvm-common</code></dt>
+<dt>`%{_jvmprivdir}`&#8201;&#8212;&#8201;<code>/usr/lib/jvm-private</code></dt>
+<dt>`%{_jvmlibdir}`&#8201;&#8212;&#8201;<code>/usr/lib/jvm</code></dt>
+<dt>`%{_jvmdatadir}`&#8201;&#8212;&#8201;<code>/usr/share/jvm</code></dt>
+<dt>`%{_jvmcommonlibdir}`&#8201;&#8212;&#8201;<code>/usr/lib/jvm-common</code></dt>
+<dt>`%{_jvmcommondatadir}`&#8201;&#8212;&#8201;<code>/usr/share/jvm-common</code></dt>
 <dd>
 <p>Directories containing implementation files of Java Virtual
 Machines (JVM).  Describing them in detail is out of scope for
@@ -1792,7 +1964,7 @@ this document.  Purpose of each directory is commented briefly in
 <code>macros.jpackage</code> file in <code>/etc/rpm</code>.  More detailed description
 can be found in JPackage policy.</p>
 </dd>
-<dt><code><code>%{_javaconfdir}</code></code>&#8201;&#8212;&#8201;<code>/etc/java</code></dt>
+<dt>`%{_javaconfdir}`&#8201;&#8212;&#8201;<code>/etc/java</code></dt>
 <dd>
 <p>Directory containing Java configuration files.  In particular it
 contains main Java configuration file&#8201;&#8212;&#8201;<code>java.conf</code>.</p>
@@ -1824,8 +1996,8 @@ artifacts in system repository.</p>
 <h4 id="_relative_paths">3.2.1. Relative paths</h4>
 <div class="paragraph">
 <p>JAR artifacts are installed in one of standard
-directory trees.  Usually this is either <code><code>%{_javadir}</code></code>
-(<code>/usr/share/java</code>) or <code><code>%{_jnidir}</code></code> (<code>/usr/lib/java</code>).</p>
+directory trees.  Usually this is either `%{_javadir}`
+(<code>/usr/share/java</code>) or `%{_jnidir}` (<code>/usr/lib/java</code>).</p>
 </div>
 <div class="paragraph">
 <p>The simplest way of identifying artifacts is using their relative path
@@ -1911,24 +2083,24 @@ Creating an alias is achieved by <code>%mvn_alias</code> macro.</p>
 <div class="listingblock">
 <div class="title">Example invocation</div>
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell"># com.example.foo:bar (the actual artifact existing in the project) will also
-# be available as com.example.foo:bar-all
+<pre class="rouge highlight"><code data-lang="shell"><span class="c"># com.example.foo:bar (the actual artifact existing in the project) will also</span>
+<span class="c"># be available as com.example.foo:bar-all</span>
 %mvn_alias com.example.foo:bar com.example.foo:bar-all
 
-# You don't need to repeat the part of coordinates that stays the same
-# (groupID in this case)
+<span class="c"># You don't need to repeat the part of coordinates that stays the same</span>
+<span class="c"># (groupID in this case)</span>
 %mvn_alias com.example.foo:bar :bar-all
 
-# You can specify multiple aliases at once
+<span class="c"># You can specify multiple aliases at once</span>
 %mvn_alias com.example.foo:bar :bar-all :bar-lib
 
-# The macro supports several shortcuts to generate multiple alisaes.
-# Braces - {} - capture their content, which can then be referenced in the
-# alias part with @N, where N is the index of the capture group.
-# * acts as a wildcard (matching anything)
-# The following generates aliases ending with shaded for all artifacts in the
-# project
-%mvn_alias 'com.example.foo:{*}' :@1-shaded</code></pre>
+<span class="c"># The macro supports several shortcuts to generate multiple alisaes.</span>
+<span class="c"># Braces - {} - capture their content, which can then be referenced in the</span>
+<span class="c"># alias part with @N, where N is the index of the capture group.</span>
+<span class="c"># * acts as a wildcard (matching anything)</span>
+<span class="c"># The following generates aliases ending with shaded for all artifacts in the</span>
+<span class="c"># project</span>
+%mvn_alias <span class="s1">'com.example.foo:{*}'</span> :@1-shaded</code></pre>
 </div>
 </div>
 </div>
@@ -2016,16 +2188,16 @@ provides.</p>
 <div class="listingblock">
 <div class="title">Example invocation of <code>%mvn_compat_version</code></div>
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell"># Assuming the package has name bar and version 3
-# Sets the compat version of foo:bar artifact to 3
+<pre class="rouge highlight"><code data-lang="shell"><span class="c"># Assuming the package has name bar and version 3</span>
+<span class="c"># Sets the compat version of foo:bar artifact to 3</span>
 %mvn_compat_version foo:bar 3
-# The installed artifact file (assuming it's jar and there were no
-# %mvn_file calls) will be at %{_javadir}/bar/bar-3.jar
-# The generated provides for foo:bar will be
-# mvn(foo:bar:3) = 3
-# mvn(foo:bar:pom:3) = 3
+<span class="c"># The installed artifact file (assuming it's jar and there were no</span>
+<span class="c"># %mvn_file calls) will be at %{_javadir}/bar/bar-3.jar</span>
+<span class="c"># The generated provides for foo:bar will be</span>
+<span class="c"># mvn(foo:bar:3) = 3</span>
+<span class="c"># mvn(foo:bar:pom:3) = 3</span>
 
-# Sets the compat versions of all artifacts in the build to 3 and 3.2
+<span class="c"># Sets the compat versions of all artifacts in the build to 3 and 3.2</span>
 %mvn_compat_version : 3 3.2</code></pre>
 </div>
 </div>
@@ -2065,12 +2237,12 @@ to be present unless it&#8217;s a Jar artifact with no classifier.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell"># Example provide for Jar artifact
-mvn(org.eclipse.jetty:jetty-server)
-# Example provide for POM artifact
-mvn(org.eclipse.jetty:jetty-parent:pom:)
-# Example provide for Jar artifact with classifier
-mvn(org.sonatype.sisu:sisu-guice::no_aop:)</code></pre>
+<pre class="rouge highlight"><code data-lang="shell"><span class="c"># Example provide for Jar artifact</span>
+mvn<span class="o">(</span>org.eclipse.jetty:jetty-server<span class="o">)</span>
+<span class="c"># Example provide for POM artifact</span>
+mvn<span class="o">(</span>org.eclipse.jetty:jetty-parent:pom:<span class="o">)</span>
+<span class="c"># Example provide for Jar artifact with classifier</span>
+mvn<span class="o">(</span>org.sonatype.sisu:sisu-guice::no_aop:<span class="o">)</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2116,8 +2288,8 @@ using <code>rpm</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">rpm -qp --provides path/to/example-1.0.noarch.rpm
-rpm -qp --requires path/to/example-1.0.noarch.rpm</code></pre>
+<pre class="rouge highlight"><code data-lang="shell">rpm <span class="nt">-qp</span> <span class="nt">--provides</span> path/to/example-1.0.noarch.rpm
+rpm <span class="nt">-qp</span> <span class="nt">--requires</span> path/to/example-1.0.noarch.rpm</code></pre>
 </div>
 </div>
 <div class="admonitionblock tip">
@@ -2357,7 +2529,7 @@ corresponding SDK (*-devel package) installed.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-spec" data-lang="spec">%install
+<pre class="rouge highlight"><code data-lang="spec">%install
 ...
 %jpackage_script msv.textui.Driver "" "" msv-msv:msv-xsdlib:relaxngDatatype:isorelax msv true
 ...</code></pre>
@@ -2376,20 +2548,20 @@ classpaths.</p>
 <h3 id="_replacing_jars_with_symlinks_using_xmvn_subst">5.2. Replacing JARs with symlinks using xmvn-subst</h3>
 <div class="paragraph">
 <p>Sometimes it may be needed to replace all JAR files in current directory with
-symlinks to the system JARs located in <code><code>%{_javadir}</code></code>. This task can be achieved
+symlinks to the system JARs located in `%{_javadir}`. This task can be achieved
 using tool called <code>xmvn-subst</code>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">$ ls -l
--rw-r--r--. 1 msrb msrb  40817 Oct 22 09:16 cli.jar
--rw-r--r--. 1 msrb msrb 289983 Oct 22 09:17 junit4.jar
--rw-r--r--. 1 msrb msrb 474276 Oct 22 09:14 log4j.jar
-$ xmvn-subst .
-[INFO] Linked ./cli.jar to /usr/share/java/commons-cli.jar
-[INFO] Linked ./log4j.jar to /usr/share/java/log4j.jar
-[INFO] Linked ./junit4.jar to /usr/share/java/junit.jar
-$ ls -la
+<pre class="rouge highlight"><code data-lang="shell"><span class="nv">$ </span><span class="nb">ls</span> <span class="nt">-l</span>
+<span class="nt">-rw-r--r--</span><span class="nb">.</span> 1 msrb msrb  40817 Oct 22 09:16 cli.jar
+<span class="nt">-rw-r--r--</span><span class="nb">.</span> 1 msrb msrb 289983 Oct 22 09:17 junit4.jar
+<span class="nt">-rw-r--r--</span><span class="nb">.</span> 1 msrb msrb 474276 Oct 22 09:14 log4j.jar
+<span class="nv">$ </span>xmvn-subst <span class="nb">.</span>
+<span class="o">[</span>INFO] Linked ./cli.jar to /usr/share/java/commons-cli.jar
+<span class="o">[</span>INFO] Linked ./log4j.jar to /usr/share/java/log4j.jar
+<span class="o">[</span>INFO] Linked ./junit4.jar to /usr/share/java/junit.jar
+<span class="nv">$ </span><span class="nb">ls</span> <span class="nt">-la</span>
 lrwxrwxrwx. 1 msrb msrb   22 Oct 22 10:08 cli.jar -&gt; /usr/share/java/commons-cli.jar
 lrwxrwxrwx. 1 msrb msrb   22 Oct 22 10:08 junit4.jar -&gt; /usr/share/java/junit.jar
 lrwxrwxrwx. 1 msrb msrb   22 Oct 22 10:08 log4j.jar -&gt; /usr/share/java/log4j.jar</code></pre>
@@ -2450,7 +2622,7 @@ Repository for it, ship it as another source and install it.</p>
 <div class="listingblock">
 <div class="title">Common spec file</div>
 <div class="content">
-<pre class="highlight"><code class="language-spec" data-lang="spec">BuildRequires: ant
+<pre class="rouge highlight"><code data-lang="spec">BuildRequires: ant
 BuildRequires: javapackages-local
 ...
 %build
@@ -2500,7 +2672,7 @@ there would be separate generated file named
 <li>
 <p>All packages are required to own directories which they create
 (and which are not owned by other packages). JAR files are by
-default installed into subdirectory of <code><code>%{_javadir}</code></code>. To override
+default installed into subdirectory of `%{_javadir}`. To override
 this behavior, use <code>%mvn_file</code></p>
 </li>
 </ul>
@@ -2520,7 +2692,7 @@ and requires generation.</p>
 <div class="listingblock">
 <div class="title">Spec file</div>
 <div class="content">
-<pre class="highlight"><code class="language-spec" data-lang="spec">BuildRequires: ivy-local
+<pre class="rouge highlight"><code data-lang="spec">BuildRequires: ivy-local
 ...
 %build
 ant -Divy.mode=local test
@@ -2570,7 +2742,7 @@ For more details, see corresponding manpages.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-spec" data-lang="spec"># Remove dependency on artifact with org="com.example" and
+<pre class="rouge highlight"><code data-lang="spec"># Remove dependency on artifact with org="com.example" and
 # name="java-project" from ivy.xml file in current directory
 %pom_remove_dep com.example:java-project
 
@@ -2593,7 +2765,7 @@ with
 <div class="listingblock">
 <div class="title">Spec file using the <code>ivy:publish</code> task</div>
 <div class="content">
-<pre class="highlight"><code class="language-spec" data-lang="spec">BuildRequires: ivy-local
+<pre class="rouge highlight"><code data-lang="spec">BuildRequires: ivy-local
 ...
 %prep
 %pom_xpath_set ivy:publish/@resolver xmvn build.xml
@@ -2660,7 +2832,7 @@ automation. In most common situations only following steps are necessary:</p>
 <div class="listingblock">
 <div class="title">Common spec file sections</div>
 <div class="content">
-<pre class="highlight"><code class="language-spec" data-lang="spec">BuildRequires:  maven-local
+<pre class="rouge highlight"><code data-lang="spec">BuildRequires:  maven-local
 ...
 %build
 %mvn_build
@@ -2690,7 +2862,42 @@ probably simplest spec file possible.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-spec" data-lang="spec">Name:           simplemaven
+<pre class="rouge highlight"><code data-lang="spec"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+</pre></td><td class="code"><pre>Name:           simplemaven
 Version:        1.0
 Release:        1%{?dist}
 Summary:        Simple Maven project
@@ -2724,7 +2931,8 @@ This package contains the API documentation for %{name}.
 
 %changelog
 * Mon Oct 14 2013 Michal Srb &lt;msrb@redhat.com&gt; - 1.0-1
-- Initial packaging</code></pre>
+- Initial packaging
+</pre></td></tr></tbody></table></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2736,7 +2944,7 @@ project. Both <code>%build</code> and <code>%install</code> sections consist onl
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-spec" data-lang="spec">10: BuildRequires:  maven-local</code></pre>
+<pre class="rouge highlight"><code data-lang="spec">10: BuildRequires:  maven-local</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2746,11 +2954,11 @@ these automatically. Package maintainer doesn&#8217;t need to list them explicit
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-spec" data-lang="spec">31: %dir %{_javadir}/%{name}</code></pre>
+<pre class="rouge highlight"><code data-lang="spec">31: %dir %{_javadir}/%{name}</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>By default, resulting JAR files will be installed in <code><code>%{_javadir}/%{name}</code></code>,
+<p>By default, resulting JAR files will be installed in `%{_javadir}/%{name}`,
 therefore package needs to own this directory.</p>
 </div>
 <div class="paragraph">
@@ -2766,7 +2974,7 @@ later.  Let&#8217;s remove the dependencies from <code>pom.xml</code>.</p>
 <div class="listingblock">
 <div class="title">Remove dependencies from pom.xml</div>
 <div class="content">
-<pre class="highlight"><code class="language-spec" data-lang="spec">...
+<pre class="rouge highlight"><code data-lang="spec">...
 %prep
 %setup -q
 
@@ -2776,7 +2984,7 @@ later.  Let&#8217;s remove the dependencies from <code>pom.xml</code>.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Package maintainer can use a wide variety of "<code>pom_</code>" macros for modifying
+<p>Package maintainer can use a wide variety of &#8220;pom_&#8221; macros for modifying
 <code>pom.xml</code> files. See <a href="#helper_macros">Macros for POM modification</a> section for
 more information.</p>
 </div>
@@ -2838,7 +3046,7 @@ the switch to <code>%mvn_build</code>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-spec" data-lang="spec">BuildRequires:  maven-local
+<pre class="rouge highlight"><code data-lang="spec">BuildRequires:  maven-local
 BuildRequires:  apache-commons-io
 ...
 %prep
@@ -2874,14 +3082,14 @@ BuildRequires:  apache-commons-io
 </div>
 <div class="paragraph">
 <p>There is plenty of other things maintainer may want to do. For example, he may want to provide symbolic links to the JAR file
-in <code><code>%{_javadir}</code></code>.</p>
+in `%{_javadir}`.</p>
 </div>
 <div class="paragraph">
 <p>This can be easily achieved with <code>%mvn_file</code> macro:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-spec" data-lang="spec">%prep
+<pre class="rouge highlight"><code data-lang="spec">%prep
 %setup -q
 
 %mvn_file : %{name}/%{name} %{name}</code></pre>
@@ -2896,9 +3104,9 @@ in <code><code>%{_javadir}</code></code>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">$ rpm -qp --provides simplemaven-1.0-1.fc21.noarch.rpm
-mvn(com.example:simplemaven) = 1.0
-simplemaven = 1.0-1.fc21</code></pre>
+<pre class="rouge highlight"><code data-lang="shell"><span class="nv">$ </span>rpm <span class="nt">-qp</span> <span class="nt">--provides</span> simplemaven-1.0-1.fc21.noarch.rpm
+mvn<span class="o">(</span>com.example:simplemaven<span class="o">)</span> <span class="o">=</span> 1.0
+simplemaven <span class="o">=</span> 1.0-1.fc21</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2915,7 +3123,7 @@ Maven artifact.</p>
 <div class="listingblock">
 <div class="title">Add alias to Maven artifact</div>
 <div class="content">
-<pre class="highlight"><code class="language-spec" data-lang="spec">%mvn_alias org.example:simplemaven simplemaven:simplemaven</code></pre>
+<pre class="rouge highlight"><code data-lang="spec">%mvn_alias org.example:simplemaven simplemaven:simplemaven</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2926,10 +3134,10 @@ Maven artifact.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">$ rpm -qp --provides simplemaven-1.0-2.fc21.noarch.rpm
-mvn(com.example:simplemaven) = 1.0
-mvn(simplemaven:simplemaven) = 1.0
-simplemaven = 1.0-2.fc21</code></pre>
+<pre class="rouge highlight"><code data-lang="shell"><span class="nv">$ </span>rpm <span class="nt">-qp</span> <span class="nt">--provides</span> simplemaven-1.0-2.fc21.noarch.rpm
+mvn<span class="o">(</span>com.example:simplemaven<span class="o">)</span> <span class="o">=</span> 1.0
+mvn<span class="o">(</span>simplemaven:simplemaven<span class="o">)</span> <span class="o">=</span> 1.0
+simplemaven <span class="o">=</span> 1.0-2.fc21</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2972,7 +3180,7 @@ created outside of <code>%mvn_build</code> can be marked for installation with
 <div class="listingblock">
 <div class="title">Requesting installation of Maven artifact</div>
 <div class="content">
-<pre class="highlight"><code class="language-spec" data-lang="spec">%prep
+<pre class="rouge highlight"><code data-lang="spec">%prep
 ...
 # Request installation of POM and JAR file
 %mvn_artifact subpackage/pom.xml target/artifact.jar
@@ -2997,7 +3205,7 @@ POM.</p>
 <div class="listingblock">
 <div class="title">Adding more mappings for JAR/POM files example</div>
 <div class="content">
-<pre class="highlight"><code class="language-spec" data-lang="spec">%prep
+<pre class="rouge highlight"><code data-lang="spec">%prep
 ...
 %mvn_alias "commons-lang:commons-lang" "org.apache.commons:commons-lang"</code></pre>
 </div>
@@ -3008,22 +3216,22 @@ POM.</p>
 <div class="paragraph">
 <p>In some cases, it may be important to be able to provide symbolic links to actual JAR
 files. This can be achieved with <code>%mvn_file</code> macro. This macro allows packager
-to specify names of the JAR files, their location in <code><code>%{_javadir}</code></code> directory and
+to specify names of the JAR files, their location in `%{_javadir}` directory and
 also can create symbolic links to the JAR files. These links can be possibly
-located outside of the <code><code>%{_javadir}</code></code> directory.</p>
+located outside of the `%{_javadir}` directory.</p>
 </div>
 <div class="listingblock">
 <div class="title">Adding file symlinks to compatibility</div>
 <div class="content">
-<pre class="highlight"><code class="language-spec" data-lang="spec">%prep
+<pre class="rouge highlight"><code data-lang="spec">%prep
 ...
 %mvn_file :guice google/guice guice</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>This means that JAR file for artifact with ID "guice" (and any groupId) will be
-installed in <code><code>%{_javadir}/google/guice.jar</code></code> and there also will be a symbolic links to
-this JAR file located in <code><code>%{_javadir}/guice.jar</code></code>. Note the macro will add ".jar"
+installed in `%{_javadir}/google/guice.jar` and there also will be a symbolic links to
+this JAR file located in `%{_javadir}/guice.jar`. Note the macro will add ".jar"
 extensions automatically.</p>
 </div>
 </div>
@@ -3039,7 +3247,7 @@ metadata). It can be later used in <code>%files</code> section of the spec file.
 <div class="listingblock">
 <div class="title">Creating one subpackage for each generated artifact</div>
 <div class="content">
-<pre class="highlight"><code class="language-spec" data-lang="spec">...
+<pre class="rouge highlight"><code data-lang="spec">...
 %description
 The Maven Plugin Tools contains...
 
@@ -3082,7 +3290,7 @@ end up in the same package.</p>
 <div class="listingblock">
 <div class="title">Assigning multiple artifacts to single subpackage</div>
 <div class="content">
-<pre class="highlight"><code class="language-spec" data-lang="spec">...
+<pre class="rouge highlight"><code data-lang="spec">...
 %prep
 %mvn_package ":plexus-compiler-jikes"   plexus-compiler-extras
 %mvn_package ":plexus-compiler-eclipse" plexus-compiler-extras
@@ -3104,7 +3312,7 @@ end up in the same package.</p>
 <code>plexus-compiler-eclipse</code>, <code>plexus-compiler-csharp</code> will end up in package named
 <code>plexus-compiler-extras</code>. If there are some other artifacts beside these three
 mentioned (e.g. some parent POMs), then these will all end up in package named
-<code><code>%{name}</code></code>.</p>
+`%{name}`.</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -3115,7 +3323,7 @@ mentioned (e.g. some parent POMs), then these will all end up in package named
 <td class="content">
 <div class="paragraph">
 <p><code>%mvn_package</code> macro supports wildcards and brace expansions, so whole <code>%prep</code> section from previous example can be replaced with single line:
-<code><code>%mvn_package ":plexus-compiler-{jikes,eclipse,csharp}" plexus-compiler-extras</code></code></p>
+`%mvn_package ":plexus-compiler-{jikes,eclipse,csharp}" plexus-compiler-extras`</p>
 </div>
 </td>
 </tr>
@@ -3129,7 +3337,7 @@ package won&#8217;t be installed anywhere and the package itself won&#8217;t be 
 <div class="listingblock">
 <div class="title">Skipping installation of an artifact</div>
 <div class="content">
-<pre class="highlight"><code class="language-spec" data-lang="spec">%prep
+<pre class="rouge highlight"><code data-lang="spec">%prep
 ...
 %mvn_package groupId:artifactId __noinstall</code></pre>
 </div>
@@ -3148,7 +3356,7 @@ compiler, so one could add following line to the spec file:</p>
 <div class="listingblock">
 <div class="title">Overriding default XMvn configuration</div>
 <div class="content">
-<pre class="highlight"><code class="language-spec" data-lang="spec">%prep
+<pre class="rouge highlight"><code data-lang="spec">%prep
 ...
 %mvn_config buildSettings/compilerSource 1.4</code></pre>
 </div>
@@ -3236,7 +3444,7 @@ For example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-spec" data-lang="spec"># The following works on pom.xml file in the current directory
+<pre class="rouge highlight"><code data-lang="spec"># The following works on pom.xml file in the current directory
 %pom_remove_parent
 
 # The following works on submodule/pom.xml
@@ -3266,7 +3474,7 @@ ease this task:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-spec" data-lang="spec"># Removes dependency with groupId "foo" and artifactId "bar" from pom.xml
+<pre class="rouge highlight"><code data-lang="spec"># Removes dependency with groupId "foo" and artifactId "bar" from pom.xml
 %pom_remove_dep foo:bar
 
 # Removes dependency on all artifacts with groupId "foo" from pom.xml
@@ -3302,7 +3510,7 @@ this macro also works in recursive mode.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-spec" data-lang="spec"># For all artifacts in pom.xml that have groupId 'example' change it to
+<pre class="rouge highlight"><code data-lang="spec"># For all artifacts in pom.xml that have groupId 'example' change it to
 # 'com.example' while leaving artifactId and other parts intact
 %pom_change_dep example: com.example:</code></pre>
 </div>
@@ -3317,7 +3525,7 @@ Maven plugin invocations. Some examples:</p>
 <div class="listingblock">
 <div class="title">Removing Maven plugins from pom.xml files</div>
 <div class="content">
-<pre class="highlight"><code class="language-spec" data-lang="spec"># Disables maven-jar-plugin so that classpath isn't included in manifests
+<pre class="rouge highlight"><code data-lang="spec"># Disables maven-jar-plugin so that classpath isn't included in manifests
 %pom_remove_plugin :maven-jar-plugin
 
 # Disable a proprietary plugin that isn't packaged for Fedora
@@ -3339,7 +3547,7 @@ achieved by using <code>%pom_disable_module</code>, for example:</p>
 <div class="listingblock">
 <div class="title">Disabling specific project modules</div>
 <div class="content">
-<pre class="highlight"><code class="language-spec" data-lang="spec"># Disables child-module-1, a submodule of the main pom.xml file
+<pre class="rouge highlight"><code data-lang="spec"># Disables child-module-1, a submodule of the main pom.xml file
 %pom_disable_module child-module-1
 
 # Disables grandchild-module, a submodule of child-module-2/pom.xml
@@ -3360,7 +3568,7 @@ one (<code>%pom_set_parent</code>).</p>
 <div class="listingblock">
 <div class="title">Manipulating parent POM references</div>
 <div class="content">
-<pre class="highlight"><code class="language-spec" data-lang="spec"># Remove reference to a parent POM from ./pom.xml
+<pre class="rouge highlight"><code data-lang="spec"># Remove reference to a parent POM from ./pom.xml
 %pom_remove_parent
 
 # Remove reference to a parent POM from ./submodule/pom.xml
@@ -3416,7 +3624,7 @@ XPath 1.0 and we cannot work it around.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-spec" data-lang="spec"># Removes extensions from the build
+<pre class="rouge highlight"><code data-lang="spec"># Removes extensions from the build
 %pom_xpath_remove "pom:build/pom:extensions" module/pom.xml</code></pre>
 </div>
 </div>
@@ -3430,7 +3638,7 @@ example.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-spec" data-lang="spec"># Add additional exclusion into maven-wagon dependency
+<pre class="rouge highlight"><code data-lang="spec"># Add additional exclusion into maven-wagon dependency
 %pom_xpath_inject "pom:dependency[pom:artifactId='maven-wagon']/pom:exclusions" "
 &lt;exclusion&gt;
     &lt;groupId&gt;antlr&lt;/groupId&gt;
@@ -3451,7 +3659,7 @@ with specified value (can contain XML nodes).</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-spec" data-lang="spec"># Change groupId of a parent
+<pre class="rouge highlight"><code data-lang="spec"># Change groupId of a parent
 %pom_xpath_set "pom:parent/pom:groupId" "org.apache"</code></pre>
 </div>
 </div>
@@ -3461,7 +3669,7 @@ with specified value (can contain XML nodes).</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-spec" data-lang="spec"># Change groupId of a parent (note the difference from %pom_xpath_set)
+<pre class="rouge highlight"><code data-lang="spec"># Change groupId of a parent (note the difference from %pom_xpath_set)
 %pom_xpath_replace "pom:parent/pom:groupId" "&lt;groupId&gt;org.apache&lt;/groupId&gt;"</code></pre>
 </div>
 </div>
@@ -3690,7 +3898,7 @@ should be used instead.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-spec" data-lang="spec">BuildRequires:  javapackages-tools
+<pre class="rouge highlight"><code data-lang="spec">BuildRequires:  javapackages-tools
 
 Requires:       some-library
 ...
@@ -3727,7 +3935,7 @@ cp -pr api/* $RPM_BUILD_ROOT%{_javadocdir}/%{name}
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-spec" data-lang="spec"># mvn_* macros are located in javapackages-local package
+<pre class="rouge highlight"><code data-lang="spec"># mvn_* macros are located in javapackages-local package
 BuildRequires:  javapackages-local
 
 # Since XMvn generates requires automatically, it is no longer needed
@@ -3790,7 +3998,7 @@ and <a href="#mvn_package">Assignment of the Maven Artifacts to the Subpackages<
 <h2 id="manpages">Appendix A: Manpages</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This section contains manpages for <code>mvn_*</code> and <code>pom_*</code> macros.</p>
+<p>This section contains manpages for mvn_* and pom_* macros.</p>
 </div>
 <div class="sect2">
 <h3 id="_mvn_alias">A.1. mvn_alias</h3>
@@ -5575,7 +5783,7 @@ JAVAPACKAGES                      01/25/2023                  POM_XPATH_SET(7)
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-10-06 12:30:18 +0200
+Last updated 2023-10-06 12:51:51 +0200
 </div>
 </div>
 </body>
