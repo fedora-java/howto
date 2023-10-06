@@ -1,7 +1,9 @@
 Java Packaging HOWTO
 ====================
-
-Generated on: {localdate}
+:toc2:
+:toclevels: 3
+:icons:
+:theme: flask
 
 include::preamble.adoc[]
 
