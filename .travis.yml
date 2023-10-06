@@ -1,4 +1,0 @@
-sudo: required
-services:
-  - docker
-script: docker run -v $PWD:/mnt/howto -w /mnt/howto -e encrypted_1f9369ab557d_key=$encrypted_1f9369ab557d_key -e encrypted_1f9369ab557d_iv=$encrypted_1f9369ab557d_iv -e TRAVIS_BRANCH=$TRAVIS_BRANCH -e TRAVIS_PULL_REQUEST=$TRAVIS_PULL_REQUEST registry.fedoraproject.org/fedora:29 sh -c "dnf -y install make asciidoc dia git python2-ansi2html source-highlight m4 && ./build-gh-pages.sh"
