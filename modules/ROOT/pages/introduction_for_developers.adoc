@@ -46,7 +46,7 @@ src/org/fedoraproject/helloworld/HelloWorld.java
 We packed the project directory into file `helloworld.tar.gz`.
 
 .Example spec file
-[source,spec,numbered]
+[source,rpmspec,numbered]
 ------
 include::{EXAMPLE}rpm_project/helloworld.spec[]
 ------
