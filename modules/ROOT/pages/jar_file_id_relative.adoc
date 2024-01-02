@@ -1,8 +1,8 @@
 ==== Relative paths
 
 JAR artifacts are installed in one of standard
-directory trees.  Usually this is either +`%{_javadir}`+
-(`/usr/share/java`) or +`%{_jnidir}`+ (`/usr/lib/java`).
+directory trees.  Usually this is either `%{_javadir}`
+(`/usr/share/java`) or `%{_jnidir}` (`/usr/lib/java`).
 
 The simplest way of identifying artifacts is using their relative path
 from one of standard locations.  All artifact can be identified this

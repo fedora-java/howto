@@ -13,7 +13,7 @@ include::{EXAMPLE}maven_project/simplemaven.spec[]
 The spec file above is a real world example how it may look like for simple Maven
 project. Both `%build` and `%install` sections consist only of one line.
 
-Another interesting lines:
+Another interesting line:
 [source,spec]
 ------
 10: BuildRequires:  maven-local

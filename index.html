@@ -829,17 +829,9 @@ package naming conventions</a>.</p>
 </div>
 <div class="paragraph">
 <p>Let&#8217;s create a simple hello world application that will execute following steps
-when run:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Ask for a name</p>
-</li>
-<li>
-<p>Print out <code>Hello World from</code> and the name from previous step</p>
-</li>
-</ol>
+when run:
+. Ask for a name
+. Print out <code>Hello World from</code> and the name from previous step</p>
 </div>
 <div class="paragraph">
 <p>To illustrate certain points we artificially complicate things by creating:</p>
@@ -1183,7 +1175,7 @@ given topics.</p>
 <p>What is the difference between JVM and Java?</p>
 </li>
 <li>
-<p>What is a CLASSPATH environment variable and how can you use it?</p>
+<p>What is a <code>CLASSPATH</code> environment variable and how can you use it?</p>
 </li>
 <li>
 <p>Name two typical Java build systems and how you can identify which one is being used</p>
@@ -1689,7 +1681,7 @@ simplemaven <span class="o">=</span> 1.0-2.fc21</code></pre>
 <p>How would you build a binary RPM if you were given a source RPM?</p>
 </li>
 <li>
-<p>What is most common content of Source0 <code>spec</code> file tag?</p>
+<p>What is most common content of <code>Source0</code> <code>spec</code> file tag?</p>
 </li>
 <li>
 <p>What is the difference between <code>Version</code> and <code>Release</code> tags?</p>
@@ -1705,11 +1697,11 @@ simplemaven <span class="o">=</span> 1.0-2.fc21</code></pre>
 </li>
 <li>
 <p>How would you install an application that needs certain layout (think
-ANT_HOME) while honoring distribution filesystem layout guidelines?</p>
+<code>ANT_HOME</code>) while honoring distribution filesystem layout guidelines?</p>
 </li>
 <li>
 <p>How would you generate script for running a application with main class
-org.project.MainClass which depends on commons-lang jar?</p>
+<code>org.project.MainClass</code> which depends on <code>commons-lang</code> jar?</p>
 </li>
 </ol>
 </div>
@@ -1898,7 +1890,7 @@ short description.</p>
 <div class="dlist glossary">
 <div class="title">Directories commonly used by regular packages</div>
 <dl>
-<dt>`%{_javadir}`&#8201;&#8212;&#8201;<code>/usr/share/java</code></dt>
+<dt><code>%{_javadir}</code>&#8201;&#8212;&#8201;<code>/usr/share/java</code></dt>
 <dd>
 <p>Directory that holds all JAR files that do not contain or use
 native code and do not depend on a particular Java standard
@@ -1907,37 +1899,37 @@ directory or one of its subdirectories.  Often packages create
 their own subdirectories there, in this case subdirectory name
 should match package name.</p>
 </dd>
-<dt>`%{_jnidir}`&#8201;&#8212;&#8201;<code>/usr/lib/java</code></dt>
+<dt><code>%{_jnidir}</code>&#8201;&#8212;&#8201;<code>/usr/lib/java</code></dt>
 <dd>
 <p>Directory where architecture-specific JAR files are installed.  In
 particular JAR files containing or using native code (Java Native
 Interface, JNI) should be installed.</p>
 </dd>
-<dt>`%{_javadocdir}`&#8201;&#8212;&#8201;<code>/usr/share/javadoc</code></dt>
+<dt><code>%{_javadocdir}</code>&#8201;&#8212;&#8201;<code>/usr/share/javadoc</code></dt>
 <dd>
 <p>Root directory where all Java API documentation (Javadoc) is
 installed.  Each source package usually creates a single
 subdirectory containing aggregated Javadocs for all binary
 packages it produces.</p>
 </dd>
-<dt>`%{_mavenpomdir}`&#8201;&#8212;&#8201;<code>/usr/share/maven-poms</code></dt>
+<dt><code>%{_mavenpomdir}</code>&#8201;&#8212;&#8201;<code>/usr/share/maven-poms</code></dt>
 <dd>
 <p>Directory where Project Object Model (POM) files used by Apache
 Maven are installed.  Each POM must have name that strictly
-corresponds to JAR file in `%{_javadir}` or `%{_jnidir}`.</p>
+corresponds to JAR file in <code>%{_javadir}</code> or <code>%{_jnidir}</code>.</p>
 </dd>
-<dt>`%{_ivyxmldir}`&#8201;&#8212;&#8201;<code>/usr/share/ivy-xmls</code></dt>
+<dt><code>%{_ivyxmldir}</code>&#8201;&#8212;&#8201;<code>/usr/share/ivy-xmls</code></dt>
 <dd>
 <p>Directory where <code>ivy.xml</code> files used by Apache Ivy are installed.
 Each XML must have name that strictly corresponds to JAR file in
-`%{_javadir}` or `%{_jnidir}`.</p>
+<code>%{_javadir}</code> or <code>%{_jnidir}</code>.</p>
 </dd>
 </dl>
 </div>
 <div class="dlist glossary">
 <div class="title">Other directories</div>
 <dl>
-<dt>`%{_jvmdir}`&#8201;&#8212;&#8201;<code>/usr/lib/jvm</code></dt>
+<dt><code>%{_jvmdir}</code>&#8201;&#8212;&#8201;<code>/usr/lib/jvm</code></dt>
 <dd>
 <p>Root directory where different Java Virtual Machines (JVM) are
 installed.  Each JVM creates a subdirectory, possibly with several
@@ -1946,17 +1938,17 @@ prefixed with <code>java</code> contain Java Development Kit (JDK), while
 directories which names start with <code>jre</code> hold Java Runtime
 Environment (JRE).</p>
 </dd>
-<dt>`%{_jvmsysconfdir}`&#8201;&#8212;&#8201;<code>/etc/jvm</code></dt>
-<dt>`%{_jvmcommonsysconfdir}`&#8201;&#8212;&#8201;<code>/etc/jvm-common</code></dt>
+<dt><code>%{_jvmsysconfdir}</code>&#8201;&#8212;&#8201;<code>/etc/jvm</code></dt>
+<dt><code>%{_jvmcommonsysconfdir}</code>&#8201;&#8212;&#8201;<code>/etc/jvm-common</code></dt>
 <dd>
 <p>Directories containing configuration files for Java Virtual
 Machines (JVM).</p>
 </dd>
-<dt>`%{_jvmprivdir}`&#8201;&#8212;&#8201;<code>/usr/lib/jvm-private</code></dt>
-<dt>`%{_jvmlibdir}`&#8201;&#8212;&#8201;<code>/usr/lib/jvm</code></dt>
-<dt>`%{_jvmdatadir}`&#8201;&#8212;&#8201;<code>/usr/share/jvm</code></dt>
-<dt>`%{_jvmcommonlibdir}`&#8201;&#8212;&#8201;<code>/usr/lib/jvm-common</code></dt>
-<dt>`%{_jvmcommondatadir}`&#8201;&#8212;&#8201;<code>/usr/share/jvm-common</code></dt>
+<dt><code>%{_jvmprivdir}</code>&#8201;&#8212;&#8201;<code>/usr/lib/jvm-private</code></dt>
+<dt><code>%{_jvmlibdir}</code>&#8201;&#8212;&#8201;<code>/usr/lib/jvm</code></dt>
+<dt><code>%{_jvmdatadir}</code>&#8201;&#8212;&#8201;<code>/usr/share/jvm</code></dt>
+<dt><code>%{_jvmcommonlibdir}</code>&#8201;&#8212;&#8201;<code>/usr/lib/jvm-common</code></dt>
+<dt><code>%{_jvmcommondatadir}</code>&#8201;&#8212;&#8201;<code>/usr/share/jvm-common</code></dt>
 <dd>
 <p>Directories containing implementation files of Java Virtual
 Machines (JVM).  Describing them in detail is out of scope for
@@ -1964,7 +1956,7 @@ this document.  Purpose of each directory is commented briefly in
 <code>macros.jpackage</code> file in <code>/etc/rpm</code>.  More detailed description
 can be found in JPackage policy.</p>
 </dd>
-<dt>`%{_javaconfdir}`&#8201;&#8212;&#8201;<code>/etc/java</code></dt>
+<dt><code>%{_javaconfdir}</code>&#8201;&#8212;&#8201;<code>/etc/java</code></dt>
 <dd>
 <p>Directory containing Java configuration files.  In particular it
 contains main Java configuration file&#8201;&#8212;&#8201;<code>java.conf</code>.</p>
@@ -1996,8 +1988,8 @@ artifacts in system repository.</p>
 <h4 id="_relative_paths">3.2.1. Relative paths</h4>
 <div class="paragraph">
 <p>JAR artifacts are installed in one of standard
-directory trees.  Usually this is either `%{_javadir}`
-(<code>/usr/share/java</code>) or `%{_jnidir}` (<code>/usr/lib/java</code>).</p>
+directory trees.  Usually this is either <code>%{_javadir}</code>
+(<code>/usr/share/java</code>) or <code>%{_jnidir}</code> (<code>/usr/lib/java</code>).</p>
 </div>
 <div class="paragraph">
 <p>The simplest way of identifying artifacts is using their relative path
@@ -2940,7 +2932,7 @@ This package contains the API documentation for %{name}.
 project. Both <code>%build</code> and <code>%install</code> sections consist only of one line.</p>
 </div>
 <div class="paragraph">
-<p>Another interesting lines:</p>
+<p>Another interesting line:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -5783,7 +5775,7 @@ JAVAPACKAGES                      01/25/2023                  POM_XPATH_SET(7)
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-10-06 12:51:51 +0200
+Last updated 2023-10-06 13:02:05 +0200
 </div>
 </div>
 </body>
