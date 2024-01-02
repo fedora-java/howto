@@ -18,9 +18,8 @@ package naming conventions].
 
 Let's create a simple hello world application that will execute following steps
 when run:
-
- 1. Ask for a name
- 2. Print out `Hello World from` and the name from previous step
+. Ask for a name
+. Print out `Hello World from` and the name from previous step
 
 To illustrate certain points we artificially complicate things by creating:
 
@@ -277,12 +276,12 @@ packaging. If you are not able to answer following questions return back to
 previous sections or ask experienced packagers for different explanations of
 given topics.
 
-1. What is the difference between JVM and Java?
-2. What is a CLASSPATH environment variable and how can you use it?
-3. Name two typical Java build systems and how you can identify which one is being used
-4. What is the difference between `java` and `javac` comands?
-5. What are contents of a typical `JAR` file?
-6. What is a pom.xml file and what information it contains?
-7. How would you handle packaging software that contains `lib/junit4.jar` inside
+. What is the difference between JVM and Java?
+. What is a `CLASSPATH` environment variable and how can you use it?
+. Name two typical Java build systems and how you can identify which one is being used
+. What is the difference between `java` and `javac` comands?
+. What are contents of a typical `JAR` file?
+. What is a pom.xml file and what information it contains?
+. How would you handle packaging software that contains `lib/junit4.jar` inside
    source tarball?
-8. Name at least three methods for bundling code in Java projects
+. Name at least three methods for bundling code in Java projects

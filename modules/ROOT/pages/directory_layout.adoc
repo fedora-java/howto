@@ -8,7 +8,7 @@ short description.
 
 .Directories commonly used by regular packages
 [glossary]
-+`%{_javadir}`+ -- `/usr/share/java`::
+`%{_javadir}` -- `/usr/share/java`::
 
     Directory that holds all JAR files that do not contain or use
     native code and do not depend on a particular Java standard
@@ -17,34 +17,34 @@ short description.
     their own subdirectories there, in this case subdirectory name
     should match package name.
 
-+`%{_jnidir}`+ -- `/usr/lib/java`::
+`%{_jnidir}` -- `/usr/lib/java`::
 
     Directory where architecture-specific JAR files are installed.  In
     particular JAR files containing or using native code (Java Native
     Interface, JNI) should be installed.
 
-+`%{_javadocdir}`+ -- `/usr/share/javadoc`::
+`%{_javadocdir}` -- `/usr/share/javadoc`::
 
     Root directory where all Java API documentation (Javadoc) is
     installed.  Each source package usually creates a single
     subdirectory containing aggregated Javadocs for all binary
     packages it produces.
 
-+`%{_mavenpomdir}`+ -- `/usr/share/maven-poms`::
+`%{_mavenpomdir}` -- `/usr/share/maven-poms`::
 
     Directory where Project Object Model (POM) files used by Apache
     Maven are installed.  Each POM must have name that strictly
-    corresponds to JAR file in +`%{_javadir}`+ or +`%{_jnidir}`+.
+    corresponds to JAR file in `%{_javadir}` or `%{_jnidir}`.
 
-+`%{_ivyxmldir}`+ -- `/usr/share/ivy-xmls`::
+`%{_ivyxmldir}` -- `/usr/share/ivy-xmls`::
 
     Directory where `ivy.xml` files used by Apache Ivy are installed.
     Each XML must have name that strictly corresponds to JAR file in
-    +`%{_javadir}`+ or +`%{_jnidir}`+.
+    `%{_javadir}` or `%{_jnidir}`.
 
 .Other directories
 [glossary]
-+`%{_jvmdir}`+ -- `/usr/lib/jvm`::
+`%{_jvmdir}` -- `/usr/lib/jvm`::
 
     Root directory where different Java Virtual Machines (JVM) are
     installed.  Each JVM creates a subdirectory, possibly with several
@@ -53,17 +53,17 @@ short description.
     directories which names start with `jre` hold Java Runtime
     Environment (JRE).
 
-+`%{_jvmsysconfdir}`+ -- `/etc/jvm`::
-+`%{_jvmcommonsysconfdir}`+ -- `/etc/jvm-common`::
+`%{_jvmsysconfdir}` -- `/etc/jvm`::
+`%{_jvmcommonsysconfdir}` -- `/etc/jvm-common`::
 
     Directories containing configuration files for Java Virtual
     Machines (JVM).
 
-+`%{_jvmprivdir}`+ -- `/usr/lib/jvm-private`::
-+`%{_jvmlibdir}`+ -- `/usr/lib/jvm`::
-+`%{_jvmdatadir}`+ -- `/usr/share/jvm`::
-+`%{_jvmcommonlibdir}`+ -- `/usr/lib/jvm-common`::
-+`%{_jvmcommondatadir}`+ -- `/usr/share/jvm-common`::
+`%{_jvmprivdir}` -- `/usr/lib/jvm-private`::
+`%{_jvmlibdir}` -- `/usr/lib/jvm`::
+`%{_jvmdatadir}` -- `/usr/share/jvm`::
+`%{_jvmcommonlibdir}` -- `/usr/lib/jvm-common`::
+`%{_jvmcommondatadir}` -- `/usr/share/jvm-common`::
 
     Directories containing implementation files of Java Virtual
     Machines (JVM).  Describing them in detail is out of scope for
@@ -71,7 +71,7 @@ short description.
     `macros.jpackage` file in `/etc/rpm`.  More detailed description
     can be found in JPackage policy.
 
-+`%{_javaconfdir}`+ -- `/etc/java`::
+`%{_javaconfdir}` -- `/etc/java`::
 
     Directory containing Java configuration files.  In particular it
     contains main Java configuration file -- `java.conf`.
