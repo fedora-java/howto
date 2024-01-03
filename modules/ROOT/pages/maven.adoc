@@ -1,23 +1,20 @@
-[[maven]]
 == Maven
+[quote,,https://maven.apache.org]
+____
+Apache Maven is a software project management and comprehension tool.
+Based on the concept of a project object model (POM), Maven can manage a project's build, reporting and documentation from a central piece of information.
+____
 
-[quote,,http://maven.apache.org]
-______
-Apache Maven is a software project management and comprehension tool. Based on
-the concept of a project object model (POM), Maven can manage a project's build,
-reporting and documentation from a central piece of information.
-______
+Maven is by far the most consistent Java build system, allowing large amount of automation.
+In most common situations only following steps are necessary:
 
-Maven is by far the most consistent Java build system, allowing large amount of
-automation. In most common situations only following steps are necessary:
-
-1. In `%build` section of the spec file use `%mvn_build` macro
-2. In `%install` section, use `%mvn_install` macro
-3. Use generated file `.mfiles` lists to populate `%files` section with `-f` switch
+. In `%build` section of the spec file use `%mvn_build` macro.
+. In `%install` section, use `%mvn_install` macro.
+. Use generated file `.mfiles` lists to populate `%files` section with `-f` switch.
 
 .Common spec file sections
 [source,spec]
---------
+----
 BuildRequires:  maven-local
 ...
 %build
@@ -28,14 +25,11 @@ BuildRequires:  maven-local
 %mvn_install
 ...
 
-
 %files -f .mfiles
 %dir %{_javadir}/%{name}
 
 %files javadoc -f .mfiles-javadoc
---------
+----
 
-
-The macros `%mvn_build` and `%mvn_install` automatically handle building of the
-JAR files and their subsequent installation to the correct directory. The
-corresponding POM and metadata files are also installed.
+The macros `%mvn_build` and `%mvn_install` automatically handle building of the JAR files and their subsequent installation to the correct directory.
+The corresponding POM and metadata files are also installed.

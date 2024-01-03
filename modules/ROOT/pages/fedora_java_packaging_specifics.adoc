@@ -1,1 +1,11 @@
 == Java Specifics in Fedora for Packagers
+
+include::directory_layout.adoc[]
+
+include::jar_file_id.adoc[]
+
+include::dependency_handling.adoc[]
+
+include::javadoc_packages.adoc[]
+
+include::core_java_packages.adoc[]

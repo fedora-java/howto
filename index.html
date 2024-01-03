@@ -558,17 +558,17 @@ pre.rouge .gs {
 <li><a href="#_introduction">1. Introduction</a>
 <ul class="sectlevel2">
 <li><a href="#_basic_introduction_to_packaging_reasons_problems_rationale">1.1. Basic introduction to packaging, reasons, problems, rationale</a></li>
-<li><a href="#XFor_Packagers">1.2. For Packagers</a>
+<li><a href="#_for_packagers">1.2. For Packagers</a>
 <ul class="sectlevel3">
 <li><a href="#_example_java_project">1.2.1. Example Java Project</a></li>
 <li><a href="#_build_system_identification">1.2.2. Build System Identification</a></li>
 <li><a href="#_quiz_for_packagers">1.2.3. Quiz for Packagers</a></li>
 </ul>
 </li>
-<li><a href="#XFor_Devs">1.3. For Java Developers</a>
+<li><a href="#_for_java_developers">1.3. For Java Developers</a>
 <ul class="sectlevel3">
 <li><a href="#_example_rpm_project">1.3.1. Example RPM Project</a></li>
-<li><a href="#querying_repositories">1.3.2. Querying repositories</a></li>
+<li><a href="#_querying_repositories">1.3.2. Querying repositories</a></li>
 <li><a href="#_quiz_for_java_developers">1.3.3. Quiz for Java Developers</a></li>
 </ul>
 </li>
@@ -576,7 +576,7 @@ pre.rouge .gs {
 </li>
 <li><a href="#_java_specifics_in_fedora_for_users_and_developers">2. Java Specifics in Fedora for Users and Developers</a>
 <ul class="sectlevel2">
-<li><a href="#openjdk">2.1. Java implementation in Fedora</a>
+<li><a href="#_java_implementation_in_fedora">2.1. Java implementation in Fedora</a>
 <ul class="sectlevel3">
 <li><a href="#_switching_between_different_java_implementations">2.1.1. Switching between different Java implementations</a></li>
 </ul>
@@ -592,11 +592,11 @@ pre.rouge .gs {
 <ul class="sectlevel3">
 <li><a href="#_relative_paths">3.2.1. Relative paths</a></li>
 <li><a href="#_artifact_specification">3.2.2. Artifact specification</a></li>
-<li><a href="#aliases">3.2.3. Aliases</a></li>
-<li><a href="#compat_packages">3.2.4. Compatibility versions</a></li>
+<li><a href="#_aliases">3.2.3. Aliases</a></li>
+<li><a href="#_compatibility_versions">3.2.4. Compatibility versions</a></li>
 </ul>
 </li>
-<li><a href="#dependency_handling">3.3. Dependency Handling</a></li>
+<li><a href="#_dependency_handling">3.3. Dependency Handling</a></li>
 <li><a href="#_javadoc_packages">3.4. Javadoc packages</a></li>
 <li><a href="#_core_java_packages">3.5. Core Java packages</a>
 <ul class="sectlevel3">
@@ -610,52 +610,52 @@ pre.rouge .gs {
 <li><a href="#_generic_java_builds">5. Generic Java Builds</a>
 <ul class="sectlevel2">
 <li><a href="#_generating_application_shell_scripts">5.1. Generating Application Shell Scripts</a></li>
-<li><a href="#_replacing_jars_with_symlinks_using_xmvn_subst">5.2. Replacing JARs with symlinks using xmvn-subst</a></li>
+<li><a href="#_replacing_jars_with_symlinks_using_xmvn_subst">5.2. Replacing JARs with symlinks using <code>xmvn-subst</code></a></li>
 </ul>
 </li>
-<li><a href="#ant">6. Ant</a>
+<li><a href="#_ant">6. Ant</a>
 <ul class="sectlevel2">
 <li><a href="#_apache_ivy">6.1. Apache Ivy</a></li>
 </ul>
 </li>
-<li><a href="#maven">7. Maven</a>
+<li><a href="#_maven">7. Maven</a>
 <ul class="sectlevel2">
-<li><a href="#packaging_maven_project">7.1. Packaging Maven project</a></li>
-<li><a href="#mvn_macros">7.2. Macros for Maven build configuration</a>
+<li><a href="#_packaging_maven_project">7.1. Packaging Maven project</a></li>
+<li><a href="#_macros_for_maven_build_configuration">7.2. Macros for Maven build configuration</a>
 <ul class="sectlevel3">
-<li><a href="#mvn_artifact">7.2.1. Installing additional artifacts</a></li>
-<li><a href="#mvn_alias">7.2.2. Additional Mappings</a></li>
-<li><a href="#mvn_file">7.2.3. Alternative JAR File Names</a></li>
-<li><a href="#mvn_singleton">7.2.4. Single Artifact Per Package</a></li>
-<li><a href="#mvn_package">7.2.5. Assignment of the Maven Artifacts to the Subpackages</a></li>
-<li><a href="#mvn_config">7.2.6. Modifying XMvn configuration from within spec file</a></li>
+<li><a href="#_installing_additional_artifacts">7.2.1. Installing additional artifacts</a></li>
+<li><a href="#_additional_mappings">7.2.2. Additional Mappings</a></li>
+<li><a href="#_alternative_jar_file_names">7.2.3. Alternative JAR File Names</a></li>
+<li><a href="#_single_artifact_per_package">7.2.4. Single Artifact Per Package</a></li>
+<li><a href="#_assignment_of_the_maven_artifacts_to_the_subpackages">7.2.5. Assignment of the Maven Artifacts to the Subpackages</a></li>
+<li><a href="#_modifying_xmvn_configuration_from_within_spec_file">7.2.6. Modifying XMvn configuration from within spec file</a></li>
 </ul>
 </li>
-<li><a href="#helper_macros">7.3. Macros for POM modification</a>
+<li><a href="#_macros_for_pom_modification">7.3. Macros for POM modification</a>
 <ul class="sectlevel3">
-<li><a href="#pom_remove_dep">7.3.1. Dependency manipulation macros</a></li>
-<li><a href="#pom_remove_plugin">7.3.2. Adding/removing plugins</a></li>
-<li><a href="#pom_disable_module">7.3.3. Disabling unneeded modules</a></li>
-<li><a href="#pom_remove_parent">7.3.4. Working with parent POM references</a></li>
-<li><a href="#pom_xpath_remove">7.3.5. Macros for performing generic modifications</a></li>
+<li><a href="#_dependency_manipulation_macros">7.3.1. Dependency manipulation macros</a></li>
+<li><a href="#_adding_removing_plugins">7.3.2. Adding / removing plugins</a></li>
+<li><a href="#_disabling_unneeded_modules">7.3.3. Disabling unneeded modules</a></li>
+<li><a href="#_working_with_parent_pom_references">7.3.4. Working with parent POM references</a></li>
+<li><a href="#_macros_for_performing_generic_modifications">7.3.5. Macros for performing generic modifications</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li><a href="#_common_errors">8. Common Errors</a>
 <ul class="sectlevel2">
-<li><a href="#error_missing_dependency">8.1. Missing dependency</a></li>
-<li><a href="#error_compilation_failure">8.2. Compilation failure</a></li>
-<li><a href="#error_requires_unknown">8.3. Requires cannot be generated</a></li>
-<li><a href="#error_scope_system">8.4. Dependencies with scope "system"</a></li>
+<li><a href="#_missing_dependency">8.1. Missing dependency</a></li>
+<li><a href="#_compilation_failure">8.2. Compilation failure</a></li>
+<li><a href="#_requires_cannot_be_generated">8.3. Requires cannot be generated</a></li>
+<li><a href="#_dependencies_with_scope_system">8.4. Dependencies with scope <code>system</code></a></li>
 </ul>
 </li>
 <li><a href="#_migration_from_older_tools">9. Migration from older tools</a>
 <ul class="sectlevel2">
-<li><a href="#_add_maven_depmap_macro">9.1. add_maven_depmap macro</a></li>
+<li><a href="#_add_maven_depmap_macro">9.1. <code>%add_maven_depmap</code> macro</a></li>
 </ul>
 </li>
-<li><a href="#manpages">Appendix A: Manpages</a>
+<li><a href="#_manpages">Appendix A: Manpages</a>
 <ul class="sectlevel2">
 <li><a href="#_mvn_alias">A.1. mvn_alias</a></li>
 <li><a href="#_mvn_artifact">A.2. mvn_artifact</a></li>
@@ -711,35 +711,27 @@ pre.rouge .gs {
 <li>
 <p>Michael Simacek, Red Hat</p>
 </li>
+<li>
+<p>Marián Konček, Red Hat</p>
+</li>
 </ul>
 </div>
 <div class="paragraph">
-<p>This document is free software; see the
-<a href="https://github.com/fedora-java/howto/blob/master/LICENSE">license</a>
-for terms of use, distribution and/or modification.</p>
+<p>This document is free software; see the <a href="https://github.com/fedora-java/howto/blob/master/LICENSE">license</a> for terms of use, distribution and / or modification.</p>
 </div>
 <div class="paragraph">
-<p>The source code for this document is available in
-<a href="https://github.com/fedora-java/howto">git repository</a>.
-Instructions for building it from sources are available in
-<a href="https://github.com/fedora-java/howto/blob/master/README.md">README file</a>.</p>
+<p>The source code for this document is available in <a href="https://github.com/fedora-java/howto">git repository</a>.
+Instructions for building it from sources are available in <a href="https://github.com/fedora-java/howto/blob/master/README.md">README file</a>.</p>
 </div>
 <div class="paragraph">
-<p>This document is developed as part of Javapackages community project,
-which welcomes new contributors.  Requests and comments related to
-this document should be
-<a href="http://bugzilla.redhat.com/enter_bug.cgi?product=fedora&amp;component=java-packaging-howto">reported
- at Red Hat Bugzilla</a>.</p>
+<p>This document is developed as part of Javapackages community project, which welcomes new contributors.
+Requests and comments related to this document should be <a href="https://bugzilla.redhat.com/enter_bug.cgi?product=fedora&amp;component=java-packaging-howto">reported at Red Hat Bugzilla</a>.</p>
 </div>
 <div class="paragraph">
-<p>Before contributing please read the
-<a href="https://github.com/fedora-java/howto/blob/master/README.md">README file</a>,
-which among other things includes basic rules which should be
-followed when working on this document.  You can send patches to
-<a href="https://bugzilla.redhat.com/">Red Hat Bugzilla</a>.  They should be in git
-format and should be prepared against <code>master</code> branch in git.
-Alternatively you can also send pull requests at
-<a href="https://github.com/fedora-java/howto">Github repository</a>.</p>
+<p>Before contributing please read the <a href="https://github.com/fedora-java/howto/blob/master/README.md">README file</a>, which among other things includes basic rules which should be followed when working on this document.
+You can send patches to the <a href="https://bugzilla.redhat.com/">Red Hat Bugzilla</a>.
+They should be in git format and should be prepared against <code>master</code> branch in git.
+Alternatively you can also send pull requests at <a href="https://github.com/fedora-java/howto">Github repository</a>.</p>
 </div>
 </div>
 </div>
@@ -747,11 +739,8 @@ Alternatively you can also send pull requests at
 <h2 id="_abstract">Abstract</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This document aims to help developers create and maintain Java packages in
-Fedora. It <strong>does not</strong> supersede or replace
-<a href="https://docs.fedoraproject.org/en-US/packaging-guidelines/Java/">Java Packaging Guidelines</a>,
-but rather aims to document tools and techniques used for packaging Java
-software on Fedora.</p>
+<p>This document aims to help developers create and maintain Java packages in Fedora.
+It <strong>does not</strong> supersede or replace <a href="https://docs.fedoraproject.org/en-US/packaging-guidelines/Java/">Java Packaging Guidelines</a>, but rather aims to document tools and techniques used for packaging Java software on Fedora.</p>
 </div>
 </div>
 </div>
@@ -759,79 +748,62 @@ software on Fedora.</p>
 <h2 id="_introduction">1. Introduction</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Clean Java packaging has historically been a daunting task.  Lack of
-any standard addressing the physical location of files on the system
-combined with the common use of licensing terms that only allow free
-redistribution of key components as a part of a greater ensemble has
-let to the systematic release of self-sufficient applications with
-built-in copies of external components.</p>
+<p>Clean Java packaging has historically been a daunting task.
+Lack of any standard addressing the physical location of files on the system combined with the common use of licensing terms that only allow free redistribution of key components as a part of a greater ensemble has let to the systematic release of self-sufficient applications with built-in copies of external components.</p>
 </div>
 <div class="paragraph">
-<p>As a consequence applications are only tested with the versions of the
-components they bundle, a complete Java system suffers from endless
-duplication of the same modules, and integrating multiple parts can be
-a nightmare since they are bound to depend on the same elements - only
-with different and subtly incompatible versions (different
-requirements, different bugs).  Any security or compatibility upgrade
-must be performed for each of those duplicated elements.</p>
+<p>As a consequence applications are only tested with the versions of the components they bundle, a complete Java system suffers from endless duplication of the same modules, and integrating multiple parts can be a nightmare since they are bound to depend on the same elements - only with different and subtly incompatible versions (different requirements, different bugs).
+Any security or compatibility upgrade must be performed for each of those duplicated elements.</p>
 </div>
 <div class="paragraph">
-<p>This problem is compounded by the current practice of folding
-extensions in the JVM itself after a while; an element that
-could safely be embedded in a application will suddenly conflict with
-a JVM part and cause subtle failures.</p>
+<p>This problem is compounded by the current practice of folding extensions in the JVM itself after a while; an element that could safely be embedded in a application will suddenly conflict with a JVM part and cause subtle failures.</p>
 </div>
 <div class="paragraph">
-<p>It is not surprising then that complex Java systems tend to fossilize
-very quickly, with the cost of maintaining dependencies current
-growing too high so fast people basically give up on it.</p>
+<p>It is not surprising then that complex Java systems tend to fossilize very quickly, with the cost of maintaining dependencies current growing too high so fast people basically give up on it.</p>
 </div>
 <div class="paragraph">
-<p>This situation is incompatible with typical fast-evolving Linux
-platform.  To attain the aim of user- and administrator-friendly RPM
-packaging of Java applications a custom infrastructure and strict
-packaging rules had to be evolved.</p>
+<p>This situation is incompatible with typical fast-evolving Linux platform.
+To attain the aim of user- and administrator-friendly RPM packaging of Java applications a custom infrastructure and strict packaging rules had to be evolved.</p>
 </div>
 <div class="sect2">
 <h3 id="_basic_introduction_to_packaging_reasons_problems_rationale">1.1. Basic introduction to packaging, reasons, problems, rationale</h3>
 <div class="paragraph">
-<p>This section includes basic introduction to Java packaging world to people
-coming from different backgrounds. Goal is to understand language of all groups
-involved. If you are a Java developer coming into contact with RPM packaging for
-the first time start reading <a href="#XFor_Devs">Java developer</a>
-section. On the other hand if you are coming from RPM packaging background an
-<a href="#XFor_Packagers">introduction to Java world</a> is probably a better starting
-point.</p>
+<p>This section includes basic introduction to Java packaging world to people coming from different backgrounds.
+The goal is to understand language of all groups involved.
+If you are a Java developer coming into contact with RPM packaging for the first time start reading <a href="#_for_java_developers">Java developer</a> section.
+On the other hand if you are coming from RPM packaging background an <a href="#_for_packagers">introduction to Java world</a> is probably a better starting point.</p>
 </div>
 <div class="paragraph">
-<p>It should be noted that especially in this section we might sacrifice
-correctness for simplicity.</p>
+<p>It should be noted that especially in this section we might sacrifice correctness for simplicity.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="XFor_Packagers">1.2. For Packagers</h3>
+<h3 id="_for_packagers">1.2. For Packagers</h3>
 <div class="paragraph">
-<p>Java is a programming language which is usually compiled into bytecode for JVM
-(Java Virtual Machine). For more details about the JVM and bytecode
-specification see
-<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/index.html">JVM
-documentation</a>.</p>
+<p>Java is a programming language which is usually compiled into bytecode for JVM (Java Virtual Machine).
+For more details about the JVM and bytecode specification see <a href="http://docs.oracle.com/javase/specs/jvms/se8/html/index.html">JVM documentation</a>.</p>
 </div>
 <div class="sect3">
 <h4 id="_example_java_project">1.2.1. Example Java Project</h4>
 <div class="paragraph">
-<p>To better illustrate various parts of Java packaging we will dissect simple Java
-<code>Hello world</code> application. Java sources are usually organized using directory
-hierarchies. Shared directory hierarchy creates a namespace called <code>package</code> in
-Java terminology. To understand naming mechanisms of Java <code>packages</code> see
-<a href="http://docs.oracle.com/javase/tutorial/java/package/namingpkgs.html">Java
-package naming conventions</a>.</p>
+<p>To better illustrate various parts of Java packaging we will dissect simple Java <code>Hello world</code> application.
+Java sources are usually organized using directory hierarchies.
+Shared directory hierarchy creates a namespace called <code>package</code> in Java terminology.
+To understand naming mechanisms of Java <code>packages</code> see <a href="http://docs.oracle.com/javase/tutorial/java/package/namingpkgs.html">Java package naming conventions</a>.</p>
 </div>
 <div class="paragraph">
 <p>Let&#8217;s create a simple hello world application that will execute following steps
-when run:
-. Ask for a name
-. Print out <code>Hello World from</code> and the name from previous step</p>
+when run:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Ask for a name.</p>
+</li>
+<li>
+<p>Print out <code>Hello World from</code> and the name from previous step.</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p>To illustrate certain points we artificially complicate things by creating:</p>
@@ -839,13 +811,13 @@ when run:
 <div class="ulist">
 <ul>
 <li>
-<p><code>Input</code> class used only for input of text from terminal</p>
+<p><code>Input</code> class used only for input of text from terminal.</p>
 </li>
 <li>
-<p><code>Output</code> class used only for output on terminal</p>
+<p><code>Output</code> class used only for output on terminal.</p>
 </li>
 <li>
-<p><code>HelloWorldApp</code> class used as main application</p>
+<p><code>HelloWorldApp</code> class used as main application.</p>
 </li>
 </ul>
 </div>
@@ -897,10 +869,9 @@ org/fedoraproject/helloworld/HelloWorld.java</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Although the directory structure of our package is hierarchical, there
-is no real parent-child relationship between packages. Each package is
-therefore seen as independent.
-Above example makes use of three separate packages:</p>
+<p>Although the directory structure of our package is hierarchical, there is no real parent-child relationship between packages.
+Each package is therefore seen as independent.
+The above example makes use of three separate packages:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -921,36 +892,32 @@ Above example makes use of three separate packages:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Telling JVM which Java class contains <code>main()</code> method</p>
+<p>Telling JVM which Java class contains <code>main()</code> method.</p>
 </li>
 <li>
-<p>Adding required JAR files on JVM classpath</p>
+<p>Adding required JAR files on JVM classpath.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
 <div class="title">Compiling our project</div>
-<p>The sample project can be compiled to a bytecode by Java compiler. Java
-compiler can be typically invoked from command line by command <code>javac</code>.</p>
+<p>The sample project can be compiled to a bytecode by Java compiler.
+Java compiler can be typically invoked from command line by command <code>javac</code>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="shell"><span class="nv">$ </span>javac <span class="si">$(</span>find <span class="nt">-name</span> <span class="s1">'*.java'</span><span class="si">)</span></code></pre>
+<pre class="rouge highlight"><code data-lang="shell">javac <span class="si">$(</span>find <span class="nt">-name</span> <span class="s1">'*.java'</span><span class="si">)</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>For every <code>.java</code> file corresponding <code>.class</code> file will be created. The
-<code>.class</code> files contain Java bytecode which is meant to be executed on
-JVM.</p>
+<p>For every <code>.java</code> file corresponding <code>.class</code> file will be created.
+The <code>.class</code> files contain Java bytecode which is meant to be executed on JVM.</p>
 </div>
 <div class="paragraph">
-<p>One could put invocation of <code>javac</code> to Makefile and simplify the
-compilation a bit. It might be sufficient for such a simple project, but
-it would quickly become hard to build more complex projects with this
-approach. Java world knows several high-level build systems which can
-highly simplify building of Java projects. Among the others, probably
-most known are <a href="http://maven.apache.org/">Apache Maven</a> and
-<a href="http://ant.apache.org/">Apache Ant</a>.</p>
+<p>One could put invocation of <code>javac</code> to Makefile and simplify the compilation a bit.
+It might be sufficient for such a simple project, but it would quickly become hard to build more complex projects with this approach.
+Java world knows several high-level build systems which can highly simplify building of Java projects.
+Among others, probably the most known are <a href="https://maven.apache.org/">Apache Maven</a> and <a href="https://ant.apache.org/">Apache Ant</a>.</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -960,7 +927,7 @@ most known are <a href="http://maven.apache.org/">Apache Maven</a> and
 </td>
 <td class="content">
 <div class="paragraph">
-<p>See also <a href="#maven">Maven</a> and <a href="#ant">Ant</a> sections.</p>
+<p>See also <a href="#_maven">Maven</a> and <a href="#_ant">Ant</a> sections.</p>
 </div>
 </td>
 </tr>
@@ -968,50 +935,43 @@ most known are <a href="http://maven.apache.org/">Apache Maven</a> and
 </div>
 <div class="paragraph">
 <div class="title">JAR files</div>
-<p>Having our application split across many <code>.class</code> files wouldn&#8217;t be very
-practical, so those <code>.class</code> files are assembled into ZIP files with
-specific layout called JAR files. Most commonly these special ZIP files
-have <code>.jar</code> suffix, but other variations exist (<code>.war</code>, <code>.ear</code>). They
-contain:</p>
+<p>Having our application split across many <code>.class</code> files would not be very practical, so those <code>.class</code> files are assembled into ZIP files with specific layout and called JAR files.
+Most commonly these special ZIP files have <code>.jar</code> suffix, but other variations exist (<code>.war</code>, <code>.ear</code>).
+They contain:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Compiled bytecode of our project</p>
+<p>Compiled bytecode of our project.</p>
 </li>
 <li>
-<p>Additional metadata stored in <code>META-INF/MANIFEST.MF</code> file</p>
+<p>Additional metadata stored in <code>META-INF/MANIFEST.MF</code> file.</p>
 </li>
 <li>
-<p>Resource files such as images or localisation data</p>
+<p>Resource files such as images or localisation data.</p>
 </li>
 <li>
-<p>Optionaly the source code of our project (called source JAR then)</p>
+<p>Optionaly the source code of our project (called source JAR then).</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>They can also contain additional bundled software which is something
-we don&#8217;t want to have in packages. You can inspect the contents of given
-JAR file by extracting it. That can be done with following command:</p>
+<p>They can also contain additional bundled software which is something we do not want to have in packages.
+You can inspect the contents of given JAR file by extracting it.
+That can be done with following command:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="shell">jar xf something.jar</code></pre>
+<pre class="rouge highlight"><code data-lang="shell">jar <span class="nt">-xf</span> something.jar</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>The detailed description of JAR file format is in the
-<a href="http://docs.oracle.com/javase/8/docs/technotes/guides/jar/jar.html">JAR File
-Specification</a>.</p>
+<p>The detailed description of JAR file format is in the <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/jar/jar.html">JAR File Specification</a>.</p>
 </div>
 <div class="paragraph">
 <div class="title">Classpath</div>
-<p>The classpath is a way of telling JVM where to look for user classes
-and 3rd party libraries. By default, only current directory is searched,
-all other locations need to be specified explicitly by setting up
-CLASSPATH environment variable, or via <code>-cp</code> (<code>-classpath</code>) option of a
-Java Virtual Machine.</p>
+<p>The classpath is a way of telling JVM where to look for user classes and 3rd party libraries.
+By default, only current directory is searched, all other locations need to be specified explicitly by setting up <code>CLASSPATH</code> environment variable, or via <code>-cp</code> (<code>-classpath</code>) option of the Java Virtual Machine.</p>
 </div>
 <div class="listingblock">
 <div class="title">Setting the classpath</div>
@@ -1021,8 +981,7 @@ Java Virtual Machine.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Please note that two JAR files are separated by colon in a classpath
-definition.</p>
+<p>Please note that two JAR files are separated by colon in a classpath definition.</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -1032,9 +991,7 @@ definition.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>See
-<a href="http://docs.oracle.com/javase/8/docs/technotes/tools/windows/classpath.html">official
-documentation</a> for more information about classpath.</p>
+<p>See <a href="https://docs.oracle.com/javase/8/docs/technotes/tools/windows/classpath.html">official documentation</a> for more information about classpath.</p>
 </div>
 </td>
 </tr>
@@ -1042,66 +999,54 @@ documentation</a> for more information about classpath.</p>
 </div>
 <div class="paragraph">
 <div class="title">Wrapper scripts</div>
-<p>Classic compiled applications use dynamic linker to find dependencies (linked
-libraries), Python interpreter has predefined directories where it searches for
-imported modules. JVM itself has no embedded knowledge of installation paths and
-thus no automatic way to resolve dependencies of Java projects. This means that
-all Java applications have to use wrapper shell scripts to setup the environment
-before invoking the JVM and running the application itself. Note that this is
-not necessary for libraries.</p>
+<p>Classic compiled applications use dynamic linker to find dependencies (linked libraries), whereas dynamic languages such as Python, Ruby, Lua have predefined directories where they search for imported modules.
+JVM itself has no embedded knowledge of installation paths and thus no automatic way to resolve dependencies of Java projects.
+This means that all Java applications have to use wrapper shell scripts to setup the environment before invoking the JVM and running the application itself.
+Note that this is not necessary for libraries.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_build_system_identification">1.2.2. Build System Identification</h4>
 <div class="paragraph">
-<p>Build system used by upstream can be usually identified by looking at
-their configuration files, which reside in project directory structure,
-usually in its root or in specialized directories with names such as
-<code>build</code> or <code>make</code>.</p>
+<p>The build system used by upstream can be usually identified by looking at their configuration files, which reside in project directory structure, usually in its root or in specialized directories with names such as <code>build</code> or <code>make</code>.</p>
 </div>
 <div class="paragraph">
 <div class="title">Maven</div>
-<p>Build managed by Apache Maven is configured by an XML file that is by
-default named <code>pom.xml</code>. In its simpler form it usually looks like this:</p>
+<p>Build managed by Apache Maven is configured by an XML file that is by default named <code>pom.xml</code>.
+In its simpler form it usually looks like this:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight"><code data-lang="xml"><span class="nt">&lt;project</span> <span class="na">xmlns=</span><span class="s">"http://maven.apache.org/POM/4.0.0"</span>
-         <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span>
-         <span class="na">xsi:schemaLocation=</span><span class="s">"http://maven.apache.org/POM/4.0.0
-                             http://maven.apache.org/maven-v4_0_0.xsd"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
-    <span class="nt">&lt;groupId&gt;</span>com.example.myproject<span class="nt">&lt;/groupId&gt;</span>
-    <span class="nt">&lt;artifactId&gt;</span>myproject<span class="nt">&lt;/artifactId&gt;</span>
-    <span class="nt">&lt;packaging&gt;</span>jar<span class="nt">&lt;/packaging&gt;</span>
-    <span class="nt">&lt;version&gt;</span>1.0<span class="nt">&lt;/version&gt;</span>
-    <span class="nt">&lt;name&gt;</span>myproject<span class="nt">&lt;/name&gt;</span>
-    <span class="nt">&lt;dependencies&gt;</span>
-        <span class="nt">&lt;dependency&gt;</span>
-            <span class="nt">&lt;groupId&gt;</span>junit<span class="nt">&lt;/groupId&gt;</span>
-            <span class="nt">&lt;artifactId&gt;</span>junit<span class="nt">&lt;/artifactId&gt;</span>
-            <span class="nt">&lt;version&gt;</span>4.1<span class="nt">&lt;/version&gt;</span>
-            <span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
-        <span class="nt">&lt;/dependency&gt;</span>
-    <span class="nt">&lt;/dependencies&gt;</span>
+<span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span>
+<span class="na">xsi:schemaLocation=</span><span class="s">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>com.example.myproject<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>myproject<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;packaging&gt;</span>jar<span class="nt">&lt;/packaging&gt;</span>
+  <span class="nt">&lt;version&gt;</span>1.0<span class="nt">&lt;/version&gt;</span>
+  <span class="nt">&lt;name&gt;</span>myproject<span class="nt">&lt;/name&gt;</span>
+  <span class="nt">&lt;dependencies&gt;</span>
+    <span class="nt">&lt;dependency&gt;</span>
+      <span class="nt">&lt;groupId&gt;</span>junit<span class="nt">&lt;/groupId&gt;</span>
+      <span class="nt">&lt;artifactId&gt;</span>junit<span class="nt">&lt;/artifactId&gt;</span>
+      <span class="nt">&lt;version&gt;</span>4.1<span class="nt">&lt;/version&gt;</span>
+      <span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
+    <span class="nt">&lt;/dependency&gt;</span>
+  <span class="nt">&lt;/dependencies&gt;</span>
 <span class="nt">&lt;/project&gt;</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>It describes project&#8217;s build process in a declarative way, without
-explicitly specifying exact steps needed to compile sources and assemble
-pieces together. It also specifies project&#8217;s dependencies which are
-usually the main point of interest for packagers. Other important
-feature of Maven that packagers should know about are plugins. Plugins
-extend Maven with some particular functionality, but unfortunately some
-of them may get in the way of packaging and need to be altered or
-removed. There are RPM macros provided to facilitate modifying Maven
-dependencies and plugins.</p>
+<p>It describes project&#8217;s build process in a declarative way, without explicitly specifying exact steps needed to compile sources and assemble pieces together.
+It also specifies project&#8217;s dependencies which are usually the main point of interest for packagers.
+Another important feature of Maven that packagers should know about are plugins.
+Plugins extend Maven with some particular functionality, but unfortunately some of them may get in the way of packaging and need to be altered or removed.
+There are RPM macros provided to facilitate modifying Maven dependencies and plugins.</p>
 </div>
 <div class="paragraph">
 <div class="title">Ant</div>
-<p>Apache Ant is also configured by an XML file. It is by convention named
-<code>build.xml</code> and in its simple form it looks like this:</p>
+<p>Apache Ant is also configured by an XML file. It is by convention named <code>build.xml</code> and in its simple form it looks like this:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1134,40 +1079,29 @@ dependencies and plugins.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Ant build file consists mostly of targets, which are collections of
-steps needed to accomplish intended task. They usually depend on each
-other and are generally similar to Makefile targets. Available targets
-can be listed by invoking <code>ant -p</code> in project directory containing
-<code>build.xml</code> file. If the file is named differently than <code>build.xml</code> you
-have to tell Ant which file should be used by using <code>-f</code> option with the
-name of the actual build file.</p>
+<p>Ant build file consists mostly of targets, which are collections of steps needed to accomplish intended task.
+They usually depend on each other and are generally similar to Makefile targets.
+Available targets can be listed by invoking <code>ant -p</code> in project directory containing <code>build.xml</code> file.
+If the file is named differently than <code>build.xml</code> you have to tell Ant which file should be used by using <code>-f</code> option with the name of the actual build file.</p>
 </div>
 <div class="paragraph">
-<p>Some projects that use Apache Ant also use Apache Ivy to simplify
-dependency handling. Ivy is capable of resolving and downloading
-artifacts from Maven repositories which are declaratively described in
-XML. Project usually contains one or more <code>ivy.xml</code> files specifying the
-module Maven coordinates and its dependencies. Ivy can also be used
-directly from Ant build files. To detect whether the project you wish to
-package is using Apache Ivy, look for files named <code>ivy.xml</code> or nodes in
-the <code>ivy</code> namespace in project&#8217;s build file.</p>
+<p>Some projects that use Apache Ant also use Apache Ivy to simplify dependency handling.
+Ivy is capable of resolving and downloading artifacts from Maven repositories which are declaratively described in XML.
+Project usually contains one or more <code>ivy.xml</code> files specifying the module Maven coordinates and its dependencies.
+Ivy can also be used directly from Ant build files.
+To detect whether the project you wish to package is using Apache Ivy, look for files named <code>ivy.xml</code> or nodes in the <code>ivy</code> namespace in project&#8217;s build file.</p>
 </div>
 <div class="paragraph">
 <div class="title">Make</div>
-<p>While unlikely, it&#8217;s still possible that you encounter a project whose
-build is managed by plain old Makefiles. They contain a list of targets
-which consist of commands (marked with tab at the begining of line) and
-are invoked by <code>make</code> <em>target</em> or simply <code>make</code> to run the default
-target.</p>
+<p>While unlikely, it is still possible that you encounter a project whose build is managed by plain old Makefiles.
+They contain a list of targets which consist of commands (marked with tab at the begining of line) and are invoked by <code>make</code> <em>target</em> or simply <code>make</code> to run the default target.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_quiz_for_packagers">1.2.3. Quiz for Packagers</h4>
 <div class="paragraph">
-<p>At this point you should have enough knowledge about Java to start
-packaging. If you are not able to answer following questions return back to
-previous sections or ask experienced packagers for different explanations of
-given topics.</p>
+<p>At this point you should have enough knowledge about Java to start packaging.
+If you are not able to answer following questions return back to previous sections or ask experienced packagers for different explanations of given topics.</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -1187,11 +1121,10 @@ given topics.</p>
 <p>What are contents of a typical <code>JAR</code> file?</p>
 </li>
 <li>
-<p>What is a pom.xml file and what information it contains?</p>
+<p>What is a <code>pom.xml</code> file and what information it contains?</p>
 </li>
 <li>
-<p>How would you handle packaging software that contains <code>lib/junit4.jar</code> inside
-source tarball?</p>
+<p>How would you handle packaging software that contains <code>lib/junit4.jar</code> inside source tarball?</p>
 </li>
 <li>
 <p>Name at least three methods for bundling code in Java projects</p>
@@ -1201,23 +1134,19 @@ source tarball?</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="XFor_Devs">1.3. For Java Developers</h3>
+<h3 id="_for_java_developers">1.3. For Java Developers</h3>
 <div class="paragraph">
-<p>Packaging Java software has specifics which we will try to cover in this section
-aimed at Java developers who are already familiar with Java language, JVM,
-classpath handling, Maven, pom.xml file structure and dependencies.</p>
+<p>Packaging Java software has specifics which we will try to cover in this section aimed at Java developers who are already familiar with Java language, JVM, classpath handling, Maven, <code>pom.xml</code> file structure and dependencies.</p>
 </div>
 <div class="paragraph">
-<p>Instead we will focus on basic packaging tools and relationships between Java
-and RPM world. One of the most important questions is: What is the reason to
-package software in RPM (or other distribution-specific formats). There are
-several reasons for it, among others:</p>
+<p>Instead we will focus on basic packaging tools and relationships between Java and RPM world.
+One of the most important questions is: What is the reason to package software in RPM (or other distribution-specific formats).
+There are several reasons for it, among others:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Unified way of installation of software for users of distribution regardless
-of upstream projects</p>
+<p>Unified way of installation of software for users of distribution regardless of upstream projects</p>
 </li>
 <li>
 <p>Verification of authenticity of software packages by signing them</p>
@@ -1232,23 +1161,19 @@ of upstream projects</p>
 <p>Common filesystem layout across distribution enforced by packaging standards</p>
 </li>
 <li>
-<p>Ability to administer, monitor and query packages installed on several
-machines through unified interfaces</p>
+<p>Ability to administer, monitor and query packages installed on several machines through unified interfaces</p>
 </li>
 <li>
-<p>Distribution of additional metadata with the software itself such as
-licenses used, homepage for the project, changelogs and other information
-that users or administrators can find useful</p>
+<p>Distribution of additional metadata with the software itself such as licenses used, homepage for the project, changelogs and other information that users or administrators can find useful</p>
 </li>
 </ul>
 </div>
 <div class="sect3">
 <h4 id="_example_rpm_project">1.3.1. Example RPM Project</h4>
 <div class="paragraph">
-<p>RPM uses <code>spec</code> files as recipes for building software packages.  We
-will use it to package example project created in previous section. If
-you didn&#8217;t read it you don&#8217;t need to; the file listing is available here
-and the rest is not necessary for this section.</p>
+<p>RPM uses <code>spec</code> files as recipes for building software packages.
+We will use it to package example project created in previous section.
+If you did not read it you do not need to; the file listing is available here and the rest is not necessary for this section.</p>
 </div>
 <div class="listingblock">
 <div class="title">Directory listing</div>
@@ -1398,45 +1323,39 @@ install -p -m 644 helloworld.jar %{buildroot}%{_javadir}/helloworld.jar
 <div class="ulist">
 <ul>
 <li>
-<p>Package metadata such as its name, version, release,
-license&#8230;&#8203;</p>
+<p>Package metadata such as its name, version, release, license, &#8230;&#8203;</p>
 </li>
 <li>
-<p>A <code>Summary</code> with basic one-line summary of package contents</p>
+<p>A <code>Summary</code> with basic one-line summary of package contents.</p>
 </li>
 <li>
-<p>Package source URLs denoted with <code>Source0</code> to <code>SourceN</code> directives</p>
+<p>Package source URLs denoted with <code>Source0</code> to <code>SourceN</code> directives.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Source files can then be referenced by <code>%SOURCE0</code> to
-<code>%SOURCEn</code>, which expand to actual paths to given files</p>
+<p>Source files can then be referenced by <code>%SOURCE0</code> to <code>%SOURCEn</code>, which expand to actual paths to given files.</p>
 </li>
 <li>
-<p>In practice, the source URL shouldn&#8217;t point to a file in our
-filesystem, but to an upstream release on the web</p>
+<p>In practice, the source URL shouldn&#8217;t point to a file in our filesystem, but to an upstream release on the web.</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>Patches - using <code>Patch0</code> to <code>PatchN</code></p>
+<p>Patches - using <code>Patch0</code> to <code>PatchN</code>.</p>
 </li>
 <li>
-<p>Project dependencies</p>
+<p>Project dependencies.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Build dependencies specified by <code>BuildRequires</code>, which need to be
-determined manually.</p>
+<p>Build dependencies specified by <code>BuildRequires</code>, which need to be determined manually.</p>
 </li>
 <li>
-<p>Run time dependencies will be detected automatically. If it fails,
-you have to specify them with <code>Requires</code>.</p>
+<p>Run time dependencies will be detected automatically. If it fails, you have to specify them with <code>Requires</code>.</p>
 </li>
 <li>
-<p>More information on this topic can be found in
-<a href="#dependency_handling">Dependency handling</a> section.</p>
+<p>More information on this topic can be found in the <a href="#_dependency_handling">dependency handling</a> section.</p>
 </li>
 </ul>
 </div>
@@ -1444,43 +1363,41 @@ you have to specify them with <code>Requires</code>.</p>
 </ul>
 </div>
 </dd>
-<dt class="hdlist1">Description</dt>
+<dt class="hdlist1"><code>%description</code></dt>
 <dd>
 <div class="ulist">
 <ul>
 <li>
-<p>Few sentences about the project and its uses. It will be displayed
-by package management software.</p>
+<p>Few sentences about the project and its uses.
+It will be displayed by package management software.</p>
 </li>
 </ul>
 </div>
 </dd>
-<dt class="hdlist1">Prep section</dt>
+<dt class="hdlist1"><code>%prep</code> section</dt>
 <dd>
 <div class="ulist">
 <ul>
 <li>
-<p>Unpacks the sources using <code>setup -q</code> or manually if needed</p>
+<p>Unpacks the sources using <code>setup -q</code> or manually if needed.</p>
 </li>
 <li>
-<p>If a source file doesn&#8217;t need to be extracted, it can be copied
-to build directory by <code>cp -p %SOURCE0 .</code></p>
+<p>If a source file doesn&#8217;t need to be extracted, it can be copied to build directory by <code>cp -p %SOURCE0 .</code>.</p>
 </li>
 <li>
-<p>Apply patches with <code>%patchX</code>, where X is the number of patch you
-want to apply. (You usually need the patch index, so it would be:
-<code>%patch0 -p1</code>)</p>
+<p>Apply patches with <code>%patch X</code>, where <code>X</code> is the number of patch you want to apply.
+(You usually need the patch index, so it would be: <code>%patch 0 -p1</code>).</p>
 </li>
 </ul>
 </div>
 </dd>
-<dt class="hdlist1">Build section</dt>
+<dt class="hdlist1"><code>%build</code> section</dt>
 <dd>
 <div class="ulist">
 <ul>
 <li>
-<p>Contains project compilation instructions. Usually consists of
-calling the projects build system such as Ant, Maven or Make.</p>
+<p>Contains project compilation instructions.
+Usually consists of calling the projects build system such as Ant, Maven or Make.</p>
 </li>
 </ul>
 </div>
@@ -1490,53 +1407,48 @@ calling the projects build system such as Ant, Maven or Make.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Runs projects integration tests. Unit test are usually run in
-<code>%build</code> section, so if there are no integration tests available,
-this section is omitted</p>
+<p>Runs projects integration tests.
+Unit test are usually run in <code>%build</code> section, so if there are no integration tests available, this section is omitted.</p>
 </li>
 </ul>
 </div>
 </dd>
-<dt class="hdlist1">Install section</dt>
+<dt class="hdlist1"><code>%install</code> section</dt>
 <dd>
 <div class="ulist">
 <ul>
 <li>
-<p>Copies built files that are supposed to be installed into
-`%{buildroot}` directory, which represents target filesystem&#8217;s root</p>
+<p>Copies built files that are supposed to be installed into <code>%{buildroot}</code> directory, which represents target filesystem&#8217;s root.</p>
 </li>
 </ul>
 </div>
 </dd>
-<dt class="hdlist1">Files section</dt>
+<dt class="hdlist1"><code>%files</code> section</dt>
 <dd>
 <div class="ulist">
 <ul>
 <li>
-<p>Lists all files, that should be installed from `%{buildroot}` to
-target system.</p>
+<p>Lists all files, that should be installed from <code>%{buildroot}</code> to target system.</p>
 </li>
 <li>
-<p>Documentation files are prefixed by <code>%doc</code> and are
-taken from build directory instead of buildroot</p>
+<p>Documentation files are prefixed by <code>%doc</code> and are taken from build directory instead of buildroot.</p>
 </li>
 <li>
-<p>Directories that this package should own are prefixed with <code>%dir</code></p>
+<p>Directories that this package should own are prefixed with <code>%dir</code>.</p>
 </li>
 </ul>
 </div>
 </dd>
-<dt class="hdlist1">Changelog</dt>
+<dt class="hdlist1"><code>%changelog</code></dt>
 <dd>
 <div class="ulist">
 <ul>
 <li>
-<p>Contains changes to this spec file (not upstream)</p>
+<p>Contains changes to this spec file (not upstream).</p>
 </li>
 <li>
-<p>Has prescribed format. To prevent mistakes in format, it is
-advised to use tool such as <code>rpmdev-bumpspec</code> from package rpmdevtools to
-append new changelog entries instead of editing it by hand</p>
+<p>Has prescribed format.
+To prevent mistakes in format, it is advised to use tool such as <code>rpmdev-bumpspec</code> from package rpmdevtools to append new changelog entries instead of editing it by hand.</p>
 </li>
 </ul>
 </div>
@@ -1544,8 +1456,7 @@ append new changelog entries instead of editing it by hand</p>
 </dl>
 </div>
 <div class="paragraph">
-<p>To build RPM from <a href="rpm_project/helloworld.spec">this <code>spec</code> file</a> save it in
-your current directory and run <code>rpmbuild</code>:</p>
+<p>To build RPM from <a href="rpm_project/helloworld.spec">this <code>spec</code> file</a> save it in your current directory and run <code>rpmbuild</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1553,13 +1464,9 @@ your current directory and run <code>rpmbuild</code>:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>If everything worked OK, this should produce RPM file
-<code>~/rpmbuild/RPMS/x86_64/helloworld-1.0-1.fc18.x86_64.rpm</code>. You can use
-<code>rpm -i</code> or <code>dnf install</code> commands to install this package and it
-will add <code>/usr/share/java/helloworld.jar</code> and <code>/usr/bin/helloworld</code>
-wrapper script to your system. Please note that this specfile is
-simplified and lacks some additional parts, such as license
-installation.</p>
+<p>If everything worked OK, this should produce RPM file <code>~/rpmbuild/RPMS/x86_64/helloworld-1.0-1.fc18.x86_64.rpm</code>.
+You can use <code>rpm -i</code> or <code>dnf install</code> commands to install this package and it will add <code>/usr/share/java/helloworld.jar</code> and <code>/usr/bin/helloworld</code> wrapper script to your system.
+Please note that this specfile is simplified and lacks some additional parts, such as license installation.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1569,25 +1476,24 @@ installation.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Paths and filenames might be slightly different depending on your architecture
-and distribution. Output of the commands will tell you exact paths</p>
+<p>Paths and filenames might be slightly different depending on your architecture and distribution.
+Output of the commands will tell you exact paths.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>As you can see to build RPM files you can use <code>rpmbuild</code> command. It has several
-other options, which we will cover later on.</p>
+<p>As you can see to build RPM files you can use <code>rpmbuild</code> command.
+It has several other options, which we will cover later on.</p>
 </div>
 <div class="paragraph">
-<p>Except building binary RPMs (<code>-bb</code>), <code>rpmbuild</code> can also be told to:</p>
+<p>Other than building binary RPMs (<code>-bb</code>), <code>rpmbuild</code> can also be used to:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>build only source RPMs (SRPMs), the packages containing source files
-which can be later build to RPMs (option <code>-bs</code>)</p>
+<p>build only source RPMs (SRPMs), the packages containing source files which can be later build to RPMs (option <code>-bs</code>)</p>
 </li>
 <li>
 <p>build all, both binary and source RPMs (option <code>-ba</code>)</p>
@@ -1595,20 +1501,17 @@ which can be later build to RPMs (option <code>-bs</code>)</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>See `rpmbuild&#8217;s manual page for all available options.</p>
+<p>See <code>rpmbuild</code> 's manual page for all available options.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="querying_repositories">1.3.2. Querying repositories</h4>
+<h4 id="_querying_repositories">1.3.2. Querying repositories</h4>
 <div class="paragraph">
-<p>Fedora comes with several useful tools which can provide great
-assistance in getting information from RPM repositories.</p>
+<p>Fedora comes with several useful tools which can provide great assistance in getting information from RPM repositories.</p>
 </div>
 <div class="paragraph">
 <p><code>dnf repoquery</code> is a tool for querying information from RPM repositories.
-Maintainer of Java packages might typically query the repository for
-information like "which package contains Maven artifact
-`groupId:artifactId`".</p>
+Maintainer of Java packages might typically query the repository for information like "which package contains Maven artifact `groupId:artifactId`".</p>
 </div>
 <div class="listingblock">
 <div class="title">Find out which package provides given artifact</div>
@@ -1618,14 +1521,11 @@ apache-commons-io-1:2.4-9.fc19.noarch</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>The example above shows that one can get to <code>commons-io:commons-io</code>
-artifact by installing <code>apache-commons-io</code> package.</p>
+<p>The example above shows that one can get to <code>commons-io:commons-io</code> artifact by installing <code>apache-commons-io</code> package.</p>
 </div>
 <div class="paragraph">
-<p>By default, <code>dnf repoquery</code> uses all enabled repositories in DNF
-configuration, but it is possible to explicitly specify any other
-repository. For example following command will query only Rawhide
-repository:</p>
+<p>By default, <code>dnf repoquery</code> uses all enabled repositories in DNF configuration, but it is possible to explicitly specify any other repository.
+For example following command will query only Rawhide repository:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1634,8 +1534,7 @@ apache-commons-io-1:2.4-10.fc20.noarch</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Sometimes it may be useful to just list all the artifacts provided by
-given package:</p>
+<p>Sometimes it may be useful to just list all the artifacts provided by given package:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1648,21 +1547,16 @@ osgi<span class="o">(</span>org.apache.commons.io<span class="o">)</span> <span 
 </div>
 </div>
 <div class="paragraph">
-<p>Output above means that package <code>apache-commons-io</code> provides two Maven
-artifacts: previously mentioned <code>commons-io:commons-io</code> and
-<code>org.apache.commons:commons-io</code>. In this case the second one is just an
-alias for same JAR file. See section about <a href="#aliases">artifact aliases</a> for
-more information on this topic.</p>
+<p>Output above means that package <code>apache-commons-io</code> provides two Maven artifacts: previously mentioned <code>commons-io:commons-io</code> and <code>org.apache.commons:commons-io</code>.
+In this case the second one is just an alias for same JAR file. See section about <a href="#_aliases">artifact aliases</a> for more information on this topic.</p>
 </div>
 <div class="paragraph">
-<p>Another useful tool is <code>rpm</code>. It can do a lot of stuff, but most
-importantly it can replace <code>dnf repoquery</code> if one only needs to query local
-RPM database. Only installed packages, or local <code>.rpm</code> files, can be
-queried with this tool.</p>
+<p>Another useful tool is <code>rpm</code>.
+It can do a lot of stuff, but most importantly it can replace <code>dnf repoquery</code> if one only needs to query local RPM database.
+Only installed packages, or local <code>.rpm</code> files, can be queried with this tool.</p>
 </div>
 <div class="paragraph">
-<p>Common use case could be checking which Maven artifacts provide locally
-built packages.</p>
+<p>Common use case could be checking which Maven artifacts provide locally built packages.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1696,12 +1590,10 @@ simplemaven <span class="o">=</span> 1.0-2.fc21</code></pre>
 <p>What is the format of RPM changelog or what tool would you use to produce it?</p>
 </li>
 <li>
-<p>How would you install an application that needs certain layout (think
-<code>ANT_HOME</code>) while honoring distribution filesystem layout guidelines?</p>
+<p>How would you install an application that needs certain layout (think <code>ANT_HOME</code>) while honoring distribution filesystem layout guidelines?</p>
 </li>
 <li>
-<p>How would you generate script for running a application with main class
-<code>org.project.MainClass</code> which depends on <code>commons-lang</code> jar?</p>
+<p>How would you generate script for running a application with main class <code>org.project.MainClass</code> which depends on <code>commons-lang</code> jar?</p>
 </li>
 </ol>
 </div>
@@ -1713,25 +1605,20 @@ simplemaven <span class="o">=</span> 1.0-2.fc21</code></pre>
 <h2 id="_java_specifics_in_fedora_for_users_and_developers">2. Java Specifics in Fedora for Users and Developers</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This section contains information about default Java implementation in
-Fedora, switching between different Java runtime environments and about
-few useful tools which can be used during packaging/development.</p>
+<p>This section contains information about default Java implementation in Fedora, switching between different Java runtime environments and about few useful tools which can be used during packaging / development.</p>
 </div>
 <div class="sect2">
-<h3 id="openjdk">2.1. Java implementation in Fedora</h3>
+<h3 id="_java_implementation_in_fedora">2.1. Java implementation in Fedora</h3>
 <div class="paragraph">
-<p>Fedora ships with an open-source reference implementation of Java
-Standard Edition called <a href="http://openjdk.java.net/">OpenJDK</a>. OpenJDK
-provides Java Runtime Environment for Java applications and set of
-development tools for Java developers.</p>
+<p>Fedora ships with an open-source reference implementation of Java Standard Edition called <a href="https://openjdk.java.net/">OpenJDK</a>.
+OpenJDK provides Java Runtime Environment for Java applications and set of development tools for Java developers.</p>
 </div>
 <div class="paragraph">
-<p>From users point of view, <code>java</code> command is probably most interesting.
-It&#8217;s a Java application launcher which spawns Java Virtual Machine
-(JVM), loads specified <code>.class</code> file and executes its main method.</p>
+<p>From users point of view, <code>java</code> command is probably the most interesting.
+It is a Java application launcher which spawns Java Virtual Machine (JVM), loads specified <code>.class</code> file and executes its main method.</p>
 </div>
 <div class="paragraph">
-<p>Here is an example how to run sample Java project from section 1.1.1:</p>
+<p>Here is an example how to run sample Java project from section <a href="#_example_java_project">Example Java Project</a>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1744,8 +1631,7 @@ It&#8217;s a Java application launcher which spawns Java Virtual Machine
 <div class="ulist">
 <ul>
 <li>
-<p><code>javac</code> is a Java compiler which translates source files
-to Java bytecode, which can be later interpreted by JVM.</p>
+<p><code>javac</code> is a Java compiler which translates source files to Java bytecode, which can be later interpreted by JVM.</p>
 </li>
 <li>
 <p><code>jdb</code> is a simple command-line debugger for Java applications.</p>
@@ -1761,10 +1647,9 @@ to Java bytecode, which can be later interpreted by JVM.</p>
 <div class="sect3">
 <h4 id="_switching_between_different_java_implementations">2.1.1. Switching between different Java implementations</h4>
 <div class="paragraph">
-<p>Users and developers may want to have multiple Java environments
-installed at the same time. It is possible in Fedora, but only one of
-them can be default Java environment in system. Fedora uses
-<code>alternatives</code> for switching between different installed JREs/JDKs.</p>
+<p>Users and developers may want to have multiple Java environments installed at the same time.
+It is possible in Fedora, but only one of them can be default Java environment in system.
+Fedora uses <code>alternatives</code> for switching between different installed JREs/JDKs.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1782,9 +1667,7 @@ Enter to keep the current selection[+], or type selection number:</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Example above shows how to chose default Java environment. <code>java</code>
-command will then point to the Java implementation provided by given
-JRE.</p>
+<p>Example above shows how to chose default Java environment. <code>java</code> command will then point to the Java implementation provided by given JRE.</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -1794,30 +1677,27 @@ JRE.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>See <code>man alternatives</code> for more information on how to use
-<code>alternatives</code>.</p>
+<p>See <code>man alternatives</code> for more information on how to use <code>alternatives</code>.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Developers may want to use Java compiler from different JDK. This can be
-achieved with <code>alternatives --config javac</code>.</p>
+<p>Developers may want to use Java compiler from different JDK.
+This can be achieved with <code>alternatives --config javac</code>.</p>
 </div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_building_classpath_with_build_classpath">2.2. Building classpath with <code>build-classpath</code></h3>
 <div class="paragraph">
-<p>Most of the Java application needs to specify classpath in order to work
-correctly. Fedora contains several tools which make working with
-classpaths easier.</p>
+<p>Most of the Java application needs to specify classpath in order to work correctly.
+Fedora contains several tools which make working with classpaths easier.</p>
 </div>
 <div class="paragraph">
-<p><code>build-classpath</code> - this tool takes JAR filenames or artifact
-coordinates as arguments and translates them to classpath-like string.
-See following example:</p>
+<p><code>build-classpath</code> - this tool takes JAR filenames or artifact coordinates as arguments and translates them to classpath-like string.
+See the following example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1826,9 +1706,8 @@ See following example:</p>
 </div>
 </div>
 <div class="paragraph">
-<p><code>log4j</code> corresponds to <code>log4j.jar</code> stored in `%{_javadir}`. If the JAR
-file is stored in subdirectory under `%{_javadir}`, it&#8217;s neccessary to
-pass <code>subdirectory/jarname</code> as an argument to <code>build-classpath</code>.
+<p><code>log4j</code> corresponds to <code>log4j.jar</code> stored in `%{_javadir}`.
+If the JAR file is stored in subdirectory under `%{_javadir}`, it is neccessary to pass <code>subdirectory/jarname</code> as an argument to <code>build-classpath</code>.
 Example:</p>
 </div>
 <div class="listingblock">
@@ -1841,10 +1720,9 @@ Example:</p>
 <div class="sect2">
 <h3 id="_building_jar_repository_with_build_jar_repository">2.3. Building JAR repository with <code>build-jar-repository</code></h3>
 <div class="paragraph">
-<p>Another tool is <code>build-jar-repository</code>. It can fill specified directory
-with symbolic/hard links to specified JAR files.Similarly to
-<code>build-classpath</code>, JARs can be identified by their names or artifact
-coordintes.</p>
+<p>Another tool is <code>build-jar-repository</code>.
+It can fill specified directory with symbolic / hard links to specified JAR files.
+Similarly to <code>build-classpath</code>, JARs can be identified by their names or artifact coordintes.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1857,13 +1735,11 @@ lrwxrwxrwx. 1 msrb msrb 25 Oct 29 10:39 <span class="o">[</span>log4j].jar -&gt;
 </div>
 </div>
 <div class="paragraph">
-<p>Similar command <code>rebuild-jar-repository</code> can be used to rebuild JAR
-repository previously built by <code>build-jar-repository</code>. See <code>man
-rebuild-jar-repository</code> for more information.</p>
+<p>Similar command <code>rebuild-jar-repository</code> can be used to rebuild JAR repository previously built by <code>build-jar-repository</code>.
+See <code>man rebuild-jar-repository</code> for more information.</p>
 </div>
 <div class="paragraph">
-<p><code>build-classpath-directory</code> is a small tool which can be used to build
-classpath string from specified directory.</p>
+<p><code>build-classpath-directory</code> is a small tool which can be used to build classpath string from specified directory.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1882,47 +1758,37 @@ classpath string from specified directory.</p>
 <h3 id="_directory_layout">3.1. Directory Layout</h3>
 <div class="paragraph">
 <p>This section describes most of directories used for Java packaging.
-Each directory is named in RPM macro form, which shows how it should
-be used in RPM spec files.  Symbolic name is followed by usual macro
-expansion (i.e. physical directory location in the file system) and
-short description.</p>
+Each directory is named in RPM macro form, which shows how it should be used in RPM spec files.
+Symbolic name is followed by usual macro expansion (i.e. physical directory location in the file system) and short description.</p>
 </div>
 <div class="dlist glossary">
 <div class="title">Directories commonly used by regular packages</div>
 <dl>
 <dt><code>%{_javadir}</code>&#8201;&#8212;&#8201;<code>/usr/share/java</code></dt>
 <dd>
-<p>Directory that holds all JAR files that do not contain or use
-native code and do not depend on a particular Java standard
-version.  JAR files can either be placed directly in this
-directory or one of its subdirectories.  Often packages create
-their own subdirectories there, in this case subdirectory name
-should match package name.</p>
+<p>Directory that holds all JAR files that do not contain or use native code and do not depend on a particular Java standard version.
+JAR files can either be placed directly in this directory or one of its subdirectories.
+Often packages create their own subdirectories there, in this case subdirectory name should match package name.</p>
 </dd>
 <dt><code>%{_jnidir}</code>&#8201;&#8212;&#8201;<code>/usr/lib/java</code></dt>
 <dd>
-<p>Directory where architecture-specific JAR files are installed.  In
-particular JAR files containing or using native code (Java Native
-Interface, JNI) should be installed.</p>
+<p>Directory where architecture-specific JAR files are installed.
+In particular, JAR files containing or using native code (Java Native Interface, JNI) should be installed there.</p>
 </dd>
 <dt><code>%{_javadocdir}</code>&#8201;&#8212;&#8201;<code>/usr/share/javadoc</code></dt>
 <dd>
-<p>Root directory where all Java API documentation (Javadoc) is
-installed.  Each source package usually creates a single
-subdirectory containing aggregated Javadocs for all binary
-packages it produces.</p>
+<p>Root directory where all Java API documentation (Javadoc) is installed.
+Each source package usually creates a single subdirectory containing aggregated Javadocs for all binary packages it produces.</p>
 </dd>
 <dt><code>%{_mavenpomdir}</code>&#8201;&#8212;&#8201;<code>/usr/share/maven-poms</code></dt>
 <dd>
-<p>Directory where Project Object Model (POM) files used by Apache
-Maven are installed.  Each POM must have name that strictly
-corresponds to JAR file in <code>%{_javadir}</code> or <code>%{_jnidir}</code>.</p>
+<p>Directory where Project Object Model (POM) files used by Apache Maven are installed.
+Each POM must have name that strictly corresponds to JAR file in <code>%{_javadir}</code> or <code>%{_jnidir}</code>.</p>
 </dd>
 <dt><code>%{_ivyxmldir}</code>&#8201;&#8212;&#8201;<code>/usr/share/ivy-xmls</code></dt>
 <dd>
 <p>Directory where <code>ivy.xml</code> files used by Apache Ivy are installed.
-Each XML must have name that strictly corresponds to JAR file in
-<code>%{_javadir}</code> or <code>%{_jnidir}</code>.</p>
+Each XML must have name that strictly corresponds to JAR file in <code>%{_javadir}</code> or <code>%{_jnidir}</code>.</p>
 </dd>
 </dl>
 </div>
@@ -1931,18 +1797,14 @@ Each XML must have name that strictly corresponds to JAR file in
 <dl>
 <dt><code>%{_jvmdir}</code>&#8201;&#8212;&#8201;<code>/usr/lib/jvm</code></dt>
 <dd>
-<p>Root directory where different Java Virtual Machines (JVM) are
-installed.  Each JVM creates a subdirectory, possibly with several
-alternative names implemented with symbolic links.  Directories
-prefixed with <code>java</code> contain Java Development Kit (JDK), while
-directories which names start with <code>jre</code> hold Java Runtime
-Environment (JRE).</p>
+<p>Root directory where different Java Virtual Machines (JVM) are installed.
+Each JVM creates a subdirectory, possibly with several alternative names implemented with symbolic links.
+Directories prefixed with <code>java</code> contain Java Development Kit (JDK), while directories which names start with <code>jre</code> hold Java Runtime Environment (JRE).</p>
 </dd>
 <dt><code>%{_jvmsysconfdir}</code>&#8201;&#8212;&#8201;<code>/etc/jvm</code></dt>
 <dt><code>%{_jvmcommonsysconfdir}</code>&#8201;&#8212;&#8201;<code>/etc/jvm-common</code></dt>
 <dd>
-<p>Directories containing configuration files for Java Virtual
-Machines (JVM).</p>
+<p>Directories containing configuration files for Java Virtual Machines (JVM).</p>
 </dd>
 <dt><code>%{_jvmprivdir}</code>&#8201;&#8212;&#8201;<code>/usr/lib/jvm-private</code></dt>
 <dt><code>%{_jvmlibdir}</code>&#8201;&#8212;&#8201;<code>/usr/lib/jvm</code></dt>
@@ -1950,16 +1812,15 @@ Machines (JVM).</p>
 <dt><code>%{_jvmcommonlibdir}</code>&#8201;&#8212;&#8201;<code>/usr/lib/jvm-common</code></dt>
 <dt><code>%{_jvmcommondatadir}</code>&#8201;&#8212;&#8201;<code>/usr/share/jvm-common</code></dt>
 <dd>
-<p>Directories containing implementation files of Java Virtual
-Machines (JVM).  Describing them in detail is out of scope for
-this document.  Purpose of each directory is commented briefly in
-<code>macros.jpackage</code> file in <code>/etc/rpm</code>.  More detailed description
-can be found in JPackage policy.</p>
+<p>Directories containing implementation files of Java Virtual Machines (JVM).
+Describing them in detail is out of scope for this document.
+Purpose of each directory is commented briefly in <code>macros.jpackage</code> file in <code>/etc/rpm</code>.
+More detailed description can be found in JPackage policy.</p>
 </dd>
 <dt><code>%{_javaconfdir}</code>&#8201;&#8212;&#8201;<code>/etc/java</code></dt>
 <dd>
-<p>Directory containing Java configuration files.  In particular it
-contains main Java configuration file&#8201;&#8212;&#8201;<code>java.conf</code>.</p>
+<p>Directory containing Java configuration files.
+In particular it contains main Java configuration file&#8201;&#8212;&#8201;<code>java.conf</code>.</p>
 </dd>
 </dl>
 </div>
@@ -1969,81 +1830,59 @@ contains main Java configuration file&#8201;&#8212;&#8201;<code>java.conf</code>
 <div class="paragraph">
 <p>Complex Java applications usually consist of multiple components.
 Each component can have multiple implementations, called <em>artifacts</em>.
-Artifacts in Java context are <em>usually</em> JAR files, but can also be WAR
-files or any other kind of file.</p>
+Artifacts in Java context are <em>usually</em> JAR files, but can also be WAR files or any other kind of file.</p>
 </div>
 <div class="paragraph">
-<p>There are multiple incompatible ways of identifying (naming) Java
-artifacts and each build system often encourages usage of specific
-naming scheme.  This means that Linux distributions also need to allow
-each artifact to be located using several different identifiers,
-possible using different schemes.  On the other hand it is virtually
-impossible to every naming scheme, so there are some simplifications.</p>
+<p>There are multiple incompatible ways of identifying (naming) Java artifacts and each build system often encourages usage of specific naming scheme.
+This means that Linux distributions also need to allow each artifact to be located using several different identifiers, possible using different schemes.
+On the other hand it is virtually impossible to every naming scheme, so there are some simplifications.</p>
 </div>
 <div class="paragraph">
-<p>This chapter describes artifact different ways to identify and locate
-artifacts in system repository.</p>
+<p>This chapter describes artifact different ways to identify and locate artifacts in system repository.</p>
 </div>
 <div class="sect3">
 <h4 id="_relative_paths">3.2.1. Relative paths</h4>
 <div class="paragraph">
-<p>JAR artifacts are installed in one of standard
-directory trees.  Usually this is either <code>%{_javadir}</code>
-(<code>/usr/share/java</code>) or <code>%{_jnidir}</code> (<code>/usr/lib/java</code>).</p>
+<p>JAR artifacts are installed in one of standard directory trees.
+Usually this is either <code>%{_javadir}</code> (<code>/usr/share/java</code>) or <code>%{_jnidir}</code> (<code>/usr/lib/java</code>).</p>
 </div>
 <div class="paragraph">
-<p>The simplest way of identifying artifacts is using their relative path
-from one of standard locations.  All artifact can be identified this
-way because each artifacts has a unique file name.  Each path
-identifying artifact will be called <em>artifact path</em> in this document.</p>
+<p>The simplest way of identifying artifacts is using their relative path from one of standard locations.
+All artifact can be identified this way because each artifacts has a unique file name.
+Each path identifying artifact will be called <em>artifact path</em> in this document.</p>
 </div>
 <div class="paragraph">
-<p>To keep artifact paths simpler and more readable, extension can be
-omitted if it is equal to <code>jar</code>.  For non-JAR artifacts extension
-cannot be omitted and must be retained.</p>
+<p>To keep artifact paths simpler and more readable, extension can be omitted if it is equal to <code>jar</code>.
+For non-JAR artifacts extension cannot be omitted and must be retained.</p>
 </div>
 <div class="paragraph">
-<p>Additionally, if artifact path points to a directory then it
-represents all artifacts contained in this directory.  This allows a
-whole set of related artifacts to be referenced easily by specifying
-directory name containing all of them.</p>
+<p>Additionally, if artifact path points to a directory then it represents all artifacts contained in this directory.
+This allows a whole set of related artifacts to be referenced easily by specifying directory name containing all of them.</p>
 </div>
 <div class="paragraph">
-<p>If the same artifact path has valid expansions in two different root
-directories then it is unspecified which artifacts will be located.</p>
+<p>If the same artifact path has valid expansions in two different root directories then it is unspecified which artifacts will be located.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_artifact_specification">3.2.2. Artifact specification</h4>
 <div class="paragraph">
-<p>As noted in previous section, every artifact can be uniquely identified
-by its file path.  However this is not always the preferred way of
-artifact identification.</p>
+<p>As noted in previous section, every artifact can be uniquely identified by its file path.
+However this is not always the preferred way of artifact identification.</p>
 </div>
 <div class="paragraph">
-<p>Modern Java build systems provide a way of identifying artifacts with
-an abstract identifier, or more often a pair of identifiers.  The
-first if usually called <strong>group ID</strong> or <strong>organization ID</strong> while the
-second is just <strong>artifact ID</strong>.  This pair of identifiers will be called
-<strong>artifact coordinates</strong> in this document.  Besides group ID and
-artifact ID, artifact coordinates may also include other (optional)
-information about artifact, such as <strong>extension</strong>, <strong>classifier</strong> or
-<strong>version</strong>.</p>
+<p>Modern Java build systems provide a way of identifying artifacts with an abstract identifier, or more often, a pair of identifiers.
+The first if usually called <strong>group ID</strong> or <strong>organization ID</strong> while the second is just <strong>artifact ID</strong>.
+This pair of identifiers will be called <strong>artifact coordinates</strong> in this document.
+Besides group ID and artifact ID, artifact coordinates may also include other optional information about artifact, such as <strong>extension</strong>, <strong>classifier</strong> and <strong>version</strong>.</p>
 </div>
 <div class="paragraph">
-<p>In Linux distributions it&#8217;s important to stay close to upstreams
-providing software being packaged, so the ability to identify
-artifacts in the same way as upstream does is very important from the
-point of view of packaging.  Every artifact can optionally be
-identified by artifact coordinates assigned during package build.
-Packages built with Maven automatically use this feature, but all
-other packages, even these built with pure <code>javac</code>, can use this
-feature too (see description of <code>%mvn_artifact</code> and
-<code>%add_maven_depmap</code> macros).</p>
+<p>In Linux distributions it is important to stay close to upstreams providing software being packaged, so the ability to identify artifacts in the same way as upstream does is very important from the packaging point of view.
+Every artifact can optionally be identified by artifact coordinates assigned during package build.
+Packages built with Maven automatically use this feature, but all other packages, even these built with pure <code>javac</code>, can use this feature too (see description of <a href="#_installing_additional artifacts"><code>%mvn_artifact</code></a> and <a href="#_add_maven_depmap_macro"><code>%add_maven_depmap</code></a> macros).</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="aliases">3.2.3. Aliases</h4>
+<h4 id="_aliases">3.2.3. Aliases</h4>
 <div class="paragraph">
 <p>Aliases working in two ways:</p>
 </div>
@@ -2058,18 +1897,15 @@ feature too (see description of <code>%mvn_artifact</code> and
 </ul>
 </div>
 <div class="paragraph">
-<p>In the real world the same project can appear under different names as it was
-evolving or released differently. Therefore other projects may refer to those
-alternative names instead of using the name currently prefered by upstream.</p>
+<p>In the real world the same project can appear under different names as it was evolving or released differently.
+Therefore other projects may refer to those alternative names instead of using the name currently prefered by upstream.</p>
 </div>
 <div class="sect4">
 <h5 id="_artifact_aliases">Artifact aliases</h5>
 <div class="paragraph">
-<p>XMvn provides a way to attach multiple artifact coordinates to a single
-artifact. Dependent projects that use alternative coordinates can then be built
-without the need to patch their POMs or alter the build by other means. It will
-also generate virtual provides for the alias, so it can be also used in
-Requires and BuildRequires.
+<p>XMvn provides a way to attach multiple artifact coordinates to a single artifact.
+Dependent projects that use alternative coordinates can then be built without the need to patch their POMs or alter the build by other means.
+It will also generate virtual provides for the alias, so it can be also used in <code>Requires</code> and <code>BuildRequires</code>.
 Creating an alias is achieved by <code>%mvn_alias</code> macro.</p>
 </div>
 <div class="listingblock">
@@ -2098,24 +1934,17 @@ Creating an alias is achieved by <code>%mvn_alias</code> macro.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="compat_packages">3.2.4. Compatibility versions</h4>
+<h4 id="_compatibility_versions">3.2.4. Compatibility versions</h4>
 <div class="paragraph">
 <p>Handling of compatibility packages, versioned jars etc.</p>
 </div>
 <div class="paragraph">
-<p>In Fedora we prefer to always have only the latest version of a given
-project. Unfortunately, this is not always possible as some projects
-change too much and it would be too hard to port dependent packages to
-the current version.  It&#8217;s not possible to just update the package and
-keep the old version around as the names, file paths and dependency
-provides would clash.  The recommended practice is to update the current
-package to the new version and create new package representing the old
-version (called compat package). The compat package needs to have the
-version number (usually only the major number, unless further
-distinction is necessary) appended to the name, thus effectivelly having
-different name from RPM&#8217;s point of view. Such compat package needs to
-perform some additional steps to ensure that it can be installed and
-used along the non-compat one.</p>
+<p>In Fedora we prefer to always have only the latest version of a given project.
+Unfortunately, this is not always possible as some projects change too much and it would be too hard to port dependent packages to the current version.
+It is not possible to just update the package and keep the old version around as the names, file paths and dependency provides would clash.
+The recommended practice is to update the current package to the new version and create new package representing the old version (called compat package).
+The compat package needs to have the version number (usually only the major number, unless further distinction is necessary) appended to the name, thus effectivelly having different name from RPM&#8217;s point of view.
+Such compat package needs to perform some additional steps to ensure that it can be installed and used along the non-compat one.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2125,12 +1954,9 @@ used along the non-compat one.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>You should always evaluate whether creating a compat package is really
-necessary. Porting dependent projects to new versions of dependencies
-may be a complicated task, but your effort would be appreciated and it&#8217;s
-likely that the patch will be accepted upstream at some point in time.
-If the upstream is already inactive and the package is not required by
-anything, you should also consider retiring it.</p>
+<p>You should always evaluate whether creating a compat package is really necessary.
+Porting dependent projects to new versions of dependencies may be a complicated task, but your effort would be appreciated and it is likely that the patch will be accepted upstream at some point in time.
+If the upstream is already inactive and the package is not required by anything, you should also consider retiring it.</p>
 </div>
 </td>
 </tr>
@@ -2139,13 +1965,11 @@ anything, you should also consider retiring it.</p>
 <div class="sect4">
 <h5 id="_maven_compat_versions">Maven Compat Versions</h5>
 <div class="paragraph">
-<p>XMvn supports marking particular artifact as compat, performing the
-necessary steps to avoid clashes with the non-compat version. An
-artifact can be marked as compat by <code>%mvn_compat_version</code>. It accepts an
-artifact argument which will determine which artifact will be compat.
-The format for specifying artifact coordinates is the same as with
-<a href="#mvn_alias"><code>%mvn_alias</code></a>. In the common case you will want to mark all
-artifacts as compat. You can specify multiple compat versions at a time.</p>
+<p>XMvn supports marking particular artifact as compat, performing the necessary steps to avoid clashes with the non-compat version.
+An artifact can be marked as compat by <code>%mvn_compat_version</code>.
+It accepts an artifact argument which will determine which artifact will be compat.
+The format for specifying artifact coordinates is the same as with <a href="#mvn_alias"><code>%mvn_alias</code></a>.
+In the common case you will want to mark all artifacts as compat. You can specify multiple compat versions at a time.</p>
 </div>
 <div class="paragraph">
 <div class="title">Dependency resolution of compat artifacts</div>
@@ -2158,24 +1982,20 @@ one. This has a few implications:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>The versions are compared for exact match. The compat package should
-provide all applicable versions that are present in packages that
-are supposed to be used with this version.</p>
+<p>The versions are compared for exact match.
+The compat package should provide all applicable versions that are present in packages that are supposed to be used with this version.</p>
 </li>
 <li>
-<p>The dependent packages need to have correct BuildRequires on the
-compat package as the virtual provides is also different (see below).</p>
+<p>The dependent packages need to have correct <code>BuildRequires</code> on the compat package as the virtual provides is also different (see below).</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
 <div class="title">File names and virtual provides</div>
-<p>In order to prevent file name clashes, compat artifacts have the first
-specified compat version appended to the filename. Virtual provides for
-compat artifacts also contain the version as the last part of the
-coordinates. There are multiple provides for each specified compat
-version. Non-compat artifact don&#8217;t have any version in the virtual
-provides.</p>
+<p>In order to prevent file name clashes, compat artifacts have the first specified compat version appended to the filename.
+Virtual provides for compat artifacts also contain the version as the last part of the coordinates.
+There are multiple provides for each specified compat version.
+Non-compat artifact do not have any version in the virtual provides.</p>
 </div>
 <div class="listingblock">
 <div class="title">Example invocation of <code>%mvn_compat_version</code></div>
@@ -2197,35 +2017,24 @@ provides.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="dependency_handling">3.3. Dependency Handling</h3>
+<h3 id="_dependency_handling">3.3. Dependency Handling</h3>
 <div class="paragraph">
-<p>RPM has multiple types of metadata to describe dependency relationships
-between packages. The two basic types are Requires and Provides.
-Requires denote that a package needs something to be present at
-runtime to work correctly and the package manager is supposed to ensure
-that requires are met. A single Requires item can specify a package or
-a virtual provide.
-RPM Provides are a way to express that a package provides certain
-capability that other packages might need. In case of Maven packages,
-the Provides are used to denote that a package contains certain Maven
-artifact. They add more flexibility to
-the dependency management as single package can have any number of
-provides, and they can be moved across different packages without
-breaking other packages' requires.
-Provides are usually generated by automatic tools based on the
-information from the built binaries or package source.</p>
+<p>RPM has multiple types of metadata to describe dependency relationships between packages.
+The two basic types are <code>Requires</code> and <code>Provides</code>.
+<code>Requires</code> denote that a package needs something to be present at runtime to work correctly and the package manager is supposed to ensure that requires are met.
+A single <code>Requires</code> item can specify a package or a virtual provide.
+RPM <code>Provides</code> are a way to express that a package provides certain capability that other packages might need.
+In case of Maven packages, the <code>Provides</code> are used to denote that a package contains certain Maven artifact.
+They add more flexibility to the dependency management as single package can have any number of provides, and they can be moved across different packages without breaking other packages' requires.
+<code>Provides</code> are usually generated by automatic tools based on the information from the built binaries or package source.</p>
 </div>
 <div class="paragraph">
 <div class="title">Dependency handling for Maven packages</div>
-<p>The Java packaging tooling on Fedora provides automatic Requires and
-Provides generation for packages built using XMvn. The Provides are based
-on Maven artifact coordinates of artifacts that were installed by the
-currenlty being built. They are generated for each subpackage
-separately. They follow a general format
-<code>mvn(groupId:artifactId:extension:classifier:version)</code>, where the
-extension is omitted if it&#8217;s <code>jar</code> and classifier is omitted if empty.
-Version is present only for compat artifacts, but the trailing colon has
-to be present unless it&#8217;s a Jar artifact with no classifier.</p>
+<p>The Java packaging tooling on Fedora provides automatic <code>Requires</code> and <code>Provides</code> generation for packages built using XMvn.
+The <code>Provides</code> are based on Maven artifact coordinates of artifacts that were installed by the currently being built.
+They are generated for each subpackage separately.
+They follow a general format <code>mvn(groupId:artifactId:extension:classifier:version)</code>, where the extension is omitted if its <code>jar</code> and classifier is omitted if empty.
+<code>Version</code> is present only for compat artifacts, but the trailing colon has to be present unless it is a Jar artifact with no classifier.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2238,45 +2047,31 @@ mvn<span class="o">(</span>org.sonatype.sisu:sisu-guice::no_aop:<span class="o">
 </div>
 </div>
 <div class="paragraph">
-<p>The generated Requires are based on dependencies specified in Maven POMs
-in the project. Only dependencies with <code>scope</code> set to either <code>compile</code>,
-<code>runtime</code> or not set at all are used for Requires generation.
-Requires don&#8217;t rely on package names and instead always
-use virtual provides that were described above, in exactly the same
-format, in order to be satisfiable by the already existing provides.
-For packages consisting of multiple subpackages, Requires are generated
-separately for each subpackage. Additionally, Requires that point to an
-artifact in a different subpackage of the same source package are
-generated with exact versions to prevent version mismatches between
-artifacts belonging to the same project.</p>
+<p>The generated Requires are based on dependencies specified in Maven POMs in the project.
+Only dependencies with <code>scope</code> set to either <code>compile</code>, <code>runtime</code> or not set at all are used for Requires generation.
+Requires do not rely on package names and instead always use virtual provides that were described above, in exactly the same format, in order to be satisfiable by the already existing provides.
+For packages consisting of multiple subpackages, <code>Requires</code> are generated separately for each subpackage.
+Additionally, <code>Requires</code> that point to an artifact in a different subpackage of the same source package are generated with exact versions to prevent version mismatches between artifacts belonging to the same project.</p>
 </div>
 <div class="paragraph">
-<p>The requires generator also always generates Requires on <code>java-headless</code>
-and <code>javapackages-tools</code>.</p>
+<p>The requires generator also always generates <code>Requires</code> on <code>java-headless</code> and <code>javapackages-tools</code>.</p>
 </div>
 <div class="paragraph">
 <div class="title">Dependency handling for non-Maven packages that ship POM files</div>
-<p>If the package is built built using different tool than Apache Maven,
-but still ships Maven POM(s), the you will still get automatic provides
-generation if you install the POM using <code>%mvn_artifact</code> and
-<code>%mvn_install</code>. The requires generation will also be executed but the
-outcome largely depends on whether the POM contains accurate dependency
-insformation. If it contains dependency information, you should double
-check that it&#8217;s correct and up-to-date. Otherwise you need to add
-<code>Requires</code> tags manually as described in the next section.</p>
+<p>If the package is built built using different tool than Apache Maven, but still ships Maven POM(s), the you will still get automatic provides generation if you install the POM using <code>%mvn_artifact</code> and <code>%mvn_install</code>.
+The requires generation will also be executed but the outcome largely depends on whether the POM contains accurate dependency insformation.
+If it contains dependency information, you should double-check that it is correct and up-to-date.
+Otherwise you need to add <code>Requires</code> tags manually as described in the next section.</p>
 </div>
 <div class="paragraph">
 <div class="title">Dependency handling for non-Maven packages that don&#8217;t ship POM files</div>
-<p>For packages without POMs it&#8217;s necessary to specify <code>Requires</code> tags
-manually. In order to build the package you needed to specify
-<code>BuildRequires</code> tags. You <code>Requires</code> tags will therefore likely be
-a subset of your <code>BuildRequires</code>, excluding build tools and test only
-dependencies.</p>
+<p>For packages without POMs it is necessary to specify <code>Requires</code> tags manually.
+In order to build the package you needed to specify <code>BuildRequires</code> tags.
+Your <code>Requires</code> tags will therefore likely be a subset of your <code>BuildRequires</code>, excluding build tools and test only dependencies.</p>
 </div>
 <div class="paragraph">
 <div class="title">Querying Requires and Provides of built packages</div>
-<p>The generated Requires and Provides of built packages can be queried
-using <code>rpm</code>:</p>
+<p>The generated Requires and Provides of built packages can be queried using <code>rpm</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2292,7 +2087,7 @@ rpm <span class="nt">-qp</span> <span class="nt">--requires</span> path/to/examp
 </td>
 <td class="content">
 <div class="paragraph">
-<p>See also <a href="#querying_repositories">Querying Fedora repositories</a></p>
+<p>See also <a href="#_querying_repositories">Querying Fedora repositories</a></p>
 </div>
 </td>
 </tr>
@@ -2300,34 +2095,25 @@ rpm <span class="nt">-qp</span> <span class="nt">--requires</span> path/to/examp
 </div>
 <div class="paragraph">
 <div class="title">Generating BuildRequires</div>
-<p>While Requires and Provides are automated for Maven projects,
-BuildRequires still remain a manual task. However, it can be at least
-a bit simplified. XMvn ships a script <code>xmvn-builddep</code> that takes
-a <code>build.log</code> output from mock and prints maven-style BuildRequires on
-artifacts that were actually used during the build. It doesn&#8217;t help you
-to figure out what the BuildRequires are before you actually build it,
-but it may help you to have a minimal set of BuildRequires that are less
-likely to break, as they don&#8217;t rely on transitive dependencies.</p>
+<p>While <code>Requires</code> and <code>Provides</code> generation is automated for Maven projects, <code>BuildRequires</code> still remains a manual task.
+However, there are tools to simplify it to some extent.
+XMvn ships a script <code>xmvn-builddep</code> that takes a <code>build.log</code> output from mock and prints Maven-style <code>BuildRequires</code> on artifacts that were actually used during the build.
+It does not help you to figure out what the <code>BuildRequires</code> are before you actually build it, but it may help you to have a minimal set of <code>BuildRequires</code> that are less likely to break, as they do not rely on transitive dependencies.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_javadoc_packages">3.4. Javadoc packages</h3>
 <div class="paragraph">
-<p>Javadoc subpackages in Fedora provide automatically generated API
-documentation for Java libraries and applications.
-<a href="#openjdk">Java Development Kit</a> comes with tool called <code>javadoc</code>. This tool
-can be used for generating the documentation from specially formated comments in
-Java source files.  Output of this tool, together with license files, usually
-represents only content of javadoc subpackages. Note <code>javadoc</code> invocation is
-typically handled by build system and package maintainer doesn&#8217;t need to deal
-with it directly.</p>
+<p>Javadoc subpackages in Fedora provide automatically generated API documentation for Java libraries and applications.
+<a href="#openjdk">Java Development Kit</a> comes with tool called <code>javadoc</code>.
+This tool can be used for generating the documentation from specially formated comments in Java source files.
+Output of this tool, together with license files, usually represents only content of javadoc subpackages.
+Note <code>javadoc</code> invocation is typically handled by build system and package maintainer does not need to deal with it directly.</p>
 </div>
 <div class="paragraph">
 <p>Javadoc subpackage shouldn&#8217;t depend on its base package and vice versa.
-The rationale behind this rule is that documentation can usually be used
-independently from application/library and therefore base package
-doesn&#8217;t need to be always installed. Users are given an option to
-install application and documentation separately.</p>
+The rationale behind this rule is that documentation can usually be used independently from application / library and therefore base package does not need to be always installed.
+Users are given an option to install application and documentation separately.</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -2337,9 +2123,7 @@ install application and documentation separately.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>You can learn more about <code>javadoc</code> from
-<a href="http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html">official
-documentation</a>.</p>
+<p>You can learn more about <code>javadoc</code> from <a href="https://www.oracle.com/technetwork/java/javase/documentation/index-137868.html">official documentation</a>.</p>
 </div>
 </td>
 </tr>
@@ -2351,47 +2135,36 @@ documentation</a>.</p>
 <div class="sect3">
 <h4 id="_jvm">3.5.1. JVM</h4>
 <div class="paragraph">
-<p>Fedora allows multiple Java Virtual Machines (JVMs) to be packaged
-independently.  Java packages should not directly depend on any
-particulat JVM, but instead require one of three virtual JVM packages
-depending of what Java funtionality is required.</p>
+<p>Fedora allows multiple Java Virtual Machines (JVMs) to be packaged independently.
+Java packages should not directly depend on any particulat JVM, but instead require one of three virtual JVM packages depending of what Java funtionality is required.</p>
 </div>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><strong><code>java-headless</code></strong></dt>
 <dd>
-<p>This package provides a working Java Runtime Environment (JRE)
-with some functionality disabled.  Graphics and audio support may
-be unavailable in this case.  <code>java-headless</code> provides
-functionality that is enough for most of packages and avoids
-pulling in a number of graphics and audio libraries as
-dependencies.  Requirement on <code>java-headless</code> is appropriate for
-most of Java packages.</p>
+<p>This package provides a working Java Runtime Environment (JRE) with some functionality disabled.
+Graphics and audio support may be unavailable in this case.
+<code>java-headless</code> provides functionality that is enough for most of packages and avoids pulling in a number of graphics and audio libraries as dependencies.
+Requirement on <code>java-headless</code> is appropriate for most of Java packages.</p>
 </dd>
 <dt class="hdlist1"><strong><code>java</code></strong></dt>
 <dd>
-<p>Includes the same base functionality as <code>java-headless</code>, but also
-implements audio and graphics subsystems.  Packages should require
-<code>java</code> if they need some functionality from these subsystems, for
-example creating GUI using AWT library.</p>
+<p>Includes the same base functionality as <code>java-headless</code>, but also implements audio and graphics subsystems.
+Packages should require <code>java</code> if they need some functionality from these subsystems, for example creating GUI using AWT library.</p>
 </dd>
 <dt class="hdlist1"><strong><code>java-devel</code></strong></dt>
 <dd>
-<p>Provides full Java Development Kit (JDK).  In most cases only
-packages related to Java development should have runtime
-dependencies on <code>java-devel</code>.  Runtime packages should require
-<code>java-headless</code> or <code>java</code>.  Some packages not strictly related to
-java development need access to libraries included with JDK, but
-not with JRE (for example <code>tools.jar</code>).  That&#8217;s one of few cases
-where requiring java-devel may be necessary.</p>
+<p>Provides full Java Development Kit (JDK).
+In most cases only packages related to Java development should have runtime dependencies on <code>java-devel</code>.
+Runtime packages should require <code>java-headless</code> or <code>java</code>.
+Some packages not strictly related to java development need access to libraries included with JDK, but not with JRE (for example <code>tools.jar</code>).
+That is one of few cases where requiring <code>java-devel</code> may be necessary.</p>
 </dd>
 </dl>
 </div>
 <div class="paragraph">
-<p>Packages that require minimal Java standard version can add versioned
-dependencies on one of virtual packages providing Java environment.
-For example if packages depending on functionality of JDK 8 can
-require <code>java-headless &gt;= 1:1.8.0</code>.</p>
+<p>Packages that require minimal Java standard version can add versioned dependencies on one of virtual packages providing Java environment.
+For example if packages depending on functionality of JDK 8 can require <code>java-headless &gt;= 1:1.8.0</code>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2402,11 +2175,9 @@ require <code>java-headless &gt;= 1:1.8.0</code>.</p>
 <td class="content">
 <div class="title">Epoch in versions of JVM packages</div>
 <div class="paragraph">
-<p>For compatibility with JPackage project packages providing Java 1.6.0
-or later use epoch equal to <code>1</code>.  This was necessary because package
-<code>java-1.5.0-ibm</code> from JPackage project had epoch <code>1</code> for some reason,
-so packages providing other implementations of JVM also had to use
-non-zero epoch in order to keep version ordering correct.</p>
+<p>For compatibility with JPackage project packages providing Java 1.6.0 or later use epoch equal to <code>1</code>.
+This was necessary because package <code>java-1.5.0-ibm</code> from JPackage project had epoch <code>1</code> for some reason.
+Therefore packages providing other implementations of JVM also had to use non-zero epoch in order to keep version ordering correct.</p>
 </div>
 </td>
 </tr>
@@ -2416,35 +2187,28 @@ non-zero epoch in order to keep version ordering correct.</p>
 <div class="sect3">
 <h4 id="_java_packages_tools">3.5.2. Java Packages Tools</h4>
 <div class="paragraph">
-<p>Java Packages Tools are packaged as severas binary RPM packages</p>
+<p>Java Packages Tools are packaged as several binary RPM packages:</p>
 </div>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><strong><code>maven-local</code></strong></dt>
 <dd>
-<p>This package provides a complete environment which is required to
-build Java packages using Apache Maven build system.  This
-includes a default system version of Java Development Kit (JDK),
-Maven, a number of Maven plugins commonly used to build packages,
-various macros and utlilty tools.  <code>maven-local</code> is usually
-declared as build dependency of Maven packages.</p>
+<p>This package provides a complete environment which is required to build Java packages using Apache Maven build system.
+This includes a default system version of Java Development Kit (JDK), Maven, a number of Maven plugins commonly used to build packages, various macros and utlilty tools.
+<code>maven-local</code> is usually declared as build dependency of Maven packages.</p>
 </dd>
 <dt class="hdlist1"><strong><code>ivy-local</code></strong></dt>
 <dd>
-<p>Analogously to <code>maven-local</code>, this package provides an environment
-required to build Java packages using Apache Ivy as dependency
-manager.</p>
+<p>Analogously to <code>maven-local</code>, this package provides an environment required to build Java packages using Apache Ivy as dependency manager.</p>
 </dd>
 <dt class="hdlist1"><strong><code>javapackages-local</code></strong></dt>
 <dd>
-<p>Package providing a basic environment necessary to geterate and
-install metadata for system artifact repository.</p>
+<p>Package providing a basic environment necessary to geterate and install metadata for system artifact repository.</p>
 </dd>
 <dt class="hdlist1"><strong><code>javapackages-tools</code></strong></dt>
 <dd>
-<p>Package owning basic Java directories and providing runtime
-support for Java packages.  The great majority of Java packages
-depend on <code>javapackages-tools</code>.</p>
+<p>Package owning basic Java directories and providing runtime support for Java packages.
+The great majority of Java packages depend on <code>javapackages-tools</code>.</p>
 </dd>
 </dl>
 </div>
@@ -2456,8 +2220,7 @@ depend on <code>javapackages-tools</code>.</p>
 <h2 id="_packaging_best_practices">4. Packaging Best Practices</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Packaging Java has certain specifics that will be covered in this section which
-will cover basic packaging principles</p>
+<p>Packaging Java has certain specifics that will be covered in this section which will cover basic packaging principles:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2487,37 +2250,18 @@ will cover basic packaging principles</p>
 <h2 id="_generic_java_builds">5. Generic Java Builds</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Handling of basic build steps in Java</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>javac</p>
-</li>
-<li>
-<p>usage of build-claspath, build-jar-repository to prepare for build</p>
-</li>
-<li>
-<p>&#8230;&#8203;</p>
-</li>
-</ul>
+<p>This chapter talks about basic build steps in Java such as invoking <code>javac</code> and using spec macros like <code>build-claspath</code> and <code>build-jar-repository</code>.</p>
 </div>
 <div class="sect2">
 <h3 id="_generating_application_shell_scripts">5.1. Generating Application Shell Scripts</h3>
 <div class="paragraph">
-<p>As mentioned in section about <a href="#XFor_Packagers">Java packaging basics</a>,
-all Java applications need wrapper shell scripts to setup the environment before
-running JVM and associated Java code.</p>
+<p>As mentioned in section about <a href="#_for_packagers">Java packaging basics</a>, all Java applications need wrapper shell scripts to setup the environment before running JVM and associated Java code.</p>
 </div>
 <div class="paragraph">
-<p>The javapackages-tools package contains a convenience <code>%jpackage_script</code> macro that
-can be used to create scripts that work for the majority of packages.  See its
-definition and documentation in <code>/usr/lib/rpm/macros.d/macros.jpackage</code>. One
-thing to pay attention to is the 6th argument to it - whether to prefer a JRE
-over a full SDK when looking up a JVM to invoke - most packages that don&#8217;t
-require the full Java SDK will want to set that to <code>true</code> to avoid unexpected
-results when looking up a JVM when some of the installed JRE&#8217;s don&#8217;t have the
-corresponding SDK (*-devel package) installed.</p>
+<p>The <code>javapackages-tools</code> package contains a convenience <code>%jpackage_script</code> macro that can be used to create scripts that work for the majority of packages.
+See its definition and documentation in <code>/usr/lib/rpm/macros.d/macros.jpackage</code>.
+One thing to pay attention to is the 6th argument to it - whether to prefer a JRE over a full SDK when looking up a JVM to invoke.
+Most packages that do not require the full Java SDK will want to set that to <code>true</code> to avoid unexpected results when looking up a JVM when some of the installed JREs do not have the corresponding SDK (<code>*-devel</code> package) installed.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2528,20 +2272,17 @@ corresponding SDK (*-devel package) installed.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The previous example installs the "msv" script (5th argument) with main class
-being msv.textui.Driver (1st argument). No optional flags (2nd argument) or
-options (3rd argument) are used. This script will add several libraries to
-classpath before executing main class (4th argument, JAR files separated with
-":"). <code>build-classpath</code> is run on every part of 4th argument to create full
-classpaths.</p>
+<p>The previous example installs the <code>msv</code> script (5th argument) with main class being <code>msv.textui.Driver</code> (1st argument).
+No optional flags (2nd argument) or options (3rd argument) are used.
+This script will add several libraries to classpath before executing main class (4th argument, JAR files separated with <code>:</code>).
+<code>build-classpath</code> is run on every part of 4th argument to create full classpaths.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_replacing_jars_with_symlinks_using_xmvn_subst">5.2. Replacing JARs with symlinks using xmvn-subst</h3>
+<h3 id="_replacing_jars_with_symlinks_using_xmvn_subst">5.2. Replacing JARs with symlinks using <code>xmvn-subst</code></h3>
 <div class="paragraph">
-<p>Sometimes it may be needed to replace all JAR files in current directory with
-symlinks to the system JARs located in `%{_javadir}`. This task can be achieved
-using tool called <code>xmvn-subst</code>.</p>
+<p>Sometimes it may be needed to replace all JAR files in current directory with symlinks to the system JARs located in <code>%{_javadir}</code>.
+This task can be achieved using tool called <code>xmvn-subst</code>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2560,10 +2301,9 @@ lrwxrwxrwx. 1 msrb msrb   22 Oct 22 10:08 log4j.jar -&gt; /usr/share/java/log4j.
 </div>
 </div>
 <div class="paragraph">
-<p>The example above shows how easy the symlinking can be. However, there are some
-limitations. Original JAR files need to carry metadata which tell xmvn-subst
-for what artifact given file should be substituted. Otherwise <code>xmvn-subst</code> won&#8217;t
-be able to identify the Maven artifact from JAR file.</p>
+<p>The example above shows how easy the symlinking can be. However, there are some limitations.
+Original JAR files need to carry metadata which tell <code>xmvn-subst</code> for what artifact given file should be substituted.
+Otherwise <code>xmvn-subst</code> won&#8217;t be able to identify the Maven artifact from JAR file.</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -2583,14 +2323,12 @@ be able to identify the Maven artifact from JAR file.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="ant">6. Ant</h2>
+<h2 id="_ant">6. Ant</h2>
 <div class="sectionbody">
 <div class="quoteblock">
 <blockquote>
 <div class="paragraph">
-<p>Apache Ant is a Java library and command-line tool whose mission is to drive
-processes described in build files as targets and extension points dependent
-upon each other.</p>
+<p>Apache Ant is a Java library and command-line tool whose mission is to drive processes described in build files as targets and extension points dependent upon each other.</p>
 </div>
 </blockquote>
 <div class="attribution">
@@ -2599,17 +2337,14 @@ upon each other.</p>
 </div>
 <div class="paragraph">
 <p>Apache Ant is one of the most popular Java build tools after Apache Maven.
-The main difference between these two tools is that Ant is procedural and Maven
-is declarative. When using Ant, it is neccessary to exactly describe the
-processes which lead to the result. It means that one needs to specify where the
-source files are, what needs to be done and when it needs to be done. On the
-other hand, Maven relies on conventions and doesn&#8217;t require specifying most
-of the process unless you need to override the defaults.</p>
+The main difference between these two tools is that Ant is procedural and Maven is declarative.
+When using Ant, it is neccessary to exactly describe the processes which lead to the result.
+It means that one needs to specify where the source files are, what needs to be done and when it needs to be done.
+On the other hand, Maven relies on conventions and doesn&#8217;t require specifying most of the process unless you need to override the defaults.</p>
 </div>
 <div class="paragraph">
-<p>If upstream ships a Maven POM file, it must be installed even if you
-don&#8217;t build with Maven. If not, you should try to search Maven Central
-Repository for it, ship it as another source and install it.</p>
+<p>If upstream ships a Maven POM file, it must be installed even if you don&#8217;t build with Maven.
+If not, you should try to search Maven Central Repository for it, ship it as another source and install it.</p>
 </div>
 <div class="listingblock">
 <div class="title">Common spec file</div>
@@ -2629,57 +2364,45 @@ ant test
 %files javadoc -f .mfiles-javadoc</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>Details:</p>
-</div>
 <div class="ulist">
+<div class="title">Details</div>
 <ul>
 <li>
-<p><code>%build</code> section uses <code>ant</code> command to build the project and run the
-tests. The used target(s) may vary depending on the <code>build.xml</code>
-file. You can use <code>ant -p</code> command to list the project info or
-manually look for <code>&lt;target&gt;</code> nodes in the <code>build.xml</code> file</p>
+<p><code>%build</code> section uses <code>ant</code> command to build the project and run the tests.
+The used target(s) may vary depending on the <code>build.xml</code> file.
+You can use <code>ant -p</code> command to list the project info or manually look for <code>&lt;target&gt;</code> nodes in the <code>build.xml</code> file.</p>
 </li>
 <li>
-<p><code>%mvn_artifact</code> macro is used to request installation of an
-artifact that was not built using Maven. It expects a POM file and
-a JAR file. For POM only artifacts, the JAR part is omitted.<br>
-See <a href="#mvn_artifact">Installing additional artifacts</a> for more information</p>
+<p><code>%mvn_artifact</code> macro is used to request installation of an artifact that was not built using Maven.
+It expects a POM file and a JAR file.
+For POM only artifacts, the JAR part is omitted.
+See <a href="#_installing_additional_artifacts">Installing additional artifacts</a> for more information.</p>
 </li>
 <li>
-<p><code>%mvn_install</code> performs the actual installation. Optional <code>-J</code>
-parameter requests installation of generated Javadoc from given
-directory</p>
+<p><code>%mvn_install</code> performs the actual installation.
+Optional <code>-J</code> parameter requests installation of generated Javadoc from given directory.</p>
 </li>
 <li>
-<p>This method of artifact installation allows using other XMvn
-macros such as <code>%mvn_alias</code> or <code>%mvn_package</code></p>
+<p>This method of artifact installation allows using other XMvn macros such as <code>%mvn_alias</code> or <code>%mvn_package</code>.</p>
 </li>
 <li>
-<p><code>%mvn_install</code> generates <code>.mfiles</code> file which should be used to
-populate <code>%files</code> section with <code>-f</code> switch. For each subpackage
-there would be separate generated file named
-<code>.mfiles-subpackage-name</code></p>
+<p><code>%mvn_install</code> generates <code>.mfiles</code> file which should be used to populate <code>%files</code> section with <code>-f</code> switch.
+For each subpackage there would be separate generated file named <code>.mfiles-subpackage-name</code>.</p>
 </li>
 <li>
-<p>All packages are required to own directories which they create
-(and which are not owned by other packages). JAR files are by
-default installed into subdirectory of `%{_javadir}`. To override
-this behavior, use <code>%mvn_file</code></p>
+<p>All packages are required to own directories which they create (and which are not owned by other packages).
+JAR files are by default installed into subdirectory of <code>%{_javadir}</code>. To override this behavior, use <code>%mvn_file</code>.</p>
 </li>
 </ul>
 </div>
 <div class="sect2">
 <h3 id="_apache_ivy">6.1. Apache Ivy</h3>
 <div class="paragraph">
-<p>Apache Ivy provides an automatic dependency management for Ant managed
-builds. It uses Maven repositories for retrieving artifacts and supports
-many declarative features of Maven such as handling transitive
-dependencies.</p>
+<p>Apache Ivy provides an automatic dependency management for Ant managed builds.
+It uses Maven repositories for retrieving artifacts and supports many declarative features of Maven such as handling transitive dependencies.</p>
 </div>
 <div class="paragraph">
-<p>XMvn supports local resolution of Ivy artifacts, their installation
-and requires generation.</p>
+<p>XMvn supports local resolution of Ivy artifacts, their installation and requires generation.</p>
 </div>
 <div class="listingblock">
 <div class="title">Spec file</div>
@@ -2698,38 +2421,27 @@ ant -Divy.mode=local test
 %files -javadoc -f .mfiles-javadoc</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>Details:</p>
-</div>
 <div class="ulist">
+<div class="title">Details</div>
 <ul>
 <li>
-<p><code>-Divy.mode=local</code> tells Ivy to use XMvn local artifact
-resolution instead of downloading from the Internet</p>
+<p><code>-Divy.mode=local</code> tells Ivy to use XMvn local artifact resolution instead of downloading from the Internet.</p>
 </li>
 <li>
-<p>If there is an <code>ivy-settings.xml</code> or similar file, which specifies
-remote repositories, it needs to be disabled, otherwise it would
-override local resolution.</p>
+<p>If there is an <code>ivy-settings.xml</code> or similar file, which specifies remote repositories, it needs to be disabled, otherwise it would override local resolution.</p>
 </li>
 <li>
-<p><code>%mvn_artifact</code> supports installing artifacts described by Ivy
-configuration files</p>
+<p><code>%mvn_artifact</code> supports installing artifacts described by Ivy configuration files.</p>
 </li>
 <li>
-<p><code>%mvn_install</code> performs the actual installation. Optional <code>-J</code>
-parameter requests installation of generated Javadoc from given
-directory</p>
+<p><code>%mvn_install</code> performs the actual installation. Optional <code>-J</code> parameter requests installation of generated Javadoc from given directory.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
 <div class="title">Ivy files manipulation</div>
-<p>A subset of macros used to modify Maven POMs also work with <code>ivy.xml</code>
-files allowing the maintainer to add/remove/change dependencies without
-the need of making patches and rebasing them with each change.
-You can use dependency handling macros <code>%pom_add_dep</code>,
-<code>%pom_remove_dep</code>, <code>%pom_change_dep</code> and generic <code>%pom_xpath_*</code> macros.
+<p>A subset of macros used to modify Maven POMs also work with <code>ivy.xml</code> files allowing the maintainer to add / remove / change dependencies without the need of making patches and rebasing them with each change.
+You can use dependency handling macros <code>%pom_add_dep</code>, <code>%pom_remove_dep</code>, <code>%pom_change_dep</code> and generic <code>%pom_xpath_*</code> macros.
 For more details, see corresponding manpages.</p>
 </div>
 <div class="listingblock">
@@ -2745,14 +2457,10 @@ For more details, see corresponding manpages.</p>
 </div>
 <div class="paragraph">
 <div class="title">Using the <code>ivy:publish</code> task</div>
-<p>Ivy supports publishing built artifact with <code>ivy:publish</code> task. If your
-<code>build.xml</code> file already contains a task that calls <code>ivy:publish</code>, you
-can set the resolver attribute of the <code>ivy:publish</code> element to <code>xmvn</code>.
-This can be done with simple <code>%pom_xpath_set</code> call.  Then when the task
-is run, XMvn can pick the published artifacts and install them during
-the run of <code>%mvn_install</code> without needing you to manually specify them
-with
-<code>%mvn_artifact</code>.</p>
+<p>Ivy supports publishing built artifact with <code>ivy:publish</code> task.
+If your <code>build.xml</code> file already contains a task that calls <code>ivy:publish</code>, you can set the resolver attribute of the <code>ivy:publish</code> element to <code>xmvn</code>.
+This can be done with simple <code>%pom_xpath_set</code> call.
+Then when the task is run, XMvn can pick the published artifacts and install them during the run of <code>%mvn_install</code> without needing you to manually specify them with <code>%mvn_artifact</code>.</p>
 </div>
 <div class="listingblock">
 <div class="title">Spec file using the <code>ivy:publish</code> task</div>
@@ -2772,14 +2480,11 @@ ant -Divy.mode=local test publish-local
 %files -javadoc -f .mfiles-javadoc</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>Details:</p>
-</div>
 <div class="ulist">
+<div class="title">Details</div>
 <ul>
 <li>
-<p>The publish target may be named differently. Search the <code>build.xml</code>
-for occurences of <code>ivy:publish</code>.</p>
+<p>The publish target may be named differently. Search the <code>build.xml</code> for occurences of <code>ivy:publish</code>.</p>
 </li>
 <li>
 <p><code>%mvn_install</code> will install all the published artifacts.</p>
@@ -2790,34 +2495,33 @@ for occurences of <code>ivy:publish</code>.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="maven">7. Maven</h2>
+<h2 id="_maven">7. Maven</h2>
 <div class="sectionbody">
 <div class="quoteblock">
 <blockquote>
 <div class="paragraph">
-<p>Apache Maven is a software project management and comprehension tool. Based on
-the concept of a project object model (POM), Maven can manage a project&#8217;s build,
-reporting and documentation from a central piece of information.</p>
+<p>Apache Maven is a software project management and comprehension tool.
+Based on the concept of a project object model (POM), Maven can manage a project&#8217;s build, reporting and documentation from a central piece of information.</p>
 </div>
 </blockquote>
 <div class="attribution">
-<cite>http://maven.apache.org</cite>
+<cite>https://maven.apache.org</cite>
 </div>
 </div>
 <div class="paragraph">
-<p>Maven is by far the most consistent Java build system, allowing large amount of
-automation. In most common situations only following steps are necessary:</p>
+<p>Maven is by far the most consistent Java build system, allowing large amount of automation.
+In most common situations only following steps are necessary:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>In <code>%build</code> section of the spec file use <code>%mvn_build</code> macro</p>
+<p>In <code>%build</code> section of the spec file use <code>%mvn_build</code> macro.</p>
 </li>
 <li>
-<p>In <code>%install</code> section, use <code>%mvn_install</code> macro</p>
+<p>In <code>%install</code> section, use <code>%mvn_install</code> macro.</p>
 </li>
 <li>
-<p>Use generated file <code>.mfiles</code> lists to populate <code>%files</code> section with <code>-f</code> switch</p>
+<p>Use generated file <code>.mfiles</code> lists to populate <code>%files</code> section with <code>-f</code> switch.</p>
 </li>
 </ol>
 </div>
@@ -2834,7 +2538,6 @@ automation. In most common situations only following steps are necessary:</p>
 %mvn_install
 ...
 
-
 %files -f .mfiles
 %dir %{_javadir}/%{name}
 
@@ -2842,15 +2545,14 @@ automation. In most common situations only following steps are necessary:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The macros <code>%mvn_build</code> and <code>%mvn_install</code> automatically handle building of the
-JAR files and their subsequent installation to the correct directory. The
-corresponding POM and metadata files are also installed.</p>
+<p>The macros <code>%mvn_build</code> and <code>%mvn_install</code> automatically handle building of the JAR files and their subsequent installation to the correct directory.
+The corresponding POM and metadata files are also installed.</p>
 </div>
 <div class="sect2">
-<h3 id="packaging_maven_project">7.1. Packaging Maven project</h3>
+<h3 id="_packaging_maven_project">7.1. Packaging Maven project</h3>
 <div class="paragraph">
-<p>This step by step guide will show you how to package Maven project. Let&#8217;s start with
-probably simplest spec file possible.</p>
+<p>This step by step guide will show you how to package Maven project.
+Let&#8217;s start with probably the simplest spec file possible.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2928,8 +2630,8 @@ This package contains the API documentation for %{name}.
 </div>
 </div>
 <div class="paragraph">
-<p>The spec file above is a real world example how it may look like for simple Maven
-project. Both <code>%build</code> and <code>%install</code> sections consist only of one line.</p>
+<p>The spec file above is a real world example how it may look like for simple Maven project.
+Both <code>%build</code> and <code>%install</code> sections consist only of one line.</p>
 </div>
 <div class="paragraph">
 <p>Another interesting line:</p>
@@ -2940,9 +2642,9 @@ project. Both <code>%build</code> and <code>%install</code> sections consist onl
 </div>
 </div>
 <div class="paragraph">
-<p>All Maven projects need to have BuildRequires on <code>maven-local</code>. They also need
-to have Requires and BuildRequires on <code>jpackages-utils</code>, but build system adds
-these automatically. Package maintainer doesn&#8217;t need to list them explicitly.</p>
+<p>All Maven projects need to have <code>BuildRequires</code> on <code>maven-local</code>.
+They also need to have <code>Requires</code> and <code>BuildRequires</code> on <code>jpackages-utils</code>, but build system adds these automatically.
+The package maintainer does not need to list them explicitly.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2950,18 +2652,15 @@ these automatically. Package maintainer doesn&#8217;t need to list them explicit
 </div>
 </div>
 <div class="paragraph">
-<p>By default, resulting JAR files will be installed in `%{_javadir}/%{name}`,
-therefore package needs to own this directory.</p>
+<p>By default, resulting JAR files will be installed in <code>%{_javadir}/%{name}</code>, therefore the package needs to own this directory.</p>
 </div>
 <div class="paragraph">
-<p>The build could fail from many reasons, but one probably most common is
-build failure due to <a href="#error_missing_dependency">missing dependencies</a></p>
+<p>The build could fail from many reasons, but one probably most common is build failure due to <a href="#_missing_dependency">missing dependencies</a>.</p>
 </div>
 <div class="paragraph">
-<p>We can try to remove these missing dependencies from pom.xml and make Maven
-stop complaining about them. However, these removed dependencies may be crucial
-for building of the project and therefore it may be needed to package them
-later.  Let&#8217;s remove the dependencies from <code>pom.xml</code>.</p>
+<p>We can try to remove these missing dependencies from pom.xml and make Maven stop complaining about them.
+However, these removed dependencies may be crucial for building of the project and therefore it may be needed to package them later.
+Let&#8217;s remove the dependencies from <code>pom.xml</code>.</p>
 </div>
 <div class="listingblock">
 <div class="title">Remove dependencies from pom.xml</div>
@@ -2976,24 +2675,25 @@ later.  Let&#8217;s remove the dependencies from <code>pom.xml</code>.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Package maintainer can use a wide variety of &#8220;pom_&#8221; macros for modifying
-<code>pom.xml</code> files. See <a href="#helper_macros">Macros for POM modification</a> section for
-more information.</p>
+<p>The package maintainer can use a wide variety of &#8220;pom_&#8221; macros for modifying <code>pom.xml</code> files.
+See the <a href="#_macros_for_pom_modification">Macros for POM modification</a> section for more information.</p>
 </div>
 <div class="paragraph">
-<p>Now try to build the project again. The build will fail with
-<a href="#error_compilation_failure">compilation failure</a>.</p>
+<p>Now try to build the project again.
+The build will fail with a <a href="#_compilation_failure">compilation failure</a>.</p>
 </div>
 <div class="paragraph">
-<p>Oops, another problem. This time Maven thought it had all the necessary dependencies, but Java
-compiler thinks otherwise.</p>
+<p>Oops, another problem.
+This time Maven thought it had all the necessary dependencies, but Java compiler found otherwise.</p>
 </div>
 <div class="paragraph">
-<p>Now it&#8217;s possible to either patch the source code not to depend on
-missing libraries or to package them. Second approach is usually correct. It&#8217;s not necessary to package every
-dependency right away. Maintainer could package compile time dependencies first and keep the
-rest for later (test dependencies, &#8230;&#8203;). But Maven needs to know that it shouldn&#8217;t try to run tests now. This can be achieved by passing <code>-f</code> option to <code>%mvn_build</code> macro.  Maven
-will stop complaining about missing test scoped dependencies from now on.</p>
+<p>Now it is possible to either patch the source code not to depend on missing libraries or to package them.
+The second approach is usually correct.
+It is not necessary to package every dependency right away.
+The maintainer could package compile time dependencies first and keep the rest for later (test dependencies, etc.).
+But Maven needs to know that it should not try to run tests now.
+This can be achieved by passing <code>-f</code> option to <code>%mvn_build</code> macro.
+Maven will stop complaining about missing test scoped dependencies from now on.</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -3003,17 +2703,11 @@ will stop complaining about missing test scoped dependencies from now on.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Another major reason to disable the test phase is to speed up the local build
-process. This can also be achieved by specifying an additional switch
-<code>--without=tests</code> to the <code>fedpkg</code> or the <code>mock</code> tool instead of adding a switch
-to <code>%mvn_build</code>.</p>
+<p>Another reason to disable the test phase is to speed up the local build process.
+This can also be achieved by specifying an additional switch <code>--without=tests</code> to the <code>fedpkg</code> or the <code>mock</code> tool instead of adding a switch to <code>%mvn_build</code>.</p>
 </div>
 <div class="paragraph">
 <p>Another switch <code>--without=javadoc</code> causes the build to skip Javadoc generation.</p>
-</div>
-<div class="paragraph">
-<p>Note that to actually build the package with tests disabled you have to specify
-the switch to <code>%mvn_build</code>.</p>
 </div>
 </td>
 </tr>
@@ -3027,14 +2721,16 @@ the switch to <code>%mvn_build</code>.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>It is always recommended to run all available test suites during build. It greatly improves quality of the package.</p>
+<p>It is always recommended to run all available test suites during build.
+It greatly improves quality of the package.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>We already have package which provides <code>commons-io:commons-io</code> artifact, let&#8217;s add it to the <code>BuildRequires</code>. Also disable tests for now.</p>
+<p>We already have package which provides <code>commons-io:commons-io</code> artifact, let&#8217;s add it to the <code>BuildRequires</code>.
+Also disable tests for now.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3061,20 +2757,21 @@ BuildRequires:  apache-commons-io
 </td>
 <td class="content">
 <div class="paragraph">
-<p>One can easily search for package which provides desired artifact. Try
-<code>dnf repoquery --whatprovides 'mvn(commons-io:commons-io)'</code>, or see how to
-<a href="#querying_repositories">query repositories</a>.</p>
+<p>One can easily search for package which provides the desired artifact.
+Try <code>dnf repoquery --whatprovides 'mvn(commons-io:commons-io)'</code>, or see how to <a href="#_querying_repositories">query repositories</a>.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Now try to build the project one more time. The build should succeed now. Congrats, you managed to create an RPM from Maven project!</p>
+<p>Now try to build the project one more time.
+The build should succeed now.
+Congrats, you managed to create an RPM from Maven project!</p>
 </div>
 <div class="paragraph">
-<p>There is plenty of other things maintainer may want to do. For example, he may want to provide symbolic links to the JAR file
-in `%{_javadir}`.</p>
+<p>There is plenty of other things maintainer may want to do.
+For example, they may want to provide symbolic links to the JAR file in <code>%{_javadir}</code>.</p>
 </div>
 <div class="paragraph">
 <p>This can be easily achieved with <code>%mvn_file</code> macro:</p>
@@ -3088,11 +2785,11 @@ in `%{_javadir}`.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>See <a href="#mvn_file">Alternative JAR File Names</a> section for more information.</p>
+<p>See <a href="#_alternative_jar_file_names">Alternative JAR File Names</a> section for more information.</p>
 </div>
 <div class="paragraph">
-<p>Another quite common thing to do is adding aliases to Maven artifact. Try to run <code>rpm
--qp --provides</code> on your locally built RPM package:</p>
+<p>Another quite common thing to do is adding aliases to Maven artifact.
+Try to run <code>rpm -qp --provides</code> on your locally built RPM package:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3102,15 +2799,14 @@ simplemaven <span class="o">=</span> 1.0-1.fc21</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>The output above tells us that the RPM package provides Maven artifact
-"com.example:simplemaven:1.0". Upstream may change the groupId:artifactId with
-any new release. And it happens. For example org.apache.commons:commons-io
-changed to commons-io:commons-io some time ago.  It&#8217;s not a big deal for package
-itself, but it is a huge problem for other packages that depends on that
-particular package. Some packages may still have dependencies on old
-groupId:artifactId, which is suddenly unavailable. Luckily, there is an easy way
-how to solve the problems like these. Package maintainer can add aliases to actually provided
-Maven artifact.</p>
+<p>The output above tells us that the RPM package provides Maven artifact <code>com.example:simplemaven:1.0</code>.
+Upstream may change the <code>groupId:artifactId</code> with any new release.
+And it happens.
+For example <code>org.apache.commons:commons-io</code> changed to <code>commons-io:commons-io</code> some time ago.
+It is not a big deal for package itself, but it is a huge problem for other packages that depends on that particular package.
+Some packages may still have dependencies on old <code>groupId:artifactId</code>, which is suddenly unavailable.
+Luckily, there is an easy way how to solve the problems like these.
+Package maintainer can add aliases to actually provided Maven artifact.</p>
 </div>
 <div class="listingblock">
 <div class="title">Add alias to Maven artifact</div>
@@ -3119,7 +2815,7 @@ Maven artifact.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>See <a href="#mvn_alias">Additional Mappings</a> for more information on <code>%mvn_alias</code>.</p>
+<p>See <a href="#_additional_mappings">Additional Mappings</a> for more information on <code>%mvn_alias</code>.</p>
 </div>
 <div class="paragraph">
 <p>Rebuild the pacakge and check <code>rpm -qp --provides</code> output again:</p>
@@ -3133,8 +2829,8 @@ simplemaven <span class="o">=</span> 1.0-2.fc21</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Now it doesn&#8217;t matter if some other package depends on either of these listed
-artifact. Both dependencies will always be satisfied with your package.</p>
+<p>Now it does not matter if some other package depends on either of these listed artifact.
+Both dependencies will always be satisfied with your package.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -3143,31 +2839,29 @@ artifact. Both dependencies will always be satisfied with your package.</p>
 <img src="./images/icons/note.png" alt="Note">
 </td>
 <td class="content">
-One could try to fix dependencies in all the dependent packages
-instead of adding an alias to single package. It&#8217;s almost always wrong thing to
-do.
+<div class="paragraph">
+<p>One could try to fix dependencies in all the dependent packages instead of adding an alias to single package.
+It is almost always wrong thing to do.</p>
+</div>
 </td>
 </tr>
 </table>
 </div>
 </div>
 <div class="sect2">
-<h3 id="mvn_macros">7.2. Macros for Maven build configuration</h3>
+<h3 id="_macros_for_maven_build_configuration">7.2. Macros for Maven build configuration</h3>
 <div class="paragraph">
-<p>Maven builds can be configured to produce alternative layout, include additional
-aliases in package metadata or create separate subpackages for certain
-artifacts.</p>
+<p>Maven builds can be configured to produce alternative layout, include additional aliases in package metadata or create separate subpackages for certain artifacts.</p>
 </div>
 <div class="sect3">
-<h4 id="mvn_artifact">7.2.1. Installing additional artifacts</h4>
+<h4 id="_installing_additional_artifacts">7.2.1. Installing additional artifacts</h4>
 <div class="paragraph">
-<p>It is possible to explicitly request an installation of any Maven artifact
-(JAR/POM file).  Macro <code>%mvn_install</code> only knows about Maven artifacts that were
-created during execution of <code>%mvn_build</code>. Normally, any other artifacts which
-were built by some other method would need to be installed manually.
-<code>%mvn_build</code> macro doesn&#8217;t even need to be used at all. Luckily, all artifacts
-created outside of <code>%mvn_build</code> can be marked for installation with
-<code>%mvn_artifact</code> macro. This macro creates configuration for <code>%mvn_install</code>.</p>
+<p>It is possible to explicitly request an installation of any Maven artifact (JAR / POM file).
+Macro <code>%mvn_install</code> only knows about Maven artifacts that were created during execution of <code>%mvn_build</code>.
+Normally, any other artifacts which were built by some other method would need to be installed manually.
+<code>%mvn_build</code> macro does not even need to be used at all.
+Luckily, all artifacts created outside of <code>%mvn_build</code> can be marked for installation with <code>%mvn_artifact</code> macro.
+This macro creates configuration for <code>%mvn_install</code>.</p>
 </div>
 <div class="listingblock">
 <div class="title">Requesting installation of Maven artifact</div>
@@ -3184,15 +2878,11 @@ created outside of <code>%mvn_build</code> can be marked for installation with
 </div>
 </div>
 <div class="sect3">
-<h4 id="mvn_alias">7.2.2. Additional Mappings</h4>
+<h4 id="_additional_mappings">7.2.2. Additional Mappings</h4>
 <div class="paragraph">
-<p>The macro <code>%mvn_alias</code> can be used to add additional mappings for given POM/JAR
-file. For example, if the POM file indicates that it contains groupId
-commons-lang, artifactId commons-lang, this macro ensures that we also add a
-mapping between groupId org.apache.commons and the installed JAR/POM files. This
-is necessary in cases where the groupId or artifactId may have changed, and
-other packages might require different IDs than those reflected in the installed
-POM.</p>
+<p>The macro <code>%mvn_alias</code> can be used to add additional mappings for given POM / JAR file.
+For example, if the POM file indicates that it contains <code>groupId</code> <code>commons-lang</code>, <code>artifactId</code> <code>commons-lang</code>, this macro ensures that we also add a mapping between <code>groupId</code> <code>org.apache.commons</code> and the installed JAR / POM files.
+This is necessary in cases where the groupId or artifactId may have changed, and other packages might require different IDs than those reflected in the installed POM.</p>
 </div>
 <div class="listingblock">
 <div class="title">Adding more mappings for JAR/POM files example</div>
@@ -3204,13 +2894,12 @@ POM.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="mvn_file">7.2.3. Alternative JAR File Names</h4>
+<h4 id="_alternative_jar_file_names">7.2.3. Alternative JAR File Names</h4>
 <div class="paragraph">
-<p>In some cases, it may be important to be able to provide symbolic links to actual JAR
-files. This can be achieved with <code>%mvn_file</code> macro. This macro allows packager
-to specify names of the JAR files, their location in `%{_javadir}` directory and
-also can create symbolic links to the JAR files. These links can be possibly
-located outside of the `%{_javadir}` directory.</p>
+<p>In some cases, it may be important to be able to provide symbolic links to actual JAR files.
+This can be achieved with <code>%mvn_file</code> macro.
+This macro allows packager to specify names of the JAR files, their location in <code>%{_javadir}</code> directory and also can create symbolic links to the JAR files.
+These links can be possibly located outside of the <code>%{_javadir}</code> directory.</p>
 </div>
 <div class="listingblock">
 <div class="title">Adding file symlinks to compatibility</div>
@@ -3221,20 +2910,17 @@ located outside of the `%{_javadir}` directory.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>This means that JAR file for artifact with ID "guice" (and any groupId) will be
-installed in `%{_javadir}/google/guice.jar` and there also will be a symbolic links to
-this JAR file located in `%{_javadir}/guice.jar`. Note the macro will add ".jar"
-extensions automatically.</p>
+<p>This means that JAR file for artifact with ID "guice" (and any <code>groupId</code>) will be installed in <code>%{_javadir}/google/guice.jar</code> and there also will be a symbolic links to this JAR file located in <code>%{_javadir}/guice.jar</code>.
+Note the macro will add <code>.jar</code> extensions automatically.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="mvn_singleton">7.2.4. Single Artifact Per Package</h4>
+<h4 id="_single_artifact_per_package">7.2.4. Single Artifact Per Package</h4>
 <div class="paragraph">
-<p>If the project consists of multiple artifacts, it is recommended to install each
-artifact to the separate subpackage. The macro <code>%mvn_build -s</code> will generate
-separate <code>.mfiles</code> file for every artifact in the project. This file contains
-list of files related to specific artifact (typically JAR file, POM file and
-metadata). It can be later used in <code>%files</code> section of the spec file.</p>
+<p>If the project consists of multiple artifacts, it is recommended to install each artifact to the separate subpackage.
+The macro <code>%mvn_build -s</code> will generate separate <code>.mfiles</code> file for every artifact in the project.
+This file contains list of files related to specific artifact (typically JAR file, POM file and metadata).
+It can be later used in <code>%files</code> section of the spec file.</p>
 </div>
 <div class="listingblock">
 <div class="title">Creating one subpackage for each generated artifact</div>
@@ -3272,12 +2958,10 @@ The Plugin Plugin is used to...
 </div>
 </div>
 <div class="sect3">
-<h4 id="mvn_package">7.2.5. Assignment of the Maven Artifacts to the Subpackages</h4>
+<h4 id="_assignment_of_the_maven_artifacts_to_the_subpackages">7.2.5. Assignment of the Maven Artifacts to the Subpackages</h4>
 <div class="paragraph">
-<p>The macro <code>%mvn_package</code> allows maintainer to specify in which exact package the
-selected artifact will end up. It is something between singleton packaging, when
-each artifact has its own subpackage and default packaging, when all artifacts
-end up in the same package.</p>
+<p>The macro <code>%mvn_package</code> allows maintainer to specify in which exact package the selected artifact will end up.
+It is something between singleton packaging, when each artifact has its own subpackage and default packaging, when all artifacts end up in the same package.</p>
 </div>
 <div class="listingblock">
 <div class="title">Assigning multiple artifacts to single subpackage</div>
@@ -3300,11 +2984,8 @@ end up in the same package.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>In above example, the artifacts <code>plexus-compiler-jikes</code>,
-<code>plexus-compiler-eclipse</code>, <code>plexus-compiler-csharp</code> will end up in package named
-<code>plexus-compiler-extras</code>. If there are some other artifacts beside these three
-mentioned (e.g. some parent POMs), then these will all end up in package named
-`%{name}`.</p>
+<p>In above example, the artifacts <code>plexus-compiler-jikes</code>, <code>plexus-compiler-eclipse</code>, <code>plexus-compiler-csharp</code> will end up in package named <code>plexus-compiler-extras</code>.
+If there are some other artifacts beside these three mentioned (e.g. some parent POMs), then these will all end up in package named <code>%{name}</code>.</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -3314,17 +2995,16 @@ mentioned (e.g. some parent POMs), then these will all end up in package named
 </td>
 <td class="content">
 <div class="paragraph">
-<p><code>%mvn_package</code> macro supports wildcards and brace expansions, so whole <code>%prep</code> section from previous example can be replaced with single line:
-`%mvn_package ":plexus-compiler-{jikes,eclipse,csharp}" plexus-compiler-extras`</p>
+<p><code>%mvn_package</code> macro supports wildcards and brace expansions, so whole <code>%prep</code> section from previous example can be replaced with single line: <code>%mvn_package ":plexus-compiler-{jikes,eclipse,csharp}" plexus-compiler-extras</code>.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>It is possible to assign artifacts into a package called <code>__noinstall</code>. This package
-name has a special meaning. And as you can guess, artifacts assigned into this
-package won&#8217;t be installed anywhere and the package itself won&#8217;t be created.</p>
+<p>It is possible to assign artifacts into a package called <code>__noinstall</code>.
+This package name has a special meaning.
+And as you can guess, artifacts assigned into this package will not be installed anywhere and the package itself will not be created.</p>
 </div>
 <div class="listingblock">
 <div class="title">Skipping installation of an artifact</div>
@@ -3336,14 +3016,13 @@ package won&#8217;t be installed anywhere and the package itself won&#8217;t be 
 </div>
 </div>
 <div class="sect3">
-<h4 id="mvn_config">7.2.6. Modifying XMvn configuration from within spec file</h4>
+<h4 id="_modifying_xmvn_configuration_from_within_spec_file">7.2.6. Modifying XMvn configuration from within spec file</h4>
 <div class="paragraph">
-<p>Some packages might need to modify XMvn&#8217;s configuration in order to build
-successfully or from other reasons. This can be achieved with <code>mvn_config</code>
-macro. For example, some old package can use <code>enum</code> as an identifier, but it is
-also keyword since Java 1.5. Such package will probably fail to build on current
-systems. This problem can be easily solved by passing <code>-source 1.4</code> to the
-compiler, so one could add following line to the spec file:</p>
+<p>Some packages might need to modify XMvn&#8217;s configuration in order to build successfully or from other reasons.
+This can be achieved with <code>mvn_config</code> macro.
+For example, some old package can use <code>enum</code> as an identifier, but it is also keyword since Java 1.5.
+Such package will probably fail to build on current systems.
+This problem can be easily solved by passing <code>-source 1.4</code> to the compiler, so one could add following line to the spec file:</p>
 </div>
 <div class="listingblock">
 <div class="title">Overriding default XMvn configuration</div>
@@ -3354,10 +3033,8 @@ compiler, so one could add following line to the spec file:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>XMvn&#8217;s configuration is quite complex, but well documented at project&#8217;s
-<a href="http://mizdebsk.fedorapeople.org/xmvn/site/">official website</a>. The website
-should always be used as a primary source of information about XMvn
-configuration.</p>
+<p>XMvn&#8217;s configuration is quite complex, but well documented at the project&#8217;s <a href="https://mizdebsk.fedorapeople.org/xmvn/site/">official website</a>.
+The website should always be used as a primary source of information about XMvn configuration.</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -3367,9 +3044,7 @@ configuration.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Read about XMvn&#8217;s configuration
-<a href="http://mizdebsk.fedorapeople.org/xmvn/site/configuration.html">basics</a> and see
-full <a href="http://mizdebsk.fedorapeople.org/xmvn/site/config.html">configuration reference</a>.</p>
+<p>Read about XMvn&#8217;s configuration <a href="https://mizdebsk.fedorapeople.org/xmvn/site/configuration.html">basics</a> and see the full <a href="https://mizdebsk.fedorapeople.org/xmvn/site/config.html">configuration reference</a>.</p>
 </div>
 </td>
 </tr>
@@ -3383,10 +3058,11 @@ full <a href="http://mizdebsk.fedorapeople.org/xmvn/site/config.html">configurat
 </td>
 <td class="content">
 <div class="paragraph">
-<p>All <code>%mvn_</code> macros have their own manual page which contains details on how to
-use them. All possible options should be documented there. These manual pages
-should be considered most up to date documentation right after source code. Try
-for example <code>man mvn_file</code>. These pages are also included in the <a href="#manpages">Appendix</a>.</p>
+<p>All <code>%mvn_</code> macros have their own manual page which contains details on how to use them.
+All possible options should be documented there.
+These manual pages should be considered most up to date documentation right after source code.
+Try for example <code>man mvn_file</code>.
+These pages are also included in the <a href="#_manpages">Appendix</a>.</p>
 </div>
 </td>
 </tr>
@@ -3395,15 +3071,11 @@ for example <code>man mvn_file</code>. These pages are also included in the <a h
 </div>
 </div>
 <div class="sect2">
-<h3 id="helper_macros">7.3. Macros for POM modification</h3>
+<h3 id="_macros_for_pom_modification">7.3. Macros for POM modification</h3>
 <div class="paragraph">
-<p>Sometimes Maven <code>pom.xml</code> files need to be patched before they are used
-to build packages. One could use traditional patches to maintain
-changes, but package maintainers should use <code>%pom_*</code> macros developed
-specially to ease this task.
-Using <code>%pom_*</code> macros not only increases readability of the spec file,
-but also improves maintainability of the package as there are no patches
-that would need to be rebased with each upstream release.</p>
+<p>Sometimes Maven <code>pom.xml</code> files need to be patched before they are used to build packages.
+One could use traditional patches to maintain changes, but package maintainers should use <code>%pom_*</code> macros developed specially to ease this task.
+Using <code>%pom_*</code> macros not only increases readability of the spec file, but also improves maintainability of the package as there are no patches that would need to be rebased with each upstream release.</p>
 </div>
 <div class="paragraph">
 <p>There are two categories of macros:</p>
@@ -3411,27 +3083,26 @@ that would need to be rebased with each upstream release.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>POM-specific macros - used to manipulate dependencies, modules&#8230;&#8203; Some
-of them also work on <code>ivy.xml</code> files.</p>
+<p>POM-specific macros - used to manipulate dependencies, modules, etc.
+Some of them also work on <code>ivy.xml</code> files.</p>
 </li>
 <li>
-<p>Generic XML manipulation macros - used to add/remove/replace XML nodes</p>
+<p>Generic XML manipulation macros - used to add / remove / replace XML nodes.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>The macros are designed to be called from <code>%prep</code> section of spec
-files. All the macros also have their own manual page.
-This document provides an overview of how they are used. For the
-technical details, refer to their respective manpages.</p>
+<p>The macros are designed to be called from <code>%prep</code> section of spec files.
+All the macros also have their own manual page.
+This document provides an overview of how they are used.
+For the technical details, refer to their respective <a href="#_manpages">manpages</a>.</p>
 </div>
 <div class="paragraph">
 <div class="title">File specfication</div>
-<p>By default, a macro acts on a <code>pom.xml</code> file (or <code>ivy.xml</code> file) in the
-current directory. Different path can be explicitly specified via an
-argument (the last one, unless stated otherwise). Multiple paths can be
-specified as multiple arguments. If a path is a directory, it looks for
-a <code>pom.xml</code> file in that directory.
+<p>By default, a macro acts on a <code>pom.xml</code> file (or <code>ivy.xml</code> file) in the current directory.
+Different path can be explicitly specified via an argument (the last one, unless stated otherwise).
+Multiple paths can be specified as multiple arguments.
+If a path is a directory, it looks for a <code>pom.xml</code> file in that directory.
 For example:</p>
 </div>
 <div class="listingblock">
@@ -3451,18 +3122,16 @@ For example:</p>
 </div>
 <div class="paragraph">
 <div class="title">Recursive mode</div>
-<p>Most macros also support <strong>recursive</strong> mode, where the change is applied
-to the <code>pom.xml</code> and all its modules recursively. This can be used, for
-example, to remove a dependency from the whole project. It is activated
-by <code>-r</code> switch.</p>
+<p>Most macros also support <strong>recursive</strong> mode, where the change is applied to the <code>pom.xml</code> and all its modules recursively.
+This can be used, for example, to remove a dependency from the whole project.
+It is activated by <code>-r</code> switch.</p>
 </div>
 <div class="sect3">
-<h4 id="pom_remove_dep">7.3.1. Dependency manipulation macros</h4>
+<h4 id="_dependency_manipulation_macros">7.3.1. Dependency manipulation macros</h4>
 <div class="paragraph">
 <div class="title">Removing dependencies</div>
-<p>Often dependencies specified in Maven <code>pom.xml</code> files need to be removed
-because of different reasons. <code>%pom_remove_dep</code> macro can be used to
-ease this task:</p>
+<p>Often dependencies specified in Maven <code>pom.xml</code> files need to be removed because of different reasons.
+<code>%pom_remove_dep</code> macro can be used to ease this task:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3489,16 +3158,13 @@ ease this task:</p>
 <div class="paragraph">
 <div class="title">Adding dependencies</div>
 <p>Dependencies can also be added to <code>pom.xml</code> with <code>%pom_add_dep</code> macro.
-Usage is very similar to <code>%pom_remove_dep</code>, see <code>$ man pom_add_dep</code> for
-more information.</p>
+Usage is very similar to <code>%pom_remove_dep</code>, see <code>$ man pom_add_dep</code> for more information.</p>
 </div>
 <div class="paragraph">
 <div class="title">Changing dependencies</div>
-<p>Sometimes the artifact coordinates used in upstream <code>pom.xml</code> don&#8217;t
-correspond to ones used in Fedora and you need to modify them.
-<code>%pom_change_dep</code> macro will modify all dependencies matching the first
-argument to artifact coordinates specified by the second argument. Note
-this macro also works in recursive mode.</p>
+<p>Sometimes the artifact coordinates used in upstream <code>pom.xml</code> do not correspond to ones used in Fedora and you need to modify them.
+<code>%pom_change_dep</code> macro will modify all dependencies matching the first argument to artifact coordinates specified by the second argument.
+Note this macro also works in recursive mode.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3509,10 +3175,10 @@ this macro also works in recursive mode.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="pom_remove_plugin">7.3.2. Adding/removing plugins</h4>
+<h4 id="_adding_removing_plugins">7.3.2. Adding / removing plugins</h4>
 <div class="paragraph">
-<p><code>%pom_remove_plugin</code> macro works exactly as <code>%pom_remove_dep</code>, except it removes
-Maven plugin invocations. Some examples:</p>
+<p><code>%pom_remove_plugin</code> macro works exactly as <code>%pom_remove_dep</code>, except it removes Maven plugin invocations.
+Some examples:</p>
 </div>
 <div class="listingblock">
 <div class="title">Removing Maven plugins from pom.xml files</div>
@@ -3525,16 +3191,15 @@ Maven plugin invocations. Some examples:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Like in previous case, there is also a macro for adding plugins to
-<code>pom.xml</code>. See <code>"man pom_add_plugin"</code> for more information.</p>
+<p>Like in previous case, there is also a macro for adding plugins to <code>pom.xml</code>.
+See its <a href="#_pom_add_plugin">manual page</a> for more information.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="pom_disable_module">7.3.3. Disabling unneeded modules</h4>
+<h4 id="_disabling_unneeded_modules">7.3.3. Disabling unneeded modules</h4>
 <div class="paragraph">
-<p>Sometimes some submodules of upstream project cannot be built for
-various reasons and there is a need to disable them. This can be
-achieved by using <code>%pom_disable_module</code>, for example:</p>
+<p>Sometimes some submodules of upstream project cannot be built for various reasons and there is a need to disable them.
+This can be achieved by using <code>%pom_disable_module</code>, for example:</p>
 </div>
 <div class="listingblock">
 <div class="title">Disabling specific project modules</div>
@@ -3548,14 +3213,11 @@ achieved by using <code>%pom_disable_module</code>, for example:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="pom_remove_parent">7.3.4. Working with parent POM references</h4>
+<h4 id="_working_with_parent_pom_references">7.3.4. Working with parent POM references</h4>
 <div class="paragraph">
-<p>Macro <code>%pom_remove_parent</code> removes reference to a parent POM from Maven
-POM files. This can be useful when parent POM is not yet packaged (e.g.
-because of licensing issues) and at the same time it&#8217;s not really needed
-for building of the project. There are also macros for adding parent POM
-reference (<code>%pom_add_parent</code>) and replacing existing reference with new
-one (<code>%pom_set_parent</code>).</p>
+<p>Macro <code>%pom_remove_parent</code> removes reference to a parent POM from Maven POM files.
+This can be useful when parent POM is not yet packaged (e.g. because of licensing issues) and at the same time it is not really needed for building of the project.
+There are also macros for adding parent POM reference (<code>%pom_add_parent</code>) and replacing existing reference with new one (<code>%pom_set_parent</code>).</p>
 </div>
 <div class="listingblock">
 <div class="title">Manipulating parent POM references</div>
@@ -3575,17 +3237,13 @@ one (<code>%pom_set_parent</code>).</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="pom_xpath_remove">7.3.5. Macros for performing generic modifications</h4>
+<h4 id="_macros_for_performing_generic_modifications">7.3.5. Macros for performing generic modifications</h4>
 <div class="paragraph">
-<p>The above macros cover the most common cases of modifying <code>pom.xml</code>
-files, however if there is a need to apply some less-common patches
-there are also three generic macros for modifying <code>pom.xml</code> files.
-These generic macros can also be applied to other XML files, such as
-Ant&#8217;s <code>build.xml</code> files.</p>
+<p>The above macros cover the most common cases of modifying <code>pom.xml</code> files, however if there is a need to apply some less-common patches there are also three generic macros for modifying <code>pom.xml</code> files.
+These generic macros can also be applied to other XML files, such as Ant&#8217;s <code>build.xml</code> files.</p>
 </div>
 <div class="paragraph">
-<p>They all take a <a href="http://www.w3.org/TR/xpath/">XPath</a> 1.0 expression
-that selects XML nodes to be acted on (removed, replaced&#8230;&#8203;).</p>
+<p>They all take a <a href="https://www.w3.org/TR/xpath/">XPath</a> 1.0 expression that selects XML nodes to be acted on (removed, replaced, etc.).</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -3596,15 +3254,11 @@ that selects XML nodes to be acted on (removed, replaced&#8230;&#8203;).</p>
 <td class="content">
 <div class="title">Handling XML namespaces</div>
 <div class="paragraph">
-<p>POM files use a specific namespace - http://maven.apache.org/POM/4.0.0.
-The easiest way to respect this namespace in XPath expressions is
-prefixing all node names with <code>pom:</code>. For example,
-<code>pom:environment/pom:os</code> will work because it selects nodes from <code>pom</code>
-namespace, but <code>environment/os</code> won&#8217;t find anything because it looks for
-nodes that don&#8217;t belong to any XML namespace. It is needed even if the
-original POM file didn&#8217;t contain proper POM namespace, since it will be
-added automatically. Note that this requirement is due to limitation of
-XPath 1.0 and we cannot work it around.</p>
+<p>POM files use a specific namespace - <code>http://maven.apache.org/POM/4.0.0</code>.
+The easiest way to respect this namespace in XPath expressions is prefixing all node names with <code>pom:</code>.
+For example, <code>pom:environment/pom:os</code> will work because it selects nodes from <code>pom</code> namespace, but <code>environment/os</code> won&#8217;t find anything because it looks for nodes that do not belong to any XML namespace.
+It is needed even if the original POM file didn&#8217;t contain proper POM namespace, since it will be added automatically.
+Note that this requirement is due to limitation of XPath 1.0 and we cannot work it around.</p>
 </div>
 </td>
 </tr>
@@ -3622,32 +3276,29 @@ XPath 1.0 and we cannot work it around.</p>
 </div>
 <div class="paragraph">
 <div class="title">Injecting nodes</div>
-<p><code>%pom_xpath_inject</code> macro is capable of injecting arbitrary
-XML code to any <code>pom.xml</code> file. The injected code is the last argument
-- optional file paths go before it (unlike most other macros).
-To pass a multiline snippet, quote the argument as in the following
-example.</p>
+<p><code>%pom_xpath_inject</code> macro is capable of injecting arbitrary XML code to any <code>pom.xml</code> file.
+The injected code is the last argument - optional file paths go before it (unlike most other macros).
+To pass a multiline snippet, quote the argument as in the following example.</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight"><code data-lang="spec"># Add additional exclusion into maven-wagon dependency
 %pom_xpath_inject "pom:dependency[pom:artifactId='maven-wagon']/pom:exclusions" "
 &lt;exclusion&gt;
-    &lt;groupId&gt;antlr&lt;/groupId&gt;
-    &lt;artifactId&gt;antlr&lt;/artifactId&gt;
+  &lt;groupId&gt;antlr&lt;/groupId&gt;
+  &lt;artifactId&gt;antlr&lt;/artifactId&gt;
 &lt;/exclusion&gt;"
 # The same thing, but with explicit file path
 %pom_xpath_inject "pom:dependency[pom:artifactId='maven-wagon']/pom:exclusions" pom.xml "
 &lt;exclusion&gt;
-    &lt;groupId&gt;antlr&lt;/groupId&gt;
-    &lt;artifactId&gt;antlr&lt;/artifactId&gt;
+  &lt;groupId&gt;antlr&lt;/groupId&gt;
+  &lt;artifactId&gt;antlr&lt;/artifactId&gt;
 &lt;/exclusion&gt;"</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <div class="title">Changing nodes' content</div>
-<p><code>%pom_xpath_set</code> replaces content of the arbitrary XML nodes
-with specified value (can contain XML nodes).</p>
+<p><code>%pom_xpath_set</code> replaces content of the arbitrary XML nodes with specified value (can contain XML nodes).</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3673,26 +3324,20 @@ with specified value (can contain XML nodes).</p>
 <h2 id="_common_errors">8. Common Errors</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This section contains explanations and solutions/workarounds for common
-errors which can be encountered during packaging.</p>
+<p>This section contains explanations and solutions/workarounds for common errors which can be encountered during packaging.</p>
 </div>
 <div class="sect2">
-<h3 id="error_missing_dependency">8.1. Missing dependency</h3>
+<h3 id="_missing_dependency">8.1. Missing dependency</h3>
 <div class="listingblock">
 <div class="content">
-<pre>[ERROR] Failed to execute goal on project simplemaven: Could not resolve
-dependencies for project com.example:simplemaven:jar:1.0: The following
-artifacts could not be resolved: commons-io:commons-io:jar:2.4,
-junit:junit:jar:4.11: Cannot access central
-(http://repo.maven.apache.org/maven2) in offline mode and the artifact
-commons-io:commons-io:jar:2.4 has not been downloaded from it before. -&gt; [Help
-1]</pre>
+<pre>[ERROR] Failed to execute goal on project simplemaven:
+Could not resolve dependencies for project com.example:simplemaven:jar:1.0:
+The following artifacts could not be resolved: commons-io:commons-io:jar:2.4, junit:junit:jar:4.11:
+Cannot access central (http://repo.maven.apache.org/maven2) in offline mode and the artifact commons-io:commons-io:jar:2.4 has not been downloaded from it before. -&gt; [Help 1]</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Maven wasn&#8217;t able to build project <code>com.example:simplemaven</code>, because it
-couldn&#8217;t find some dependencies (in this case
-<code>commons-io:commons-io:jar:2.4</code> and <code>junit:junit:jar:4.11</code>)</p>
+<p>Maven wasn&#8217;t able to build project <code>com.example:simplemaven</code> because it couldn&#8217;t find some dependencies (in this case <code>commons-io:commons-io:jar:2.4</code> and <code>junit:junit:jar:4.11</code>)</p>
 </div>
 <div class="paragraph">
 <p>You have multiple options here:</p>
@@ -3700,31 +3345,22 @@ couldn&#8217;t find some dependencies (in this case
 <div class="ulist">
 <ul>
 <li>
-<p>If you suspect that a dependency is not necessary, you can
-remove it from <code>pom.xml</code> file and Maven will stop complaining about it.
-You can use wide variety of <a href="#helper_macros">macros</a> for modifying POM
-files. The one for removing dependencies is called
-<a href="#pom_remove_dep"><code>%pom_remove_dep</code></a>.</p>
+<p>If you suspect that a dependency is not necessary, you can remove it from <code>pom.xml</code> file and Maven will stop complaining about it.
+You can use wide variety of <a href="#_macros_for_pom_modification">macros</a> for modifying POM files.
+The one for removing dependencies is called <a href="#_dependency_manipulation_macros"><code>%pom_remove_dep</code></a>.</p>
 </li>
 <li>
-<p>There is a mock plugin that can automate installation of missing
-dependencies. When you&#8217;re using mock, pass additional
-<code>--enable-plugin pm_request</code> argument and the build process would be able to
-install missing dependencies by itself. You still need to add the
-<code>BuildRequires</code> later, because you need to build the package in Koji, where
-the plugin is not allowed. You should do so using <code>xmvn-builddep build.log</code>,
-where <code>build.log</code> is the path to mock&#8217;s build log. It will print a list of
-<code>BuildRequires</code> lines, which you can directly paste into the specfile. To
-verify that the <code>BuildRequires</code> you just added are correct, you can rebuild
-the package once more without the plugin enabled.</p>
+<p>There is a mock plugin that can automate installation of missing dependencies.
+When you&#8217;re using mock, pass additional <code>--enable-plugin pm_request</code> argument and the build process would be able to install missing dependencies by itself.
+You still need to add the <code>BuildRequires</code> later, because you need to build the package in Koji, where the plugin is not allowed.
+You should do so using <code>xmvn-builddep build.log</code>, where <code>build.log</code> is the path to mock&#8217;s build log.
+It will print a list of <code>BuildRequires</code> lines, which you can directly paste into the specfile.
+To verify that the <code>BuildRequires</code> you just added are correct, you can rebuild the package once more without the plugin enabled.</p>
 </li>
 <li>
-<p>Add the artifacts to <code>BuildRequires</code> manually. Maven packages have virtual
-provides in a format <code>mvn(artifact coordinates)</code>, where artifact coordinates
-are in the format which maven used in the error message, but without version
-for non-compat packages (most of the packages you encounter). Virtual
-provides can be used directly in <code>BuildRequires</code>, so in this case, it would
-be:</p>
+<p>Add the artifacts to <code>BuildRequires</code> manually.
+Maven packages have virtual provides in a format <code>mvn(artifact coordinates)</code>, where artifact coordinates are in the format which Maven used in the error message, but without version for non-compat packages (most of the packages you encounter).
+Virtual provides can be used directly in <code>BuildRequires</code>, so in this case it would be:</p>
 </li>
 </ul>
 </div>
@@ -3736,67 +3372,55 @@ BuildRequires:  mvn(junit:junit)</pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="error_compilation_failure">8.2. Compilation failure</h3>
+<h3 id="_compilation_failure">8.2. Compilation failure</h3>
 <div class="listingblock">
 <div class="content">
 <pre>[ERROR] Failed to execute goal
         org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile)
         on project simplemaven: Compilation failure: Compilation failure:
-[ERROR]
-/builddir/build/BUILD/simplemaven-1.0/src/main/java/com/example/Main.java:[3,29]
-package org.apache.commons.io does not exist
-[ERROR]
-/builddir/build/BUILD/simplemaven-1.0/src/main/java/com/example/Main.java:[8,9]
-cannot find symbol
+[ERROR] /builddir/build/BUILD/simplemaven-1.0/src/main/java/com/example/Main.java:[3,29] package org.apache.commons.io does not exist
+[ERROR] /builddir/build/BUILD/simplemaven-1.0/src/main/java/com/example/Main.java:[8,9] cannot find symbol
 [ERROR] symbol:   class FileUtils
 [ERROR] location: class com.example.Main
 [ERROR] -&gt; [Help 1]</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Java compiler couldn&#8217;t find given class on classpath or incompatible
-version was present. This could be caused by following reasons:</p>
+<p>Java compiler couldn&#8217;t find given class on classpath or incompatible version was present.
+This could be caused by following reasons:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>pom.xml</code> requires different version of Maven artifact than local
-repository provides</p>
+<p><code>pom.xml</code> requires different version of the Maven artifact than the local repository provides</p>
 </li>
 <li>
-<p><code>pom.xml</code> is missing necessary dependency</p>
+<p><code>pom.xml</code> is missing a necessary dependency</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
 <p>Different versions of same library may provide slightly different API.
-This means that project doesn&#8217;t have to be buildable if different
-version is provided.  If the library in local repository is older than
-the one required by project, then the library could be updated. If the
-project requires older version, then the project should be ported to
-latest stable version of the library (this may require cooperation with
-project&#8217;s upstream). If none of these is possible from some reason, it
-is still possible to introduce new <code>compat</code> package. See
-<a href="#compat_packages">compat packages</a> section for more
-information on this topic.</p>
+This means that project doesn&#8217;t have to be buildable if different version is provided.
+If the library in local repository is older than the one required by project, then the library could be updated.
+If the project requires older version, then the project should be ported to latest stable version of the library (this may require cooperation with project&#8217;s upstream).
+If none of these is possible from some reason, it is still possible to introduce new <code>compat</code> package.
+See <a href="#compatibility_versions">compat packages</a> section for more information on this topic.</p>
 </div>
 <div class="paragraph">
-<p>Sometimes <code>pom.xml</code> doesn&#8217;t list all the necessary dependencies, even if
-it should. Dependencies can also depend on some other and typically all
-these will be available to the project which is being built. The problem
-is that local repository may contain different versions of these
-dependencies. And even if these versions are fully compatible with the
-project, they may require slightly different set of dependencies. This
-could lead to build failure if <code>pom.xml</code> doesn&#8217;t specify all necessary
-dependencies and relies on transitive dependencies. Such a missing
-dependency may be considered a bug in the project. The solution is to
-explicitly add missing dependency to the <code>pom.xml</code>. This may be easily
-done by using <code>%pom_add_dep</code> macro. See section about
-<a href="#helper_macros">macros for POM modification</a> for more information.</p>
+<p>Sometimes <code>pom.xml</code> doesn&#8217;t list all the necessary dependencies, even if it should.
+Dependencies can also depend on some other and typically all these will be available to the project which is being built.
+The problem is that local repository may contain different versions of these dependencies.
+And even if these versions are fully compatible with the project, they may require slightly different set of dependencies.
+This could lead to build failure if <code>pom.xml</code> doesn&#8217;t specify all necessary dependencies and relies on transitive dependencies.
+Such a missing dependency may be considered a bug in the project.
+The solution is to explicitly add missing dependency to the <code>pom.xml</code>.
+This may be easily done by using <code>%pom_add_dep</code> macro.
+See the section about <a href="#_macros_for_pom_modification">macros for POM modification</a> for more information.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="error_requires_unknown">8.3. Requires cannot be generated</h3>
+<h3 id="_requires_cannot_be_generated">8.3. Requires cannot be generated</h3>
 <div class="listingblock">
 <div class="content">
 <pre>Following dependencies were not resolved and requires cannot be generated.
@@ -3805,10 +3429,9 @@ BuildRequires: org.apache.maven.doxia:doxia-core::tests:UNKNOWN</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Most often this error happens when one part of the package depends on an
-attached artifact which is not being installed. Automatic RPM requires generator
-then tries to generate requires on artifact which is not being installed. This
-would most likely result in a broken RPM package so generator halts the build.</p>
+<p>Most often this error happens when one part of the package depends on an attached artifact which is not being installed.
+Automatic RPM requires generator then tries to generate requires on artifact which is not being installed.
+This would most likely result in a broken RPM package so generator halts the build.</p>
 </div>
 <div class="paragraph">
 <p>There are usually two possible solutions for this problem:</p>
@@ -3816,45 +3439,41 @@ would most likely result in a broken RPM package so generator halts the build.</
 <div class="ulist">
 <ul>
 <li>
-<p>Install attached artifact in question. For the above error following macro
-would install artifacts with <code>tests</code> classifiers into <code>tests</code> subpackage.</p>
-<div class="literalblock">
+<p>Install attached artifact in question. For the above error following macro would install artifacts with <code>tests</code> classifiers into <code>tests</code> subpackage.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
 <div class="content">
 <pre>%mvn_package :::tests: %{name}-tests</pre>
 </div>
 </div>
-</li>
+<div class="ulist">
+<ul>
 <li>
-<p>Remove dependency on problematic artifact. This can involve <code>pom.xml</code>
-modifications, disabling tests or even code changes so it is usually easier
-to install the dependency.</p>
+<p>Remove dependency on problematic artifact. This can involve <code>pom.xml</code> modifications, disabling tests or even code changes so it is usually easier to install the dependency.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="error_scope_system">8.4. Dependencies with scope "system"</h3>
+<h3 id="_dependencies_with_scope_system">8.4. Dependencies with scope <code>system</code></h3>
 <div class="listingblock">
 <div class="content">
-<pre>[ERROR] Failed to execute goal
-org.fedoraproject.xmvn:xmvn-mojo:1.2.0:install (default-cli) on project
-pom: Some reactor artifacts have dependencies with scope "system". Such
-dependencies are not supported by XMvn installer. You should either
-remove any dependencies with scope "system" before the build or not run
-XMvn instaler. -&gt; [Help 1]</pre>
+<pre>[ERROR] Failed to execute goal org.fedoraproject.xmvn:xmvn-mojo:1.2.0:install (default-cli) on project pom: Some reactor artifacts have dependencies with scope "system".
+Such dependencies are not supported by XMvn installer.
+You should either remove any dependencies with scope "system" before the build or not run XMvn instaler. -&gt; [Help 1]</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Some Maven artifacts try to depend on exact system paths. Most usually this
-dependency is either on <code>com.sun:tools</code> or <code>sun.jdk:jconsole</code>. Dependencies with
-system scope cause issues with our tooling and requires generators so they are
-not supported.</p>
+<p>Some Maven artifacts try to depend on exact system paths.
+Most usually this dependency is either on <code>com.sun:tools</code> or <code>sun.jdk:jconsole</code>.
+Dependencies with system scope cause issues with our tooling and requires generators so they are not supported.</p>
 </div>
 <div class="paragraph">
-<p>Easiest way to solve this for above two dependencies is by removing and adding
-back the dependency without <code>&lt;scope&gt;</code> or <code>&lt;systemPath&gt;</code> nodes:</p>
+<p>Easiest way to solve this for above two dependencies is by removing and adding back the dependency without <code>&lt;scope&gt;</code> or <code>&lt;systemPath&gt;</code> nodes:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
 <pre>%pom_remove_dep com.sun:tools
 %pom_add_dep com.sun:tools</pre>
@@ -3867,26 +3486,20 @@ back the dependency without <code>&lt;scope&gt;</code> or <code>&lt;systemPath&g
 <h2 id="_migration_from_older_tools">9. Migration from older tools</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This section describes how to migrate packages that use older deprecated
-tools to current ones.</p>
+<p>This section describes how to migrate packages that use older deprecated tools to current ones.</p>
 </div>
 <div class="sect2">
-<h3 id="_add_maven_depmap_macro">9.1. add_maven_depmap macro</h3>
+<h3 id="_add_maven_depmap_macro">9.1. <code>%add_maven_depmap</code> macro</h3>
 <div class="paragraph">
-<p><code>%add_maven_depmap</code> macro was used to manually install Maven artifacts
-that were built with Apache Ant or <code>mvn-rpmbuild</code>. It
-is now deprecated and its invocations should be replaced with
-<code>%mvn_artifact</code> and <code>%mvn_install</code>.</p>
+<p><code>%add_maven_depmap</code> macro was used to manually install Maven artifacts that were built with Apache Ant or <code>mvn-rpmbuild</code>.
+It is now deprecated and its invocations should be replaced with <code>%mvn_artifact</code> and <code>%mvn_install</code>.</p>
 </div>
 <div class="paragraph">
-<p>Artifact files, Maven POM files and their installation directories no
-longer need to be manually installed, since that is done
-during run of <code>%mvn_install</code>. The installed files also don&#8217;t need to be
-explicitly enumerated in <code>%files</code> section. Generated file <code>.mfiles</code>
-should be used instead.</p>
+<p>Artifact files, Maven POM files and their installation directories no longer need to be manually installed, since that is done during run of <code>%mvn_install</code>.
+The installed files also don&#8217;t need to be explicitly enumerated in <code>%files</code> section. Generated file <code>.mfiles</code> should be used instead.</p>
 </div>
 <div class="paragraph">
-<p>Relevant parts of specfile using <code>%add_maven_depmap</code></p>
+<p>Relevant parts of specfile using <code>%add_maven_depmap</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3923,7 +3536,7 @@ cp -pr api/* $RPM_BUILD_ROOT%{_javadocdir}/%{name}
 </div>
 </div>
 <div class="paragraph">
-<p>The same specfile migrated to <code>%mvn_artifact</code> and <code>%mvn_install</code></p>
+<p>The same specfile migrated to <code>%mvn_artifact</code> and <code>%mvn_install</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3964,10 +3577,8 @@ ant test
 </div>
 <div class="paragraph">
 <div class="title">Aliases and subpackages</div>
-<p><code>%add_maven_depmap</code> had <code>-a</code> switch to specify artifact aliases and <code>-f</code>
-switch to support splitting artifacts across multiple subpackages. To
-achieve the same things with <code>%mvn_*</code> macros, see <a href="#mvn_alias">Additional Mappings</a>
-and <a href="#mvn_package">Assignment of the Maven Artifacts to the Subpackages</a>.</p>
+<p><code>%add_maven_depmap</code> had <code>-a</code> switch to specify artifact aliases and <code>-f</code> switch to support splitting artifacts across multiple subpackages.
+To achieve the same things with <code>%mvn_*</code> macros, see <a href="#_additional_mappings">Additional Mappings</a> and <a href="#_assignment_of_the_maven_artifacts_to_the_subpackages">Assignment of the Maven Artifacts to the Subpackages</a>.</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -3977,7 +3588,7 @@ and <a href="#mvn_package">Assignment of the Maven Artifacts to the Subpackages<
 </td>
 <td class="content">
 <div class="paragraph">
-<p>If project consists of multiple artifacts and parent POMs are among them, call <code>%mvn_artifact</code> on these parent POMs first.</p>
+<p>If the project consists of multiple artifacts and parent POMs are among them, call <code>%mvn_artifact</code> on these parent POMs first.</p>
 </div>
 </td>
 </tr>
@@ -3987,10 +3598,10 @@ and <a href="#mvn_package">Assignment of the Maven Artifacts to the Subpackages<
 </div>
 </div>
 <div class="sect1">
-<h2 id="manpages">Appendix A: Manpages</h2>
+<h2 id="_manpages">Appendix A: Manpages</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This section contains manpages for mvn_* and pom_* macros.</p>
+<p>This section contains manpages for <code>mvn_*</code> and <code>pom_*</code> macros.</p>
 </div>
 <div class="sect2">
 <h3 id="_mvn_alias">A.1. mvn_alias</h3>
@@ -5775,7 +5386,7 @@ JAVAPACKAGES                      01/25/2023                  POM_XPATH_SET(7)
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-10-06 13:02:05 +0200
+Last updated 2024-01-03 09:41:55 +0100
 </div>
 </div>
 </body>

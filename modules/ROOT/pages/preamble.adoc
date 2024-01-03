@@ -1,6 +1,5 @@
 [colophon]
 == Authors and contributing
-
 The authors of this document are:
 
 * Mikolaj Izdebski, Red Hat
@@ -9,27 +8,17 @@ The authors of this document are:
 * Ville Skyttä, JPackage Project
 * Michal Srb, Red Hat
 * Michael Simacek, Red Hat
+* Marián Konček, Red Hat
 
-This document is free software; see the
-https://github.com/fedora-java/howto/blob/master/LICENSE[license]
-for terms of use, distribution and/or modification.
+This document is free software; see the https://github.com/fedora-java/howto/blob/master/LICENSE[license] for terms of use, distribution and / or modification.
 
-The source code for this document is available in
-https://github.com/fedora-java/howto[git repository].
-Instructions for building it from sources are available in
-https://github.com/fedora-java/howto/blob/master/README.md[README file].
+The source code for this document is available in https://github.com/fedora-java/howto[git repository].
+Instructions for building it from sources are available in https://github.com/fedora-java/howto/blob/master/README.md[README file].
 
-This document is developed as part of Javapackages community project,
-which welcomes new contributors.  Requests and comments related to
-this document should be
-http://bugzilla.redhat.com/enter_bug.cgi?product=fedora&component=java-packaging-howto[reported
- at Red Hat Bugzilla].
+This document is developed as part of Javapackages community project, which welcomes new contributors.
+Requests and comments related to this document should be https://bugzilla.redhat.com/enter_bug.cgi?product=fedora&component=java-packaging-howto[reported at Red Hat Bugzilla].
 
-Before contributing please read the
-https://github.com/fedora-java/howto/blob/master/README.md[README file],
-which among other things includes basic rules which should be
-followed when working on this document.  You can send patches to
-https://bugzilla.redhat.com/[Red Hat Bugzilla].  They should be in git
-format and should be prepared against `master` branch in git.
-Alternatively you can also send pull requests at
-https://github.com/fedora-java/howto[Github repository].
+Before contributing please read the https://github.com/fedora-java/howto/blob/master/README.md[README file], which among other things includes basic rules which should be followed when working on this document.
+You can send patches to the https://bugzilla.redhat.com/[Red Hat Bugzilla].
+They should be in git format and should be prepared against `master` branch in git.
+Alternatively you can also send pull requests at https://github.com/fedora-java/howto[Github repository].
