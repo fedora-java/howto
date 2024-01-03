@@ -8,16 +8,6 @@ include::fedora_java_specifics.adoc[]
 
 include::fedora_java_packaging_specifics.adoc[]
 
-include::directory_layout.adoc[]
-
-include::jar_file_id.adoc[]
-
-include::dependency_handling.adoc[]
-
-include::javadoc_packages.adoc[]
-
-include::core_java_packages.adoc[]
-
 include::packaging_best_practices.adoc[]
 
 include::generic_java_build.adoc[]

@@ -1,8 +1,6 @@
 [appendix]
-[[manpages]]
 == Manpages
-
-This section contains manpages for +mvn_*+ and +pom_*+ macros.
+This section contains manpages for `mvn_*` and `pom_*` macros.
 
 === mvn_alias
 ++++++++++++++++++++++++++
