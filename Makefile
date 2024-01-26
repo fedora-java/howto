@@ -39,7 +39,7 @@ clean:
 	@rm -rfv build cache public $(generated_sources)
 
 index.html: $(pages) $(examples) $(generated_sources)
-	asciidoctor -a EXAMPLE='../examples/' -o $@ $(source_dir)/pages/index.adoc --failure-level=ERROR
+	asciidoctor -v -a EXAMPLE='../examples/' -o $@ $(source_dir)/pages/index.adoc --failure-level=ERROR
 
 $(call manpage_html,%):
 	COLUMNS=80 man -Tutf8 7 $(*F) | ansi2html >$@
