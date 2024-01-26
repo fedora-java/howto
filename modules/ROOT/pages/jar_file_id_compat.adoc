@@ -22,7 +22,7 @@ If the upstream is already inactive and the package is not required by anything,
 XMvn supports marking particular artifact as compat, performing the necessary steps to avoid clashes with the non-compat version.
 An artifact can be marked as compat by `%mvn_compat_version`.
 It accepts an artifact argument which will determine which artifact will be compat.
-The format for specifying artifact coordinates is the same as with <<mvn_alias,`%mvn_alias`>>.
+The format for specifying artifact coordinates is the same as with <<_mvn_alias,`%mvn_alias`>>.
 In the common case you will want to mark all artifacts as compat. You can specify multiple compat versions at a time.
 
 .Dependency resolution of compat artifacts

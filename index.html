@@ -1193,7 +1193,7 @@ src/org/fedoraproject/helloworld/HelloWorld.java</code></pre>
 <div class="paragraph">
 <p>We packed the project directory into file <code>helloworld.tar.gz</code>.</p>
 </div>
-<div class="listingblock">
+<div id="helloworld_spec" class="listingblock">
 <div class="title">Example spec file</div>
 <div class="content">
 <pre class="rouge highlight"><code data-lang="rpmspec"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno"> 1
@@ -1456,7 +1456,7 @@ To prevent mistakes in format, it is advised to use tool such as <code>rpmdev-bu
 </dl>
 </div>
 <div class="paragraph">
-<p>To build RPM from <a href="rpm_project/helloworld.spec">this <code>spec</code> file</a> save it in your current directory and run <code>rpmbuild</code>:</p>
+<p>To build RPM from <a href="#helloworld_spec">this <code>spec</code> file</a> save it in your current directory and run <code>rpmbuild</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1878,7 +1878,7 @@ Besides group ID and artifact ID, artifact coordinates may also include other op
 <div class="paragraph">
 <p>In Linux distributions it is important to stay close to upstreams providing software being packaged, so the ability to identify artifacts in the same way as upstream does is very important from the packaging point of view.
 Every artifact can optionally be identified by artifact coordinates assigned during package build.
-Packages built with Maven automatically use this feature, but all other packages, even these built with pure <code>javac</code>, can use this feature too (see description of <a href="#_installing_additional artifacts"><code>%mvn_artifact</code></a> and <a href="#_add_maven_depmap_macro"><code>%add_maven_depmap</code></a> macros).</p>
+Packages built with Maven automatically use this feature, but all other packages, even these built with pure <code>javac</code>, can use this feature too (see description of <a href="#_installing_additional_artifacts"><code>%mvn_artifact</code></a> and <a href="#_add_maven_depmap_macro"><code>%add_maven_depmap</code></a> macros).</p>
 </div>
 </div>
 <div class="sect3">
@@ -1968,7 +1968,7 @@ If the upstream is already inactive and the package is not required by anything,
 <p>XMvn supports marking particular artifact as compat, performing the necessary steps to avoid clashes with the non-compat version.
 An artifact can be marked as compat by <code>%mvn_compat_version</code>.
 It accepts an artifact argument which will determine which artifact will be compat.
-The format for specifying artifact coordinates is the same as with <a href="#mvn_alias"><code>%mvn_alias</code></a>.
+The format for specifying artifact coordinates is the same as with <a href="#_mvn_alias"><code>%mvn_alias</code></a>.
 In the common case you will want to mark all artifacts as compat. You can specify multiple compat versions at a time.</p>
 </div>
 <div class="paragraph">
@@ -2105,7 +2105,7 @@ It does not help you to figure out what the <code>BuildRequires</code> are befor
 <h3 id="_javadoc_packages">3.4. Javadoc packages</h3>
 <div class="paragraph">
 <p>Javadoc subpackages in Fedora provide automatically generated API documentation for Java libraries and applications.
-<a href="#openjdk">Java Development Kit</a> comes with tool called <code>javadoc</code>.
+<a href="#_java_implementation_in_fedora">Java Development Kit</a> comes with tool called <code>javadoc</code>.
 This tool can be used for generating the documentation from specially formated comments in Java source files.
 Output of this tool, together with license files, usually represents only content of javadoc subpackages.
 Note <code>javadoc</code> invocation is typically handled by build system and package maintainer does not need to deal with it directly.</p>
@@ -3405,7 +3405,7 @@ This means that project doesn&#8217;t have to be buildable if different version 
 If the library in local repository is older than the one required by project, then the library could be updated.
 If the project requires older version, then the project should be ported to latest stable version of the library (this may require cooperation with project&#8217;s upstream).
 If none of these is possible from some reason, it is still possible to introduce new <code>compat</code> package.
-See <a href="#compatibility_versions">compat packages</a> section for more information on this topic.</p>
+See <a href="#_compatibility_versions">compat packages</a> section for more information on this topic.</p>
 </div>
 <div class="paragraph">
 <p>Sometimes <code>pom.xml</code> doesn&#8217;t list all the necessary dependencies, even if it should.

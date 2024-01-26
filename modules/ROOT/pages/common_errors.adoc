@@ -55,7 +55,7 @@ This means that project doesn't have to be buildable if different version is pro
 If the library in local repository is older than the one required by project, then the library could be updated.
 If the project requires older version, then the project should be ported to latest stable version of the library (this may require cooperation with project's upstream).
 If none of these is possible from some reason, it is still possible to introduce new `compat` package.
-See <<compatibility_versions, compat packages>> section for more information on this topic.
+See <<_compatibility_versions, compat packages>> section for more information on this topic.
 
 Sometimes `pom.xml` doesn't list all the necessary dependencies, even if it should.
 Dependencies can also depend on some other and typically all these will be available to the project which is being built.

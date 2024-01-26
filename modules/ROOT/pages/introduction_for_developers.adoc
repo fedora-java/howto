@@ -35,6 +35,7 @@ src/org/fedoraproject/helloworld/HelloWorld.java
 
 We packed the project directory into file `helloworld.tar.gz`.
 
+[#helloworld_spec]
 .Example spec file
 [source,rpmspec,numbered]
 ----
@@ -86,7 +87,7 @@ Unit test are usually run in `%build` section, so if there are no integration te
 * Has prescribed format.
 To prevent mistakes in format, it is advised to use tool such as `rpmdev-bumpspec` from package rpmdevtools to append new changelog entries instead of editing it by hand.
 
-To build RPM from link:rpm_project/helloworld.spec[this `spec` file] save it in your current directory and run `rpmbuild`:
+To build RPM from <<helloworld_spec, this `spec` file>> save it in your current directory and run `rpmbuild`:
 [source,shell]
 ----
 $ rpmbuild -bb helloworld.spec
