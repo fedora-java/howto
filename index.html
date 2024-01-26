@@ -1511,7 +1511,7 @@ It has several other options, which we will cover later on.</p>
 </div>
 <div class="paragraph">
 <p><code>dnf repoquery</code> is a tool for querying information from RPM repositories.
-Maintainer of Java packages might typically query the repository for information like "which package contains Maven artifact `groupId:artifactId`".</p>
+Maintainers of Java packages might typically query the repository for information like "which package contains the Maven artifact <code>groupId:artifactId</code>".</p>
 </div>
 <div class="listingblock">
 <div class="title">Find out which package provides given artifact</div>
@@ -1706,8 +1706,8 @@ See the following example:</p>
 </div>
 </div>
 <div class="paragraph">
-<p><code>log4j</code> corresponds to <code>log4j.jar</code> stored in `%{_javadir}`.
-If the JAR file is stored in subdirectory under `%{_javadir}`, it is neccessary to pass <code>subdirectory/jarname</code> as an argument to <code>build-classpath</code>.
+<p><code>log4j</code> corresponds to <code>log4j.jar</code> stored in <code>%{_javadir}</code>.
+If the JAR file is stored in subdirectory under <code>%{_javadir}</code>, it is neccessary to pass <code>subdirectory/jarname</code> as an argument to <code>build-classpath</code>.
 Example:</p>
 </div>
 <div class="listingblock">
