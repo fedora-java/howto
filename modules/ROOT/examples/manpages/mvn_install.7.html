@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+MVN_INSTALL(7)                Java Packages Tools               MVN_INSTALL(7)
+
+
+
+<span class="ansi1">NAME</span>
+       mvn_install - install Maven artifacts
+
+<span class="ansi1">SYNOPSIS</span>
+       <span class="ansi1">%mvn_install </span>[-X] [-J directory]
+
+<span class="ansi1">DESCRIPTION</span>
+       <span class="ansi1">mvn_install </span>macro installs Maven artifacts into <span class="ansi1">%buildroot</span>.
+
+       Specification of artifacts to be installed is taken from <span class="ansi1">.xmvn-reactor</span>
+       file. This file can be populated using <span class="ansi1">mvn_build </span>and/or <span class="ansi1">mvn_artifact</span>
+       macros.
+
+       Specification how artifacts should be installed is taken from installer
+       settings section in XMvn configuration. See XMvn Configuration
+       Reference for more information. Macros <span class="ansi1">mvn_alias</span>(7), <span class="ansi1">mvn_build</span>(7),
+       <span class="ansi1">mvn_compat_version</span>(7), <span class="ansi1">mvn_config</span>(7), <span class="ansi1">mvn_file</span>(7) and <span class="ansi1">mvn_package</span>(7)
+       are capable of writing configuration that can affect behavior of
+       <span class="ansi1">mvn_install</span>.
+
+<span class="ansi1">OPTIONS</span>
+       <span class="ansi1">-X</span>
+           Enable debugging output. This option causes XMvn installer to write
+           verbose debugging information to standard output.
+
+       <span class="ansi1">-J </span>directory
+           Specify alternative API documentation directory. By default API
+           documentation is searched for in <span class="ansi1">target/site/apidocs </span>directory. The
+           <span class="ansi1">-J </span>option allows to override this default location.
+
+<span class="ansi1">AUTHOR</span>
+       Written by Mikolaj Izdebski.
+
+<span class="ansi1">REPORTING BUGS</span>
+       Bugs should be reported through Java Packages Tools issue tracker at
+       Github: <span class="ansi34"></span><span class="ansi1 ansi34">https://github.com/fedora-java/javapackages/issues</span><span class="ansi1"></span>.
+
+<span class="ansi1">SEE ALSO</span>
+       <span class="ansi1">gradle_build</span>(7), <span class="ansi1">mvn_alias</span>(7), <span class="ansi1">mvn_artifact</span>(7), <span class="ansi1">mvn_build</span>(7),
+       <span class="ansi1">mvn_compat_version</span>(7), <span class="ansi1">mvn_config</span>(7), <span class="ansi1">mvn_file</span>(7), <span class="ansi1">mvn_package</span>(7),
+       <span class="ansi1">xmvn</span>(1).
+
+
+
+JAVAPACKAGES                      01/25/2023                    MVN_INSTALL(7)
+
+</pre>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+POM_XPATH_SET(7)              Java Packages Tools             POM_XPATH_SET(7)
+
+
+
+<span class="ansi1">NAME</span>
+       pom_xpath_set - set contents of XML node from XML file
+
+<span class="ansi1">SYNOPSIS</span>
+       <span class="ansi1">%pom_xpath_set </span>XPath new-contents [XML-file-location]
+
+<span class="ansi1">DESCRIPTION</span>
+       This macro patches specified POM file replacing contents of all XML
+       nodes described by the XPath expression with given new text content.
+       This works on both elements and attributes.
+
+       XPath is an expression describing a set of XML nodes to be removed from
+       the POM file. It must be a properly formated XPath 1.0 expression, as
+       described in <span class="ansi34"></span><span class="ansi1 ansi34">http://www.w3.org/TR/xpath/</span><span class="ansi1"></span>.
+
+       Maven POM files use specific XML namespace
+       http://maven.apache.org/POM/4.0.0 as default. This namespace needs to
+       be explicitly specified in XPath expressions by prefixing all node
+       names with <span class="ansi1">pom </span>(i.e. <span class="ansi1">pom:modelVersion</span>).
+
+       Many other XML formats also use namespaces which you have to explicitly
+       specify. This script will use the namespace prefix names from the <span class="ansi1">xmlns</span>
+       declarations in the document’s root element. So if the document begins
+       with &lt;root xmlns:my="myurl.com"&gt; you would select the root node with
+       XPath expression <span class="ansi1">/my:root</span>. If the document specifies a default
+       namespace (eg xmlns="myurl.com") use the prefix named <span class="ansi1">default </span>to acces
+       elements in that namespace.
+
+       XML location can be either a full path to the XML, or a path to the
+       directory containing <span class="ansi1">pom.xml </span>or <span class="ansi1">ivy.xml</span>. If XML location is not given
+       then <span class="ansi1">pom.xml </span>or <span class="ansi1">ivy.xml </span>from current working directory is used. When
+       both <span class="ansi1">pom.xml </span>and <span class="ansi1">ivy.xml </span>are present, <span class="ansi1">pom.xml </span>is processed. You can
+       specify more file locations.
+
+<span class="ansi1">AUTHOR</span>
+       Written by Mikolaj Izdebski.
+
+<span class="ansi1">REPORTING BUGS</span>
+       Bugs should be reported through Java Packages Tools issue tracker at
+       Github: <span class="ansi34"></span><span class="ansi1 ansi34">https://github.com/fedora-java/javapackages/issues</span><span class="ansi1"></span>.
+
+<span class="ansi1">SEE ALSO</span>
+       <span class="ansi1">pom_add_dep</span>(7), <span class="ansi1">pom_add_parent</span>(7), <span class="ansi1">pom_add_plugin</span>(7),
+       <span class="ansi1">pom_disable_module</span>(7), <span class="ansi1">pom_remove_dep</span>(7), <span class="ansi1">pom_remove_parent</span>(7),
+       <span class="ansi1">pom_remove_plugin</span>(7), <span class="ansi1">pom_set_parent</span>(7), <span class="ansi1">pom_xpath_inject</span>(7),
+       <span class="ansi1">pom_xpath_remove</span>(7), <span class="ansi1">pom_xpath_replace</span>(7).
+
+
+
+JAVAPACKAGES                      01/25/2023                  POM_XPATH_SET(7)
+
+</pre>
+</body>
+
+</html>

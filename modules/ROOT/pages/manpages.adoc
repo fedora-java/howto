@@ -1,0 +1,3 @@
+[appendix]
+== Manpages
+This section contains manpages for `mvn_*` and `pom_*` macros.

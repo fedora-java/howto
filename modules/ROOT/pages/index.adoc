@@ -1,0 +1,18 @@
+[.text-justify]
+= Java Packaging HOWTO
+:doctype: book
+:source-highlighter: rouge
+:toc2:
+:toclevels: 3
+:icons:
+:theme: flask
+
+include::preamble.adoc[]
+
+[abstract]
+== Abstract
+This document aims to help developers create and maintain Java packages in Fedora.
+It *does not* supersede or replace link:https://docs.fedoraproject.org/en-US/packaging-guidelines/Java/[Java Packaging Guidelines], but rather aims to document tools and techniques used for packaging Java software on Fedora.
+
+:sectnums:
+include::sections.adoc[]

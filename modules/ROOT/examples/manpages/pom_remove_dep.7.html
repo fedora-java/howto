@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+POM_REMOVE_DEP(7)             Java Packages Tools            POM_REMOVE_DEP(7)
+
+
+
+<span class="ansi1">NAME</span>
+       pom_remove_dep - remove dependency on Maven artifact from POM file
+
+<span class="ansi1">SYNOPSIS</span>
+       <span class="ansi1">%pom_remove_dep </span>[OPTIONS] [groupId]<span class="ansi1">:</span>[artifactId][<span class="ansi1">:</span>version[<span class="ansi1">:</span>scope]]
+       [POM-location]...
+
+       <span class="ansi1">%pom_remove_dep </span>[OPTIONS] [org]<span class="ansi1">:</span>[name][<span class="ansi1">:</span>rev[<span class="ansi1">:</span>conf[<span class="ansi1">:</span>transitive]]]
+       [Ivy-module-location]...
+
+<span class="ansi1">OPTIONS</span>
+       <span class="ansi1">-r</span>
+           Work in recursive mode. That means that dependency is also removed
+           from all enabled submodules of given POM file(s).
+
+       <span class="ansi1">-f</span>
+           Do not throw an error when one of the specified files doesn’t
+           contain given dependency.
+
+<span class="ansi1">DESCRIPTION</span>
+       This macro patches specified POM file not to contain dependencies on
+       given Maven artifact.
+
+       groupId and artifactId are identifiers of Maven group and artifact of
+       the module on which dependency is to be removed. If they are ommited
+       then all identifiers are matched.
+
+       When modifying Ivy modules, the org and name correspond to the Maven
+       groupId and artifactId.
+
+       POM location can be either a full path to the POM or Ivy file, or a
+       path to the directory containing <span class="ansi1">pom.xml </span>or <span class="ansi1">ivy.xml</span>. If POM location is
+       not given then <span class="ansi1">pom.xml </span>or <span class="ansi1">ivy.xml </span>from current working directory is
+       used. When both <span class="ansi1">pom.xml </span>and <span class="ansi1">ivy.xml </span>are present, <span class="ansi1">pom.xml </span>is processed.
+       You can specify more file locations. If the dependency is not found in
+       all of given files, the command raises an error. This can be overriden
+       with the -f option.
+
+<span class="ansi1">EXAMPLES</span>
+       <span class="ansi1">%pom_remove_dep com.example: </span>- this call removes dependency on all
+       artifacts with groupId <span class="ansi1">com.example </span>from POM in current working
+       directory.
+
+       <span class="ansi1">%pom_remove_dep boo:bar target/location </span>- this call removes dependency
+       on artifacts with groupId <span class="ansi1">foo </span>and artifactId <span class="ansi1">bar </span>from
+       <span class="ansi1">target/location/pom.xml</span>.
+
+<span class="ansi1">AUTHOR</span>
+       Written by Mikolaj Izdebski.
+
+<span class="ansi1">REPORTING BUGS</span>
+       Bugs should be reported through Java Packages Tools issue tracker at
+       Github: <span class="ansi34"></span><span class="ansi1 ansi34">https://github.com/fedora-java/javapackages/issues</span><span class="ansi1"></span>.
+
+<span class="ansi1">SEE ALSO</span>
+       <span class="ansi1">pom_add_dep</span>(7), <span class="ansi1">pom_add_parent</span>(7), <span class="ansi1">pom_add_plugin</span>(7),
+       <span class="ansi1">pom_disable_module</span>(7), <span class="ansi1">pom_remove_parent</span>(7), <span class="ansi1">pom_remove_plugin</span>(7),
+       <span class="ansi1">pom_change_dep</span>(7), <span class="ansi1">pom_set_parent</span>(7), <span class="ansi1">pom_xpath_inject</span>(7),
+       <span class="ansi1">pom_xpath_remove</span>(7), <span class="ansi1">pom_xpath_replace</span>(7), <span class="ansi1">pom_xpath_set</span>(7).
+
+
+
+JAVAPACKAGES                      01/25/2023                 POM_REMOVE_DEP(7)
+
+</pre>
+</body>
+
+</html>
