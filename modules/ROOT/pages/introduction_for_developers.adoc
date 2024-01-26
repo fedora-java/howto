@@ -116,7 +116,7 @@ See `rpmbuild` 's manual page for all available options.
 Fedora comes with several useful tools which can provide great assistance in getting information from RPM repositories.
 
 `dnf repoquery` is a tool for querying information from RPM repositories.
-Maintainer of Java packages might typically query the repository for information like "which package contains Maven artifact `groupId:artifactId`".
+Maintainers of Java packages might typically query the repository for information like "which package contains the Maven artifact ``groupId:artifactId``".
 
 .Find out which package provides given artifact
 [source,shell]
