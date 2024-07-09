@@ -1,85 +1,64 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title></title>
-<style type="text/css">
-.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
-.body_foreground { color: #AAAAAA; }
-.body_background { background-color: #000000; }
-.inv_foreground { color: #000000; }
-.inv_background { background-color: #AAAAAA; }
-.ansi1 { font-weight: bold; }
-.ansi34 { color: #0000aa; }
-</style>
-</head>
-<body class="body_foreground body_background" style="font-size: normal;" >
-<pre class="ansi2html-content">
-POM_XPATH_REPLACE(7)          Java Packages Tools         POM_XPATH_REPLACE(7)
+<pre style="color:#bbb;white-space:pre-wrap;word-wrap:break-word;overflow-wrap:break-word">POM_XPATH_REPLACE(7)          Java Packages Tools         POM_XPATH_REPLACE(7)
 
 
 
-<span class="ansi1">NAME</span>
+<span style="font-weight:bold">NAME</span>
        pom_xpath_replace - replace XML node from XML file with given code
 
-<span class="ansi1">SYNOPSIS</span>
-       <span class="ansi1">%pom_xpath_replace </span>XPath XML-code [XML-file-location]...
+<span style="font-weight:bold">SYNOPSIS</span>
+       <span style="font-weight:bold">%pom_xpath_replace </span>XPath XML-code [XML-file-location]...
 
-<span class="ansi1">OPTIONS</span>
-       <span class="ansi1">-r</span>
+<span style="font-weight:bold">OPTIONS</span>
+       <span style="font-weight:bold">-r</span>
            Work in recursive mode. That means that given node is also replaced
            in all enabled submodules of given POM file(s). Has no effect if
            the file is not Maven POM.
 
-       <span class="ansi1">-f</span>
+       <span style="font-weight:bold">-f</span>
            Do not throw an error when one of the specified files doesn’t
            contain given node.
 
-<span class="ansi1">DESCRIPTION</span>
+<span style="font-weight:bold">DESCRIPTION</span>
        This macro patches specified POM file removing all XML nodes described
        by the XPath expression and injecting given XML code in their place.
 
        XPath is an expression describing a set of XML nodes to be removed from
        the POM file. It must be a properly formated XPath 1.0 expression, as
-       described in <span class="ansi34"></span><span class="ansi1 ansi34">http://www.w3.org/TR/xpath/</span><span class="ansi1"></span>.
+       described in <span style="color:#00a"></span><span style="color:#55f">http://www.w3.org/TR/xpath/</span><span style="font-weight:bold"></span>.
 
        Maven POM files use specific XML namespace
        http://maven.apache.org/POM/4.0.0 as default. This namespace needs to
        be explicitly specified in XPath expressions by prefixing all node
-       names with <span class="ansi1">pom </span>(i.e. <span class="ansi1">pom:modelVersion</span>).
+       names with <span style="font-weight:bold">pom </span>(i.e. <span style="font-weight:bold">pom:modelVersion</span>).
 
        Many other XML formats also use namespaces which you have to explicitly
-       specify. This script will use the namespace prefix names from the <span class="ansi1">xmlns</span>
+       specify. This script will use the namespace prefix names from the <span style="font-weight:bold">xmlns</span>
        declarations in the document’s root element. So if the document begins
        with &lt;root xmlns:my="myurl.com"&gt; you would select the root node with
-       XPath expression <span class="ansi1">/my:root</span>. If the document specifies a default
-       namespace (eg xmlns="myurl.com") use the prefix named <span class="ansi1">default </span>to acces
+       XPath expression <span style="font-weight:bold">/my:root</span>. If the document specifies a default
+       namespace (eg xmlns="myurl.com") use the prefix named <span style="font-weight:bold">default </span>to acces
        elements in that namespace.
 
        XML location can be either a full path to the XML, or a path to the
-       directory containing <span class="ansi1">pom.xml </span>or <span class="ansi1">ivy.xml</span>. If XML location is not given
-       then <span class="ansi1">pom.xml </span>or <span class="ansi1">ivy.xml </span>from current working directory is used. When
-       both <span class="ansi1">pom.xml </span>and <span class="ansi1">ivy.xml </span>are present, <span class="ansi1">pom.xml </span>is processed. You can
+       directory containing <span style="font-weight:bold">pom.xml </span>or <span style="font-weight:bold">ivy.xml</span>. If XML location is not given
+       then <span style="font-weight:bold">pom.xml </span>or <span style="font-weight:bold">ivy.xml </span>from current working directory is used. When
+       both <span style="font-weight:bold">pom.xml </span>and <span style="font-weight:bold">ivy.xml </span>are present, <span style="font-weight:bold">pom.xml </span>is processed. You can
        specify more file locations.
 
-<span class="ansi1">AUTHOR</span>
+<span style="font-weight:bold">AUTHOR</span>
        Written by Mikolaj Izdebski.
 
-<span class="ansi1">REPORTING BUGS</span>
+<span style="font-weight:bold">REPORTING BUGS</span>
        Bugs should be reported through Java Packages Tools issue tracker at
-       Github: <span class="ansi34"></span><span class="ansi1 ansi34">https://github.com/fedora-java/javapackages/issues</span><span class="ansi1"></span>.
+       Github: <span style="color:#00a"></span><span style="color:#55f">https://github.com/fedora-java/javapackages/issues</span><span style="font-weight:bold"></span>.
 
-<span class="ansi1">SEE ALSO</span>
-       <span class="ansi1">pom_add_dep</span>(7), <span class="ansi1">pom_add_parent</span>(7), <span class="ansi1">pom_add_plugin</span>(7),
-       <span class="ansi1">pom_disable_module</span>(7), <span class="ansi1">pom_remove_dep</span>(7), <span class="ansi1">pom_remove_parent</span>(7),
-       <span class="ansi1">pom_remove_plugin</span>(7), <span class="ansi1">pom_change_dep</span>(7), <span class="ansi1">pom_set_parent</span>(7),
-       <span class="ansi1">pom_xpath_inject</span>(7), <span class="ansi1">pom_xpath_remove</span>(7), <span class="ansi1">pom_xpath_set</span>(7).
+<span style="font-weight:bold">SEE ALSO</span>
+       <span style="font-weight:bold">pom_add_dep</span>(7), <span style="font-weight:bold">pom_add_parent</span>(7), <span style="font-weight:bold">pom_add_plugin</span>(7),
+       <span style="font-weight:bold">pom_disable_module</span>(7), <span style="font-weight:bold">pom_remove_dep</span>(7), <span style="font-weight:bold">pom_remove_parent</span>(7),
+       <span style="font-weight:bold">pom_remove_plugin</span>(7), <span style="font-weight:bold">pom_change_dep</span>(7), <span style="font-weight:bold">pom_set_parent</span>(7),
+       <span style="font-weight:bold">pom_xpath_inject</span>(7), <span style="font-weight:bold">pom_xpath_remove</span>(7), <span style="font-weight:bold">pom_xpath_set</span>(7).
 
 
 
 JAVAPACKAGES                      01/25/2023              POM_XPATH_REPLACE(7)
-
 </pre>
-</body>
-
-</html>

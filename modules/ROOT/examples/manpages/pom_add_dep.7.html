@@ -1,46 +1,29 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title></title>
-<style type="text/css">
-.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
-.body_foreground { color: #AAAAAA; }
-.body_background { background-color: #000000; }
-.inv_foreground { color: #000000; }
-.inv_background { background-color: #AAAAAA; }
-.ansi1 { font-weight: bold; }
-.ansi34 { color: #0000aa; }
-</style>
-</head>
-<body class="body_foreground body_background" style="font-size: normal;" >
-<pre class="ansi2html-content">
-POM_ADD_DEP(7)                Java Packages Tools               POM_ADD_DEP(7)
+<pre style="color:#bbb;white-space:pre-wrap;word-wrap:break-word;overflow-wrap:break-word">POM_ADD_DEP(7)                Java Packages Tools               POM_ADD_DEP(7)
 
 
 
-<span class="ansi1">NAME</span>
+<span style="font-weight:bold">NAME</span>
        pom_add_dep - add dependency to Maven POM file or Ivy module
 
-<span class="ansi1">SYNOPSIS</span>
-       <span class="ansi1">%pom_add_dep </span>groupId<span class="ansi1">:</span>artifactId[<span class="ansi1">:</span>version[<span class="ansi1">:</span>scope]] [POM-location]...
+<span style="font-weight:bold">SYNOPSIS</span>
+       <span style="font-weight:bold">%pom_add_dep </span>groupId<span style="font-weight:bold">:</span>artifactId[<span style="font-weight:bold">:</span>version[<span style="font-weight:bold">:</span>scope]] [POM-location]...
        [extra-XML]
 
-       <span class="ansi1">%pom_add_dep </span>org<span class="ansi1">:</span>name[<span class="ansi1">:</span>rev[<span class="ansi1">:</span>conf[<span class="ansi1">:</span>transitive]]]
+       <span style="font-weight:bold">%pom_add_dep </span>org<span style="font-weight:bold">:</span>name[<span style="font-weight:bold">:</span>rev[<span style="font-weight:bold">:</span>conf[<span style="font-weight:bold">:</span>transitive]]]
        [Ivy-module-location]... [extra-XML]
 
-       <span class="ansi1">%pom_add_dep_mgmt </span>groupId<span class="ansi1">:</span>articId[<span class="ansi1">:</span>version[<span class="ansi1">:</span>scope]] [POM-location]...
+       <span style="font-weight:bold">%pom_add_dep_mgmt </span>groupId<span style="font-weight:bold">:</span>articId[<span style="font-weight:bold">:</span>version[<span style="font-weight:bold">:</span>scope]] [POM-location]...
        [extra-XML]
 
-<span class="ansi1">DESCRIPTION</span>
+<span style="font-weight:bold">DESCRIPTION</span>
        These macros patch specified POM or Ivy file adding a dependency on
-       given Maven artifact specified by artifact coordinates. <span class="ansi1">pom_add_dep</span>
-       adds the dependency to <span class="ansi1">&lt;dependencies&gt; </span>XML node, while <span class="ansi1">pom_add_dep_mgmt</span>
-       adds it to <span class="ansi1">&lt;dependencyManagement&gt;</span>.
+       given Maven artifact specified by artifact coordinates. <span style="font-weight:bold">pom_add_dep</span>
+       adds the dependency to <span style="font-weight:bold">&lt;dependencies&gt; </span>XML node, while <span style="font-weight:bold">pom_add_dep_mgmt</span>
+       adds it to <span style="font-weight:bold">&lt;dependencyManagement&gt;</span>.
 
        groupId and artifactId are identifiers of Maven artifact on which
        dependency is to be added. They must be specified. If version is not
-       specified then default value of <span class="ansi1">"any" </span>is used. If scope is not
+       specified then default value of <span style="font-weight:bold">"any" </span>is used. If scope is not
        specified then no scope is defined (Maven defaults to "compile" in this
        case).
 
@@ -53,37 +36,33 @@ POM_ADD_DEP(7)                Java Packages Tools               POM_ADD_DEP(7)
        unspecified Ivy defaults to true.
 
        POM location can be either a full path to the POM or Ivy file, or a
-       path to the directory containing <span class="ansi1">pom.xml </span>or <span class="ansi1">ivy.xml</span>. If POM location is
-       not given then <span class="ansi1">pom.xml </span>or <span class="ansi1">ivy.xml </span>from current working directory is
-       used. When both <span class="ansi1">pom.xml </span>and <span class="ansi1">ivy.xml </span>are present, <span class="ansi1">pom.xml </span>is processed.
+       path to the directory containing <span style="font-weight:bold">pom.xml </span>or <span style="font-weight:bold">ivy.xml</span>. If POM location is
+       not given then <span style="font-weight:bold">pom.xml </span>or <span style="font-weight:bold">ivy.xml </span>from current working directory is
+       used. When both <span style="font-weight:bold">pom.xml </span>and <span style="font-weight:bold">ivy.xml </span>are present, <span style="font-weight:bold">pom.xml </span>is processed.
        You can specify more file locations which will be processed.
 
-       Extra XML is additional XML code to be added into the <span class="ansi1">&lt;dependency&gt;</span>
+       Extra XML is additional XML code to be added into the <span style="font-weight:bold">&lt;dependency&gt;</span>
        node. This parameter can be ommited, in which case no extra XML is
        appended.
 
-<span class="ansi1">EXAMPLES</span>
-       <span class="ansi1">%pom_add_dep foo:bar baz </span>- this call adds dependency on artifact
-       <span class="ansi1">foo:bar </span>to <span class="ansi1">baz/pom.xml </span>file.
+<span style="font-weight:bold">EXAMPLES</span>
+       <span style="font-weight:bold">%pom_add_dep foo:bar baz </span>- this call adds dependency on artifact
+       <span style="font-weight:bold">foo:bar </span>to <span style="font-weight:bold">baz/pom.xml </span>file.
 
-<span class="ansi1">AUTHOR</span>
+<span style="font-weight:bold">AUTHOR</span>
        Written by Mikolaj Izdebski.
 
-<span class="ansi1">REPORTING BUGS</span>
+<span style="font-weight:bold">REPORTING BUGS</span>
        Bugs should be reported through Java Packages Tools issue tracker at
-       Github: <span class="ansi34"></span><span class="ansi1 ansi34">https://github.com/fedora-java/javapackages/issues</span><span class="ansi1"></span>.
+       Github: <span style="color:#00a"></span><span style="color:#55f">https://github.com/fedora-java/javapackages/issues</span><span style="font-weight:bold"></span>.
 
-<span class="ansi1">SEE ALSO</span>
-       <span class="ansi1">pom_add_parent</span>(7), <span class="ansi1">pom_add_plugin</span>(7), <span class="ansi1">pom_disable_module</span>(7),
-       <span class="ansi1">pom_remove_dep</span>(7), <span class="ansi1">pom_remove_parent</span>(7), <span class="ansi1">pom_remove_plugin</span>(7),
-       <span class="ansi1">pom_change_dep</span>(7), <span class="ansi1">pom_set_parent</span>(7), <span class="ansi1">pom_xpath_inject</span>(7),
-       <span class="ansi1">pom_xpath_remove</span>(7), <span class="ansi1">pom_xpath_replace</span>(7), <span class="ansi1">pom_xpath_set</span>(7).
+<span style="font-weight:bold">SEE ALSO</span>
+       <span style="font-weight:bold">pom_add_parent</span>(7), <span style="font-weight:bold">pom_add_plugin</span>(7), <span style="font-weight:bold">pom_disable_module</span>(7),
+       <span style="font-weight:bold">pom_remove_dep</span>(7), <span style="font-weight:bold">pom_remove_parent</span>(7), <span style="font-weight:bold">pom_remove_plugin</span>(7),
+       <span style="font-weight:bold">pom_change_dep</span>(7), <span style="font-weight:bold">pom_set_parent</span>(7), <span style="font-weight:bold">pom_xpath_inject</span>(7),
+       <span style="font-weight:bold">pom_xpath_remove</span>(7), <span style="font-weight:bold">pom_xpath_replace</span>(7), <span style="font-weight:bold">pom_xpath_set</span>(7).
 
 
 
 JAVAPACKAGES                      01/25/2023                    POM_ADD_DEP(7)
-
 </pre>
-</body>
-
-</html>

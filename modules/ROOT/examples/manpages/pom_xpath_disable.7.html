@@ -1,32 +1,15 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title></title>
-<style type="text/css">
-.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
-.body_foreground { color: #AAAAAA; }
-.body_background { background-color: #000000; }
-.inv_foreground { color: #000000; }
-.inv_background { background-color: #AAAAAA; }
-.ansi1 { font-weight: bold; }
-.ansi34 { color: #0000aa; }
-</style>
-</head>
-<body class="body_foreground body_background" style="font-size: normal;" >
-<pre class="ansi2html-content">
-POM_XPATH_DISABLE(7)          Java Packages Tools         POM_XPATH_DISABLE(7)
+<pre style="color:#bbb;white-space:pre-wrap;word-wrap:break-word;overflow-wrap:break-word">POM_XPATH_DISABLE(7)          Java Packages Tools         POM_XPATH_DISABLE(7)
 
 
 
-<span class="ansi1">NAME</span>
+<span style="font-weight:bold">NAME</span>
        pom_xpath_disable - Disable all modules whose POM files satisfy given
        XPath condition
 
-<span class="ansi1">SYNOPSIS</span>
-       <span class="ansi1">%pom_xpath_disable </span>XPath-expression [POM-location]...
+<span style="font-weight:bold">SYNOPSIS</span>
+       <span style="font-weight:bold">%pom_xpath_disable </span>XPath-expression [POM-location]...
 
-<span class="ansi1">DESCRIPTION</span>
+<span style="font-weight:bold">DESCRIPTION</span>
        This macro recursively walks all enabled submodules of given POM and
        evaluates given XPath expression on them. If the expression returns a
        true value, matching submodule is disabled. Values considered true are
@@ -40,36 +23,32 @@ POM_XPATH_DISABLE(7)          Java Packages Tools         POM_XPATH_DISABLE(7)
        error is also raised.
 
        POM location can be either a full path to the POM file, or a path to
-       the directory containing <span class="ansi1">pom.xml</span>. If POM location is not given then
-       <span class="ansi1">pom.xml </span>from current working directory is used. You can specify more
+       the directory containing <span style="font-weight:bold">pom.xml</span>. If POM location is not given then
+       <span style="font-weight:bold">pom.xml </span>from current working directory is used. You can specify more
        file locations which will be processed.
 
-<span class="ansi1">EXAMPLES</span>
-       <span class="ansi1">%pom_xpath_disable "/pom:project/pom:classifier = 'test'" </span>- this call
-       disables all modules with classifier <span class="ansi1">test</span>
+<span style="font-weight:bold">EXAMPLES</span>
+       <span style="font-weight:bold">%pom_xpath_disable "/pom:project/pom:classifier = 'test'" </span>- this call
+       disables all modules with classifier <span style="font-weight:bold">test</span>
 
-       <span class="ansi1">%pom_xpath_disable /pom:project/pom:packaging </span>- this call disables all
+       <span style="font-weight:bold">%pom_xpath_disable /pom:project/pom:packaging </span>- this call disables all
        sumbodules that explicitly specify packaging
 
-<span class="ansi1">AUTHOR</span>
+<span style="font-weight:bold">AUTHOR</span>
        Written by Michael Simacek.
 
-<span class="ansi1">REPORTING BUGS</span>
+<span style="font-weight:bold">REPORTING BUGS</span>
        Bugs should be reported through Java Packages Tools issue tracker at
-       Github: <span class="ansi34"></span><span class="ansi1 ansi34">https://github.com/fedora-java/javapackages/issues</span><span class="ansi1"></span>.
+       Github: <span style="color:#00a"></span><span style="color:#55f">https://github.com/fedora-java/javapackages/issues</span><span style="font-weight:bold"></span>.
 
-<span class="ansi1">SEE ALSO</span>
-       <span class="ansi1">pom_add_dep</span>(7), <span class="ansi1">pom_add_parent</span>(7), <span class="ansi1">pom_add_plugin</span>(7),
-       <span class="ansi1">pom_remove_dep</span>(7), <span class="ansi1">pom_remove_parent</span>(7), <span class="ansi1">pom_remove_plugin</span>(7),
-       <span class="ansi1">pom_change_dep</span>(7), <span class="ansi1">pom_set_parent</span>(7), <span class="ansi1">pom_xpath_inject</span>(7),
-       <span class="ansi1">pom_xpath_remove</span>(7), <span class="ansi1">pom_xpath_replace</span>(7), <span class="ansi1">pom_xpath_set</span>(7).
-       <span class="ansi1">pom_disable_module</span>(7).
+<span style="font-weight:bold">SEE ALSO</span>
+       <span style="font-weight:bold">pom_add_dep</span>(7), <span style="font-weight:bold">pom_add_parent</span>(7), <span style="font-weight:bold">pom_add_plugin</span>(7),
+       <span style="font-weight:bold">pom_remove_dep</span>(7), <span style="font-weight:bold">pom_remove_parent</span>(7), <span style="font-weight:bold">pom_remove_plugin</span>(7),
+       <span style="font-weight:bold">pom_change_dep</span>(7), <span style="font-weight:bold">pom_set_parent</span>(7), <span style="font-weight:bold">pom_xpath_inject</span>(7),
+       <span style="font-weight:bold">pom_xpath_remove</span>(7), <span style="font-weight:bold">pom_xpath_replace</span>(7), <span style="font-weight:bold">pom_xpath_set</span>(7).
+       <span style="font-weight:bold">pom_disable_module</span>(7).
 
 
 
 JAVAPACKAGES                      01/25/2023              POM_XPATH_DISABLE(7)
-
 </pre>
-</body>
-
-</html>

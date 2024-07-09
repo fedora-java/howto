@@ -1,110 +1,89 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title></title>
-<style type="text/css">
-.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
-.body_foreground { color: #AAAAAA; }
-.body_background { background-color: #000000; }
-.inv_foreground { color: #000000; }
-.inv_background { background-color: #AAAAAA; }
-.ansi1 { font-weight: bold; }
-.ansi34 { color: #0000aa; }
-</style>
-</head>
-<body class="body_foreground body_background" style="font-size: normal;" >
-<pre class="ansi2html-content">
-MVN_BUILD(7)                  Java Packages Tools                 MVN_BUILD(7)
+<pre style="color:#bbb;white-space:pre-wrap;word-wrap:break-word;overflow-wrap:break-word">MVN_BUILD(7)                  Java Packages Tools                 MVN_BUILD(7)
 
 
 
-<span class="ansi1">NAME</span>
+<span style="font-weight:bold">NAME</span>
        mvn_build - build Maven project with XMvn
 
-<span class="ansi1">SYNOPSIS</span>
-       <span class="ansi1">%mvn_build </span>[options] [-- Maven-arguments]
+<span style="font-weight:bold">SYNOPSIS</span>
+       <span style="font-weight:bold">%mvn_build </span>[options] [-- Maven-arguments]
 
-<span class="ansi1">DESCRIPTION</span>
-       <span class="ansi1">mvn_build </span>macro builds Maven project by calling XMvn and generates
-       reactor structure information to be used by <span class="ansi1">mvn_install</span>.
+<span style="font-weight:bold">DESCRIPTION</span>
+       <span style="font-weight:bold">mvn_build </span>macro builds Maven project by calling XMvn and generates
+       reactor structure information to be used by <span style="font-weight:bold">mvn_install</span>.
 
-       By default Maven phase <span class="ansi1">verify </span>and goal <span class="ansi1">javadoc:aggregate </span>are executed,
-       as well as some additional XMvn-specific goals or phases. If <span class="ansi1">-f </span>is
-       specified then phase <span class="ansi1">package </span>is executed instead of <span class="ansi1">verify</span>. If <span class="ansi1">-j </span>is
-       given then goal <span class="ansi1">javadoc:aggregate </span>is skipped.
+       By default Maven phase <span style="font-weight:bold">verify </span>and goal <span style="font-weight:bold">javadoc:aggregate </span>are executed,
+       as well as some additional XMvn-specific goals or phases. If <span style="font-weight:bold">-f </span>is
+       specified then phase <span style="font-weight:bold">package </span>is executed instead of <span style="font-weight:bold">verify</span>. If <span style="font-weight:bold">-j </span>is
+       given then goal <span style="font-weight:bold">javadoc:aggregate </span>is skipped.
 
-       Any arguments after <span class="ansi1">-- </span>are passed directly to XMvn. See <span class="ansi1">xmvn(1) </span>for
+       Any arguments after <span style="font-weight:bold">-- </span>are passed directly to XMvn. See <span style="font-weight:bold">xmvn(1) </span>for
        more information on availability of XMvn options.
 
-<span class="ansi1">OPTIONS</span>
-       <span class="ansi1">-d, --xmvn-debug</span>
+<span style="font-weight:bold">OPTIONS</span>
+       <span style="font-weight:bold">-d, --xmvn-debug</span>
            Enable XMvn debugging output. This option causes XMvn to write
            verbose debugging information to standard output. Debugging
            information includes at least details about artifact resolution
            from system repositories.
 
-       <span class="ansi1">-f, --force</span>
+       <span style="font-weight:bold">-f, --force</span>
            Skip compilation and execution of unit and integration tests, as
-           well as resolution of build dependencies with scope <span class="ansi1">test</span>. This
-           option causes Maven phase <span class="ansi1">package </span>to be executed instead of default
-           phase <span class="ansi1">verify</span>, defines property <span class="ansi1">maven.test.skip=true </span>which disables
+           well as resolution of build dependencies with scope <span style="font-weight:bold">test</span>. This
+           option causes Maven phase <span style="font-weight:bold">package </span>to be executed instead of default
+           phase <span style="font-weight:bold">verify</span>, defines property <span style="font-weight:bold">maven.test.skip=true </span>which disables
            compilation and execution of tests and causes XMvn to remove any
-           project dependencies with scope <span class="ansi1">test</span>.
+           project dependencies with scope <span style="font-weight:bold">test</span>.
 
-       <span class="ansi1">-i, --skip-install</span>
+       <span style="font-weight:bold">-i, --skip-install</span>
            Skip artifact installation. This option disables generation of
-           reactor structure information so that future calls to <span class="ansi1">mvn_install</span>
+           reactor structure information so that future calls to <span style="font-weight:bold">mvn_install</span>
            will not result in installation of artifacts produced in current
            Maven reactor.
 
-       <span class="ansi1">-j, --skip-javadoc</span>
+       <span style="font-weight:bold">-j, --skip-javadoc</span>
            Skip javadoc generation. This option skips running Maven Javadoc
            Plugin. Useful for packages which don’t want to produce Java API
            documentation.
 
-       <span class="ansi1">-s, --singleton</span>
+       <span style="font-weight:bold">-s, --singleton</span>
            Enable singleton packaging (one artifact per package). This option
-           causes artifacts with identical <span class="ansi1">artifactId </span>to be installed as part
+           causes artifacts with identical <span style="font-weight:bold">artifactId </span>to be installed as part
            of the same subpackage. This behavior can be further customized by
-           adding more specific packaging rules with <span class="ansi1">mvn_package</span>.
+           adding more specific packaging rules with <span style="font-weight:bold">mvn_package</span>.
 
-       <span class="ansi1">-X, --debug</span>
-           Enable Maven debugging output. Implies <span class="ansi1">-d</span>. This option causes Maven
+       <span style="font-weight:bold">-X, --debug</span>
+           Enable Maven debugging output. Implies <span style="font-weight:bold">-d</span>. This option causes Maven
            to write verbose debugging information to standard output.
 
-<span class="ansi1">ENVIRONMENT</span>
-       <span class="ansi1">xmvn_bootstrap</span>
-           Run XMvn in online mode. If <span class="ansi1">xmvn_bootstrap </span>RPM macro is defined to
+<span style="font-weight:bold">ENVIRONMENT</span>
+       <span style="font-weight:bold">xmvn_bootstrap</span>
+           Run XMvn in online mode. If <span style="font-weight:bold">xmvn_bootstrap </span>RPM macro is defined to
            any value then XMvn is ran in online mode. Otherwise XMvn is ran in
            offline mode. Online mode of XMvn allows missing dependency
            artifacts to be fetched from remote repositories. This behavior is
            mostly useful when bootstrapping new packages, which dependecies
            have not yet been packaged.
 
-       <span class="ansi1">_without_tests</span>
-           Defining this macro to any value is equivalent to <span class="ansi1">-f </span>option.
+       <span style="font-weight:bold">_without_tests</span>
+           Defining this macro to any value is equivalent to <span style="font-weight:bold">-f </span>option.
 
-       <span class="ansi1">_without_javadoc</span>
-           Defining this macro to any value is equivalent to <span class="ansi1">-j </span>option.
+       <span style="font-weight:bold">_without_javadoc</span>
+           Defining this macro to any value is equivalent to <span style="font-weight:bold">-j </span>option.
 
-<span class="ansi1">AUTHOR</span>
+<span style="font-weight:bold">AUTHOR</span>
        Originally written by Mikolaj Izdebski. Versions 3.0.0 and later were
        written by Stanislav Ochotnicky.
 
-<span class="ansi1">REPORTING BUGS</span>
+<span style="font-weight:bold">REPORTING BUGS</span>
        Bugs should be reported through Java Packages Tools issue tracker at
-       Github: <span class="ansi34"></span><span class="ansi1 ansi34">https://github.com/fedora-java/javapackages/issues</span><span class="ansi1"></span>.
+       Github: <span style="color:#00a"></span><span style="color:#55f">https://github.com/fedora-java/javapackages/issues</span><span style="font-weight:bold"></span>.
 
-<span class="ansi1">SEE ALSO</span>
-       <span class="ansi1">mvn_alias</span>(7), <span class="ansi1">mvn_compat_version</span>(7), <span class="ansi1">mvn_config</span>(7), <span class="ansi1">mvn_file</span>(7),
-       <span class="ansi1">mvn_package</span>(7), <span class="ansi1">xmvn</span>(1).
+<span style="font-weight:bold">SEE ALSO</span>
+       <span style="font-weight:bold">mvn_alias</span>(7), <span style="font-weight:bold">mvn_compat_version</span>(7), <span style="font-weight:bold">mvn_config</span>(7), <span style="font-weight:bold">mvn_file</span>(7),
+       <span style="font-weight:bold">mvn_package</span>(7), <span style="font-weight:bold">xmvn</span>(1).
 
 
 
 JAVAPACKAGES                      01/25/2023                      MVN_BUILD(7)
-
 </pre>
-</body>
-
-</html>

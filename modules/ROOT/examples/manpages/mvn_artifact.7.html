@@ -1,76 +1,55 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title></title>
-<style type="text/css">
-.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
-.body_foreground { color: #AAAAAA; }
-.body_background { background-color: #000000; }
-.inv_foreground { color: #000000; }
-.inv_background { background-color: #AAAAAA; }
-.ansi1 { font-weight: bold; }
-.ansi34 { color: #0000aa; }
-</style>
-</head>
-<body class="body_foreground body_background" style="font-size: normal;" >
-<pre class="ansi2html-content">
-MVN_ARTIFACT(7)               Java Packages Tools              MVN_ARTIFACT(7)
+<pre style="color:#bbb;white-space:pre-wrap;word-wrap:break-word;overflow-wrap:break-word">MVN_ARTIFACT(7)               Java Packages Tools              MVN_ARTIFACT(7)
 
 
 
-<span class="ansi1">NAME</span>
+<span style="font-weight:bold">NAME</span>
        mvn_artifact - request installation of Maven artifact
 
-<span class="ansi1">SYNOPSIS</span>
-       <span class="ansi1">%mvn_artifact </span>[options] model [artifact-file]
+<span style="font-weight:bold">SYNOPSIS</span>
+       <span style="font-weight:bold">%mvn_artifact </span>[options] model [artifact-file]
 
-       <span class="ansi1">%mvn_artifact </span>[options] artifact-coordinates artifact-file
+       <span style="font-weight:bold">%mvn_artifact </span>[options] artifact-coordinates artifact-file
 
-<span class="ansi1">DESCRIPTION</span>
-       <span class="ansi1">mvn_artifact </span>macro marks specified Maven artifact to be installed by
-       further call to <span class="ansi1">mvn_install</span>. Multiple calls to <span class="ansi1">mvn_artifact </span>and/or
-       <span class="ansi1">mvn_build </span>can be made to request installation of multiple artifacts.
+<span style="font-weight:bold">DESCRIPTION</span>
+       <span style="font-weight:bold">mvn_artifact </span>macro marks specified Maven artifact to be installed by
+       further call to <span style="font-weight:bold">mvn_install</span>. Multiple calls to <span style="font-weight:bold">mvn_artifact </span>and/or
+       <span style="font-weight:bold">mvn_build </span>can be made to request installation of multiple artifacts.
 
-<span class="ansi1">OPTIONS</span>
-       <span class="ansi1">--skip-dependencies</span>
+<span style="font-weight:bold">OPTIONS</span>
+       <span style="font-weight:bold">--skip-dependencies</span>
            Do not try to gather list of dependencies for given Maven artifact.
 
-       <span class="ansi1">-Dproperty=value</span>
+       <span style="font-weight:bold">-Dproperty=value</span>
            Add artifact property
 
-<span class="ansi1">OPERANDS</span>
-       <span class="ansi1">model</span>
+<span style="font-weight:bold">OPERANDS</span>
+       <span style="font-weight:bold">model</span>
            Path to raw project object model (POM) file to be associated and
            installed with artifact.
 
-       <span class="ansi1">artifact-file</span>
+       <span style="font-weight:bold">artifact-file</span>
            Path to file to be used as artifact file. If omitted then no
            artifact file is installed.
 
-       <span class="ansi1">artifact-coordinates</span>
+       <span style="font-weight:bold">artifact-coordinates</span>
            Artifact coordinates specify artifact to be installed. If specified
            then no model file is installed with artifact. Coordinates are in
-           format <span class="ansi1">groupId:artifactId[:extension[:classifier]]:version</span>. If
+           format <span style="font-weight:bold">groupId:artifactId[:extension[:classifier]]:version</span>. If
            extension is omitted then "jar" is used. If classifier is omitted
            then empty classifier is used. For more information see XMvn
            Configuration Reference.
 
-<span class="ansi1">AUTHOR</span>
+<span style="font-weight:bold">AUTHOR</span>
        Written by Michal Srb.
 
-<span class="ansi1">REPORTING BUGS</span>
+<span style="font-weight:bold">REPORTING BUGS</span>
        Bugs should be reported through Java Packages Tools issue tracker at
-       Github: <span class="ansi34"></span><span class="ansi1 ansi34">https://github.com/fedora-java/javapackages/issues</span><span class="ansi1"></span>.
+       Github: <span style="color:#00a"></span><span style="color:#55f">https://github.com/fedora-java/javapackages/issues</span><span style="font-weight:bold"></span>.
 
-<span class="ansi1">SEE ALSO</span>
-       <span class="ansi1">gradle_build</span>(7), <span class="ansi1">mvn_build</span>(7), <span class="ansi1">mvn_install</span>(7).
+<span style="font-weight:bold">SEE ALSO</span>
+       <span style="font-weight:bold">gradle_build</span>(7), <span style="font-weight:bold">mvn_build</span>(7), <span style="font-weight:bold">mvn_install</span>(7).
 
 
 
 JAVAPACKAGES                      01/25/2023                   MVN_ARTIFACT(7)
-
 </pre>
-</body>
-
-</html>
