@@ -24,12 +24,11 @@ manpages :=\
 	pom_xpath_replace\
 	pom_xpath_set\
 
-source_dir := modules/ROOT
-pages = $(shell find $(source_dir)/pages -type f)
-examples = $(shell find $(source_dir)/examples -type f)
+pages = $(shell find pages -type f)
+examples = $(shell find examples -type f)
 
-manpage_html = $(patsubst %,$(source_dir)/examples/manpages/%.7.html,$(1))
-generated_sources = $(source_dir)/images/xmvn.svg $(source_dir)/examples/manpages.adoc $(call manpage_html,$(manpages))
+manpage_html = $(patsubst %,examples/manpages/%.7.html,$(1))
+generated_sources = images/xmvn.svg examples/manpages.adoc $(call manpage_html,$(manpages))
 
 .PHONY: all clean clean-all generate-sources antora antora-preview
 
@@ -44,15 +43,15 @@ clean-all: clean
 generate-sources: $(generated_sources)
 
 index.html: $(pages) $(examples) $(generated_sources)
-	asciidoctor -v -a EXAMPLE='../examples/' -o $@ $(source_dir)/pages/index.adoc --failure-level=ERROR
+	asciidoctor -v -a EXAMPLE='../examples/' -o $@ pages/index.adoc --failure-level=ERROR
 
 $(call manpage_html,%):
 	COLUMNS=80 man -Tutf8 7 $(*F) | ansi2html --no-header --white --contrast >$@
 
-$(source_dir)/images/xmvn.svg: $(source_dir)/images/xmvn.dia
+images/xmvn.svg: images/xmvn.dia
 	dia -e $@ $<
 
-$(source_dir)/examples/manpages.adoc: $(source_dir)/pages/manpages.adoc
+examples/manpages.adoc: pages/manpages.adoc
 	@echo 'Generating $@'
 	@cp $< $@
 	@echo >> $@
