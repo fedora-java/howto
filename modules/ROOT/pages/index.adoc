@@ -6,6 +6,9 @@
 :toclevels: 3
 :icons:
 :theme: flask
+:data-uri:
+:iconsdir: ../icons/
+:imagesdir: ../images/
 
 include::preamble.adoc[]
 

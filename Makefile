@@ -29,7 +29,7 @@ pages = $(shell find $(source_dir)/pages -type f)
 examples = $(shell find $(source_dir)/examples -type f)
 
 manpage_html = $(patsubst %,$(source_dir)/examples/manpages/%.7.html,$(1))
-generated_sources = $(source_dir)/examples/images/xmvn.svg $(source_dir)/examples/manpages.adoc $(call manpage_html,$(manpages))
+generated_sources = $(source_dir)/images/xmvn.svg $(source_dir)/examples/manpages.adoc $(call manpage_html,$(manpages))
 
 .PHONY: all clean clean-all generate-sources antora antora-preview
 
@@ -49,7 +49,7 @@ index.html: $(pages) $(examples) $(generated_sources)
 $(call manpage_html,%):
 	COLUMNS=80 man -Tutf8 7 $(*F) | ansi2html >$@
 
-$(source_dir)/examples/images/xmvn.svg: $(source_dir)/examples/images/xmvn.dia
+$(source_dir)/images/xmvn.svg: $(source_dir)/images/xmvn.dia
 	dia -e $@ $<
 
 $(source_dir)/examples/manpages.adoc: $(source_dir)/pages/manpages.adoc
