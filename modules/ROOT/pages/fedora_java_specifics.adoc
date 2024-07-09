@@ -27,6 +27,7 @@ Users and developers may want to have multiple Java environments installed at th
 It is possible in Fedora, but only one of them can be default Java environment in system.
 Fedora uses `alternatives` for switching between different installed JREs/JDKs.
 
+[%nowrap]
 ----
 # alternatives --config java
 
