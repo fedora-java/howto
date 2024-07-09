@@ -36,7 +36,7 @@ generated_sources = $(source_dir)/examples/images/xmvn.svg $(source_dir)/example
 all: index.html
 
 clean:
-	@rm -rfv cache public
+	@rm -rfv cache public index.html
 
 clean-all: clean
 	@rm -rfv $(generated_sources)
