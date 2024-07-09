@@ -47,7 +47,7 @@ index.html: $(pages) $(examples) $(generated_sources)
 	asciidoctor -v -a EXAMPLE='../examples/' -o $@ $(source_dir)/pages/index.adoc --failure-level=ERROR
 
 $(call manpage_html,%):
-	COLUMNS=80 man -Tutf8 7 $(*F) | ansi2html --no-header >$@
+	COLUMNS=80 man -Tutf8 7 $(*F) | ansi2html --no-header --white --contrast >$@
 
 $(source_dir)/images/xmvn.svg: $(source_dir)/images/xmvn.dia
 	dia -e $@ $<

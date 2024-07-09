@@ -13,7 +13,7 @@ You can preview it by running an HTTP server in a container with `make antora-pr
 
 The repository contains generated HTML manpages and diagrams.
 To regenerate them from sources, run `make clean-all` and then `make generate-sources`.
-You need to have all the relevant manpages installed, as well as `dia` and `ansi2html`.
+You need to have all the relevant manpages installed, as well as `man`, `dia` and `ansi2html` from `colorized-logs` package.
 
 Conventions
 -----------
