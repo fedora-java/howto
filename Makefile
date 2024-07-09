@@ -73,11 +73,10 @@ cache public &: modules $(shell find $(source_dir)) $(generated_sources) antora.
 
 antora: cache public
 
-antora-preview: antora nginx.conf
+antora-preview: antora
 	@echo ------------
 	@echo Preveiew should be available at http://localhost:8080
 	@echo ------------
 	@podman run --rm \
-		--mount type=bind,source=.,target='/antora',readonly \
-		--mount type=bind,source=nginx.conf,target='/etc/nginx/conf.d/default.conf',readonly \
-		-p 8080:80 docker.io/library/nginx:latest \
+		--mount type=bind,source=public,target='/srv',readonly \
+		-p 8080:8080 docker.io/philippgille/serve \
