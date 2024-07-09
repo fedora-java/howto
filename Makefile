@@ -31,12 +31,15 @@ examples = $(shell find $(source_dir)/examples -type f)
 manpage_html = $(patsubst %,$(source_dir)/examples/manpages/%.7.html,$(1))
 generated_sources = $(source_dir)/examples/images/xmvn.svg $(source_dir)/examples/manpages.adoc $(call manpage_html,$(manpages))
 
-.PHONY: all clean antora antora-preview
+.PHONY: all clean clean-all antora antora-preview
 
 all: index.html
 
 clean:
-	@rm -rfv build cache public $(generated_sources)
+	@rm -rfv cache public
+
+clean-all: clean
+	@rm -rfv $(generated_sources)
 
 index.html: $(pages) $(examples) $(generated_sources)
 	asciidoctor -v -a EXAMPLE='../examples/' -o $@ $(source_dir)/pages/index.adoc --failure-level=ERROR
