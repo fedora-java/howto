@@ -66,12 +66,10 @@ $(source_dir)/examples/manpages.adoc: $(source_dir)/pages/manpages.adoc
 
 ################################################################################
 
-cache public &: modules $(shell find $(source_dir)) $(generated_sources) antora.yml site.yml
+antora: modules $(shell find $(source_dir)) $(generated_sources) antora.yml site.yml
 	podman run --rm --mount type=bind,source=.,target='/antora',shared\
 		-it docker.io/antora/antora:latest --html-url-extension-style=indexify site.yml
 	@touch cache public
-
-antora: cache public
 
 antora-preview: antora
 	@echo ------------
