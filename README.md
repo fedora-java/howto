@@ -1,6 +1,3 @@
-[![Build Status](https://travis-ci.org/fedora-java/howto.svg?branch=master)](https://travis-ci.org/fedora-java/howto)
-
-
 Documentation contained in this repository can be converted into HTML by simply running `make`.
 It will build a single-HTML page with Asciidoctor and save it as `index.html`.
 
