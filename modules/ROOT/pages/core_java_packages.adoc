@@ -43,7 +43,7 @@ This includes a default system version of Java Development Kit (JDK), Maven, a n
 Analogously to `maven-local`, this package provides an environment required to build Java packages using Apache Ivy as dependency manager.
 
 *`javapackages-local`*::
-Package providing a basic environment necessary to geterate and install metadata for system artifact repository.
+Package providing a basic environment necessary to generate and install metadata for system artifact repository.
 
 *`javapackages-tools`*::
 Package owning basic Java directories and providing runtime support for Java packages.
